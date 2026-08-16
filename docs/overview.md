@@ -13,11 +13,11 @@ The framework rests on a single, elementary, and rigorously established fact (Pa
 $$\tau(x) = \int_a^x \frac{dt}{\rho(t)}$$
 
 is a diffeomorphism — the **conformal transport** — under which the $\rho$-deformed calculus becomes the ordinary calculus on a straight axis. Three consequences follow:
-1. **Graded continua become uniform.** The wave equation in a graded, impedance-matched medium is, in the transported coordinate, the constant-coefficient wave equation. Modes are closed-form (Paper 02, PDF p. 81), design is reflectionless (Paper 05, PDF p. 113), and energy is exactly conserved (Paper 04, PDF p. 102).
+1. **Graded continua become uniform.** The wave equation in a graded, impedance-matched medium is, in the transported coordinate, the constant-coefficient wave equation. Modes are closed-form (Paper 02, PDF p. 3), design is reflectionless (Paper 05, PDF p. 4), and energy is exactly conserved (Paper 04, PDF p. 4).
 
-2. **Time-varying networks become stationary shadows.** The spectral theory of a time-varying graph is the spectral theory of a fixed operator in a moving eigenframe. Mode energy *migrates* between modes under deformation — a proven redistribution law (Paper 03, PDF p. 91) — with applications to power-grid stress (Paper 06, PDF p. 123), epidemic outbreaks on adaptive contact networks (Paper 07, PDF p. 134), and causal graph-time signal processing (Paper 10, PDF p. 167).
+2. **Time-varying networks become stationary shadows.** The spectral theory of a time-varying graph is the spectral theory of a fixed operator in a moving eigenframe. Mode energy *migrates* between modes under deformation — a proven redistribution law (Paper 03, PDF p. 4) — with applications to power-grid stress (Paper 06, PDF p. 5), epidemic outbreaks on adaptive contact networks (Paper 07, PDF p. 5), and causal graph-time signal processing (Paper 10, PDF p. 6).
 
-3. **Higher dimensions inherit the structure.** A structure field per coordinate direction endows a product (anisotropic) metric, a structure Laplacian, a divergence theorem, a Weyl law, and — on separable domains — closed-form spectra (Paper 09, PDF p. 155).
+3. **Higher dimensions inherit the structure.** A structure field per coordinate direction endows a product (anisotropic) metric, a structure Laplacian, a divergence theorem, a Weyl law, and — on separable domains — closed-form spectra (Paper 09, PDF p. 6).
 ## What is proved
 
 Every theorem in the program carries a complete proof. The theorems are:
@@ -64,21 +64,21 @@ Every central theorem is verified numerically by a runnable demo, and several id
 
 ## The program papers (expanded)
 
-- **00 Capstone** (PDF p. 18): Contributions 1–10; Theorems 1–22 with proof sketches, numerical verification tables, and robustness analysis.
+- **00 Capstone** (PDF p. 1): Contributions 1–10; Theorems 1–22 with proof sketches, numerical verification tables, and robustness analysis.
 - **00 Comprehensive Treatise** (~30 pages, this document): Parts I–IX covering the calculus, the closed-form spectral theory, the causal network theory, the variational theory, the applications, the higher-dimensional theory, the signal-processing pipeline, the honest novelty statement, and a full derivation appendix with a numerical casebook. All 86 proofs are collected with their verification numbers.
-- **01 Foundations** (PDF p. 70): The $\rho$-calculus: operators, Fundamental Theorem, algebraic rules, adjoint pair, transport theorem, uniqueness theorems, mean-value theory, energy identity, Sobolev spaces, and regularity theory. 19 theorems, 3 corollaries.
-- **02 Structure Spectral Theory** (PDF p. 81): Closed-form spectrum $\mu_m=(m\pi/\Lambda)^2$, modes, d'Alembert evolution, energy conservation, resolvent kernel, perturbation theory, and closed-form profiles for exponential, linear, and piecewise-linear structures. 10+ theorems.
-- **03 Causal Network Spectral Theory** (PDF p. 91): Mass conservation, contraction via time-integrated algebraic connectivity, skew-symmetric eigenframe connection $C_{jk}$, modal ODEs, Energy Migration Theorem, eigenvalue flow, and variational characterization. 7+ theorems.
-- **04 Variational & Conservation Theory** (PDF p. 102): Structure-flow action, Euler–Lagrange equations, structure-stationarity constraint, Hamiltonian and canonical structure, Noether-type conservation laws, Poisson bracket, gauge theory, and the corrected coupled field-structure equation. 10 theorems.
-- **05 Graded Media Engineering** (PDF p. 113): Impedance matching, reflectionless design, closed-form modes, energy flux in transport form, mode-counting law, transmission coefficients, bandwidth formulas, and sensitivity analysis. 7+ theorems.
-- **06 Power Networks & Synchronization** (PDF p. 123): Synchronization rates from algebraic connectivity, time-to-sync bounds, mode-energy migration under stress, vulnerability index, early-warning indicators, and IEEE test case results. 5+ theorems.
-- **07 Epidemiology on Adaptive Networks** (PDF p. 134): Spectral outbreak bounds, extinction-time bounds, Perron–Frobenius sensitivity, optimal single-edge intervention, intervention monotonicity, and age-structured examples. 6+ theorems.
-- **08 Numerical Methods** (PDF p. 144): Spectral Galerkin convergence, midpoint-flux finite differences, energy-preserving time stepping, CFL stability bounds, dispersion analysis, and stability regions. 5+ theorems.
-- **09 Higher-Dimensional Structure-Flow** (PDF p. 155): Product metric, transport isometry, structure Laplacian, divergence and Green's identities, spectral theorem, Weyl law with two-term correction, closed-form product spectra, and obstruction theorem. 10+ theorems.
-- **10 Causal Graph-Time Signal Processing** (PDF p. 167): Causal graph Fourier transform, spectral-flow filtering, reduced-order modeling, energy-migration anomaly detection, and detectability threshold. 5+ theorems.
-- **11 Novelty, Literature & Research Program** (PDF p. 177): Honest novelty statement, literature comparison tables, novelty verification log, research program timeline, and collaboration opportunities.
-- **12 Quantum & Information** (PDF p. 189): $\rho$-weighted Schrödinger equation, Fisher information, quantum-like graph diffusion, spectral entropy, fidelity measures, and measurement back-action.
-- **12 Quantum & Information** (PDF p. 103): $\rho$-weighted Schrödinger equation, Fisher information, quantum-like graph diffusion, spectral entropy, fidelity measures, and measurement back-action.
+- **01 Foundations** (PDF p. 3): The $\rho$-calculus: operators, Fundamental Theorem, algebraic rules, adjoint pair, transport theorem, uniqueness theorems, mean-value theory, energy identity, Sobolev spaces, and regularity theory. 19 theorems, 3 corollaries.
+- **02 Structure Spectral Theory** (PDF p. 3): Closed-form spectrum $\mu_m=(m\pi/\Lambda)^2$, modes, d'Alembert evolution, energy conservation, resolvent kernel, perturbation theory, and closed-form profiles for exponential, linear, and piecewise-linear structures. 10+ theorems.
+- **03 Causal Network Spectral Theory** (PDF p. 4): Mass conservation, contraction via time-integrated algebraic connectivity, skew-symmetric eigenframe connection $C_{jk}$, modal ODEs, Energy Migration Theorem, eigenvalue flow, and variational characterization. 7+ theorems.
+- **04 Variational & Conservation Theory** (PDF p. 4): Structure-flow action, Euler–Lagrange equations, structure-stationarity constraint, Hamiltonian and canonical structure, Noether-type conservation laws, Poisson bracket, gauge theory, and the corrected coupled field-structure equation. 10 theorems.
+- **05 Graded Media Engineering** (PDF p. 4): Impedance matching, reflectionless design, closed-form modes, energy flux in transport form, mode-counting law, transmission coefficients, bandwidth formulas, and sensitivity analysis. 7+ theorems.
+- **06 Power Networks & Synchronization** (PDF p. 5): Synchronization rates from algebraic connectivity, time-to-sync bounds, mode-energy migration under stress, vulnerability index, early-warning indicators, and IEEE test case results. 5+ theorems.
+- **07 Epidemiology on Adaptive Networks** (PDF p. 5): Spectral outbreak bounds, extinction-time bounds, Perron–Frobenius sensitivity, optimal single-edge intervention, intervention monotonicity, and age-structured examples. 6+ theorems.
+- **08 Numerical Methods** (PDF p. 6): Spectral Galerkin convergence, midpoint-flux finite differences, energy-preserving time stepping, CFL stability bounds, dispersion analysis, and stability regions. 5+ theorems.
+- **09 Higher-Dimensional Structure-Flow** (PDF p. 6): Product metric, transport isometry, structure Laplacian, divergence and Green's identities, spectral theorem, Weyl law with two-term correction, closed-form product spectra, and obstruction theorem. 10+ theorems.
+- **10 Causal Graph-Time Signal Processing** (PDF p. 6): Causal graph Fourier transform, spectral-flow filtering, reduced-order modeling, energy-migration anomaly detection, and detectability threshold. 5+ theorems.
+- **11 Novelty, Literature & Research Program** (PDF p. 7): Honest novelty statement, literature comparison tables, novelty verification log, research program timeline, and collaboration opportunities.
+- **12 Quantum & Information** (PDF p. 7): $\rho$-weighted Schrödinger equation, Fisher information, quantum-like graph diffusion, spectral entropy, fidelity measures, and measurement back-action.
+- **13 Neuroscience & Brain Networks** (PDF p. 7): Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals, and causal GFT for real-time fMRI. 6 theorems.
 
 ## How the papers fit together (cross-reference diagram)
 
@@ -95,24 +95,26 @@ Every central theorem is verified numerically by a runnable demo, and several id
    │        ├── 06 Power Networks & Synchronization
    │        ├── 07 Epidemiology on Adaptive Networks
    │        └── 10 Causal Graph-Time Signal Processing
-   │
-   ├── 04 Variational & Conservation Theory ── Euler–Lagrange equations, Noether laws, Hamiltonian, coupled theory
-   │        │
-   │        └── 12 Quantum & Information Theory ── Schrodinger equation, Fisher information, entropy
-   │
-   └── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
+    │
+    ├── 04 Variational & Conservation Theory ── Euler–Lagrange equations, Noether laws, Hamiltonian, coupled theory
+    │        │
+    │        └── 12 Quantum & Information Theory ── Schrodinger equation, Fisher information, entropy
+    │        └── 13 Neuroscience & Brain Networks ── connectome structure field, seizure detection, neural energy migration
+    │
+    └── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
 ```
 
 ## Reading order (expanded)
 
-1. **Paper 01** (PDF p. 70) first: everything downstream uses the $\rho$-calculus and the transport map.
-2. **Paper 02** (PDF p. 81) second: the spectral theory is the workhorse for Papers 05, 08, 09.
-3. **Paper 04** (PDF p. 102) is self-contained variational theory (uses only 01); it can be read any time after 01.
-4. **Paper 03** (PDF p. 91) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
-5. **Paper 11** (PDF p. 177) documents novelty and can be read last (or first, for the honest statement).
-6. **Paper 12** (PDF p. 189) extends to quantum mechanics and information theory; it can be read after Papers 01–04.
-7. **Capstone** (Paper 00, PDF p. 18) collects all central theorems in one place.
-8. **Comprehensive treatise** (`00-treatise.md`, PDF p. 25, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
+1. **Paper 01** (PDF p. 3) first: everything downstream uses the $\rho$-calculus and the transport map.
+2. **Paper 02** (PDF p. 3) second: the spectral theory is the workhorse for Papers 05, 08, 09.
+3. **Paper 04** (PDF p. 4) is self-contained variational theory (uses only 01); it can be read any time after 01.
+4. **Paper 03** (PDF p. 4) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
+5. **Paper 11** (PDF p. 7) documents novelty and can be read last (or first, for the honest statement).
+6. **Paper 12** (PDF p. 7) extends to quantum mechanics and information theory; it can be read after Papers 01–04.
+7. **Paper 13** (PDF p. 7) applies SFC to neuroscience and brain networks; it can be read after Papers 01–04.
+8. **Capstone** (Paper 00, PDF p. 1) collects all central theorems in one place.
+9. **Comprehensive treatise** (`00-treatise.md`, PDF p. 26, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## Honesty statement
 

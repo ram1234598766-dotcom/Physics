@@ -1037,7 +1037,7 @@ All numerical claims are reproducible by four demos in the repository: `demos/ve
 
 ## 40. The program at a glance
 
-The Structure-Flow Calculus program is twelve papers and one capstone, collected here. The mapping from papers to parts of the treatise is exact:
+The Structure-Flow Calculus program is thirteen papers and one capstone, collected here. The mapping from papers to parts of the treatise is exact:
 
 | Paper | Treatise part | Content |
 |---|---|---|
@@ -1060,7 +1060,7 @@ A reader who wants the complete path through the treatise can follow either the 
 
 ## 42. The contribution statement, per paper
 
-Each of the twelve papers carries its own **Original Contributions** paragraph, which states what the paper provides without any new-versus-old comparison. The treatise-level statement is §33. The complete set:
+Each of the thirteen papers carries its own **Original Contributions** paragraph, which states what the paper provides without any new-versus-old comparison. The treatise-level statement is §33. The complete set:
 
 1. **Paper 01** — a complete calculus built on one positive function, with a Fundamental Theorem, algebraic rules, adjoint structure, mean-value theory, and a uniqueness theorem.
 2. **Paper 02** — closed-form spectra, evolution operators, resolvents, and sharp perturbation theory for arbitrary graded profiles via transport.
@@ -1237,7 +1237,7 @@ This appendix reconstructs every central identity from first principles, with no
 
 ## 46. The program at a glance (cross-referenced)
 
-The Structure-Flow Calculus program is twelve papers and one capstone, collected in this treatise. The mapping from papers to parts is exact:
+The Structure-Flow Calculus program is thirteen papers and one capstone, collected in this treatise. The mapping from papers to parts is exact:
 
 | Paper | Treatise section | Content | Cross-reference target |
 |---|---|---|---|
@@ -1350,7 +1350,7 @@ Every theorem, formula, and worked example in the program is indexed below by th
 
 The program is complete in the sense that matters for a research document: every theorem has a terminated proof, every number has a reproduction path, every reference is cited where it is used, and the boundaries of the framework are stated as openly as its results. The cross-reference index above maps each mathematical object to its source paper and treatise location, providing a navigation map for the reader who wants to trace any claim to its origin.
 
-The Structure-Flow Calculus program is twelve papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, and a quantum-information reading — every step a proved theorem, every central theorem verified numerically, every claim honest. The twelve contributions of the program are twelve facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
+The Structure-Flow Calculus program is thirteen papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, a quantum-information reading, and a neuroscience application — every step a proved theorem, every central theorem verified numerically, every claim honest. The thirteen contributions of the program are thirteen facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
 
 **Block R — the resolvent kernel in closed form.** In $\tau$-coordinates the operator is $-\partial_\tau^2-z$ on $[0,\Lambda]$. The Green's function satisfying $G_{\tau\tau}-zG=\delta$ with Dirichlet conditions is
 $$G(\tau,\sigma)=\frac{\sin(\sqrt{-z}\,\tau_<)\sin(\sqrt{-z}\,(\Lambda-\tau_>))}{\sqrt{-z}\sin(\sqrt{-z}\,\Lambda)}.$$
@@ -1698,4 +1698,4 @@ For the cloak profile $\rho(r) = r/(R_2-R_1)\cdot(R_2/r-1) = R_2/(R_2-R_1) - r/(
 
 The program is complete in the sense that matters for a research document: every theorem has a terminated proof, every number has a reproduction path, every reference is cited where it is used, and the boundaries of the framework are stated as openly as its results. The cross-reference index above maps each mathematical object to its source paper and treatise location, providing a navigation map for the reader who wants to trace any claim to its origin.
 
-The Structure-Flow Calculus program is twelve papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, and a quantum-information reading -- every step a proved theorem, every central theorem verified numerically, every claim honest. The twelve contributions of the program are twelve facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
+The Structure-Flow Calculus program is thirteen papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, a quantum-information reading, and a neuroscience application -- every step a proved theorem, every central theorem verified numerically, every claim honest. The thirteen contributions of the program are thirteen facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.

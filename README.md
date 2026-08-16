@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/status-peer--review_ready-blue" alt="Status">
   <img src="https://img.shields.io/badge/theorems-294-success" alt="Theorems">
   <img src="https://img.shields.io/badge/demos-5_pass-brightgreen" alt="Demos">
-  <img src="https://img.shields.io/badge/PDF-219_pages-red" alt="PDF">
+  <img src="https://img.shields.io/badge/PDF-241_pages-red" alt="PDF">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </p>
 
@@ -53,7 +53,7 @@ python demos/epidemic_decay_bound.py
 python demos/quantum_information.py
 ```
 
-Or simply download the **[219-page PDF](https://github.com/ram1234598766-dotcom/Physics/releases/latest)** — no tools required.
+Or simply download the **[241-page PDF](https://github.com/ram1234598766-dotcom/Physics/releases/latest)** — no tools required.
 
 ---
 
@@ -82,23 +82,23 @@ npm run docs:pdf      # generates Structure-Flow-Calculus-Docs.pdf
 ## Research Papers
 
 | # | Paper | PDF page | Core Result |
-|---|-------|----------|-------------|
-| 00a | **Capstone** | 18 | Unified statement of contributions 1–10 |
-| 00b | **Comprehensive Treatise** | 25 | Whole program, self-contained, with derivation appendix |
-| 01 | **Foundations** | 70 | The ρ-calculus, Fundamental Theorem, conformal transport |
-| 02 | **Structure Spectral Theory** | 81 | Closed-form spectrum, resolvent, energy conservation |
-| 03 | **Causal Network Spectral Theory** | 91 | Eigenframe connection, Energy Migration Theorem |
-| 04 | **Variational & Conservation Theory** | 102 | Euler–Lagrange, Hamiltonian, Noether laws |
-| 05 | **Graded Media Engineering** | 113 | Impedance matching, reflectionless design |
-| 06 | **Power Networks & Synchronization** | 123 | Sync rates, vulnerability, early warning |
-| 07 | **Epidemiology on Adaptive Networks** | 134 | Spectral outbreak bounds, interventions |
-| 08 | **Numerical Methods** | 144 | Spectral convergence, energy-preserving schemes |
-| 09 | **Higher-Dimensional Structure-Flow** | 155 | Product metric, Weyl law, closed-form spectra |
-| 10 | **Causal Graph-Time Signal Processing** | 167 | Causal GFT, anomaly detection |
-| 11 | **Novelty, Literature & Research Program** | 177 | Honest positioning, novelty verification log |
-| 12 | **Quantum & Information** | 189 | ρ-weighted quantum mechanics, Fisher information, entanglement |
-| 13 | **Neuroscience & Brain Networks** | — | Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals |
-| 14 | **Open Problems** | — | Twenty open problems with precise formulations and partial results |
+||---|-------|----------|-------------|
+| 00a | **Capstone** | 1 | Unified statement of contributions 1–10 |
+| 00b | **Comprehensive Treatise** | 26 | Whole program, self-contained, with derivation appendix |
+| 01 | **Foundations** | 3 | The ρ-calculus, Fundamental Theorem, conformal transport |
+| 02 | **Structure Spectral Theory** | 3 | Closed-form spectrum, resolvent, energy conservation |
+| 03 | **Causal Network Spectral Theory** | 4 | Eigenframe connection, Energy Migration Theorem |
+| 04 | **Variational & Conservation Theory** | 4 | Euler–Lagrange, Hamiltonian, Noether laws |
+| 05 | **Graded Media Engineering** | 4 | Impedance matching, reflectionless design |
+| 06 | **Power Networks & Synchronization** | 5 | Sync rates, vulnerability, early warning |
+| 07 | **Epidemiology on Adaptive Networks** | 5 | Spectral outbreak bounds, interventions |
+| 08 | **Numerical Methods** | 6 | Spectral convergence, energy-preserving schemes |
+| 09 | **Higher-Dimensional Structure-Flow** | 6 | Product metric, Weyl law, closed-form spectra |
+| 10 | **Causal Graph-Time Signal Processing** | 6 | Causal GFT, anomaly detection |
+| 11 | **Novelty, Literature & Research Program** | 7 | Honest positioning, novelty verification log |
+| 12 | **Quantum & Information** | 7 | ρ-weighted quantum mechanics, Fisher information, entanglement |
+| 13 | **Neuroscience & Brain Networks** | 7 | Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals |
+| 14 | **Open Problems** | 8 | Twenty open problems with precise formulations and partial results |
 
 **Proof audit:** 320+ theorems proved, 320+ QED marks, balanced equation delimiters across all papers, capstone, and treatise.
 
@@ -160,7 +160,7 @@ Structural length: Λ = ∫ dx/ρ(x)
 
 | Format | How to get it |
 |--------|---------------|
-| **PDF (225 pages)** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
+| **PDF (241 pages)** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
 | **Live site** | [https://physics-phi-dusky.vercel.app/](https://physics-phi-dusky.vercel.app/) |
 | **Local dev** | `npm run docs:dev` |
 | **Static build** | `npm run docs:build` |

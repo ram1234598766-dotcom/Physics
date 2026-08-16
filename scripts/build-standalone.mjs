@@ -71,7 +71,7 @@ const tocHtml = sections
   .join('')
 
 const bodyHtml = sections
-  .map((s) => `<section id="${s.slug}" class="doc-section">${s.html}</section>`)
+  .map((s) => `<section id="${s.slug}" class="doc-section" style="page-break-before: always; break-before: page;">${s.html}</section>`)
   .join('')
 
 const katexDist = resolve(root, 'node_modules/katex/dist')
@@ -159,8 +159,8 @@ footer { text-align: center; color: #888; font-size: .85em; margin-top: 30px; }
   }
   body { background: #fff; font-size: 11pt; }
   a { color: inherit; text-decoration: none; }
-  .toc-box { page-break-after: always; border: none; }
-  .doc-section { page-break-before: always; }
+  .toc-box { page-break-after: always; break-after: page; border: none; }
+  .doc-section { page-break-before: always; break-before: page; }
   .katex-display { overflow: visible !important; }
   p, li { orphans: 3; widows: 3; }
 }

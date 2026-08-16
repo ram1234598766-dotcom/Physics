@@ -2,7 +2,7 @@
 
 **Structure-Flow Calculus Working Group** — *2026-08-16*
 
-This document maps how the twelve papers and four demos fit together, states the open problems of the program, and lists the next steps.
+This document maps how the thirteen papers and four demos fit together, states the open problems of the program, and lists the next steps.
 
 ## 1. How the papers fit together
 
@@ -24,24 +24,28 @@ This document maps how the twelve papers and four demos fit together, states the
    │
    ├── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
    │
-   └── 12 Quantum & Information ── ρ-weighted quantum mechanics, Fisher information, quantum measurement, entanglement
+    └── 12 Quantum & Information ── ρ-weighted quantum mechanics, Fisher information, quantum measurement, entanglement
+    └── 13 Neuroscience & Brain Networks ── connectome structure field, seizure detection, neural energy migration
 ```
 
 ### Reading order
 
-1. **Paper 01** (PDF p. 70) first: everything downstream uses the $\rho$-calculus and the transport map.
-2. **Paper 02** (PDF p. 81) second: the spectral theory is the workhorse for Papers 05, 08, 09.
-3. **Paper 04** (PDF p. 102) is self-contained variational theory (uses only 01); it can be read any time after 01.
-4. **Paper 03** (PDF p. 91) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
-5. **Paper 11** (PDF p. 177) documents novelty and can be read last (or first, for the honest statement).
-6. **Paper 12** (PDF p. 189) extends the framework to quantum mechanics and information theory; read after Papers 01–02.
-7. **Capstone** (Paper 00, PDF p. 18) collects all central theorems in one place.
-8. **Comprehensive treatise** (`00-treatise.md`, PDF p. 25, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
+1. **Paper 01** (PDF p. 3) first: everything downstream uses the $\rho$-calculus and the transport map.
+2. **Paper 02** (PDF p. 3) second: the spectral theory is the workhorse for Papers 05, 08, 09.
+3. **Paper 04** (PDF p. 4) is self-contained variational theory (uses only 01); it can be read any time after 01.
+4. **Paper 03** (PDF p. 4) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
+5. **Paper 11** (PDF p. 7) documents novelty and can be read last (or first, for the honest statement).
+6. **Paper 12** (PDF p. 7) extends the framework to quantum mechanics and information theory; read after Papers 01–02.
+7. **Paper 13** (PDF p. 7) applies SFC to neuroscience and brain networks; read after Papers 01–04.
+8. **Capstone** (Paper 00, PDF p. 1) collects all central theorems in one place.
+9. **Comprehensive treatise** (`00-treatise.md`, PDF p. 26, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## 2. What each paper contributes
 
 | # | Paper | Central result | Verified by |
 |---|---|---|---|
+| 00 | Capstone | Contributions 1–10; proof sketches | `verify_calculus.py` etc. |
+| 00 | Comprehensive Treatise | Whole program self-contained | All demos |
 | 01 | Foundations | Transport theorem; uniqueness of the calculus | `verify_calculus.py` |
 | 02 | Structure Spectral Theory | Closed-form spectrum & resolvent; energy conservation | `verify_calculus.py`, `graded_wave.py` |
 | 03 | Causal Network Spectral Theory | Skew connection; Energy Migration; contraction | `power_grid_mode_migration.py`, `epidemic_decay_bound.py` |
@@ -53,6 +57,8 @@ This document maps how the twelve papers and four demos fit together, states the
 | 09 | Higher-Dimensional Structure-Flow | Product metric; Weyl law; product-domain spectra | audit check ($d=2$ Weyl, separation) |
 | 10 | Causal Graph-Time Signal Processing | Causal GFT; modal ODEs; anomaly bounds | `power_grid_mode_migration.py` |
 | 11 | Novelty, Literature & Research Program | Honest positioning; verification log | arXiv/websearch |
+| 12 | Quantum & Information | ρ-weighted quantum mechanics; Fisher information; entanglement | `quantum_information.py` |
+| 13 | Neuroscience & Brain Networks | Connectome structure field; seizure detection; neural energy migration | `neuroscience_validation.py` |
 
 ## 3. The theorem inventory
 
@@ -71,7 +77,7 @@ This document maps how the twelve papers and four demos fit together, states the
 - **Paper 11:** novel-literature-positioning document.
 - **Paper 12:** 25 theorems. Core: ρ-weighted Schrödinger equation (Thm 1), Stationary states = structure-flow modes (Thm 2), Fisher information & Cramér–Rao bound (Thm 3), Graph diffusion (Thm 4), Spectral entropy bound (Thm 5), Quantum measurement (Thms 20, 29), Fidelity decay (Thm 30), Concurrence (Thm 30), Channel capacity (Thm 31).
 
-Proof/QED audit across all papers, capstone, and treatise: **294 proofs, 294 QED marks, balanced equation delimiters** (Papers 01–10 alone: 153 proofs).
+Proof/QED audit across all papers, capstone, and treatise: **300+ proofs, 300+ QED marks, balanced equation delimiters** (Papers 01–10 alone: 153 proofs).
 
 ## 4. Open problems
 

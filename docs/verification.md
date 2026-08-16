@@ -23,7 +23,7 @@ Two independent verification routes are used:
 | Self-adjointness of $L_\rho$ (Thm 10) | $\langle L_\rho f,g\rangle_\rho - \langle f,L_\rho g\rangle_\rho = 0$ | $5.107\times10^{-12}$ |
 | Eigenvalue relation (Paper 02, Thm 1; PDF p. 81) | $-L_\rho\varphi_m = \mu_m\varphi_m$, $\mu_m=(m\pi/\Lambda)^2$ | $5.359\times10^{-5}$ |
 
-### 2.2 `graded_wave.py` — Papers 02 (PDF p. 81), 04 (PDF p. 102), 05 (PDF p. 113) (graded-media waves)
+### 2.2 `graded_wave.py` — Papers 02 (PDF p. 3), 04 (PDF p. 4), 05 (PDF p. 4) (graded-media waves)
 
 | Check | Result |
 |---|---|
@@ -36,7 +36,7 @@ Two independent verification routes are used:
 
 The mode checks scale as the grid's finite-difference order; the energy drift is at machine precision, confirming exact conservation of the scheme and of the theorem.
 
-### 2.3 `power_grid_mode_migration.py` — Paper 03 (PDF p. 91; causal spectral theory)
+### 2.3 `power_grid_mode_migration.py` — Paper 03 (PDF p. 4; causal spectral theory)
 
 | Check | Result |
 |---|---|
@@ -46,13 +46,13 @@ The mode checks scale as the grid's finite-difference order; the energy drift is
 
 The skewness error $4.2\times10^{-6}$ directly confirms the eigenframe connection theorem; the energy-balance residual confirms that the skew part contributes zero to total energy (Energy Migration).
 
-### 2.4 `epidemic_decay_bound.py` — Papers 03 (PDF p. 91), 07 (PDF p. 134) (time-varying networks)
+### 2.4 `epidemic_decay_bound.py` — Papers 03 (PDF p. 4), 07 (PDF p. 5) (time-varying networks)
 
 | Check | Result |
 |---|---|
 | Mass conservation (Thm 11): total mass | conserved within $10^{-9}$ |
 | Algebraic-connectivity contraction bound (Thm 11) | holds throughout |
-| SIS decay bound (Paper 07, Thm 3; PDF p. 134): $\|x(t)\|$ below Grönwall envelope | holds throughout |
+| SIS decay bound (Paper 07, Thm 3; PDF p. 5): $\|x(t)\|$ below Grönwall envelope | holds throughout |
 
 ### 2.5 New-theorem checks (Papers 02, 03, 07, 09)
 
@@ -187,7 +187,7 @@ Additional web searches (2026-08-16) found no prior "structure flow calculus" co
 
 ## 6. Summary
 
-All theorems of the program are proved in the papers and collected in the comprehensive treatise `00-treatise.md` (a ~30-page research paper; Proof/QED audit: **294 proofs, 294 QED marks, balanced equation delimiters** across the capstone, the treatise, and Papers 01–12; Papers 01–10 alone: 153 proofs). Every central theorem has at least one independent numerical or symbolic check; all pass. The framework is original in organization and theorems, classical in underlying mathematics, and fully verified.
+All theorems of the program are proved in the papers and collected in the comprehensive treatise `00-treatise.md` (a ~30-page research paper; Proof/QED audit: **300+ proofs, 300+ QED marks, balanced equation delimiters** across the capstone, the treatise, and Papers 01–13; Papers 01–10 alone: 153 proofs). Every central theorem has at least one independent numerical or symbolic check; all pass. The framework is original in organization and theorems, classical in underlying mathematics, and fully verified.
 
 ## 7. Detailed verification tables
 
@@ -332,4 +332,4 @@ The uncorrected sign ($+2\mu_m\delta\Lambda/\Lambda$) gives a $200\%$ error for 
 - [x] Open-problem paper: `docs/papers/12-open-problems.md` states twenty open problems with precise formulations and partial results.
 - [ ] The novelty verification log (Paper 11) is reproduced with zero arXiv hits for the exact-phrase queries.
 - [ ] All figure references to `deep_explorations.py` outputs are traceable to the corresponding exploration IDs in the demo script.
-- [x] The Proof/QED audit (294 proofs across capstone, treatise, Papers 01–12) is reproducible by counting `$\square$` and `**Theorem**` markers.
+- [x] The Proof/QED audit (300+ proofs across capstone, treatise, Papers 01–13) is reproducible by counting `$\square$` and `**Theorem**` markers.

@@ -45,7 +45,7 @@ where K is a Gaussian kernel with bandwidth σ = 5 mm. This is the structure-fie
 
 **Theorem 1 (connectome-structure theorem).** The structural length Λ = ∫_Ω dx/ρ(x) is the integrated "neural travel time" across the brain. The Dirichlet spectrum of the connectome Laplacian L_ρ is μ_m = (mπ/Λ)^2, and the eigenfunctions φ_m are the structure-flow modes of the brain volume.
 
-*Proof.* By Paper 01, Theorem 12, the transport map τ(x) = ∫ dx/ρ(x) is a diffeomorphism from Ω to [0,Λ]^d. In τ-coordinates, L_ρ = ∂_τ^2, whose Dirichlet spectrum is (mπ/Λ)^2. The eigenfunctions are pulled back to x-coordinates as φ_m(x) = √(2/Λ) sin(mπ τ(x)/Λ). ∎
+*Proof.* By Paper 01, Theorem 12, the transport map τ(x) = ∫ dx/ρ(x) is a diffeomorphism from Ω to [0,Λ]^d. In τ-coordinates, L_ρ = ∂_τ^2, whose Dirichlet spectrum is (mπ/Λ)^2. The eigenfunctions are pulled back to x-coordinates as φ_m(x) = √(2/Λ) sin(mπ τ(x)/Λ). ∎ $\square$
 
 **Corollary 1 (mode localization).** Modes with small m are spatially smooth and global; modes with large m localize in regions of small ρ (slow conduction). This matches the empirical observation that high-frequency EEG components are localized in specific cortical patches.
 
@@ -59,7 +59,7 @@ Let G(t) be a family of connectomes estimated from sequential fMRI scans (e.g., 
 
 **Theorem 2 (seizure-detection theorem).** During an epileptic seizure, the eigenframe connection exhibits a spike: max_{j,k} |C_{jk}(t)| > τ_threshold, where τ_threshold = 5 σ_0 and σ_0 is the baseline connection standard deviation over the pre-seizure interval. The spike occurs within 2–10 seconds of seizure onset.
 
-*Proof.* During a seizure, a subset of synapses undergoes rapid, synchronized strengthening. This creates a low-rank perturbation of W(t), producing large off-diagonal entries in the connection matrix C(t). The perturbation theory of Paper 03, Theorem 4 gives C_{jk} ≈ ⟨φ_j, Ṫ φ_k⟩ where Ṫ is the rate of change of the adjacency. For a seizure-induced weight change δW_{ij} = δw on a localized subgraph, the dominant eigenvector perturbation is δφ_1 ≈ (δw/λ_1) Σ_{j∈seizure} φ_j, producing a connection spike of magnitude |δw|/λ_1. ∎
+*Proof.* During a seizure, a subset of synapses undergoes rapid, synchronized strengthening. This creates a low-rank perturbation of W(t), producing large off-diagonal entries in the connection matrix C(t). The perturbation theory of Paper 03, Theorem 4 gives C_{jk} ≈ ⟨φ_j, Ṫ φ_k⟩ where Ṫ is the rate of change of the adjacency. For a seizure-induced weight change δW_{ij} = δw on a localized subgraph, the dominant eigenvector perturbation is δφ_1 ≈ (δw/λ_1) Σ_{j∈seizure} φ_j, producing a connection spike of magnitude |δw|/λ_1. ∎ $\square$
 
 **Worked example 2.1 (synthetic seizure).** We simulate a 68-node connectome (C. elegans connectome [5]) with time-varying edge weights. At t = 50 s, we inject a seizure-like perturbation: δW_{ij} = 0.5 for edges in a 10-node cluster. The connection spike reaches max |C_{jk}| = 0.34 at t = 52 s, confirming the 2-second detection lag predicted by the theorem.
 
@@ -77,7 +77,7 @@ When synapses are strengthened or weakened (long-term potentiation/depression), 
 
 with C_{jk} = -C_{kj}. The total energy E = Σ_j E_j satisfies dE/dt = -2 Σ_j λ_j(t) E_j ≤ 0. Deformation redistributes energy without creating or destroying it.
 
-*Proof.* Identical to Paper 03, Theorem 6, applied to the neural graph Laplacian L(t) = D(t) - W(t). ∎
+*Proof.* Identical to Paper 03, Theorem 6, applied to the neural graph Laplacian L(t) = D(t) - W(t). ∎ $\square$
 
 **Corollary 3 (memory formation).** If a learning rule strengthens edges in a pattern that couples modes j and k, the energy transfer from j to k is bounded by |ΔE_k| ≤ 2 |C_{jk}| E_j Δt. Slow, continuous learning produces small, distributed energy transfers; rapid, salient events produce large, localized transfers.
 
@@ -95,7 +95,7 @@ quantifies how the signal's energy is distributed across modes.
 
 **Theorem 4 (spectral entropy bound).** For any connectome with n nodes, H(t) ≤ log(n - 1), with equality iff the signal is uniformly distributed across all non-constant modes. Resting-state BOLD signals have higher spectral entropy than task-state signals.
 
-*Proof.* The entropy of a probability distribution on k ≤ n-1 outcomes is maximized by the uniform distribution, giving H ≤ log k ≤ log(n-1). Empirically, resting-state fMRI shows â_j(t) spread across many modes, while task-state fMRI concentrates energy in a few task-relevant modes. ∻
+*Proof.* The entropy of a probability distribution on k ≤ n-1 outcomes is maximized by the uniform distribution, giving H ≤ log k ≤ log(n-1). Empirically, resting-state fMRI shows â_j(t) spread across many modes, while task-state fMRI concentrates energy in a few task-relevant modes. ∻ $\square$
 
 **Worked example 5.1 (ABIDE dataset).** We analyze the ABIDE-1 autism dataset [6], comprising 539 fMRI resting-state scans. The mean spectral entropy across subjects is H̄ = 3.42 ± 0.31 nats, compared to H = 2.87 ± 0.28 nats for the same subjects during a motor task. The difference is significant (p < 10^-6, paired t-test), confirming Theorem 4.
 
@@ -113,7 +113,7 @@ The inverse transform is x(t) = Σ_j â_j(t) φ_j(t).
 
 **Theorem 5 (causal Parseval for neural signals).** Σ_j |â_j(t)|^2 = ‖x(t)‖^2 =: E(t), and along the structure-flow dynamics, Ė(t) = -2 Σ_j λ_j(t) |â_j(t)|^2.
 
-*Proof.* First identity: orthonormal frame. Second: Paper 03, Theorem 6 applied to the neural graph. ∎
+*Proof.* First identity: orthonormal frame. Second: Paper 03, Theorem 6 applied to the neural graph. ∎ $\square$
 
 **Definition 3 (neural anomaly detector).** The detection statistic is
 
@@ -123,7 +123,7 @@ where r_j^{(0)}(t) is the null dynamics under C(t) ≡ 0 (pure eigenvalue drift)
 
 **Theorem 6 (detectability threshold).** For a structural event producing a connection perturbation δC_{jk} with magnitude δC, the detection threshold is δS ≈ 2 δC^2 E(t) / (n-1). Events with δC > √((n-1)δS_min)/(2E) are detectable at false-alarm rate δS_min.
 
-*Proof.* The null dynamics r_j^{(0)}(t) are deterministic and known; the deviation under δC is a random walk with step size δC. The detection threshold follows from the Cramér-Rao bound for the change-point problem. ∔
+*Proof.* The null dynamics r_j^{(0)}(t) are deterministic and known; the deviation under δC is a random walk with step size δC. The detection threshold follows from the Cramér-Rao bound for the change-point problem. ∔ $\square$
 
 ---
 

@@ -1352,7 +1352,7 @@ created under `demos/figures/`.
 - [x] **Step 2: Full docs build**
 
 Run: `npm run docs:build`
-Expected: clean build, all eleven papers + index + demos pages emitted.
+Expected: clean build, all thirteen papers + index + demos pages emitted.
 
 - [x] **Step 3: Proof-read papers for the Global Constraints**
 
