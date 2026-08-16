@@ -201,7 +201,7 @@ Structure-Flow Calculus is a mature framework with proved theorems and verified 
 ---
 
 <p align="center">
-  <strong>Structure-Flow Calculus Working Group</strong> — 2026-08-16
+  <strong>Mrityunjay K</strong> — 2026-08-16
   <br>
   <em>Every theorem proved. Every central theorem verified numerically. Every claim honest.</em>
 </p>

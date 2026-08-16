@@ -60,7 +60,7 @@ vite: {
       }
     ],
     footer: {
-      message: 'Structure-Flow Calculus Working Group',
+      message: 'Mrityunjay K',
       copyright: 'Every theorem proved, every central claim verified numerically.'
     }
   },
