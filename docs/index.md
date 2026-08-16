@@ -2,15 +2,15 @@
 
 **A new stream in mathematics and physics.**
 
-Structure-Flow Calculus (SFC) is a mathematical framework in which the *differential structure of space is itself a dynamical field*. A positive function $\rho$ — the **structure field** — generates a complete calculus, a spectral theory, a variational theory, and a network theory, all with proven theorems and numerical verification.
+Structure-Flow Calculus (SFC) is a mathematical framework in which the *differential structure of space is itself a dynamical field*. A single positive function $\rho$ — the **structure field** — generates a complete calculus, a spectral theory, a variational theory, and a network theory. Every theorem is proved; every central theorem is verified numerically.
 
 Read the [program statement](/overview), the [capstone paper](/papers/00-capstone), the [comprehensive treatise](/papers/00-treatise) (~30 pages, self-contained), the [verification report](/verification), or the [roadmap](/roadmap).
 
 ## Why it matters
 
-- **Graded media.** Closed-form modes for wave propagation in impedance-matched graded media (paper 02).
-- **Power networks.** Mode energy migration as a grid is stressed — a proven redistribution law (paper 03).
-- **Adaptive contact networks.** Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (paper 03).
+- **Graded media.** Closed-form modes for wave propagation in impedance-matched graded media, and reflectionless design (Paper 02, Paper 05).
+- **Power networks.** Mode-energy migration as a grid is stressed — a proven redistribution law that exposes the vulnerable modes (Paper 03, Paper 06).
+- **Adaptive contact networks.** Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Paper 03, Paper 07).
 
 ## Research papers
 
@@ -32,4 +32,4 @@ Every theorem is proved in the paper in which it appears. Every central theorem 
 
 ## Demos
 
-See the [demos page](/demos).
+Four runnable scripts turn the central theorems into numbers and double as regression tests. See the [demos page](/demos).
