@@ -1,13 +1,21 @@
 import { defineConfig } from 'vitepress'
-import katex from 'markdown-it-katex'
+import katexModule from '@vscode/markdown-it-katex'
+
+const katex = (katexModule as any).default ?? katexModule
 
 export default defineConfig({
   title: 'Structure-Flow Calculus',
   description: 'A new stream in mathematics and physics',
   lastUpdated: true,
+  srcExclude: ['**/superpowers/**', '**/papers/archive/**'],
   markdown: {
     config(md) {
       md.use(katex, { throwOnError: false })
+    }
+  },
+vite: {
+    build: {
+      chunkSizeWarningLimit: 2500
     }
   },
   themeConfig: {
