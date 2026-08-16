@@ -4,11 +4,11 @@
 
 *Received 2026-08-16*
 
-**Abstract.** We couple fields to the structure field through an action principle in the $\rho$-calculus. Varying the field $u$ gives the Structure-Flow Euler-Lagrange equation; varying the structure $\rho$ gives a *structure-stationarity* constraint; the Hamiltonian formulation yields the canonical equations and a symplectic structure. We prove a Noether-type conservation theorem for joint field-structure symmetries and derive, as its concrete instances, energy conservation (time translation) and momentum conservation (space translation). We characterize structure-stationary configurations, prove the energy functional is bounded below in the free case, and give the Euler-Lagrange equations for coupled field-structure dynamics. All conservation statements are verified numerically.
+**Abstract.** We couple fields to the structure field through an action principle in the $\rho$-calculus. Varying the field $u$ gives the Structure-Flow Euler–Lagrange equation; varying the structure $\rho$ gives a *structure-stationarity* constraint; the Hamiltonian formulation yields the canonical equations and a symplectic structure. We prove a Noether-type conservation theorem for joint field-structure symmetries and derive, as its concrete instances, energy conservation (time translation) and momentum conservation (space translation). We characterize structure-stationary configurations, prove the energy functional is bounded below in the free case, and give the Euler–Lagrange equations for coupled field-structure dynamics. All conservation statements are verified numerically.
 
-**Keywords:** calculus of variations, structure field, Euler-Lagrange equations, Noether's theorem, Hamiltonian dynamics, structure stationarity.
+**Keywords:** calculus of variations, structure field, Euler–Lagrange equations, Noether's theorem, Hamiltonian dynamics, structure stationarity.
 
-**Original Contributions.** The paper sets up the field-structure action in the $\rho$-calculus and proves the structure-flow Euler-Lagrange equations (Theorem 1) together with the *structure-stationarity* constraint obtained by varying $\rho$ (Theorem 3). New results include the Hamiltonian and canonical formulation with the corrected kinetic term $\tfrac12\rho^2\pi^2$ (Theorem 4), the Noether-type conservation theorem for joint field-structure symmetries (Theorem 8) with energy and momentum as concrete instances (Theorems 5, 6), and the $\kappa$-regularized coupled field-structure theory with its corrected coupled equation (Theorem 10), verified symbolically with `sympy`.
+**Original Contributions.** The paper sets up the field-structure action in the $\rho$-calculus and proves the structure-flow Euler–Lagrange equations (Theorem 1) together with the *structure-stationarity* constraint obtained by varying $\rho$ (Theorem 3). New results include the Hamiltonian and canonical formulation with the corrected kinetic term $\tfrac12\rho^2\pi^2$ (Theorem 4), the Noether-type conservation theorem for joint field-structure symmetries (Theorem 8) with energy and momentum as concrete instances (Theorems 5, 6), and the $\kappa$-regularized coupled field-structure theory with its corrected coupled equation (Theorem 10), verified symbolically with `sympy`.
 
 ---
 
@@ -145,7 +145,7 @@ $$S_\kappa[u,\rho] = S[u,\rho] - \frac{\kappa}{2}\int_0^T\!\!\int_I \rho_x^2\, d
 $$\kappa\Big(\rho\,\rho_{xx} - \tfrac12 \rho_x^2\Big) = \tfrac12 u_t^2 + \tfrac12 \rho^2 u_x^2 + \rho\, V_\rho - V, \tag{19}$$
 
 a quasilinear elliptic equation for $\rho$.
-*Proof.* In the $dx$-form $\mathcal{L}_\kappa = \frac{1}{\rho}(\tfrac12 u_t^2 - \tfrac12 \rho^2 u_x^2 - V) - \frac{\kappa}{2}\frac{\rho_x^2}{\rho}$, the Euler-Lagrange equation in $\rho$ is
+*Proof.* In the $dx$-form $\mathcal{L}_\kappa = \frac{1}{\rho}(\tfrac12 u_t^2 - \tfrac12 \rho^2 u_x^2 - V) - \frac{\kappa}{2}\frac{\rho_x^2}{\rho}$, the Euler–Lagrange equation in $\rho$ is
 $$0 = \partial_\rho \mathcal{L}_\kappa - \partial_x \partial_{\rho_x} \mathcal{L}_\kappa = -\frac{u_t^2}{2\rho^2} - \frac{u_x^2}{2} - \frac{V_\rho}{\rho} + \frac{V}{\rho^2} + \kappa\Big(\frac{\rho_{xx}}{\rho} - \frac{\rho_x^2}{2\rho^2}\Big),$$
 using $\partial_{\rho_x}\mathcal{L}_\kappa = -\kappa\rho_x/\rho$ and $\partial_x(-\kappa\rho_x/\rho) = -\kappa\rho_{xx}/\rho + \kappa\rho_x^2/\rho^2$. Multiplying by $\rho^2$ yields (19). $\square$
 

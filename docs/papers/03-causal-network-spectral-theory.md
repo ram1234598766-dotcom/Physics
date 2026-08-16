@@ -126,7 +126,7 @@ $$\dot\lambda_j = \langle \varphi_j, \dot L\,\varphi_j\rangle. \tag{11}$$
 
 $$\text{minimize } \frac{1}{2}\sum_j \|\dot\varphi_j\|^2 \quad \text{subject to } \langle\varphi_j,\dot\varphi_k\rangle + \langle\dot\varphi_j,\varphi_k\rangle = 0. \tag{12}$$
 
-*Proof.* The constraint is the differentiated orthonormality condition. Introduce Lagrange multipliers $\mu_{jk}$ for the constraints; the Euler-Lagrange condition is $\ddot\varphi_j = \sum_k \mu_{jk}\varphi_k$. At the level of the instantaneous connection, the minimal-norm antisymmetric connection is unique and is precisely (5); the eigenframe is the unique frame whose connection is $C_{kj} = \langle\varphi_j,\dot L\varphi_k\rangle/(\lambda_j - \lambda_k)$. This is the standard minimal-connection (gauge) statement for eigenbundles [6]. $\square$
+*Proof.* The constraint is the differentiated orthonormality condition. Introduce Lagrange multipliers $\mu_{jk}$ for the constraints; the Euler–Lagrange condition is $\ddot\varphi_j = \sum_k \mu_{jk}\varphi_k$. At the level of the instantaneous connection, the minimal-norm antisymmetric connection is unique and is precisely (5); the eigenframe is the unique frame whose connection is $C_{kj} = \langle\varphi_j,\dot L\varphi_k\rangle/(\lambda_j - \lambda_k)$. This is the standard minimal-connection (gauge) statement for eigenbundles [6]. $\square$
 
 **Corollary 7 (physical interpretation).** The eigenframe is the frame that "moves as little as possible" while tracking the spectrum: mode migration is minimal in the least-squares sense.
 *Proof.* Theorem 8. $\square$

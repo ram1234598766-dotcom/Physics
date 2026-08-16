@@ -48,7 +48,7 @@ For auditability, the table below maps the central result of each paper to the s
 | 03 | Skew-symmetric eigenframe connection | Thm 4 | demo: $4.2\times10^{-6}$ |
 | 03 | Energy Migration Theorem | Thm 6 | demo: energy balance $2.6\times10^{-3}$ |
 | 03 | Contraction via time-integrated algebraic connectivity | Thm 2 | demo: bound holds |
-| 04 | Structure-flow Euler-Lagrange equations | Thm 1 | proof complete |
+| 04 | Structure-Flow Euler–Lagrange equations | Thm 1 | proof complete |
 | 04 | Hamiltonian with corrected kinetic term | Thm 4 | proof complete |
 | 04 | Corrected coupled equation | Thm 10 | `sympy` exact |
 | 05 | Impedance matching / reflectionless design | Thm 1 | proof complete |
@@ -92,7 +92,7 @@ Performed 2026-08-16 against the arXiv API (exact-phrase queries):
 The framework is deliberately *open*: each paper closes its core results and opens directions.
 
 1. **Nonlinear structure-flow dynamics.** Structure coupled back-reaction to the field through the Paper 04 stationarity constraint gives a self-consistent field-structure system; its well-posedness is open.
-2. **Structure-flow on manifolds with boundary and corners** beyond the product-metric case (Paper 09).
+2. **Structure-Flow on manifolds with boundary and corners** beyond the product-metric case (Paper 09).
 3. **Data-driven structure recovery.** Given observations of a field, estimate $\rho$ via structure stationarity (Paper 04) and use the modal-energy detector (Paper 10) for online structure monitoring.
 4. **Random structure fields.** Spectral statistics of $L_\rho$ for random $\rho$ (a "structure-flow Anderson problem").
 5. **Causal GFT in production systems.** Real-time estimation of the eigenframe connection $C(t)$ from streaming signals (Paper 10) — the enabling computation for early-warning systems.

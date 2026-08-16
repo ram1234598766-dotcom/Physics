@@ -135,7 +135,7 @@ SFC claims *integration and theorems*, not new fundamental physics. The physical
 1. Degenerate spectral flow (eigenvalue crossings) for the eigenframe connection.
 2. Nonlinear structure-field dynamics from the coupled equation (7).
 3. Stochastic structure fields and probabilistic analogues of Theorem 13.
-4. Structure-flow inverse problems beyond identifiability.
+4. Structure-Flow inverse problems beyond identifiability.
 5. Relativistic structure-field theory (Klein–Gordon reading of $\partial_t^2 - L_\rho$).
 
 ## X. CONCLUSION

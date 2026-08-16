@@ -2,7 +2,7 @@
 
 **Structure-Flow Calculus Working Group**
 
-*2026-08-16*
+*Received 2026-08-16*
 
 **Abstract.** This treatise presents the Structure-Flow Calculus (SFC) in full detail: the axioms and the $\rho$-calculus, the transport theorem and its consequences, the spectral theory of the structure Laplacian, the causal spectral theory of time-varying operators, the variational and conservation structure, the engineering results for graded media, the applications to power networks and adaptive epidemics, the numerical methods, the higher-dimensional theory, and the signal-processing pipeline. Every theorem is stated with a complete proof and a pointer to its numerical or symbolic verification. The treatise is self-contained: it derives the transport map from first principles, builds the spectral theory on it, and carries the reader from a single positive function $\rho$ to the ten contributions of the program. Worked examples with explicit numbers accompany each part, a dedicated derivation appendix (Part IX) reconstructs every central identity step by step, and a numerical casebook collects the audited verification numbers of the whole program. The honest novelty statement and the open problems close the volume.
 
@@ -935,12 +935,12 @@ SFC is an integrated framework with proved theorems; it does not claim new funda
 1. **Degenerate spectral flow.** The eigenframe connection at eigenvalue crossings ($\lambda_j = \lambda_k$) is undefined by (3.2); an adiabatic/level-repulsion extension is open.
 2. **Nonlinear structure-field dynamics.** The coupled equation (4.6) is the $\kappa$-regularized start; a full nonlinear theory of $\rho$-evolution with its own Lagrangian is open.
 3. **Stochastic structure fields.** Time-varying graphs with random weights make $L(t)$ a stochastic operator; probabilistic analogues of (3.1) via large-deviation bounds are open.
-4. **Structure-flow inverse problems.** Theorem 1.16 gives identifiability; reconstruction algorithms and stability estimates beyond the mean-value bounds are open.
+4. **Structure-Flow inverse problems.** Theorem 1.16 gives identifiability; reconstruction algorithms and stability estimates beyond the mean-value bounds are open.
 5. **Relativistic structure-field theory.** The operator $\partial_t^2 - L_\rho$ has a Klein–Gordon reading; a relativistic structure-field theory and its quantization are untouched.
 6. **Random structure fields and spectral statistics.** A "structure-flow Anderson problem" for random $\rho$.
 7. **Optimal structure design.** Prescribing $\rho$ to achieve a target spectrum (bandgaps, resonances) is a natural inverse-spectral-design problem.
 8. **Time-varying product metrics.** The higher-dimensional theory of Part VI is static; a time-dependent structure field $\rho(t)$ in $d \ge 2$ would couple the eigenframe connections of Part III to the product geometry, and no analogue of (3.2) is yet formulated there.
-9. **Structure-flow hydrodynamics.** The transport map $\tau = \int dx/\rho$ defines a Lagrangian flow; interpreting $\rho$ as a density of a continuum and $L_\rho$ as its advective operator suggests a fluid-dynamical reading of the energy identities, for which a rigorous existence theory is open.
+9. **Structure-Flow hydrodynamics.** The transport map $\tau = \int dx/\rho$ defines a Lagrangian flow; interpreting $\rho$ as a density of a continuum and $L_\rho$ as its advective operator suggests a fluid-dynamical reading of the energy identities, for which a rigorous existence theory is open.
 10. **Observability and reconstruction.** Theorem 1.16 guarantees identifiability of $\rho$ from the calculus; algorithmic reconstruction from boundary measurements — the "structure-flow inverse problem" of item 4 with stability estimates — is the natural completion of the design results of Part V.
 
 Each of these problems has a concrete first step supplied by the treatise: item 1 by the level-repulsion analysis of Paper 03, item 2 by the coupled equation (4.6), item 3 by the Perron–Frobenius machinery of Paper 07, item 4 by the transport-map derivative identities of Part I, item 7 by the design formula $\Lambda = \pi c_0/\omega$ of §29.1, and item 8 by the product metric of Part VI. The program is deliberately bounded: every statement in this treatise is a proved theorem with a reproduced verification, and the open problems mark the honest frontier beyond it.

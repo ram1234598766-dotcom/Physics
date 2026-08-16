@@ -20,7 +20,7 @@ This document maps how the eleven papers and four demos fit together, states the
    │        ├── 07 Epidemiology on Adaptive Networks
    │        └── 10 Causal Graph-Time Signal Processing
    │
-   ├── 04 Variational & Conservation Theory ── EL equations, Noether laws, Hamiltonian, coupled theory
+   ├── 04 Variational & Conservation Theory ── Euler–Lagrange equations, Noether laws, Hamiltonian, coupled theory
    │
    └── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
 ```
@@ -42,7 +42,7 @@ This document maps how the eleven papers and four demos fit together, states the
 | 01 | Foundations | Transport theorem; uniqueness of the calculus | `verify_calculus.py` |
 | 02 | Structure Spectral Theory | Closed-form spectrum & resolvent; energy conservation | `verify_calculus.py`, `graded_wave.py` |
 | 03 | Causal Network Spectral Theory | Skew connection; Energy Migration; contraction | `power_grid_mode_migration.py`, `epidemic_decay_bound.py` |
-| 04 | Variational & Conservation | EL equations; Hamiltonian; corrected coupled equation | `graded_wave.py`, `sympy` |
+| 04 | Variational & Conservation | Euler–Lagrange equations; Hamiltonian; corrected coupled equation | `graded_wave.py`, `sympy` |
 | 05 | Graded Media Engineering | Impedance matching; flux $J=-Kp_tp_x$; transport identity | `graded_wave.py`, audit check |
 | 06 | Power Networks & Synchronization | Sync rates; time-to-sync; early warning | `power_grid_mode_migration.py` |
 | 07 | Epidemiology on Adaptive Networks | Outbreak bounds; extinction time; interventions | `epidemic_decay_bound.py` |
@@ -58,7 +58,7 @@ This document maps how the eleven papers and four demos fit together, states the
 - **Paper 01:** 19 theorems, 3 corollaries. Core: Transport (Thm 12), Uniqueness of field (Thm 13), Uniqueness of calculus (Thm 19), Energy identity (Thm 17).
 - **Paper 02:** 10+ theorems. Core: Spectrum (Thm 1), Closed-form evolution (Thm 3), Energy conservation (Thm 5), Resolvent (Thm 6), Perturbation (Thm 9), Eigenfunction perturbation (Thm 10) + localization (Cor 10).
 - **Paper 03:** 7+ theorems. Core: Mass conservation (Thm 1), Contraction (Thm 2), Eigenframe connection (Thm 4), Modal ODEs (Thm 5), Energy Migration (Thm 6), Migration suppression (Thm 6b) + deformation-limited migration (Cor 5b), Sensitivity (Thm 7).
-- **Paper 04:** 10 theorems. Core: EL equations (Thm 1), Structure stationarity (Thm 3), Hamiltonian (Thm 4), Momentum (Thm 6), Coupled equation (Thm 10).
+- **Paper 04:** 10 theorems. Core: Euler–Lagrange equations (Thm 1), Structure stationarity (Thm 3), Hamiltonian (Thm 4), Momentum (Thm 6), Coupled equation (Thm 10).
 - **Paper 05:** 7+ theorems. Core: Impedance matching (Thm 1), Modes (Thm 2), Flux (Thm 6), Transport identity (Thm 7), Mode count (Thm 8).
 - **Paper 06:** 5+ theorems. Core: Sync rate (Thm 2), Time-to-sync (Thm 3), Energy migration (Thm 5), Early warning (Thm 6).
 - **Paper 07:** 6+ theorems. Core: Decay bound (Thm 3), Extinction time (Cor 2), Sensitivity (Thm 4), Optimal single-edge intervention (Thm 4b).

@@ -217,7 +217,7 @@ To justify the phrase "complete calculus," we collect the defining properties of
 1. **Graded-media acoustics.** The energy identity (Theorem 17) and Poincaré inequality (Corollary 4) convert the graded-medium wave equation of Paper 02 into a spectral problem with closed-form modes (Papers 02, 05).
 2. **Signal modeling.** The transport map (Theorem 12) is the coordinate system in which a graded sensor becomes uniform (Paper 10); Theorem 13 guarantees the map is unambiguously recoverable.
 3. **Inverse problems.** The uniqueness theorem (Theorem 13) and the mean-value theorems (15)–(16) provide the identifiability and stability estimates for structure recovery (Papers 04, 10).
-4. **Variational theory.** The adjoint pair (Theorem 9) and integration by parts (Theorem 7) are the integration-by-parts steps of the Euler-Lagrange derivation in Paper 04.
+4. **Variational theory.** The adjoint pair (Theorem 9) and integration by parts (Theorem 7) are the integration-by-parts steps of the Euler–Lagrange derivation in Paper 04.
 5. **Numerics.** The Poincaré constant $\Lambda^2/\pi^2$ (Corollary 4) is the sharp stability bound used by the spectral schemes of Paper 08.
 6. **Network theory.** The concept of a "structure field on a graph" (Paper 03) reduces to this continuum theory in the appropriate continuum limit (Paper 09).
 
