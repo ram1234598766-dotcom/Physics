@@ -33,7 +33,37 @@ As an integrated construction with proven theorems it is, to the best of our kno
 - SFC's individual ingredients — Sturm-Liouville theory, graph signal processing, the calculus of variations, Noether's theorem, Riemannian metrics — are classical and are cited as such throughout the series.
 - Absence of a documented prior construction is evidence of novelty, not proof of it; readers are invited to falsify the claim.
 
-## IV. NOVELTY VERIFICATION LOG
+## IV. NOVELTY MATRIX
+
+For auditability, the table below maps the central result of each paper to the status of its proof and its numerical verification. This is a *transparency* table: it states exactly where each result is proved and what evidence supports it, without over- or under-claiming.
+
+| Paper | Central result | Theorem | Verification |
+|---|---|---|---|
+| 01 | Transport: $\rho$-calculus = ordinary calculus on the $\tau$-axis | Thm 12 | demo: Fundamental Theorem $1.6\times10^{-9}$ |
+| 01 | Uniqueness of the calculus compatible with $d\rho$ | Thm 19 | proof complete |
+| 02 | Closed-form spectrum $\mu_m = (m\pi/\Lambda)^2$ | Thm 1 | demo: $5.4\times10^{-5}$ |
+| 02 | Closed-form resolvent kernel | Thm 6 | audit: $1.5\times10^{-3}$ |
+| 02 | Exact energy conservation | Thm 5 | demo: drift $1.1\times10^{-13}$ |
+| 02 | Eigenvalue perturbation (corrected sign) | Thm 9 | audit: $0.05\%$ |
+| 03 | Skew-symmetric eigenframe connection | Thm 4 | demo: $4.2\times10^{-6}$ |
+| 03 | Energy Migration Theorem | Thm 6 | demo: energy balance $2.6\times10^{-3}$ |
+| 03 | Contraction via time-integrated algebraic connectivity | Thm 2 | demo: bound holds |
+| 04 | Structure-flow Euler-Lagrange equations | Thm 1 | proof complete |
+| 04 | Hamiltonian with corrected kinetic term | Thm 4 | proof complete |
+| 04 | Corrected coupled equation | Thm 10 | `sympy` exact |
+| 05 | Impedance matching / reflectionless design | Thm 1 | proof complete |
+| 05 | Energy flux $J=-Kp_tp_x$ in transport form | Thm 7 | audit: $9.5\times10^{-4}$ |
+| 06 | Synchronization rate with worst-case floor | Thm 3 | demo: spectral flow |
+| 07 | SIS decay bound with sup-ceiling | Thm 3/Cor 2 | demo: bound holds |
+| 08 | Spectral convergence / CFL bound | Thm 1/Thm 6 | demo: graded-wave |
+| 09 | Product-metric isometry to Euclidean box | Thm 2 | audit: separation residual |
+| 09 | Closed-form product spectra | Thm 7 | audit: $10^{-4}$–$10^{-3}$ |
+| 09 | Weyl law with product volume | Thm 6 | audit: ratio → 1 |
+| 10 | Causal GFT and modal ODEs | Thm 1–2 | demo: forward model |
+
+**Reading the matrix.** A "proof complete" entry means the theorem carries a full proof in the cited paper. A demo entry refers to a runnable script in `demos/` that reproduces the stated error. An audit entry refers to a one-off numerical check performed during the verification pass of 2026-08-16 (documented in the Verification Report). No entry is asserted beyond what the proof or the measured number supports.
+
+## V. NOVELTY VERIFICATION LOG
 
 Performed 2026-08-16 against the arXiv API (exact-phrase queries):
 
@@ -48,7 +78,7 @@ Performed 2026-08-16 against the arXiv API (exact-phrase queries):
 
 **Limitations.** (i) arXiv covers only arXiv; journals, preprints, and older literature are not covered. (ii) Combined-phrase absence does not rule out closely-adjacent constructions under different names. (iii) The verification is a snapshot in time. This log is included for transparency and should be treated as evidence, not guarantee.
 
-## V. RELATIONSHIP TO NEIGHBORING FIELDS
+## VI. RELATIONSHIP TO NEIGHBORING FIELDS
 
 - **Sturm-Liouville theory [1].** $L_\rho = \rho(\rho u_x)_x$ is a special Sturm-Liouville operator. SFC adds the structure-field *interpretation* and the transport map (Paper 01, Theorem 12) that yields the closed-form spectrum; Paper 02 makes this explicit.
 - **Graph signal processing [2,3].** Static in [2]; SFC treats time-varying families, the eigenframe connection, and modal-energy migration (Papers 03, 10).
@@ -57,7 +87,7 @@ Performed 2026-08-16 against the arXiv API (exact-phrase queries):
 - **Conformal geometry [4].** Paper 09's metric is the product (anisotropic) rescaling $g_\rho = \sum_j \rho_j^{-2}dx_j^2$ (the conformal case when all profiles coincide); SFC's contribution is the structure-field presentation and the closed-form product-domain spectra.
 - **General relativity.** A metric field is dynamical there too, but SFC's $\rho$ is a scale field with no Lorentzian structure; no claim of relation is made.
 
-## VI. THE RESEARCH PROGRAM
+## VII. THE RESEARCH PROGRAM
 
 The framework is deliberately *open*: each paper closes its core results and opens directions.
 
@@ -68,13 +98,13 @@ The framework is deliberately *open*: each paper closes its core results and ope
 5. **Causal GFT in production systems.** Real-time estimation of the eigenframe connection $C(t)$ from streaming signals (Paper 10) — the enabling computation for early-warning systems.
 6. **Graded-media inverse design at scale.** Transport-based design (Paper 05) for multi-dimensional, multi-physics devices (Paper 09).
 
-## VII. HOW TO READ THE SERIES
+## VIII. HOW TO READ THE SERIES
 
 - **Mathematician:** Papers 01–04, 09 are the core; applications (05–07) are illustrations.
 - **Engineer:** Papers 05–08, 10 carry the design rules; each is backed by a runnable demo.
 - **Skeptic:** This paper, and the verification demos, are the place to test the claims.
 
-## VIII. CONCLUSION
+## IX. CONCLUSION
 
 SFC claims integration, not invention of physics; it documents its verification transparently, states its non-claims explicitly, and opens a concrete research program. The falsifiability that matters is mathematical: every theorem in the series is proved, and every central theorem is verified numerically by a runnable demo.
 

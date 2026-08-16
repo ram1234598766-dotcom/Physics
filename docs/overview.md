@@ -33,6 +33,7 @@ Every theorem in the program carries a complete proof. The theorems are:
 - **Paper 09 — Higher-Dimensional Structure-Flow.** Product metric, transport isometry, structure Laplacian, divergence and Green's identities, spectral theorem, Weyl law, closed-form spectra on product domains, and the obstruction theorem.
 - **Paper 10 — Causal Graph-Time Signal Processing.** Causal graph Fourier transform, modal ODEs, filtered output, energy-rate dynamics, anomaly bounds, and the truncation theorem.
 - **Paper 11 — Novelty, Literature & Research Program.** The honest novelty statement, the literature survey, and the program.
+- **00 — Comprehensive Treatise (~30 pages).** The self-contained single document of the program: Parts I–IX covering the calculus, the closed-form spectral theory, the causal network theory, the variational theory, the applications, the higher-dimensional theory, the signal-processing pipeline, the honest novelty statement, and a derivation appendix that reconstructs every central identity step by step with a numerical casebook. All 86 proofs are collected with their verification numbers.
 
 ## What is verified
 

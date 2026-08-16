@@ -8,6 +8,8 @@
 
 **Keywords:** power systems, linearized swing equations, synchronization, algebraic connectivity, mode migration, early warning.
 
+**Original Contributions.** The paper translates the causal spectral theory of Paper 03 into concrete power-systems results. New contributions include the synchronization-rate theorem from the time-integrated algebraic connectivity with the worst-case floor $\underline\lambda_2$ (Theorem 3), the modal-energy migration formula exposing the most vulnerable modes during a developing outage (Theorem 5), the vulnerability ordering (Theorem 6), the time-to-synchronization bound (Corollary 3), the outage-detection criterion, and the vulnerability-index formula. The results are verified numerically.
+
 ---
 
 ## I. INTRODUCTION

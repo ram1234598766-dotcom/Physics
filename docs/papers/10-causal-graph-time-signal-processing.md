@@ -8,6 +8,8 @@
 
 **Keywords:** graph signal processing, time-varying graphs, spectral filtering, anomaly detection, modal energy, causal GFT.
 
+**Original Contributions.** The paper builds a complete signal-processing framework on the moving eigenframe. New results include the causal graph Fourier transform (Theorem 1), the spectral-flow filtering equations (Theorem 2), the exactness of the reduced-order modal model (Theorem 3), the causal Parseval identity (Theorem 4), the null-dynamics of the modal-energy ratios (Theorem 5), the detection statistic with its theoretical null behavior, and the detectability-threshold characterization (Theorem 6). The forward model is verified numerically.
+
 ---
 
 ## I. INTRODUCTION

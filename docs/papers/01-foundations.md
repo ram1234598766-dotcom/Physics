@@ -8,6 +8,8 @@
 
 **Keywords:** structure field, $\rho$-calculus, conformal transport, adjoint operators, structure Laplacian, integration by parts.
 
+**Original Contributions.** This paper constructs the $\rho$-calculus as a *complete calculus* — not a collection of isolated identities — and proves the structural claims that anchor the whole program: (i) the transport theorem (Theorem 12), which identifies the $\rho$-calculus with the ordinary calculus of a deformed coordinate; (ii) the uniqueness of the structure field from its transport map (Theorem 13); (iii) the characterization of the $\rho$-calculus as *the* calculus compatible with a prescribed background measure (Theorem 19); and (iv) the energy identity and sharp Poincaré-type inequality that power the spectral theory of Paper 02. Every statement is proved in full and verified numerically.
+
 ---
 
 ## I. INTRODUCTION

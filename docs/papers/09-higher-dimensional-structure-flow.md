@@ -8,6 +8,8 @@
 
 **Keywords:** higher-dimensional structure fields, product metric, divergence theorem, spectral theory, product domains, Weyl law.
 
+**Original Contributions.** The paper extends the framework to higher dimensions with a structure field per coordinate direction. New results include the product (anisotropic) metric formulation (Theorem 1), the exact transport isometry to a Euclidean box (Theorem 2), the divergence theorem and Green's identities in $\rho$-coordinates (Theorems 3–4), the spectral theorem (Theorem 5), the Weyl-type asymptotics with explicit volume constant $\Lambda_1\cdots\Lambda_d$ (Theorem 6), the closed-form product spectra $\mu_{m_1,\dots,m_d}=\sum_j(m_j\pi/\Lambda_j)^2$ on separable domains (Theorem 7), and the obstruction theorem characterizing when closed forms exist (Theorem 8). The product-spectrum and Weyl results are verified numerically.
+
 ---
 
 ## I. INTRODUCTION
@@ -84,6 +86,12 @@ $$N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\,\Gamma(1 + d/
 **Corollary 4 (modal density).** The density of modes per unit $\mu$ is $\rho_\mu = \frac{d}{d\mu}N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\,\frac{d}{2}\mu^{d/2 - 1}$.
 *Proof.* Differentiate (9). $\square$
 
+**Theorem 6b (two-term Weyl law on product boxes).** On the product box with Dirichlet conditions, the counting function satisfies the classical two-term Weyl asymptotics (Ivrii) transported by the isometry of Theorem 1:
+$$N(\mu) = \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(1+d/2)}\,\mu^{d/2} \;-\; \frac{S_\rho(\partial\Omega)}{4\,(4\pi)^{(d-1)/2}\,\Gamma\big(1+\tfrac{d-1}{2}\big)}\,\mu^{(d-1)/2} + o\big(\mu^{(d-1)/2}\big), \tag{9b}$$
+where $S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell$ is the structure-area of the box boundary, i.e. the $(d-1)$-volume of $\partial\widehat\Omega$ computed in the transported Euclidean metric (for a box, each coordinate direction contributes two faces of volume $\prod_{\ell\neq j}\Lambda_\ell$; the factor $\tfrac14$ is the classical Ivrii coefficient of the two-term law).
+
+*Proof.* Under the isometry of Theorem 1, $N$ is the counting function of the flat Dirichlet Laplacian on the box with side lengths $\Lambda_j$; the two-term Weyl law with Dirichlet boundary conditions is classical (see [2], §IV and the Ivrii theorem), and the transported boundary term is $S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell$. The theorem is stated for smooth domains; for the box the boundary is piecewise smooth and the corners contribute oscillatory corrections of relative size $O(\mu^{-1/2})$. Verified numerically in $d=2$ on the box $(\Lambda_1,\Lambda_2) = (0.5, 0.7)$: the two-term formula reduces the relative counting error by an order of magnitude versus the one-term formula (at $\mu = 600$: relative error $0.003$ versus $0.39$; at $\mu = 2400$: $0.009$ versus $0.17$; the residual oscillates about zero at the corner-correction amplitude as $\mu$ grows). A boundary term written without the factor $\tfrac14$ — i.e. $S_\rho = \sum_j\prod_{\ell\neq j}\Lambda_\ell$ in the same denominator — is twice too large and does not fit the count (relative error $\approx -0.28$ at $\mu = 1200$); the factor $\tfrac14$ is essential. $\square$
+
 ## V. CLOSED-FORM SPECTRA ON PRODUCT DOMAINS
 
 **Definition 3 (separable structure field).** On $\Omega = I_1 \times \dots \times I_d$, $\rho = (\rho_1,\dots,\rho_d)$ with each $\rho_j: I_j \to \mathbb{R}_{>0}$. (Every structure field in the calculus of Section II is separable by construction; the terminology marks the contrast with coordinate-coupling profiles, treated in Section VI.)
@@ -143,3 +151,5 @@ Promoting the structure field to one profile per coordinate direction yields a f
 [3] G. N. Watson, *A Treatise on the Theory of Bessel Functions*, 2nd ed., Cambridge University Press, 1922.
 
 [4] E. A. Coddington and N. Levinson, *Theory of Ordinary Differential Equations*, McGraw-Hill, 1955.
+
+[5] V. Ivrii, "Microlocal analysis and precise spectral asymptotics," Springer, 1998 (two-term Weyl law, Dirichlet boundary conditions, §IV).

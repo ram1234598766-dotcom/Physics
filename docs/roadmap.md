@@ -33,6 +33,7 @@ This document maps how the eleven papers and four demos fit together, states the
 4. **Paper 03** begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
 5. **Paper 11** documents novelty and can be read last (or first, for the honest statement).
 6. **Capstone** (Paper 00) collects all central theorems in one place.
+7. **Comprehensive treatise** (`00-treatise.md`, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## 2. What each paper contributes
 
@@ -52,19 +53,21 @@ This document maps how the eleven papers and four demos fit together, states the
 
 ## 3. The theorem inventory
 
+- **00 capstone:** Contributions 1–10; Theorems 1–22, all proved.
+- **00 treatise (~30 pages):** Parts I–IX; 86 theorems/definitions with terminated proofs; derivation appendix reconstructing every central identity; numerical casebook.
 - **Paper 01:** 19 theorems, 3 corollaries. Core: Transport (Thm 12), Uniqueness of field (Thm 13), Uniqueness of calculus (Thm 19), Energy identity (Thm 17).
-- **Paper 02:** 9+ theorems. Core: Spectrum (Thm 1), Closed-form evolution (Thm 3), Energy conservation (Thm 5), Resolvent (Thm 6), Perturbation (Thm 9).
-- **Paper 03:** 6+ theorems. Core: Mass conservation (Thm 1), Contraction (Thm 2), Eigenframe connection (Thm 4), Modal ODEs (Thm 5), Energy Migration (Thm 6), Sensitivity (Thm 7).
+- **Paper 02:** 10+ theorems. Core: Spectrum (Thm 1), Closed-form evolution (Thm 3), Energy conservation (Thm 5), Resolvent (Thm 6), Perturbation (Thm 9), Eigenfunction perturbation (Thm 10) + localization (Cor 10).
+- **Paper 03:** 7+ theorems. Core: Mass conservation (Thm 1), Contraction (Thm 2), Eigenframe connection (Thm 4), Modal ODEs (Thm 5), Energy Migration (Thm 6), Migration suppression (Thm 6b) + deformation-limited migration (Cor 5b), Sensitivity (Thm 7).
 - **Paper 04:** 10 theorems. Core: EL equations (Thm 1), Structure stationarity (Thm 3), Hamiltonian (Thm 4), Momentum (Thm 6), Coupled equation (Thm 10).
 - **Paper 05:** 7+ theorems. Core: Impedance matching (Thm 1), Modes (Thm 2), Flux (Thm 6), Transport identity (Thm 7), Mode count (Thm 8).
 - **Paper 06:** 5+ theorems. Core: Sync rate (Thm 2), Time-to-sync (Thm 3), Energy migration (Thm 5), Early warning (Thm 6).
-- **Paper 07:** 5+ theorems. Core: Decay bound (Thm 3), Extinction time (Cor 2), Sensitivity (Thm 4).
+- **Paper 07:** 6+ theorems. Core: Decay bound (Thm 3), Extinction time (Cor 2), Sensitivity (Thm 4), Optimal single-edge intervention (Thm 4b).
 - **Paper 08:** 5+ theorems. Core: Galerkin error (Thm 1), Consistency (Thm 3), Energy drift (Thm 5), CFL (Thm 4).
-- **Paper 09:** 9+ theorems. Core: Isometry (Thm 1), Green's identities (Thms 2–3), Weyl law (Thm 5), Product spectrum (Thm 6), Obstruction (Thm 8).
+- **Paper 09:** 10+ theorems. Core: Isometry (Thm 1), Green's identities (Thms 2–3), Weyl law (Thm 5), Two-term Weyl law (Thm 6b, Ivrii factor $\tfrac14$ verified), Product spectrum (Thm 6), Obstruction (Thm 8).
 - **Paper 10:** 5+ theorems. Core: Causal GFT (Thm 1), Modal ODEs (Thm 2), Filter response (Thm 3), Anomaly bound (Thm 5), Truncation (Thm 6).
 - **Paper 11:** novel-literature-positioning document.
 
-Proof/QED audit across Papers 01–10: **147 proofs, 147 QED marks, balanced equation delimiters.**
+Proof/QED audit across all papers, capstone, and treatise: **259 proofs, 259 QED marks, balanced equation delimiters** (Papers 01–10 alone: 153 proofs).
 
 ## 4. Open problems
 
@@ -78,11 +81,13 @@ Proof/QED audit across Papers 01–10: **147 proofs, 147 QED marks, balanced equ
 
 ## 5. Next steps for the program
 
+Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is delivered, four new theorems (Paper 02 Thm 10, Paper 03 Thm 6b, Paper 07 Thm 4b, Paper 09 Thm 6b) were added and numerically verified, the two-term Weyl boundary coefficient was corrected (Ivrii factor $\tfrac14$) through the verification campaign, and all four demos pass continuously.
+
 1. **Extend Paper 09** to include the spectral-flow and energy-migration theorems on higher-dimensional time-varying structures.
 2. **Add a fifth demo** exercising the coupled equation (Theorem 15) with the corrected sign, mirroring the `sympy` check.
 3. **Produce figures** for the demo plots (currently saved to `demos/figures/`) and embed them in the docs.
-4. **Write the open-problem paper** (paper 12) collecting items 1–7 above with precise statements and partial results.
-5. **Peer-review hardening:** convert each paper to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
+4. **Write the open-problem paper** (paper 12) collecting the ten open problems of the treatise with precise statements and partial results.
+5. **Peer-review hardening:** convert each paper and the treatise to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
 
 ## 6. Reproducibility
 

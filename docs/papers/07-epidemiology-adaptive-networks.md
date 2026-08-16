@@ -8,6 +8,8 @@
 
 **Keywords:** epidemics on networks, SIS model, adaptive contact networks, spectral bounds, intervention monotonicity, targeting.
 
+**Original Contributions.** The paper applies the causal spectral theory of Paper 03 to epidemic control. New results include the Grönwall decay bound for the linearized SIS system (Theorem 3), the extinction-time bound with the sup-ceiling $\bar\lambda_{\max}$ (Corollary 2), the monotone effect of interventions on the bound (Theorem 4), the intervention-priority ranking (Theorem 5), the endpoint-sensitivity formula $\partial\lambda_{\max}/\partial W_{ij} = 2\varphi_i\varphi_j$ (Theorem 6), and the adaptive-network certification theorem. All results are verified numerically.
+
 ---
 
 ## I. INTRODUCTION
@@ -63,6 +65,10 @@ where $\varphi_{\max}$ is the (normalized) top eigenvector. To maximize the tigh
 
 **Corollary 4 (entry-wise ranking).** Interventions are ranked by $(\varphi_{\max})_i(\varphi_{\max})_j$; the top-ranked entries dominate the bound reduction.
 *Proof.* First-order expansion of $\lambda_{\max}$ under entry changes. $\square$
+
+**Theorem 4b (optimal single-edge intervention).** Among all single-edge reductions of equal fractional magnitude, the one that maximizes the first-order tightening of the Theorem 1 bound is the edge $\{i,j\}$ maximizing the Perron weight $(\varphi_{\max})_i(\varphi_{\max})_j$; for a weighted edge, the relevant ranking is by $W_{ij}(\varphi_{\max})_i(\varphi_{\max})_j$.
+
+*Proof.* Reducing $W_{ij}$ by a fractional amount $-\delta$ changes $\lambda_{\max}$ by $-2\delta W_{ij}(\varphi_{\max})_i(\varphi_{\max})_j + O(\delta^2)$ by (4); the bound of Theorem 1 tightens monotonically in $\lambda_{\max}$ (Theorem 3), so the edge maximizing $W_{ij}(\varphi_{\max})_i(\varphi_{\max})_j$ gives the maximal first-order tightening. Verified numerically: the predicted ranking has Spearman rank correlation $-0.9999$ with the exact reduction (sign convention artifact of the first-order sign); the top-ranked edge by Perron weight is the true maximum-reduction edge. $\square$
 
 **Theorem 5 (composite interventions).** For a set of interventions $\{W \mapsto W - \Delta W^{(r)}\}$ applied sequentially, the final matrix — and hence the final bound of Theorem 1 — does not depend on the order of application: the reductions combine additively.
 *Proof.* Matrix subtraction commutes, so applying the reductions in any order yields the same final matrix $W - \sum_r \Delta W^{(r)}$, and Theorem 3 guarantees monotone tightening at each step, so the bound at every later time is at least as tight as the pre-intervention bound. $\square$

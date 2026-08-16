@@ -8,6 +8,8 @@
 
 **Keywords:** graded media, acoustic metamaterials, impedance matching, closed-form modes, energy flux, anti-reflection.
 
+**Original Contributions.** The paper turns the spectral theory of Paper 02 into an engineering tool. New results include the impedance-matching theorem (Theorem 1) showing the impedance $Z=\sqrt{K\rho_0}$ is constant exactly when the medium is encoded by a structure field, closed-form modes and frequencies (Theorem 2), the reflectionless-propagation theorem for matched graded slabs (Theorem 3), the energy-flux identity with the corrected flux $J=-K p_t p_x = -K_*\rho\,p_t p_x$ (Theorem 6), the transport-form energy identity $\partial_t\tilde e + c_0\partial_\tau\tilde e = 0$ (Theorem 7), and the mode-counting law (Theorem 8). All results are verified numerically.
+
 ---
 
 ## I. INTRODUCTION

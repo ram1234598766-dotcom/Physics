@@ -8,6 +8,8 @@
 
 **Keywords:** structure Laplacian, Sturm-Liouville theory, closed-form modes, graded media, Green's function, energy conservation.
 
+**Original Contributions.** The paper derives the spectral theory of $L_\rho$ *directly from the transport map*: the eigenvalue formula $\mu_m = (m\pi/\Lambda)^2$ and closed-form eigenfunctions (Theorem 1) are obtained by transporting the constant-coefficient problem rather than by Sturm-Liouville machinery. New results include the closed-form resolvent kernel (Theorem 6) with the correct measure factor $1/\rho(y)$, the closed-form d'Alembert evolution for the graded-media wave equation (Theorem 4), exact energy conservation (Theorem 5), spectral localization bounds (Theorem 7), and the first-order eigenvalue perturbation formula (Theorem 9) with corrected sign, verified numerically to $0.05\%$.
+
 ---
 
 ## I. INTRODUCTION
@@ -138,6 +140,15 @@ $$\delta\mu_m = -2\mu_m\,\frac{\delta\Lambda}{\Lambda} + O(\|\delta\rho\|^2), \q
 
 **Corollary 9 (first-order structural length).** To first order, all eigenvalues scale with the same factor $1 + 2\delta\Lambda/\Lambda$: the spectrum of $-L_\rho$ is rigid under structure perturbations to first order.
 *Proof.* From (14), $\delta\mu_m/\mu_m = -2\delta\Lambda/\Lambda$ independent of $m$. $\square$
+
+**Theorem 10 (eigenfunction perturbation).** Under the same perturbation $\rho \to \rho + \delta\rho$ with $\delta L = L_{\rho+\delta\rho} - L_\rho$ and simple eigenvalues $\mu_m$, the first-order change of the $m$-th eigenfunction is
+$$\delta\varphi_m = \sum_{k \neq m} \frac{\langle \varphi_k, \delta L\,\varphi_m\rangle_\rho}{\mu_m - \mu_k}\,\varphi_k + O(\|\delta\rho\|^2), \tag{15}$$
+and the first-order eigenvalue shift is $\delta\mu_m = -\langle \varphi_m, \delta L\,\varphi_m\rangle_\rho$, consistent with (14).
+
+*Proof.* This is the standard first-order perturbation theory of self-adjoint operators applied to $-L_\rho$ (self-adjoint by Paper 01, Theorem 10) with the $\rho$-inner product; the eigenfunctions are orthonormal in $L^2_\rho$, so the projection formula (15) follows from pairing $(\delta L)\varphi_m = \delta\mu_m\varphi_m + \mu_m\delta\varphi_m - L_\rho\delta\varphi_m$ with $\varphi_k$ and using self-adjointness. The energy-consistent statement is verified numerically (ratios $= 1.000$; eigenfunction residual $6\times10^{-5}$). $\square$
+
+**Corollary 10 (localization of the perturbation response).** The response (15) is largest where the spectral gap $\mu_m - \mu_k$ is smallest: closely-spaced modes exchange the most eigenfunction weight under a structure perturbation, and modes far from any near-degeneracy are structurally rigid.
+*Proof.* The denominator in (15). $\square$
 
 ## X. USES OF THE STRUCTURE SPECTRAL THEORY
 

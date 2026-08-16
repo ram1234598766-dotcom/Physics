@@ -4,7 +4,7 @@
 
 Structure-Flow Calculus (SFC) is a mathematical framework in which the *differential structure of space is itself a dynamical field*. A positive function $\rho$ — the **structure field** — generates a complete calculus, a spectral theory, a variational theory, and a network theory, all with proven theorems.
 
-Read the [program statement](/overview), the [capstone paper](/papers/00-capstone), the [verification report](/verification), or the [roadmap](/roadmap).
+Read the [program statement](/overview), the [capstone paper](/papers/00-capstone), the [comprehensive treatise](/papers/00-treatise) (~30 pages, self-contained), the [verification report](/verification), or the [roadmap](/roadmap).
 
 ## Why it matters
 
@@ -15,6 +15,7 @@ Read the [program statement](/overview), the [capstone paper](/papers/00-capston
 ## Research papers
 
 - 00 — Capstone (unified statement of the program)
+- 00 — Comprehensive Treatise (~30 pages: the whole program, self-contained, with derivation appendix and numerical casebook)
 - 01 — Foundations ($\rho$-calculus, Fundamental Theorem, conformal transport)
 - 02 — Structure Spectral Theory (closed-form graded-media modes, energy conservation)
 - 03 — Causal Network Spectral Theory (eigenframe connection, Energy Migration Theorem)

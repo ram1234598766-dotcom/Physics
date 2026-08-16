@@ -8,6 +8,8 @@
 
 **Keywords:** calculus of variations, structure field, Euler-Lagrange equations, Noether's theorem, Hamiltonian dynamics, structure stationarity.
 
+**Original Contributions.** The paper sets up the field-structure action in the $\rho$-calculus and proves the structure-flow Euler-Lagrange equations (Theorem 1) together with the *structure-stationarity* constraint obtained by varying $\rho$ (Theorem 3). New results include the Hamiltonian and canonical formulation with the corrected kinetic term $\tfrac12\rho^2\pi^2$ (Theorem 4), the Noether-type conservation theorem for joint field-structure symmetries (Theorem 8) with energy and momentum as concrete instances (Theorems 5, 6), and the $\kappa$-regularized coupled field-structure theory with its corrected coupled equation (Theorem 10), verified symbolically with `sympy`.
+
 ---
 
 ## I. INTRODUCTION

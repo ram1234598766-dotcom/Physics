@@ -29,6 +29,7 @@ export default defineConfig({
         text: 'Research Papers',
         items: [
           { text: '00 — Capstone', link: '/papers/00-capstone' },
+          { text: '00 — Comprehensive Treatise', link: '/papers/00-treatise' },
           { text: '01 — Foundations', link: '/papers/01-foundations' },
           { text: '02 — Structure Spectral Theory', link: '/papers/02-structure-spectral-theory' },
           { text: '03 — Causal Network Spectral Theory', link: '/papers/03-causal-network-spectral-theory' },

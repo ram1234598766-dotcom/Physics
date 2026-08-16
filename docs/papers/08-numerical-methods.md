@@ -8,6 +8,8 @@
 
 **Keywords:** spectral methods, finite differences, energy preservation, method of lines, graded-media numerics, CFL condition.
 
+**Original Contributions.** The paper develops numerical methods tailored to Structure-Flow systems. New results include the spectral-convergence theorem for the eigenbasis discretization (Theorem 1), the midpoint-flux finite-difference Laplacian $L_\rho^h$ that respects the divergence structure with $O(h^2)$ consistency (Theorems 3–4), the discrete-energy preservation theorem (Theorem 5), the sharp CFL condition (Theorem 6), and the energy-drift bound for leapfrog time stepping (Theorem 7). The schemes are the ones exercised by the companion demos.
+
 ---
 
 ## I. INTRODUCTION
