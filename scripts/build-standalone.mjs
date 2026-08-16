@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import MarkdownIt from 'markdown-it'
@@ -67,7 +67,12 @@ const bodyHtml = sections
   .map((s) => `<section id="${s.slug}" class="doc-section">${s.html}</section>`)
   .join('')
 
-const katexCss = readFileSync(resolve(root, 'node_modules/katex/dist/katex.min.css'), 'utf8')
+const katexDist = resolve(root, 'node_modules/katex/dist')
+let katexCss = readFileSync(resolve(katexDist, 'katex.min.css'), 'utf8')
+katexCss = katexCss.replace(/url\(fonts\/([^)]+\.woff2)\)/g, (m, name) => {
+  const b64 = readFileSync(resolve(katexDist, 'fonts', name)).toString('base64')
+  return `url(data:font/woff2;base64,${b64})`
+})
 
 const page = `<!DOCTYPE html>
 <html lang="en">
@@ -135,9 +140,13 @@ strong { color: #0f1822; }
 .katex-display { margin: 16px 0; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
 footer { text-align: center; color: #888; font-size: .85em; margin-top: 30px; }
 @media print {
+  @page { size: A4; margin: 16mm 15mm 18mm; }
   body { background: #fff; font-size: 11pt; }
-  .toc-box { page-break-after: always; }
+  a { color: inherit; text-decoration: none; }
+  .toc-box { page-break-after: always; border: none; }
   .doc-section { page-break-before: always; }
+  .katex-display { overflow: visible !important; }
+  p, li { orphans: 3; widows: 3; }
 }
 ${katexCss}
 </style>
@@ -159,6 +168,9 @@ ${katexCss}
 </html>
 `
 
-const out = resolve(root, 'Structure-Flow-Calculus-Docs.html')
+const outDir = resolve(root, 'build')
+const out = resolve(outDir, 'Structure-Flow-Calculus-Docs.html')
+mkdirSync(outDir, { recursive: true })
 writeFileSync(out, page, 'utf8')
 console.log(`Wrote ${out} (${(Buffer.byteLength(page) / 1024).toFixed(0)} KB, ${sections.length} documents, ${sections.reduce((n, s) => n + (s.html.match(/<h2 /g) || []).length, 0)} sections)`)
+export { out }
