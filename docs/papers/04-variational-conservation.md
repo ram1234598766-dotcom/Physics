@@ -1,6 +1,6 @@
 # Variational Structure-Flow Theory and Conservation Laws
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

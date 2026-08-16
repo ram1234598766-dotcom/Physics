@@ -1,6 +1,6 @@
 # Structure-Flow in Neuroscience and Brain Network Dynamics
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

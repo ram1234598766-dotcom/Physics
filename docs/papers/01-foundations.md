@@ -1,6 +1,6 @@
 # Foundations of Structure-Flow Calculus
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

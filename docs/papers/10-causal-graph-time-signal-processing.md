@@ -1,6 +1,6 @@
 # Causal Graph-Time Signal Processing
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

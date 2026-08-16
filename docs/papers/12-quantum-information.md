@@ -1,6 +1,6 @@
 # Structure-Flow in Quantum Mechanics and Information Theory
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

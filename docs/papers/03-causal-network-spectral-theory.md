@@ -1,6 +1,6 @@
 # Causal Network Spectral Theory
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

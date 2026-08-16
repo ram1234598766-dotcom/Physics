@@ -1,6 +1,6 @@
 # Novelty, Literature Position, and the Research Program
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

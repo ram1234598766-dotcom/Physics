@@ -1,6 +1,6 @@
 # Structure-Flow Calculus: Verification Report
 
-**Structure-Flow Calculus Working Group** — *2026-08-16*
+**Mrityunjay K** — *2026-08-16*
 
 This report records, theorem by theorem, the verification evidence for the Structure-Flow Calculus program. Every entry below is reproducible: each demo listed is a runnable Python script that exits non-zero on failure, and each symbolic check was performed with `sympy`. All demos currently pass (exit code 0).
 

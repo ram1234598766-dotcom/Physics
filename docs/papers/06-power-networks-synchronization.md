@@ -1,6 +1,6 @@
 # Applications II: Power Networks, Synchronization, and Mode Migration
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

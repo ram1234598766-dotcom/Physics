@@ -1,6 +1,6 @@
 # The Structure-Flow Calculus: Foundations, Spectral Theory, and Applications
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Capstone paper, 2026-08-16*
 

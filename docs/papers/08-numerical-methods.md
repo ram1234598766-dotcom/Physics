@@ -1,6 +1,6 @@
 # Numerical Methods for Structure-Flow Systems
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

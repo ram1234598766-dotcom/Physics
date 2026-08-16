@@ -1,6 +1,6 @@
 # Applications III: Epidemiology on Adaptive Contact Networks
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

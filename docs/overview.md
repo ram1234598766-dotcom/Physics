@@ -1,6 +1,6 @@
 # The Structure-Flow Calculus: A New Stream in Mathematics and Physics
 
-**Structure-Flow Calculus Working Group** — *Program statement, 2026-08-16*
+**Mrityunjay K** — *Program statement, 2026-08-16*
 
 ---
 

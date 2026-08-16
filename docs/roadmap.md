@@ -1,6 +1,6 @@
 # Structure-Flow Calculus: Compilation & Research Roadmap
 
-**Structure-Flow Calculus Working Group** — *2026-08-16*
+**Mrityunjay K** — *2026-08-16*
 
 This document maps how the thirteen papers and four demos fit together, states the open problems of the program, and lists the next steps.
 

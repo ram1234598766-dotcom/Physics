@@ -1,6 +1,6 @@
 # Structure Spectral Theory of the Structure-Flow Laplacian
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

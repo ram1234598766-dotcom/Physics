@@ -1,6 +1,6 @@
 # Structure-Flow Calculus: A Comprehensive Treatise
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 

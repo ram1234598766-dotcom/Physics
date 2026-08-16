@@ -1,6 +1,6 @@
 # Applications I: Engineering Graded Media with the Structure Field
 
-**Structure-Flow Calculus Working Group**
+**Mrityunjay K**
 
 *Received 2026-08-16*
 
