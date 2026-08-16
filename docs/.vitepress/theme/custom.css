@@ -1,399 +1,24 @@
 /* ============================================================
-   Structure-Flow Calculus — Premium Material Theme
-   Clean, modern, scholarly
+   Structure-Flow Calculus — Clean Minimal Theme
    ============================================================ */
 
 :root {
-  /* Primary: deep scholarly blue */
-  --sf-primary: #1a73e8;
-  --sf-primary-dark: #1557b0;
-  --sf-primary-light: #4a90e2;
+  --sf-navy: #2c5282;
+  --sf-navy-dark: #1a365d;
+  --sf-gold: #b8961a;
 
-  /* Secondary: warm gold */
-  --sf-secondary: #b8961a;
-  --sf-secondary-dark: #8c6d14;
-  --sf-secondary-light: #d4b94a;
+  --vp-c-brand-1: var(--sf-navy);
+  --vp-c-brand-2: var(--sf-navy);
+  --vp-c-brand-3: var(--sf-navy-dark);
+  --vp-c-brand-soft: rgba(44, 82, 130, 0.1);
 
-  /* Tertiary: scholarly navy */
-  --sf-tertiary: #2c5282;
-  --sf-tertiary-dark: #1a365d;
-  --sf-tertiary-light: #3a6aa5;
-
-  /* Surfaces */
-  --sf-surface: #ffffff;
-  --sf-surface-variant: #f8f9fa;
-  --sf-surface-elevated: #ffffff;
-  --sf-outline: #dadce0;
-  --sf-outline-variant: #e8eaed;
-
-  /* Text */
-  --sf-on-surface: #202124;
-  --sf-on-surface-variant: #5f6368;
-  --sf-on-surface-secondary: #70757a;
-
-  /* Background */
-  --sf-background: #ffffff;
-  --sf-background-variant: #f8f9fa;
-
-  /* Elevation shadows */
-  --sf-elevation-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
-  --sf-elevation-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
-  --sf-elevation-3: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
-  --sf-elevation-4: 0 2px 3px 0 rgba(60,64,67,0.3), 0 6px 10px 4px rgba(60,64,67,0.15);
-
-  /* VitePress overrides */
-  --vp-c-brand-1: var(--sf-primary);
-  --vp-c-brand-2: var(--sf-primary-light);
-  --vp-c-brand-3: var(--sf-primary-dark);
-  --vp-c-brand-soft: rgba(26, 115, 232, 0.08);
-  --vp-c-bg: var(--sf-background);
-  --vp-c-bg-soft: var(--sf-background-variant);
-  --vp-c-text-1: var(--sf-on-surface);
-  --vp-c-text-2: var(--sf-on-surface-variant);
-  --vp-c-text-3: var(--sf-on-surface-secondary);
-  --vp-c-divider: var(--sf-outline);
-  --vp-c-gutter: var(--sf-outline);
-
-  /* Typography */
-  --vp-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --vp-font-family-heading: 'Source Serif Pro', 'Charter', 'Iowan Old Style', 'Georgia', serif;
-  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
-
-  /* Spacing (8px grid) */
-  --sf-space-xs: 4px;
-  --sf-space-sm: 8px;
-  --sf-space-md: 16px;
-  --sf-space-lg: 24px;
-  --sf-space-xl: 32px;
-  --sf-space-2xl: 48px;
-  --sf-space-3xl: 64px;
-
-  /* Border radius */
-  --sf-radius-sm: 8px;
-  --sf-radius-md: 12px;
-  --sf-radius-lg: 16px;
-  --sf-radius-xl: 28px;
-
-  /* Transitions */
-  --sf-transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  --sf-transition-normal: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --sf-transition-slow: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Dark mode */
-.dark {
-  --sf-surface: #1e1e1e;
-  --sf-surface-variant: #282828;
-  --sf-surface-elevated: #2d2d2d;
-  --sf-outline: #3c4043;
-  --sf-outline-variant: #5f6368;
-  --sf-on-surface: #e8eaed;
-  --sf-on-surface-variant: #9aa0a6;
-  --sf-on-surface-secondary: #bdc1c6;
-  --sf-background: #1e1e1e;
-  --sf-background-variant: #282828;
-  --sf-primary: #8ab4f8;
-  --sf-primary-dark: #aecbfa;
-  --sf-primary-light: #6b9ee6;
-  --sf-secondary: #c9a227;
-  --sf-secondary-dark: #d9b54d;
-  --sf-secondary-light: #a68816;
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --vp-font-family-heading: 'Source Serif Pro', 'Georgia', serif;
 }
 
 /* ============================================================
-   Base & Layout
+   Typography
    ============================================================ */
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: var(--vp-font-family-base);
-  background: var(--sf-background);
-  color: var(--sf-on-surface);
-  line-height: 1.6;
-}
-
-/* ============================================================
-   Navigation
-   ============================================================ */
-.VPNav {
-  background: var(--sf-surface);
-  border-bottom: 1px solid var(--sf-outline);
-  box-shadow: var(--sf-elevation-1);
-  backdrop-filter: blur(8px);
-}
-
-.dark .VPNav {
-  background: rgba(30, 30, 30, 0.8);
-}
-
-.VPNavBar .title {
-  font-family: var(--vp-font-family-heading);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--sf-tertiary-dark);
-  letter-spacing: -0.01em;
-}
-
-.dark .VPNavBar .title {
-  color: var(--sf-secondary-light);
-}
-
-.VPNavBarMenuLink {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: var(--sf-on-surface-variant);
-  transition: color var(--sf-transition-fast);
-  border-radius: var(--sf-radius-sm);
-  padding: var(--sf-space-xs) var(--sf-space-sm);
-}
-
-.VPNavBarMenuLink:hover {
-  color: var(--sf-primary);
-  background: rgba(26, 115, 232, 0.04);
-}
-
-.dark .VPNavBarMenuLink:hover {
-  background: rgba(138, 180, 248, 0.08);
-}
-
-.VPNavBarMenuLink.active {
-  color: var(--sf-primary);
-  font-weight: 600;
-}
-
-/* ============================================================
-   Hero Section
-   ============================================================ */
-.VPHero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--sf-background-variant) 0%, var(--sf-surface) 100%);
-  padding: var(--sf-space-3xl) 0 var(--sf-space-2xl);
-}
-
-.dark .VPHero {
-  background: linear-gradient(135deg, var(--sf-surface-variant) 0%, var(--sf-surface) 100%);
-}
-
-.VPHero .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--sf-space-xl);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--sf-space-2xl);
-  align-items: center;
-}
-
-.VPHero .main {
-  max-width: 680px;
-}
-
-.VPHero .name {
-  font-family: var(--vp-font-family-heading);
-  font-weight: 800;
-  font-size: 3.5rem;
-  line-height: 1.1;
-  color: var(--sf-tertiary-dark);
-  letter-spacing: -0.03em;
-  margin-bottom: var(--sf-space-md);
-}
-
-.dark .VPHero .name {
-  color: var(--sf-secondary-light);
-}
-
-.VPHero .text {
-  font-family: var(--vp-font-family-heading);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.35rem;
-  color: var(--sf-on-surface-variant);
-  margin-bottom: var(--sf-space-lg);
-  line-height: 1.5;
-}
-
-.VPHero .tagline {
-  font-size: 1.05rem;
-  color: var(--sf-on-surface-secondary);
-  line-height: 1.7;
-  margin-bottom: var(--sf-space-xl);
-  max-width: 600px;
-}
-
-.VPHero .actions {
-  display: flex;
-  gap: var(--sf-space-md);
-  flex-wrap: wrap;
-}
-
-.VPHero .vp-button {
-  border-radius: var(--sf-radius-xl);
-  font-weight: 500;
-  padding: 0.85rem 1.75rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  transition: all var(--sf-transition-normal);
-  box-shadow: var(--sf-elevation-1);
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sf-space-sm);
-}
-
-.VPHero .vp-button:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--sf-elevation-2);
-}
-
-.VPHero .vp-button.brand {
-  background: var(--sf-primary);
-  color: white;
-}
-
-.VPHero .vp-button.brand:hover {
-  background: var(--sf-primary-dark);
-  box-shadow: var(--sf-elevation-2);
-}
-
-.VPHero .vp-button.alt {
-  background: var(--sf-surface);
-  color: var(--sf-primary);
-  border: 1px solid var(--sf-outline);
-}
-
-.VPHero .vp-button.alt:hover {
-  background: var(--sf-background-variant);
-  border-color: var(--sf-primary);
-}
-
-.dark .VPHero .vp-button.alt {
-  color: var(--sf-secondary-light);
-  border-color: var(--sf-outline);
-}
-
-/* Hero image */
-.VPHero .image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.VPHero .image-container {
-  width: 280px;
-  height: 280px;
-  border-radius: var(--sf-radius-xl);
-  background: linear-gradient(135deg, var(--sf-primary-light) 0%, var(--sf-tertiary) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--sf-elevation-3);
-  padding: var(--sf-space-xl);
-}
-
-.VPHero .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
-}
-
-/* ============================================================
-   Features Section
-   ============================================================ */
-.VPFeatures {
-  padding: var(--sf-space-2xl) 0;
-  background: var(--sf-background);
-}
-
-.VPFeatures .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--sf-space-xl);
-}
-
-.VPFeatures .items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--sf-space-lg);
-}
-
-.VPFeature {
-  background: var(--sf-surface);
-  border: 1px solid var(--sf-outline-variant);
-  border-radius: var(--sf-radius-md);
-  padding: var(--sf-space-lg);
-  transition: all var(--sf-transition-normal);
-  box-shadow: var(--sf-elevation-1);
-  position: relative;
-  overflow: hidden;
-}
-
-.VPFeature::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--sf-primary), var(--sf-secondary));
-  opacity: 0;
-  transition: opacity var(--sf-transition-normal);
-}
-
-.VPFeature:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--sf-elevation-3);
-  border-color: var(--sf-primary);
-}
-
-.VPFeature:hover::before {
-  opacity: 1;
-}
-
-.dark .VPFeature {
-  background: var(--sf-surface-variant);
-  border-color: var(--sf-outline);
-}
-
-.dark .VPFeature:hover {
-  border-color: var(--sf-secondary);
-}
-
-.VPFeature .title {
-  font-family: var(--vp-font-family-heading);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--sf-tertiary-dark);
-  margin-bottom: var(--sf-space-sm);
-  letter-spacing: -0.01em;
-}
-
-.dark .VPFeature .title {
-  color: var(--sf-secondary-light);
-}
-
-.VPFeature .details {
-  color: var(--sf-on-surface-variant);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-/* ============================================================
-   Typography — Document Content
-   ============================================================ */
-.vp-doc {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--sf-space-2xl) var(--sf-space-xl);
-}
-
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
@@ -401,69 +26,47 @@ body {
   font-family: var(--vp-font-family-heading);
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--sf-tertiary-dark);
+  color: var(--sf-navy-dark);
   line-height: 1.3;
-  margin-top: var(--sf-space-2xl);
-}
-
-.dark .vp-doc h1,
-.dark .vp-doc h2,
-.dark .vp-doc h3,
-.dark .vp-doc h4 {
-  color: var(--sf-secondary-light);
 }
 
 .vp-doc h1 {
-  font-size: 2.4rem;
-  border-bottom: 3px solid var(--sf-secondary);
-  padding-bottom: var(--sf-space-md);
-  margin-top: var(--sf-space-xl);
+  font-size: 2.1rem;
+  border-bottom: 2px solid var(--sf-gold);
+  padding-bottom: 0.4rem;
+  margin-top: 1.5rem;
 }
 
 .vp-doc h2 {
-  font-size: 1.85rem;
-  padding-bottom: var(--sf-space-sm);
-  border-bottom: 1px solid var(--sf-outline-variant);
+  font-size: 1.65rem;
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e5e3d8;
 }
 
 .vp-doc h3 {
-  font-size: 1.4rem;
-}
-
-.vp-doc h4 {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
 }
 
 .vp-doc p {
-  line-height: 1.8;
-  margin: var(--sf-space-md) 0;
+  line-height: 1.75;
+  margin: 1rem 0;
   max-width: 75ch;
-  color: var(--sf-on-surface);
 }
 
 /* ============================================================
    Links
    ============================================================ */
 .vp-doc a {
-  color: var(--sf-primary);
+  color: var(--sf-navy);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: all var(--sf-transition-fast);
-  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
 .vp-doc a:hover {
-  color: var(--sf-primary-dark);
-  border-bottom-color: var(--sf-secondary);
-}
-
-.dark .vp-doc a {
-  color: var(--sf-secondary-light);
-}
-
-.dark .vp-doc a:hover {
-  color: var(--sf-secondary-dark);
+  border-bottom-color: var(--sf-gold);
 }
 
 /* ============================================================
@@ -471,492 +74,191 @@ body {
    ============================================================ */
 .vp-doc table {
   width: 100%;
-  margin: var(--sf-space-lg) 0;
-  border-collapse: separate;
-  border-spacing: 0;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
   font-size: 0.95rem;
-  border: 1px solid var(--sf-outline);
-  border-radius: var(--sf-radius-sm);
+  border: 1px solid #e5e3d8;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: var(--sf-elevation-1);
 }
 
 .vp-doc th {
-  background: var(--sf-tertiary);
+  background: var(--sf-navy);
   color: white;
   font-weight: 600;
-  padding: var(--sf-space-md) var(--sf-space-lg);
+  padding: 0.6rem 1rem;
   text-align: left;
   font-family: var(--vp-font-family-heading);
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-}
-
-.dark .vp-doc th {
-  background: var(--sf-tertiary-dark);
 }
 
 .vp-doc td {
-  padding: var(--sf-space-md) var(--sf-space-lg);
-  border-top: 1px solid var(--sf-outline-variant);
-  line-height: 1.6;
-  background: var(--sf-surface);
-}
-
-.dark .vp-doc td {
-  background: var(--sf-surface-variant);
+  padding: 0.6rem 1rem;
+  border-top: 1px solid #e5e3d8;
 }
 
 .vp-doc tr:nth-child(even) td {
-  background: var(--sf-background-variant);
-}
-
-.dark .vp-doc tr:nth-child(even) td {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.vp-doc tr:hover td {
-  background: rgba(26, 115, 232, 0.04);
-}
-
-.dark .vp-doc tr:hover td {
-  background: rgba(138, 180, 248, 0.06);
+  background: #f7f6f1;
 }
 
 /* ============================================================
    Blockquotes
    ============================================================ */
 .vp-doc blockquote {
-  margin: var(--sf-space-lg) 0;
-  padding: var(--sf-space-md) var(--sf-space-lg);
-  border-left: 4px solid var(--sf-secondary);
-  background: var(--sf-background-variant);
-  border-radius: 0 var(--sf-radius-sm) var(--sf-radius-sm) 0;
-  color: var(--sf-on-surface-variant);
-  font-style: italic;
-  position: relative;
-  box-shadow: var(--sf-elevation-1);
-}
-
-.dark .vp-doc blockquote {
-  background: rgba(184, 150, 26, 0.08);
+  margin: 1.25rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 4px solid var(--sf-gold);
+  background: #f7f6f1;
+  border-radius: 0 4px 4px 0;
+  color: #4a4a4a;
 }
 
 /* ============================================================
    Code
    ============================================================ */
 .vp-doc code {
-  font-family: var(--vp-font-family-mono);
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
   font-size: 0.88em;
-  background: var(--sf-background-variant);
-  padding: 0.2em 0.5em;
-  border-radius: var(--sf-radius-sm);
-  color: var(--sf-tertiary-dark);
-  border: 1px solid var(--sf-outline-variant);
-}
-
-.dark .vp-doc code {
-  background: rgba(138, 180, 248, 0.12);
-  color: var(--sf-primary-light);
-  border-color: rgba(138, 180, 248, 0.2);
+  background: #f0efe8;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
 }
 
 .vp-doc pre {
-  background: var(--sf-surface-variant);
-  border: 1px solid var(--sf-outline);
-  border-radius: var(--sf-radius-md);
-  padding: var(--sf-space-lg);
+  background: #f7f6f1;
+  border: 1px solid #e5e3d8;
+  border-radius: 6px;
+  padding: 1rem;
   overflow-x: auto;
-  box-shadow: var(--sf-elevation-1);
-  line-height: 1.6;
-}
-
-.dark .vp-doc pre {
-  background: var(--sf-surface-variant);
-  border-color: var(--sf-outline);
 }
 
 .vp-doc pre code {
   background: transparent;
   padding: 0;
-  font-size: 0.9rem;
-  border: none;
-  color: inherit;
+  font-size: 0.88rem;
 }
 
 /* ============================================================
-   Lists
+   Hero
    ============================================================ */
-.vp-doc ul,
-.vp-doc ol {
-  padding-left: var(--sf-space-lg);
-  line-height: 1.8;
-  margin: var(--sf-space-md) 0;
+.VPHero .name {
+  font-family: var(--vp-font-family-heading);
+  font-weight: 700;
+  font-size: 2.75rem;
+  color: var(--sf-navy-dark);
+  letter-spacing: -0.02em;
 }
 
-.vp-doc li {
-  margin: var(--sf-space-sm) 0;
-}
-
-.vp-doc li::marker {
-  color: var(--sf-secondary);
-  font-weight: 600;
-}
-
-/* ============================================================
-   Custom Containers
-   ============================================================ */
-.vp-doc .theorem,
-.vp-doc .definition,
-.vp-doc .lemma,
-.vp-doc .proof {
-  border-left: 4px solid var(--sf-secondary);
-  background: var(--sf-background-variant);
-  padding: var(--sf-space-md) var(--sf-space-lg);
-  margin: var(--sf-space-md) 0;
-  border-radius: 0 var(--sf-radius-sm) var(--sf-radius-sm) 0;
-  box-shadow: var(--sf-elevation-1);
-}
-
-.dark .vp-doc .theorem,
-.dark .vp-doc .definition,
-.dark .vp-doc .lemma,
-.dark .vp-doc .proof {
-  background: rgba(184, 150, 26, 0.06);
-}
-
-/* ============================================================
-   Images & Figures
-   ============================================================ */
-.vp-doc img {
-  max-width: 100%;
-  border-radius: var(--sf-radius-md);
-  box-shadow: var(--sf-elevation-2);
-}
-
-.vp-doc figure {
-  margin: var(--sf-space-xl) 0;
-  text-align: center;
-}
-
-.vp-doc figcaption {
-  margin-top: var(--sf-space-md);
-  color: var(--sf-on-surface-secondary);
-  font-size: 0.9rem;
+.VPHero .text {
+  font-family: var(--vp-font-family-heading);
   font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.VPHero .tagline {
+  color: #6b6a66;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.VPHero .vp-button.brand {
+  background: var(--sf-navy);
+  border-color: var(--sf-navy);
+}
+
+.VPHero .vp-button.alt {
+  color: var(--sf-navy);
+  border-color: var(--sf-navy);
 }
 
 /* ============================================================
-   Selection & Focus
+   Features
+   ============================================================ */
+.VPFeature {
+  border: 1px solid #e5e3d8;
+  border-radius: 8px;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.VPFeature:hover {
+  border-color: var(--sf-navy);
+}
+
+.VPFeature .title {
+  font-family: var(--vp-font-family-heading);
+  font-weight: 600;
+  color: var(--sf-navy-dark);
+}
+
+/* ============================================================
+   Selection & focus
    ============================================================ */
 ::selection {
-  background: var(--sf-secondary);
+  background: var(--sf-gold);
   color: white;
 }
 
 .vp-doc :focus-visible {
-  outline: 3px solid var(--sf-secondary);
-  outline-offset: 3px;
-  border-radius: var(--sf-radius-sm);
+  outline: 2px solid var(--sf-gold);
+  outline-offset: 2px;
 }
 
 /* ============================================================
-   Footer
+   Dark mode
    ============================================================ */
-.VPFooter {
-  background: var(--sf-background-variant);
-  border-top: 1px solid var(--sf-outline);
-  padding: var(--sf-space-xl) 0;
-  margin-top: var(--sf-space-3xl);
+.dark .vp-doc h1,
+.dark .vp-doc h2,
+.dark .vp-doc h3,
+.dark .vp-doc h4 {
+  color: #e0d8c8;
 }
 
-.dark .VPFooter {
-  background: var(--sf-surface-variant);
+.dark .vp-doc a {
+  color: #c9a227;
 }
 
-.VPFooter .message,
-.VPFooter .copyright {
-  color: var(--sf-on-surface-secondary);
-  font-size: 0.9rem;
+.dark .vp-doc tr:nth-child(even) td {
+  background: rgba(255,255,255,0.03);
 }
 
-/* ============================================================
-   Math (KaTeX)
-   ============================================================ */
-.katex-display {
-  margin: var(--sf-space-lg) 0;
-  padding: var(--sf-space-md) 0;
-  overflow-x: auto;
+.dark .vp-doc blockquote {
+  background: rgba(201,162,39,0.08);
+  color: #d0d0d0;
 }
 
-.katex {
-  font-size: 1.1em;
-  color: var(--sf-on-surface);
+.dark .vp-doc code {
+  background: rgba(201,162,39,0.15);
 }
 
-.katex-display > .katex {
-  color: var(--sf-tertiary-dark);
+.dark .vp-doc pre {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
 }
 
-.dark .katex-display > .katex {
-  color: var(--sf-secondary-light);
+.dark .VPHero .name {
+  color: #c9a227;
 }
 
-/* ============================================================
-   Responsive
-   ============================================================ */
-@media (max-width: 768px) {
-  .VPHero .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .VPHero .name {
-    font-size: 2.5rem;
-  }
-
-  .VPHero .tagline {
-    max-width: 100%;
-  }
-
-  .VPHero .actions {
-    justify-content: center;
-  }
-
-  .VPHero .image {
-    order: -1;
-  }
-
-  .VPHero .image-container {
-    width: 180px;
-    height: 180px;
-  }
-
-  .VPFeatures .items {
-    grid-template-columns: 1fr;
-  }
-
-  .vp-doc {
-    padding: var(--sf-space-lg) var(--sf-space-md);
-  }
+.dark .VPHero .text {
+  color: #c0b8a8;
 }
 
-/* ============================================================
-   Print Styles
-   ============================================================ */
-@media print {
-  .VPHero .image-container,
-  .VPFeatures,
-  .VPNav,
-  .VPSidebar,
-  .VPFooter,
-  .VPDocFooter {
-    display: none !important;
-  }
-
-  .vp-doc h1 {
-    color: #1a1a1a;
-    border-bottom-color: #b8961a;
-  }
-
-  .vp-doc a {
-    color: #1a1a1a;
-    text-decoration: underline;
-  }
-
-  body {
-    font-size: 11pt;
-    line-height: 1.5;
-  }
+.dark .VPHero .vp-button.alt {
+  color: #c9a227;
+  border-color: #c9a227;
 }
 
-/* ============================================================
-   Animations — Clean Material Motion
-   ============================================================ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.dark .VPFeature {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.dark .VPFeature:hover {
+  border-color: #c9a227;
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-/* Page load animations */
-.VPHero {
-  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.VPFeatures {
-  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
-}
-
-.vp-doc {
-  animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
-}
-
-/* Feature cards stagger animation */
-.VPFeature {
-  animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.VPFeature:nth-child(1) { animation-delay: 0.3s; }
-.VPFeature:nth-child(2) { animation-delay: 0.4s; }
-.VPFeature:nth-child(3) { animation-delay: 0.5s; }
-.VPFeature:nth-child(4) { animation-delay: 0.6s; }
-
-/* Smooth hover transitions */
-.VPFeature,
-.vp-doc table,
-.vp-doc blockquote,
-.vp-doc pre,
-.VPHero .vp-button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Button ripple effect */
-.VPHero .vp-button {
-  position: relative;
-  overflow: hidden;
-}
-
-.VPHero .vp-button::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.VPHero .vp-button:active::after {
-  width: 200%;
-  height: 200%;
-}
-
-/* Nav link underline animation */
-.VPNavBarMenuLink {
-  position: relative;
-}
-
-.VPNavBarMenuLink::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--sf-primary);
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.VPNavBarMenuLink:hover::after,
-.VPNavBarMenuLink.active::after {
-  width: 100%;
-}
-
-/* Table row highlight animation */
-.vp-doc tr {
-  transition: background-color 0.2s ease;
-}
-
-/* Code block copy animation */
-.vp-doc pre {
-  position: relative;
-}
-
-.vp-doc pre::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--sf-primary), var(--sf-secondary));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.vp-doc pre:hover::before {
-  transform: scaleX(1);
-}
-
-/* Image hover effect */
-.vp-doc img {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-}
-
-.vp-doc img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--sf-background-variant);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--sf-outline);
-  border-radius: 5px;
-  transition: background 0.2s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--sf-on-surface-variant);
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+.dark .VPFeature .title {
+  color: #c9a227;
 }
