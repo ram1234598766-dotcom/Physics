@@ -5,6 +5,7 @@ A new stream in mathematics and physics: a complete calculus built relative to a
 ## Program documents
 
 - [Program overview](docs/overview.md) — the new-stream statement
+- [Comprehensive treatise](docs/papers/00-treatise.md) — the ~30-page, self-contained research paper (Parts I–IX, derivation appendix, numerical casebook)
 - [Capstone paper](docs/papers/00-capstone.md) — unified statement with proofs
 - [Verification report](docs/verification.md) — theorem-by-theorem evidence
 - [Roadmap](docs/roadmap.md) — connections, open problems, next steps
@@ -14,6 +15,7 @@ A new stream in mathematics and physics: a complete calculus built relative to a
 The research papers live in `docs/papers/` (rendered as a documentation site):
 
 0. 00 — Capstone (unified statement of the program)
+0. 00 — Comprehensive Treatise (~30 pages: the whole program, self-contained, with derivation appendix and numerical casebook)
 1. 01 — Foundations ($\rho$-calculus, Fundamental Theorem, conformal transport)
 2. 02 — Structure Spectral Theory (closed-form graded-media modes, energy conservation)
 3. 03 — Causal Network Spectral Theory (eigenframe connection, Energy Migration Theorem)
@@ -22,11 +24,11 @@ The research papers live in `docs/papers/` (rendered as a documentation site):
 6. 06 — Power Networks & Synchronization (rates, vulnerability, early warning)
 7. 07 — Epidemiology on Adaptive Networks (spectral outbreak bounds, interventions)
 8. 08 — Numerical Methods (spectral convergence, energy-preserving schemes)
-9. 09 — Higher-Dimensional Structure-Flow (metrics, Weyl law, product domains)
+9. 09 — Higher-Dimensional Structure-Flow (metrics, Weyl law, two-term correction, product domains)
 10. 10 — Causal Graph-Time Signal Processing (causal GFT, anomaly detection)
 11. 11 — Novelty, Literature & Research Program
 
-Every theorem is proved in the paper in which it appears, and every central theorem is verified numerically by a runnable demo.
+Every theorem is proved in the paper in which it appears, and every central theorem is verified numerically by a runnable demo. Proof/QED audit across the papers, capstone, and treatise: **259 proofs, 259 QED marks**, balanced equation delimiters.
 
 ## Build the docs
 
