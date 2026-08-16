@@ -20,16 +20,11 @@ The program is written as a set of self-contained documents; each can be read on
 
 The papers are rendered as a documentation site. To read it locally, run `npm install && npm run docs:dev` and open the printed address; to build a static copy, run `npm run docs:build`.
 
-### One-click install
+### Read it as a single file
 
-Double-click **`start-docs.bat`** — it installs the dependencies on first run, starts the local documentation site, and opens your browser. All you need is [Node.js](https://nodejs.org).
+Prefer one readable file to a running server? Download **[`Structure-Flow-Calculus-Docs.html`](Structure-Flow-Calculus-Docs.html)** — the entire documentation (treatise, all eleven papers, and the program reports) in a single self-contained page with the mathematics typeset. Open it in any browser; no installation needed.
 
-The same commands, by hand:
-
-```
-npm install
-npm run docs:dev
-```
+Regenerate it any time with `npm run docs:standalone`.
 
 ## Research papers
 
@@ -55,8 +50,9 @@ Proof/QED audit across the papers, capstone, and treatise: **259 proofs, 259 QED
 
 ```
 npm install
-npm run docs:dev      # local preview
-npm run docs:build    # static build (docs/.vitepress/dist)
+npm run docs:dev          # local preview
+npm run docs:build        # static build (docs/.vitepress/dist)
+npm run docs:standalone   # single-file readable HTML (Structure-Flow-Calculus-Docs.html)
 ```
 
 ## Run the demos
