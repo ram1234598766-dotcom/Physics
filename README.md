@@ -22,9 +22,28 @@ The papers are rendered as a documentation site. To read it locally, run `npm in
 
 ### Read it as a PDF
 
-Prefer one readable file to a running server? Download **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** — the entire documentation (treatise, all eleven papers, and the program reports, 100 pages) typeset for reading and printing, mathematics embedded. No installation needed.
+Grab the ready-to-read PDF — **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** (100 pages, A4, mathematics embedded) — straight from the repo, or download it from [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest). Open it in any PDF reader; no installation required. Regenerate it any time with `npm run docs:pdf`.
 
-Regenerate it any time with `npm run docs:pdf`.
+## Install
+
+Four ways to get the documentation, from easiest to fullest:
+
+1. **Download the PDF (one click, no tools).** Open the [latest release](https://github.com/ram1234598766-dotcom/Physics/releases/latest) and download `Structure-Flow-Calculus-Docs.pdf` — the entire documentation in one typeset file.
+2. **Build the PDF from source.** Requires [Node.js](https://nodejs.org):
+   ```
+   npm install
+   npm run docs:pdf      # writes Structure-Flow-Calculus-Docs.pdf
+   ```
+3. **Read the full site locally.**
+   ```
+   npm install
+   npm run docs:dev      # opens the documentation site in your browser
+   ```
+4. **Build a static copy of the site** (`docs/.vitepress/dist`):
+   ```
+   npm install
+   npm run docs:build
+   ```
 
 ## Research papers
 
@@ -45,15 +64,6 @@ Regenerate it any time with `npm run docs:pdf`.
 | 11 | **Novelty, Literature & Research Program** | Honest positioning and the way forward |
 
 Proof/QED audit across the papers, capstone, and treatise: **259 proofs, 259 QED marks**, balanced equation delimiters.
-
-## Build the docs
-
-```
-npm install
-npm run docs:dev          # local preview
-npm run docs:build        # static build (docs/.vitepress/dist)
-npm run docs:pdf          # printable PDF (Structure-Flow-Calculus-Docs.pdf)
-```
 
 ## Run the demos
 
