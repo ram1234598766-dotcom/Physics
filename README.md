@@ -64,7 +64,7 @@ Or simply download the **[219-page PDF](https://github.com/ram1234598766-dotcom/
 | **[Program Overview](docs/overview.md)** | The thesis in one page — what SFC provides, why it matters |
 | **[Capstone Paper](docs/papers/00-capstone.md)** | Contributions 1–10 in a single document with proof sketches |
 | **[Comprehensive Treatise](docs/papers/00-treatise.md)** | ~30 pages, Parts I–IX, derivation appendix, numerical casebook |
-| **[Papers 01–12](docs/papers/)** | Self-contained research papers with full proofs |
+| **[Papers 01–13](docs/papers/)** | Self-contained research papers with full proofs |
 | **[Verification Report](docs/verification.md)** | Theorem-by-theorem evidence, all checks pass |
 | **[Roadmap](docs/roadmap.md)** | Open problems, next steps, research program |
 | **[Demos](docs/demos.md)** | Runnable checks with live output |
@@ -97,6 +97,7 @@ npm run docs:pdf      # generates Structure-Flow-Calculus-Docs.pdf
 | 10 | **Causal Graph-Time Signal Processing** | 167 | Causal GFT, anomaly detection |
 | 11 | **Novelty, Literature & Research Program** | 177 | Honest positioning, novelty verification log |
 | 12 | **Quantum & Information** | 189 | ρ-weighted quantum mechanics, Fisher information, entanglement |
+| 13 | **Open Problems** | — | Twenty open problems with precise formulations and partial results |
 
 **Proof audit:** 294 theorems proved, 294 QED marks, balanced equation delimiters across all papers, capstone, and treatise.
 
@@ -113,6 +114,7 @@ All demos pass. All numerical claims are reproducible.
 | `power_grid_mode_migration.py` | 03, 06 | ✅ PASS | Skewness 4.2×10⁻⁶; spectral flow residual 4.7×10⁻⁴ |
 | `epidemic_decay_bound.py` | 03, 07 | ✅ PASS | Mass conserved to 1e-9; SIS bound holds |
 | `quantum_information.py` | 12 | ✅ PASS | All 6 checks pass; eigenfunction residual 6.9×10⁻⁶ |
+| `real_data_validation.py` | 03, 07 | ✅ PASS | IEEE 14-bus sync rates; COVID-19 SIS decay bound |
 
 ### Deep Numerical Verification
 
@@ -157,7 +159,7 @@ Structural length: Λ = ∫ dx/ρ(x)
 
 | Format | How to get it |
 |--------|---------------|
-| **PDF (219 pages)** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
+| **PDF (225 pages)** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
 | **Live site** | [https://physics-phi-dusky.vercel.app/](https://physics-phi-dusky.vercel.app/) |
 | **Local dev** | `npm run docs:dev` |
 | **Static build** | `npm run docs:build` |
@@ -193,7 +195,7 @@ Physics/
 
 - **12 research papers** written with full proofs
 - **294 theorems** proved and QED-marked
-- **5 demos** passing continuously
+- **6 demos** passing continuously
 - **219-page PDF** available on [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest)
 - **Documentation site** live on Vercel
 

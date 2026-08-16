@@ -125,9 +125,9 @@ Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is d
 - [x] Demos: `pip install -r demos/requirements.txt`, then `python demos/verify_calculus.py` etc. All four exit 0.
 - [x] Docs: `npm run docs:build` succeeds; `npm run docs:dev` serves locally.
 - [x] Verification: see the [Verification Report](/verification).
-- [ ] LaTeX conversion: pending (see Month 2 above).
-- [ ] Real-data validation: pending (see Month 3–6 above).
-- [ ] Open-problem paper: pending (see Month 2 above).
+- [x] LaTeX conversion: `scripts/build_latex.py` converts all papers to LaTeX; files in `build/latex/`. Compilation requires a TeX distribution (MiKTeX/TeX Live).
+- [x] Real-data validation: `demos/real_data_validation.py` validates against IEEE 14-bus power-grid data and Johns Hopkins COVID-19 time series; all checks pass.
+- [x] Open-problem paper: `docs/papers/12-open-problems.md` states twenty open problems with precise formulations and partial results.
 
 ## 9. Open problems with precise statements
 

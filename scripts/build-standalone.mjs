@@ -26,6 +26,7 @@ const DOCS = [
   'docs/papers/10-causal-graph-time-signal-processing.md',
   'docs/papers/11-novelty-and-literature.md',
   'docs/papers/12-quantum-information.md',
+  'docs/papers/12-open-problems.md',
   'docs/verification.md',
   'docs/roadmap.md',
   'docs/demos.md'
@@ -159,7 +160,7 @@ ${katexCss}
 <body>
 <header class="hero">
   <h1>Structure-Flow Calculus</h1>
-  <p>Complete documentation — the capstone, the treatise, the twelve research papers, and the program reports, in one readable file.</p>
+  <p>Complete documentation — the capstone, the treatise, the thirteen research papers, and the program reports, in one readable file.</p>
 </header>
 <div class="wrap">
   <nav class="toc-box">

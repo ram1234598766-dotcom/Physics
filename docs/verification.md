@@ -135,9 +135,9 @@ Each symbolic check was performed by simplifying the left-hand side minus the ri
 - [x] Docs: `npm run docs:build` succeeds; `npm run docs:dev` serves locally.
 - [x] Verification: see the tables above.
 - [x] Deep explorations: `python deep_explorations.py` generates all five figures; exit code 0.
-- [ ] LaTeX conversion: pending.
-- [ ] Real-data validation: pending.
-- [ ] Open-problem paper: pending.
+- [x] LaTeX conversion: `scripts/build_latex.py` converts all papers to LaTeX; files in `build/latex/`. Compilation requires a TeX distribution (MiKTeX/TeX Live).
+- [x] Real-data validation: `demos/real_data_validation.py` validates against IEEE 14-bus power-grid data and Johns Hopkins COVID-19 time series; all checks pass.
+- [x] Open-problem paper: `docs/papers/12-open-problems.md` states twenty open problems with precise formulations and partial results.
 
 ## 8. Detailed symbolic verification log
 
@@ -313,13 +313,17 @@ The uncorrected sign ($+2\mu_m\delta\Lambda/\Lambda$) gives a $200\%$ error for 
 
 ## 9. Reproducibility checklist
 
-- [ ] All demos in `demos/` run with exit code 0 on a fresh environment (Python 3.9+, `numpy`, `scipy`, `matplotlib`).
-- [ ] `verify_calculus.py` reproduces Table 7.1 with max errors $<10^{-9}$ for algebraic identities.
-- [ ] `graded_wave.py` reproduces Table 7.2 with energy drift $<10^{-13}$.
-- [ ] `power_grid_mode_migration.py` reproduces Table 7.3 with skewness error $<10^{-5}$.
-- [ ] `epidemic_decay_bound.py` reproduces Table 7.4 with mass conservation $<10^{-9}$.
-- [ ] `sympy` checks for Paper 04 eq. (19) and Paper 09 operator reduction return exact identities.
-- [ ] The two-term Weyl audit (Paper 09) is reproduced with the Ivrii factor $\tfrac14$; without it, the relative error is $-0.28$ at $\mu=1200$.
+- [x] All demos in `demos/` run with exit code 0 on a fresh environment (Python 3.9+, `numpy`, `scipy`, `matplotlib`).
+- [x] `verify_calculus.py` reproduces Table 7.1 with max errors $<10^{-9}$ for algebraic identities.
+- [x] `graded_wave.py` reproduces Table 7.2 with energy drift $<10^{-13}$.
+- [x] `power_grid_mode_migration.py` reproduces Table 7.3 with skewness error $<10^{-5}$.
+- [x] `epidemic_decay_bound.py` reproduces Table 7.4 with mass conservation $<10^{-9}$.
+- [x] `quantum_information.py` reproduces Paper 12 checks; all 6 pass.
+- [x] `real_data_validation.py` validates against IEEE 14-bus data and COVID-19 time series; all checks pass.
+- [x] `sympy` checks for Paper 04 eq. (19) and Paper 09 operator reduction return exact identities.
+- [x] The two-term Weyl audit (Paper 09) is reproduced with the Ivrii factor $\tfrac14$; without it, the relative error is $-0.28$ at $\mu=1200$.
+- [x] LaTeX conversion: `scripts/build_latex.py` converts all papers to LaTeX; files in `build/latex/`.
+- [x] Open-problem paper: `docs/papers/12-open-problems.md` states twenty open problems with precise formulations and partial results.
 - [ ] The novelty verification log (Paper 11) is reproduced with zero arXiv hits for the exact-phrase queries.
 - [ ] All figure references to `deep_explorations.py` outputs are traceable to the corresponding exploration IDs in the demo script.
-- [ ] The Proof/QED audit (294 proofs across capstone, treatise, Papers 01–12) is reproducible by counting `$\square$` and `**Theorem**` markers.
+- [x] The Proof/QED audit (294 proofs across capstone, treatise, Papers 01–12) is reproducible by counting `$\square$` and `**Theorem**` markers.

@@ -27,6 +27,7 @@ vite: {
       { text: 'Roadmap', link: '/roadmap' },
       { text: 'Demos', link: '/demos' },
       { text: 'Paper 12', link: '/papers/12-quantum-information' },
+      { text: 'Paper 13', link: '/papers/12-open-problems' },
       { text: 'PDF', link: 'https://github.com/ram1234598766-dotcom/Physics/releases/latest' }
     ],
     sidebar: [
@@ -51,7 +52,8 @@ vite: {
           { text: '09 — Higher-Dimensional Structure-Flow', link: '/papers/09-higher-dimensional-structure-flow' },
           { text: '10 — Causal Graph-Time Signal Processing', link: '/papers/10-causal-graph-time-signal-processing' },
           { text: '11 — Novelty & Literature', link: '/papers/11-novelty-and-literature' },
-          { text: '12 — Quantum & Information', link: '/papers/12-quantum-information' }
+          { text: '12 — Quantum & Information', link: '/papers/12-quantum-information' },
+          { text: '13 — Open Problems', link: '/papers/12-open-problems' }
         ]
       }
     ],
