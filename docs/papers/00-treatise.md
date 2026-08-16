@@ -1037,7 +1037,7 @@ All numerical claims are reproducible by four demos in the repository: `demos/ve
 
 ## 40. The program at a glance
 
-The Structure-Flow Calculus program is eleven papers and one capstone, collected here. The mapping from papers to parts of the treatise is exact:
+The Structure-Flow Calculus program is twelve papers and one capstone, collected here. The mapping from papers to parts of the treatise is exact:
 
 | Paper | Treatise part | Content |
 |---|---|---|
@@ -1052,14 +1052,15 @@ The Structure-Flow Calculus program is eleven papers and one capstone, collected
 | 09 higher dimensions | Part VI | product metric, isometry, Weyl law, product spectra, obstruction |
 | 10 causal graph signal processing | Part VII | causal GFT, filtering, anomaly detection |
 | 11 novelty and literature | Part VIII | novelty matrix, neighboring fields, verification log |
+| 12 quantum and information | Part IX | ρ-weighted quantum mechanics, Fisher information, measurement, entanglement |
 
 ## 41. Reading order and dependencies
 
-A reader who wants the complete path through the treatise can follow either the sequential reading (Parts I–IX in order) or the paper-based reading (Papers 01–11). The dependency structure is a tree rooted at Part I: Part II uses only Part I; Part III is independent of Parts I–II (it is the theory of time-varying operators on a fixed graph); Parts IV, V, VI, VII each use Part II (and V additionally uses III and IV); Part VIII is a summary of all. The derivation appendix (Part IX) is written so that each Block can be read in isolation — Block C, for instance, is a self-contained derivation of the eigenframe connection and can be read before or after Part III. The casebook (§37) and the inventory (§38) are reference tables, not narrative.
+A reader who wants the complete path through the treatise can follow either the sequential reading (Parts I–IX in order) or the paper-based reading (Papers 01–12). The dependency structure is a tree rooted at Part I: Part II uses only Part I; Part III is independent of Parts I–II (it is the theory of time-varying operators on a fixed graph); Parts IV, V, VI, VII each use Part II (and V additionally uses III and IV); Part VIII is a summary of all. The derivation appendix (Part IX) is written so that each Block can be read in isolation — Block C, for instance, is a self-contained derivation of the eigenframe connection and can be read before or after Part III. The casebook (§37) and the inventory (§38) are reference tables, not narrative.
 
 ## 42. The contribution statement, per paper
 
-Each of the eleven papers carries its own **Original Contributions** paragraph, which states what the paper provides without any new-versus-old comparison. The treatise-level statement is §33. The complete set:
+Each of the twelve papers carries its own **Original Contributions** paragraph, which states what the paper provides without any new-versus-old comparison. The treatise-level statement is §33. The complete set:
 
 1. **Paper 01** — a complete calculus built on one positive function, with a Fundamental Theorem, algebraic rules, adjoint structure, mean-value theory, and a uniqueness theorem.
 2. **Paper 02** — closed-form spectra, evolution operators, resolvents, and sharp perturbation theory for arbitrary graded profiles via transport.
@@ -1072,6 +1073,7 @@ Each of the eleven papers carries its own **Original Contributions** paragraph, 
 9. **Paper 09** — a product-metric calculus, transport isometry, Green's identities, Weyl-type asymptotics, and closed-form product spectra with an obstruction theorem.
 10. **Paper 10** — a causal graph Fourier transform, moving-frame filtering, and quantitative anomaly detection.
 11. **Paper 11** — a novelty matrix, a survey of neighboring fields, and a verification log for the whole program.
+12. **Paper 12** — a $\rho$-weighted formulation of quantum mechanics and information theory: Schrödinger equation, Fisher information, graph diffusion, spectral entropy, fidelity, and measurement theory.
 
 ## 43. Glossary and notation
 
@@ -1235,7 +1237,7 @@ This appendix reconstructs every central identity from first principles, with no
 
 ## 46. The program at a glance (cross-referenced)
 
-The Structure-Flow Calculus program is eleven papers and one capstone, collected in this treatise. The mapping from papers to parts is exact:
+The Structure-Flow Calculus program is twelve papers and one capstone, collected in this treatise. The mapping from papers to parts is exact:
 
 | Paper | Treatise section | Content | Cross-reference target |
 |---|---|---|---|
@@ -1250,6 +1252,7 @@ The Structure-Flow Calculus program is eleven papers and one capstone, collected
 | 09 higher dimensions | Part VI | product metric, isometry, Weyl law, product spectra, obstruction | §36 Block E |
 | 10 causal graph signal processing | Part VII | causal GFT, filtering, anomaly detection | Table 37.7 |
 | 11 novelty and literature | Part VIII | novelty matrix, neighboring fields, verification log | §44 checklist |
+| 12 quantum and information | Part IX | ρ-weighted Schrödinger equation, Fisher information, measurement, entanglement | §36 Blocks R–T |
 
 Each block of §36 is self-contained and can be read independently; the tables of §37 reproduce every verification number with its exact source.
 
@@ -1347,7 +1350,7 @@ Every theorem, formula, and worked example in the program is indexed below by th
 
 The program is complete in the sense that matters for a research document: every theorem has a terminated proof, every number has a reproduction path, every reference is cited where it is used, and the boundaries of the framework are stated as openly as its results. The cross-reference index above maps each mathematical object to its source paper and treatise location, providing a navigation map for the reader who wants to trace any claim to its origin.
 
-The Structure-Flow Calculus program is eleven papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, and a higher-dimensional theory — every step a proved theorem, every central theorem verified numerically, every claim honest. The ten contributions of the program are ten facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
+The Structure-Flow Calculus program is twelve papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, and a quantum-information reading — every step a proved theorem, every central theorem verified numerically, every claim honest. The twelve contributions of the program are twelve facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
 
 **Block R — the resolvent kernel in closed form.** In $\tau$-coordinates the operator is $-\partial_\tau^2-z$ on $[0,\Lambda]$. The Green's function satisfying $G_{\tau\tau}-zG=\delta$ with Dirichlet conditions is
 $$G(\tau,\sigma)=\frac{\sin(\sqrt{-z}\,\tau_<)\sin(\sqrt{-z}\,(\Lambda-\tau_>))}{\sqrt{-z}\sin(\sqrt{-z}\,\Lambda)}.$$
@@ -1695,4 +1698,4 @@ For the cloak profile $\rho(r) = r/(R_2-R_1)\cdot(R_2/r-1) = R_2/(R_2-R_1) - r/(
 
 The program is complete in the sense that matters for a research document: every theorem has a terminated proof, every number has a reproduction path, every reference is cited where it is used, and the boundaries of the framework are stated as openly as its results. The cross-reference index above maps each mathematical object to its source paper and treatise location, providing a navigation map for the reader who wants to trace any claim to its origin.
 
-The Structure-Flow Calculus program is eleven papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, and a higher-dimensional theory -- every step a proved theorem, every central theorem verified numerically, every claim honest. The ten contributions of the program are ten facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
+The Structure-Flow Calculus program is twelve papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, and a quantum-information reading -- every step a proved theorem, every central theorem verified numerically, every claim honest. The twelve contributions of the program are twelve facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.

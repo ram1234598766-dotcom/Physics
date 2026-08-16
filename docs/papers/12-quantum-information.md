@@ -292,26 +292,7 @@ $$S_\rho(\rho_\rho) = -\text{Tr}(\rho_\rho \log \rho_\rho) = -\sum_j p_j \log p_
 $$S_\rho(\rho_\beta) = \beta \langle H_\rho\rangle + \log Z(\beta), \qquad Z(\beta) = \text{Tr}(e^{-\beta H_\rho}).$$
 *Proof.* Standard quantum statistical mechanics; the only change is that $H_\rho$ has the structure-flow spectrum. $\square$
 
-## XII. STRUCTURE-FIELD QUANTUM MEASUREMENT
-
-**Definition 12 (ρ-weighted measurement).** A measurement with projectors $P_j$ acting on $L^2_\rho(I)$ yields outcome $j$ with probability
-$$p_j = \text{Tr}(P_j \rho_\rho P_j)/\text{Tr}(P_j \rho_\rho).$$
-
-**Theorem 29 (measurement back-action).** After outcome $j$, the post-measurement state is
-$$\rho_\rho^{(j)} = \frac{P_j \rho_\rho P_j}{\text{Tr}(P_j \rho_\rho)}.$$
-*Proof.* Standard Lüders rule; the $\rho$-weighting enters only through the inner product defining the projectors and the density matrix. $\square$
-
-**Corollary 22 (structure-field measurement entropy).** The entropy produced by the measurement is $\Delta S = S_\rho(\{p_j\}) - S_\rho(\rho_\rho)$, where $S_\rho(\{p_j\}) = -\sum_j p_j \log p_j$ is the Shannon entropy of the outcome distribution.
-*Proof.* This is the standard measurement-entropy formula; the structure field enters through the probabilities (29). $\square$
-
-**Worked example 29.1 (position measurement in graded medium).** For $\rho(x)=e^x$ on $[0,1]$ and a particle in the ground state $\varphi_1(x)=\sqrt{2/\Lambda}\sin(\pi\tau(x)/\Lambda)$ with $\Lambda=0.6321$:
-- Position probability density: $|\varphi_1(x)|^2 = \frac{2}{0.6321}\sin^2(\pi(1-e^{-x})/0.6321)$
-- Most likely position: $x_{ML} = -\ln(1 - \Lambda/2) = -\ln(0.684) = 0.380$
-- Measurement entropy: $S_\rho(\{p_j\})$ for a binary split at $x=0.5$ gives $p_1 = \int_0^{0.5}|\varphi_1|^2 d\rho = 0.618$, $p_2 = 0.382$, $\Delta S = -0.618\log0.618 - 0.382\log0.382 = 0.971$ nats
-
-**Worked example 29.2 (energy measurement).** Measuring the energy of $\varphi_1$ yields $E_1 = (\hbar^2/2m)(\pi/\Lambda)^2 = 24.70\hbar^2/(2m)$ with probability $p_1=1$. The post-measurement state is $\rho_\rho^{(1)} = |\varphi_1\rangle\langle\varphi_1|$, with entropy $S_\rho = 0$ (pure state).
-
-## XIII. ρ-WEIGHTED QUANTUM FIDELITY IN DYNAMICS
+## XII. ρ-WEIGHTED QUANTUM FIDELITY IN DYNAMICS
 
 **Theorem 30 (fidelity decay under structural deformation).** For a time-dependent structure field $\rho(t)$ with $|\dot\rho| \le \varepsilon$, the fidelity between the evolved state $\psi(t)$ and the static reference $\psi_0(t)$ satisfies
 $$\mathcal{F}_\rho(\psi(t), \psi_0(t)) \ge 1 - \frac{\varepsilon^2 t^2}{2}\sum_m \frac{m^2\pi^2}{\Lambda^2}\|c_m\|^2.$$
@@ -319,7 +300,7 @@ $$\mathcal{F}_\rho(\psi(t), \psi_0(t)) \ge 1 - \frac{\varepsilon^2 t^2}{2}\sum_m
 
 **Corollary 23 (dynamical stability).** If $\|\dot\rho\|_\infty/\rho_0 \le \varepsilon \ll \Lambda/\pi$, the fidelity remains close to 1 for times $t \ll (\Lambda/\pi)/\varepsilon$: the quantum evolution is adiabatic in the structure field.
 *Proof.* The phase error grows linearly in $t$ with coefficient proportional to $\varepsilon$; requiring $\delta\phi_m \ll 1$ gives the time bound. $\square$
-## XIV. DETAILED QUANTUM MEASUREMENT THEORY
+## XIII. DETAILED QUANTUM MEASUREMENT THEORY
 
 ### XIV.1 Measurement Postulate in the $\rho$-Calculus
 
@@ -348,7 +329,7 @@ $$\|\delta C\| \le g\|\dot L\| \le g\max_j |E_j - E_k|. \tag{XIV.4}$$
 - Weak measurement with $g=0.01$: $\delta\hat c_1 = -0.01i(E_1-E_1)\hat c_1 = 0$, $\delta\hat c_2 = -0.01i(3E_1)\cdot0.1 = -0.003iE_1$
 - The ground state is unaffected; the excited state acquires a phase proportional to $g\Delta E$.
 
-## XV. ENTANGLEMENT MEASURES
+## XIV. ENTANGLEMENT MEASURES
 
 ### XV.1 $\rho$-Weighted Concurrence
 
@@ -372,7 +353,7 @@ $$S_\rho = -\sum_k p_k \log p_k, \qquad p_k = \langle\varphi_k^{(1)}, \rho_{\rho
 - Reduced density on $I_1$: $\rho_{\rho}^{(1)} = \frac{1}{2}(|\varphi_1^{(1)}\rangle\langle\varphi_1^{(1)}| + |\varphi_1^{(2)}\rangle\langle\varphi_1^{(2)}|)$... wait, this is a spin-1/2 Bell state in the position basis. Let me write it properly:
 - $p_1 = \langle\varphi_1^{(1)}, \rho_{\rho}^{(1)}\varphi_1^{(1)}\rangle = 1/2$, $p_2 = \langle\varphi_2^{(1)}, \rho_{\rho}^{(1)}\varphi_2^{(1)}\rangle = 0$ for $m \neq 1$... actually for the Bell state, the reduced density matrix is maximally mixed: $\rho_{\rho}^{(1)} = \frac{1}{2}I$ in the two-dimensional spin subspace, so $p_1 = p_2 = 1/2$ and $S_\rho = \log 2 = 0.693$ nats.
 
-## XVI. QUANTUM CHANNEL CAPACITY
+## XV. QUANTUM CHANNEL CAPACITY
 
 ### XVI.1 Structure-Flow Quantum Channel
 

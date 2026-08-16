@@ -309,9 +309,11 @@ $$u_{tt} = L_{\rho^g} u - D_\rho(e^g)D_\rho(e^g u). \tag{VIII.2}$$
 
 *Proof.* The extra term $D_\rho(e^g)D_\rho(e^g u) = e^g D_\rho(e^g D_\rho u)$ cancels the gauge-induced part of $L_{\rho^g}$ when $u$ is the same function. In $\tau$-coordinates, both equations become $\partial_t^2 u = \partial_\tau^2 u$; the gauge is a coordinate artifact in the $\rho$-calculus. $\square$
 
-**Theorem 12 (gauge-invariant spectral quantities).** The eigenvalues $\mu_m$ and the structural length $\Lambda$ are gauge-invariant: if $\rho^g = \rho e^g$, then $\mu_m(\rho^g) = \mu_m(\rho)$ and $\Lambda(\rho^g) = \Lambda(\rho)$.
+**Theorem 12 (spectral response to gauge).** Under $\rho \mapsto \rho^g = \rho e^g$, the structural length changes to $\Lambda^g = \int_I dx/(\rho e^g)$, and the eigenvalues adjust accordingly:
+$$\mu_m(\rho^g) = \Big(\frac{m\pi}{\Lambda^g}\Big)^2 \neq \mu_m(\rho) \quad \text{unless } g \equiv 0.$$
+The *form* $\mu_m = (m\pi/\Lambda)^2$ is preserved for every $\rho$, but the numerical values are gauge-covariant through $\Lambda$.
 
-*Proof.* $\Lambda = \int dx/\rho$ transforms as $\int dx/(\rho e^g) = \int e^{-g}d\rho$. This is *not* obviously equal to $\Lambda$ unless $g=0$. Wait — the theorem as stated is false. We correct it: $\Lambda$ is *not* gauge-invariant; only the eigenvalues $\mu_m$ are gauge-invariant when accompanied by the transformed eigenfunctions $\tilde\varphi_m(x) = \varphi_m(\tau(x))$ with $\tau$ computed from $\rho^g$. The eigenvalues depend only on $\Lambda$, so $\mu_m(\rho^g) = (m\pi/\Lambda^g)^2$ with $\Lambda^g = \int dx/(\rho e^g)$. The spectral theorem (Paper 02, Theorem 1) holds for any $\rho$, so the eigenvalues are always $(m\pi/\Lambda)^2$, but $\Lambda$ itself changes under gauge. $\square$
+*Proof.* Since $\Lambda^g = \int_I e^{-g} d\rho \neq \int_I d\rho = \Lambda$ in general, the spectral formula gives different eigenvalues. The gauge-transformed eigenfunctions are $\tilde\varphi_m(x) = \varphi_m(\tau^g(x))$ with $\tau^g$ computed from $\rho^g$. $\square$
 
 **Corrected Theorem 12 (spectral gauge invariance).** The *spectral sequence* $\{\mu_m/\mu_1\}_{m\ge 1}$ is gauge-invariant: ratios of eigenvalues depend only on the mode index, not on the gauge.
 

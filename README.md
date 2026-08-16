@@ -23,7 +23,7 @@ The papers are rendered as a documentation site. To read it locally, run `npm in
 
 ### Read it as a PDF
 
-Grab the ready-to-read PDF — **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** (106 pages, A4, mathematics embedded) — straight from the repo, or download it from [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest). Open it in any PDF reader; no installation required. Regenerate it any time with `npm run docs:pdf`.
+Grab the ready-to-read PDF — **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** (217 pages, A4, mathematics embedded) — straight from the repo, or download it from [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest). Open it in any PDF reader; no installation required. Regenerate it any time with `npm run docs:pdf`.
 
 ## Install
 
@@ -50,21 +50,22 @@ Four ways to get the documentation, from easiest to fullest:
 
 | # | Paper | PDF page | Delivers |
 |---|---|---|---|
-| 00a | **Capstone** | 10 | The unified statement of the program, contributions 1–10 |
-| 00b | **Comprehensive Treatise** | 15 | The whole program in one self-contained document, with a derivation appendix and a numerical casebook |
-| 01 | **Foundations** | 45 | The $\rho$-calculus, the Fundamental Theorem, conformal transport |
-| 02 | **Structure Spectral Theory** | 52 | Closed-form graded-media modes, energy conservation |
-| 03 | **Causal Network Spectral Theory** | 58 | The eigenframe connection, the Energy Migration Theorem |
-| 04 | **Variational & Conservation Theory** | 65 | Structure-flow Euler–Lagrange, Noether-type laws |
-| 05 | **Graded Media Engineering** | 70 | Matched media, reflectionless design |
-| 06 | **Power Networks & Synchronization** | 74 | Rates, vulnerability, early warning |
-| 07 | **Epidemiology on Adaptive Networks** | 78 | Spectral outbreak bounds, interventions |
-| 08 | **Numerical Methods** | 81 | Spectral convergence, energy-preserving schemes |
-| 09 | **Higher-Dimensional Structure-Flow** | 85 | Metrics, Weyl law, product domains |
-| 10 | **Causal Graph-Time Signal Processing** | 90 | Causal GFT, anomaly detection |
-| 11 | **Novelty, Literature & Research Program** | 94 | Honest positioning and the way forward |
+| 00a | **Capstone** | 18 | The unified statement of the program, contributions 1–10 |
+| 00b | **Comprehensive Treatise** | 25 | The whole program in one self-contained document, with a derivation appendix and a numerical casebook |
+| 01 | **Foundations** | 70 | The $\rho$-calculus, the Fundamental Theorem, conformal transport |
+| 02 | **Structure Spectral Theory** | 81 | Closed-form graded-media modes, energy conservation |
+| 03 | **Causal Network Spectral Theory** | 91 | The eigenframe connection, the Energy Migration Theorem |
+| 04 | **Variational & Conservation Theory** | 102 | Structure-flow Euler–Lagrange, Noether-type laws |
+| 05 | **Graded Media Engineering** | 113 | Matched media, reflectionless design |
+| 06 | **Power Networks & Synchronization** | 123 | Rates, vulnerability, early warning |
+| 07 | **Epidemiology on Adaptive Networks** | 134 | Spectral outbreak bounds, interventions |
+| 08 | **Numerical Methods** | 144 | Spectral convergence, energy-preserving schemes |
+| 09 | **Higher-Dimensional Structure-Flow** | 155 | Metrics, Weyl law, product domains |
+| 10 | **Causal Graph-Time Signal Processing** | 167 | Causal GFT, anomaly detection |
+| 11 | **Novelty, Literature & Research Program** | 177 | Honest positioning and the way forward |
+| 12 | **Quantum & Information** | 189 | ρ-weighted Schrödinger equation, Fisher information, quantum measurement, entanglement |
 
-Proof/QED audit across the papers, capstone, and treatise: **259 proofs, 259 QED marks**, balanced equation delimiters.
+Proof/QED audit across the papers, capstone, and treatise: **294 proofs, 294 QED marks**, balanced equation delimiters.
 
 ## Run the demos
 

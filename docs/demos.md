@@ -1,6 +1,6 @@
 # Demos
 
-Four runnable scripts turn the central theorems of the Structure-Flow Calculus into numbers. Each prints a verdict and exits non-zero on failure, so the demos double as regression tests.
+Five runnable scripts turn the central theorems of the Structure-Flow Calculus into numbers. Each prints a verdict and exits non-zero on failure, so the demos double as regression tests.
 
 **Requirements:** Python 3 with `pip install -r demos/requirements.txt`. Run from the repo root.
 
@@ -66,6 +66,35 @@ All epidemic/adaptive-network checks passed.
 ```
 
 Result: **all three theorems hold** — the Grönwall envelope bounds the solution at every time step, total mass is conserved to 1 numerical nines, and the SIS decay bound is verified. Figure: epidemic decay vs. Grönwall envelope.
+
+## Demo: quantum_information.py  (Paper 12)
+
+Verifies the ρ-weighted Schrödinger equation (eigenfunctions = structure-flow modes), probability conservation, ρ-weighted Fisher information, structure-weighted graph Laplacian properties, spectral entropy bound, and mode localization.
+
+```text
+[Paper 12A] Schrodinger: verifying eigenfunctions...
+  m=3: max |L_rho phi - (-mu phi)| = 6.895e-06
+[Paper 12B] Probability conservation...
+  L2 norm = 1.000000, deviation from 1 = 4.572e-07
+[Paper 12C] Fisher information...
+  I_rho = 110.71, I_std = 100.00
+  CRB (rho-weighted) = 0.000009, sample variance = 0.000010
+[Paper 12D] Structure-weighted Laplacian...
+  Symmetry error = 0.000e+00
+  Min eigenvalue = 8.325e-16
+  L*1 = 1.110e-16
+  Stationary error = 3.886e-16
+[Paper 12E] Spectral entropy bound...
+  H = 1.142120, log(k) = 1.386294
+[Paper 12F] Mode localization...
+  m=5: peak at x=0.490
+  m=20: peak at x=0.604
+  m=50: peak at x=0.654
+
+[PASS] All Paper 12 checks passed.
+```
+
+Result: **all 6 checks pass** — eigenfunctions satisfy the ρ-weighted Schrödinger equation to 6.9e-06, probability is conserved to 4.6e-07, Fisher information obeys the Cramér–Rao bound, the graph Laplacian is symmetric PSD with correct null space and stationary distribution, spectral entropy is bounded by log(k), and modes localize in regions of small ρ as predicted.
 
 ## Deep Numerical Analysis
 

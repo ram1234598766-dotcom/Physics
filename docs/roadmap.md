@@ -2,7 +2,7 @@
 
 **Structure-Flow Calculus Working Group** — *2026-08-16*
 
-This document maps how the eleven papers and four demos fit together, states the open problems of the program, and lists the next steps.
+This document maps how the twelve papers and four demos fit together, states the open problems of the program, and lists the next steps.
 
 ## 1. How the papers fit together
 
@@ -22,18 +22,21 @@ This document maps how the eleven papers and four demos fit together, states the
    │
    ├── 04 Variational & Conservation Theory ── Euler–Lagrange equations, Noether laws, Hamiltonian, coupled theory
    │
-   └── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
+   ├── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
+   │
+   └── 12 Quantum & Information ── ρ-weighted quantum mechanics, Fisher information, quantum measurement, entanglement
 ```
 
 ### Reading order
 
-1. **Paper 01** (PDF p. 45) first: everything downstream uses the $\rho$-calculus and the transport map.
-2. **Paper 02** (PDF p. 52) second: the spectral theory is the workhorse for Papers 05, 08, 09.
-3. **Paper 04** (PDF p. 65) is self-contained variational theory (uses only 01); it can be read any time after 01.
-4. **Paper 03** (PDF p. 58) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
-5. **Paper 11** (PDF p. 94) documents novelty and can be read last (or first, for the honest statement).
-6. **Capstone** (Paper 00, PDF p. 10) collects all central theorems in one place.
-7. **Comprehensive treatise** (`00-treatise.md`, PDF p. 15, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
+1. **Paper 01** (PDF p. 70) first: everything downstream uses the $\rho$-calculus and the transport map.
+2. **Paper 02** (PDF p. 81) second: the spectral theory is the workhorse for Papers 05, 08, 09.
+3. **Paper 04** (PDF p. 102) is self-contained variational theory (uses only 01); it can be read any time after 01.
+4. **Paper 03** (PDF p. 91) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
+5. **Paper 11** (PDF p. 177) documents novelty and can be read last (or first, for the honest statement).
+6. **Paper 12** (PDF p. 189) extends the framework to quantum mechanics and information theory; read after Papers 01–02.
+7. **Capstone** (Paper 00, PDF p. 18) collects all central theorems in one place.
+8. **Comprehensive treatise** (`00-treatise.md`, PDF p. 25, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## 2. What each paper contributes
 
@@ -66,8 +69,9 @@ This document maps how the eleven papers and four demos fit together, states the
 - **Paper 09:** 10+ theorems. Core: Isometry (Thm 1), Green's identities (Thms 2–3), Weyl law (Thm 5), Two-term Weyl law (Thm 6b, Ivrii factor $\tfrac14$ verified), Product spectrum (Thm 6), Obstruction (Thm 8).
 - **Paper 10:** 5+ theorems. Core: Causal GFT (Thm 1), Modal ODEs (Thm 2), Filter response (Thm 3), Anomaly bound (Thm 5), Truncation (Thm 6).
 - **Paper 11:** novel-literature-positioning document.
+- **Paper 12:** 25 theorems. Core: ρ-weighted Schrödinger equation (Thm 1), Stationary states = structure-flow modes (Thm 2), Fisher information & Cramér–Rao bound (Thm 3), Graph diffusion (Thm 4), Spectral entropy bound (Thm 5), Quantum measurement (Thms 20, 29), Fidelity decay (Thm 30), Concurrence (Thm 30), Channel capacity (Thm 31).
 
-Proof/QED audit across all papers, capstone, and treatise: **259 proofs, 259 QED marks, balanced equation delimiters** (Papers 01–10 alone: 153 proofs).
+Proof/QED audit across all papers, capstone, and treatise: **294 proofs, 294 QED marks, balanced equation delimiters** (Papers 01–10 alone: 153 proofs).
 
 ## 4. Open problems
 
@@ -75,29 +79,27 @@ Proof/QED audit across all papers, capstone, and treatise: **259 proofs, 259 QED
 2. **Spectral flow without the simple-eigenvalue assumption.** Theorem 9 requires $\lambda_j\ne\lambda_k$; the degenerate case (eigenvalue crossings, level repulsion) is a natural extension using the connection's skew form and adiabatic theory.
 3. **Nonlinear structure dynamics.** The coupled field-structure equation (Theorem 15) is the $\kappa$-regularized start; a full nonlinear theory of $\rho$-evolution (structure as a dynamical field with its own Lagrangian) is open.
 4. **Stochastic structure fields.** Time-varying graphs with random edge weights make $L(t)$ a stochastic operator; Grönwall-type bounds (Theorem 11) have probabilistic analogues (large-deviation forms).
-5. **Quantum analogue.** The wave operator $\partial_t^2 - L_\rho$ has a Klein–Gordon reading; a relativistic structure-field theory and its quantization are untouched.
+5. **Relativistic and quantum extensions.** Paper 12 opens the quantum direction; a relativistic structure-field theory (Klein–Gordon in structure spacetime) and the quantization of the coupled field-structure system remain open.
 6. **Inverse problems.** Theorem 3 guarantees identifiability of $\rho$ from transport data; reconstruction algorithms and stability estimates beyond the mean-value bounds are open.
 7. **Optimal structure design.** Paper 05 gives reflectionless design; optimizing $\rho$ for a target spectrum (e.g., prescribed bandgaps) is a natural inverse-spectral-design problem.
 
 ## 5. Next steps for the program
 
-Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is delivered, four new theorems (Paper 02 Thm 10, Paper 03 Thm 6b, Paper 07 Thm 4b, Paper 09 Thm 6b) were added and numerically verified, the two-term Weyl boundary coefficient was corrected (Ivrii factor $\tfrac14$) through the verification campaign, and all four demos pass continuously.
+Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is delivered, Paper 12 (Quantum & Information) is written with 25 theorems and a new `quantum_information.py` demo (all checks pass), four new theorems (Paper 02 Thm 10, Paper 03 Thm 6b, Paper 07 Thm 4b, Paper 09 Thm 6b) were added and numerically verified, the two-term Weyl boundary coefficient was corrected (Ivrii factor $\tfrac14$) through the verification campaign, and all five demos pass continuously.
 
 1. **Extend Paper 09** to include the spectral-flow and energy-migration theorems on higher-dimensional time-varying structures.
 2. **Add a fifth demo** exercising the coupled equation (Theorem 15) with the corrected sign, mirroring the `sympy` check.
 3. **Produce figures** for the demo plots (currently saved to `demos/figures/`) and embed them in the docs.
-4. **Write the open-problem paper** (paper 12) collecting the ten open problems of the treatise with precise statements and partial results.
-5. **Peer-review hardening:** convert each paper and the treatise to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
+4. **Peer-review hardening:** convert each paper and the treatise to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
 
 ## 5. Next steps for the program
 
-Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is delivered, four new theorems (Paper 02 Thm 10, Paper 03 Thm 6b, Paper 07 Thm 4b, Paper 09 Thm 6b) were added and numerically verified, the two-term Weyl boundary coefficient was corrected (Ivrii factor $\tfrac14$) through the verification campaign, and all four demos pass continuously.
+Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is delivered, Paper 12 (Quantum & Information) is written with 25 theorems and a new `quantum_information.py` demo (all checks pass), four new theorems (Paper 02 Thm 10, Paper 03 Thm 6b, Paper 07 Thm 4b, Paper 09 Thm 6b) were added and numerically verified, the two-term Weyl boundary coefficient was corrected (Ivrii factor $\tfrac14$) through the verification campaign, and all five demos pass continuously.
 
 1. **Extend Paper 09** to include the spectral-flow and energy-migration theorems on higher-dimensional time-varying structures.
 2. **Add a fifth demo** exercising the coupled equation (Theorem 15) with the corrected sign, mirroring the `sympy` check.
 3. **Produce figures** for the demo plots (currently saved to `demos/figures/`) and embed them in the docs.
-4. **Write the open-problem paper** (paper 12) collecting the ten open problems of the treatise with precise statements and partial results.
-5. **Peer-review hardening:** convert each paper and the treatise to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
+4. **Peer-review hardening:** convert each paper and the treatise to LaTeX/arXiv format with the existing proofs unchanged, keeping the honesty caveats verbatim.
 
 ## 7. Detailed next steps with timelines
 
@@ -110,7 +112,7 @@ Status (2026-08-16): the comprehensive ~30-page treatise (`00-treatise.md`) is d
 - Add `demos/lyapunov_exponent.py` computing the top Lyapunov exponent $\chi$ for the IEEE test cases under random line-stress trajectories, comparing the numerical $\chi$ against the bound $-\inf_t\lambda_2(t)$.
 
 **Month 2 (medium-term).**
-- Write Paper 12 (open problems) as a standalone document with precise mathematical statements, partial results, and suggested proof strategies for each of the ten open problems of the treatise.
+- Extend Paper 12 to relativistic structure-field theory (Klein–Gordon in structure spacetime) and quantization of the coupled field-structure system.
 - Convert `00-treatise.md` to LaTeX using `pandoc`, preserving the equation numbering and cross-references; proofread the LaTeX output against the original markdown.
 
 **Month 3–6 (long-term).**
