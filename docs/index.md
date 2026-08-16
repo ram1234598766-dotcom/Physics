@@ -1,16 +1,34 @@
-# Structure-Flow Calculus
+---
+layout: home
 
-**A new stream in mathematics and physics.**
+hero:
+  name: Structure-Flow Calculus
+  text: A new stream in mathematics and physics
+  tagline: One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, and a network theory. Every theorem is proved; every central theorem is verified numerically.
+  image:
+    src: /sf-mark.svg
+    alt: Structure-Flow mark
+  actions:
+    - theme: brand
+      text: Read the program statement
+      link: /overview
+    - theme: alt
+      text: Comprehensive treatise
+      link: /papers/00-treatise
+    - theme: alt
+      text: Download the PDF
+      link: https://github.com/ram1234598766-dotcom/Physics/releases/latest
 
-Structure-Flow Calculus (SFC) is a mathematical framework in which the *differential structure of space is itself a dynamical field*. A single positive function $\rho$ — the **structure field** — generates a complete calculus, a spectral theory, a variational theory, and a network theory. Every theorem is proved; every central theorem is verified numerically.
-
-Read the [program statement](/overview), the [capstone paper](/papers/00-capstone), the [comprehensive treatise](/papers/00-treatise) (~30 pages, self-contained), the [verification report](/verification), or the [roadmap](/roadmap).
-
-## Why it matters
-
-- **Graded media.** Closed-form modes for wave propagation in impedance-matched graded media, and reflectionless design (Paper 02, Paper 05).
-- **Power networks.** Mode-energy migration as a grid is stressed — a proven redistribution law that exposes the vulnerable modes (Paper 03, Paper 06).
-- **Adaptive contact networks.** Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Paper 03, Paper 07).
+features:
+  - title: Graded media
+    details: Closed-form modes for wave propagation in impedance-matched graded media, and reflectionless design (Papers 02, 05).
+  - title: Power networks
+    details: Mode-energy migration as a grid is stressed — a proven redistribution law that exposes the vulnerable modes (Papers 03, 06).
+  - title: Adaptive contact networks
+    details: Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Papers 03, 07).
+  - title: Verified end to end
+    details: 259 proofs, 259 QED marks, and every central theorem checked numerically by a runnable demo.
+---
 
 ## Research papers
 

@@ -30,6 +30,9 @@ const DOCS = [
   'docs/demos.md'
 ]
 
+const stripFrontmatter = (src) =>
+  src.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '')
+
 const stripRelativeLinks = (src) =>
   src.replace(/\[([^\]]+)\]\((?!https?:\/\/)[^)]*\)/g, '$1')
 
@@ -37,6 +40,7 @@ function renderDoc(file) {
   const path = resolve(root, file)
   if (!existsSync(path)) throw new Error(`missing: ${path}`)
   let src = readFileSync(path, 'utf8')
+  src = stripFrontmatter(src)
   src = stripRelativeLinks(src)
   const html = md.render(src)
   const slug = file.replace(/^docs\//, '').replace(/[^\w]+/g, '-').replace(/^-+|-+$/g, '')

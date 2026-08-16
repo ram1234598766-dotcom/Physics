@@ -25,7 +25,8 @@ vite: {
       { text: 'Papers', link: '/papers/00-capstone' },
       { text: 'Verification', link: '/verification' },
       { text: 'Roadmap', link: '/roadmap' },
-      { text: 'Demos', link: '/demos' }
+      { text: 'Demos', link: '/demos' },
+      { text: 'PDF', link: 'https://github.com/ram1234598766-dotcom/Physics/releases/latest' }
     ],
     sidebar: [
       { text: 'Overview', link: '/' },
@@ -51,7 +52,11 @@ vite: {
           { text: '11 — Novelty & Literature', link: '/papers/11-novelty-and-literature' }
         ]
       }
-    ]
+    ],
+    footer: {
+      message: 'Structure-Flow Calculus Working Group',
+      copyright: 'Every theorem proved, every central claim verified numerically.'
+    }
   },
   server: {
     allowedHosts: ['.monkeycode-ai.live']
