@@ -20,6 +20,15 @@ The program is written as a set of self-contained documents; each can be read on
 
 The papers are rendered as a documentation site. To read it locally, run `npm install && npm run docs:dev` and open the printed address; to build a static copy, run `npm run docs:build`.
 
+### One-click docs site
+
+Prefer a hosted copy? Deploy the documentation site with a single click — the platform clones the repository, runs the VitePress build, and serves the result:
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fram1234598766-dotcom%2FPhysics)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ram1234598766-dotcom/Physics)
+
+The build is already wired up for both platforms: Vercel reads `vercel.json` and Netlify reads `netlify.toml` (build `npm run docs:build`, publish `docs/.vitepress/dist`).
+
 ## Research papers
 
 | # | Paper | Delivers |
