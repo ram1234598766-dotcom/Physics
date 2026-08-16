@@ -28,8 +28,17 @@ features:
     details: Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Papers 03, 07).
   - title: Verified end to end
     details: 259 proofs, 259 QED marks, and every central theorem checked numerically by a runnable demo.
----
 
+---
+# Introduction
+
+The **Structure-Flow Calculus (SFC)** is a new mathematical framework that builds a complete calculus relative to a dynamical **structure field** — a single positive function ρ(x) that treats the differential structure of space as a variable rather than a given. From this single object ρ, three complete theories emerge: a spectral theory (eigenvalues and eigenfunctions relative to ρ), a variational theory (Euler–Lagrange equations and Noether‑type conservation laws relative to ρ), and a network theory (graph Laplacians with structure‑dependent edge weights and a skew‑symmetric connection form that enables energy migration while conserving total modal energy).
+
+The framework does **not** claim new fundamental physics; the underlying phenomena (graded‑media acoustics, swing equations, SIS epidemics) are classical. The contribution is the unified object ρ and the theorems built around it, all of which are numerically verified through runnable demos and the deep analysis suite (`demos/deep_analysis.py`). The novelty, its evidence, and its limits are stated plainly in Paper 11.
+
+Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete program consists of 12 research papers (00–11), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (259 proofs, 259 QED marks), and a roadmap of open problems and next steps.
+
+---
 ## Research papers
 
 - [00 — Capstone](/papers/00-capstone): unified statement of the program
