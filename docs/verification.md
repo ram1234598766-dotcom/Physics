@@ -13,7 +13,7 @@ Two independent verification routes are used:
 
 ## 2. Demo evidence (all pass, exit code 0)
 
-### 2.1 `verify_calculus.py` — Paper 01 (PDF p. 70; Foundations)
+### 2.1 `verify_calculus.py` — Paper 01 (PDF p. 3; Foundations)
 
 | Theorem / identity | Check | Max error |
 |---|---|---|
@@ -21,7 +21,7 @@ Two independent verification routes are used:
 | Product rule (Thm 2) | $D_\rho(fg) = (D_\rho f)g + f(D_\rho g)$ | $1.801\times10^{-7}$ |
 | Adjoint pair (Thm 9) | $\langle D_\rho f,g\rangle_\rho + \langle f,D_\rho g\rangle_\rho = 0$ | $2.026\times10^{-14}$ |
 | Self-adjointness of $L_\rho$ (Thm 10) | $\langle L_\rho f,g\rangle_\rho - \langle f,L_\rho g\rangle_\rho = 0$ | $5.107\times10^{-12}$ |
-| Eigenvalue relation (Paper 02, Thm 1; PDF p. 81) | $-L_\rho\varphi_m = \mu_m\varphi_m$, $\mu_m=(m\pi/\Lambda)^2$ | $5.359\times10^{-5}$ |
+| Eigenvalue relation (Paper 02, Thm 1; PDF p. 3) | $-L_\rho\varphi_m = \mu_m\varphi_m$, $\mu_m=(m\pi/\Lambda)^2$ | $5.359\times10^{-5}$ |
 
 ### 2.2 `graded_wave.py` — Papers 02 (PDF p. 3), 04 (PDF p. 4), 05 (PDF p. 4) (graded-media waves)
 
