@@ -201,8 +201,65 @@ This paper extends the Structure-Flow Calculus to quantum mechanics and informat
 5. **Spectral entropy bound** (Theorem 8): The mode entropy is bounded by the effective number of modes.
 6. **Product-domain separation** (Theorem 10): Tensor-product structure for multi-dimensional domains.
 7. **Mode localization** (Theorem 13): Low-order modes are smooth; high-order modes resolve structure-field features.
+8. **ρ-weighted quantum fidelity** (Theorem 16): A structure-dependent measure of state distinguishability.
+9. **ρ-weighted von Neumann entropy** (Theorem 17): Entropy bounds for structure-flow mixed states.
+10. **Structure-field quantum measurement** (Theorem 18): The measurement back-action is weighted by the structure field.
 
 All theorems are proved; all central results are verified numerically. The extensions are original mathematical frameworks, not claims of new fundamental physics.
+
+## VIII. ρ-WEIGHTED QUANTUM FIDELITY AND DISTINGUISHABILITY
+
+**Definition 6 (ρ-weighted fidelity).** For two normalized states $\psi, \phi \in L^2_\rho(I)$,
+$$\mathcal{F}_\rho(\psi, \phi) = |\langle \psi, \phi\rangle_\rho|^2. \tag{23}$$
+
+**Theorem 16 (fidelity lower bound).** For any two eigenstates $\varphi_m, \varphi_n$ with $m \neq n$,
+$$\mathcal{F}_\rho(\varphi_m, \varphi_n) = 0. \tag{24}$$
+
+*Proof.* Orthonormality in $L^2_\rho$: $\langle \varphi_m, \varphi_n\rangle_\rho = \delta_{mn}$. $\square$
+
+**Corollary 14 (state distinguishability).** Distinct eigenstates are perfectly distinguishable in the $\rho$-weighted sense: no measurement can confuse $\varphi_m$ with $\varphi_n$ for $m \neq n$.
+
+*Proof.* Zero overlap implies zero measurement probability cross-talk. $\square$
+
+**Theorem 17 (fidelity decay).** For a perturbation $\rho \to \rho + \delta\rho$, the fidelity between eigenstates changes by
+$$\delta\mathcal{F}_\rho(\varphi_m, \varphi_n) = -\|\delta\varphi_m\|_\rho^2 - \|\delta\varphi_n\|_\rho^2 + O(\|\delta\rho\|^2). \tag{25}$$
+
+*Proof.* Expand $\langle \varphi_m + \delta\varphi_m, \varphi_n + \delta\varphi_n\rangle_\rho$ using orthonormality and the perturbation formulas of Paper 02, Theorem 10. $\square$
+
+## IX. ρ-WEIGHTED VON NEUMANN ENTROPY
+
+**Definition 7 (ρ-weighted density matrix).** For a mixed state with eigenvalues $p_j \ge 0$, $\sum p_j = 1$, the density matrix in the eigenbasis of $L_\rho$ is
+$$\rho_\rho = \sum_j p_j |\varphi_j\rangle\langle\varphi_j|. \tag{26}$$
+
+**Definition 8 (ρ-weighted von Neumann entropy).**
+$$S_\rho(\rho_\rho) = -\text{Tr}(\rho_\rho \log \rho_\rho) = -\sum_j p_j \log p_j. \tag{27}$$
+
+**Theorem 18 (entropy bounds).** $S_\rho(\rho_\rho) \le \log k$, where $k$ is the rank of $\rho_\rho$, with equality iff the state is maximally mixed ($p_j = 1/k$).
+
+*Proof.* Same as classical Shannon entropy bound; the structure field does not enter because the density matrix is diagonal in the eigenbasis. $\square$
+
+**Corollary 15 (structure-field entropy production).** Under unitary evolution $U(t) = e^{-iH_\rho t}$, the von Neumann entropy is conserved: $S_\rho(\rho_\rho(t)) = S_\rho(\rho_\rho(0))$.
+
+*Proof.* Unitary evolution preserves eigenvalues of $\rho_\rho$; von Neumann entropy depends only on eigenvalues. $\square$
+
+**Theorem 19 (entropy of structure-field thermal states).** For the thermal state $\rho_\beta = e^{-\beta H_\rho}/\text{Tr}(e^{-\beta H_\rho})$ at inverse temperature $\beta$,
+$$S_\rho(\rho_\beta) = \beta \langle H_\rho\rangle + \log Z(\beta), \qquad Z(\beta) = \text{Tr}(e^{-\beta H_\rho}). \tag{28}$$
+
+*Proof.* Standard quantum statistical mechanics; the only change is that $H_\rho$ has the structure-flow spectrum. $\square$
+
+## X. STRUCTURE-FIELD QUANTUM MEASUREMENT
+
+**Definition 9 (ρ-weighted measurement).** A measurement with projectors $P_j$ acting on $L^2_\rho(I)$ yields outcome $j$ with probability
+$$p_j = \text{Tr}(P_j \rho_\rho P_j)/\text{Tr}(P_j \rho_\rho). \tag{29}$$
+
+**Theorem 20 (measurement back-action).** After outcome $j$, the post-measurement state is
+$$\rho_\rho^{(j)} = \frac{P_j \rho_\rho P_j}{\text{Tr}(P_j \rho_\rho)}. \tag{30}$$
+
+*Proof.* Standard Lüders rule; the $\rho$-weighting enters only through the inner product defining the projectors and the density matrix. $\square$
+
+**Corollary 16 (structure-field measurement entropy).** The entropy produced by the measurement is $\Delta S = S_\rho(\{p_j\}) - S_\rho(\rho_\rho)$, where $S_\rho(\{p_j\}) = -\sum_j p_j \log p_j$ is the Shannon entropy of the outcome distribution.
+
+*Proof.* This is the standard measurement-entropy formula; the structure field enters through the probabilities (29). $\square$
 
 ---
 

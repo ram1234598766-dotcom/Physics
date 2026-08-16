@@ -142,6 +142,8 @@ SFC claims *integration and theorems*, not new fundamental physics. The physical
 
 The ten contributions form one object: a field $\rho$, a transport map $\tau$, and the calculus, spectra, migrations, and engineering that follow. The capstone collects them as proved theorems with a single honest novelty statement.
 
+*PDF page references:* Paper 01 (Foundations) p. 45; Paper 02 (Spectral Theory) p. 52; Paper 03 (Causal Network) p. 58; Paper 04 (Variational) p. 65; Paper 05 (Graded Media) p. 70; Paper 06 (Power Networks) p. 74; Paper 07 (Epidemiology) p. 78; Paper 08 (Numerical Methods) p. 81; Paper 09 (Higher-Dimensional) p. 85; Paper 10 (Signal Processing) p. 90; Paper 11 (Novelty) p. 94.
+
 ---
 
 ## REFERENCES
@@ -164,4 +166,4 @@ The ten contributions form one object: a field $\rho$, a transport map $\tau$, a
 
 ## Program papers
 
-00 Capstone · 01 Foundations · 02 Structure Spectral Theory · 03 Causal Network Spectral Theory · 04 Variational & Conservation · 05 Graded Media Engineering · 06 Power Networks & Synchronization · 07 Epidemiology on Adaptive Networks · 08 Numerical Methods · 09 Higher-Dimensional Structure-Flow · 10 Causal Graph-Time Signal Processing · 11 Novelty, Literature & Research Program
+00 Capstone (PDF p. 10) · 01 Foundations (PDF p. 45) · 02 Structure Spectral Theory (PDF p. 52) · 03 Causal Network Spectral Theory (PDF p. 58) · 04 Variational & Conservation (PDF p. 65) · 05 Graded Media Engineering (PDF p. 70) · 06 Power Networks & Synchronization (PDF p. 74) · 07 Epidemiology on Adaptive Networks (PDF p. 78) · 08 Numerical Methods (PDF p. 81) · 09 Higher-Dimensional Structure-Flow (PDF p. 85) · 10 Causal Graph-Time Signal Processing (PDF p. 90) · 11 Novelty, Literature & Research Program (PDF p. 94) · 12 Quantum & Information (PDF p. 103)

@@ -13,7 +13,7 @@ Two independent verification routes are used:
 
 ## 2. Demo evidence (all pass, exit code 0)
 
-### 2.1 `verify_calculus.py` — Paper 01 ($\rho$-calculus identities)
+### 2.1 `verify_calculus.py` — Paper 01 (PDF p. 45; Foundations)
 
 | Theorem / identity | Check | Max error |
 |---|---|---|
@@ -21,9 +21,9 @@ Two independent verification routes are used:
 | Product rule (Thm 2) | $D_\rho(fg) = (D_\rho f)g + f(D_\rho g)$ | $1.801\times10^{-7}$ |
 | Adjoint pair (Thm 9) | $\langle D_\rho f,g\rangle_\rho + \langle f,D_\rho g\rangle_\rho = 0$ | $2.026\times10^{-14}$ |
 | Self-adjointness of $L_\rho$ (Thm 10) | $\langle L_\rho f,g\rangle_\rho - \langle f,L_\rho g\rangle_\rho = 0$ | $5.107\times10^{-12}$ |
-| Eigenvalue relation (Paper 02, Thm 1) | $-L_\rho\varphi_m = \mu_m\varphi_m$, $\mu_m=(m\pi/\Lambda)^2$ | $5.359\times10^{-5}$ |
+| Eigenvalue relation (Paper 02, Thm 1; PDF p. 52) | $-L_\rho\varphi_m = \mu_m\varphi_m$, $\mu_m=(m\pi/\Lambda)^2$ | $5.359\times10^{-5}$ |
 
-### 2.2 `graded_wave.py` — Papers 02, 04, 05 (graded-media waves)
+### 2.2 `graded_wave.py` — Papers 02 (PDF p. 52), 04 (PDF p. 65), 05 (PDF p. 70) (graded-media waves)
 
 | Check | Result |
 |---|---|
@@ -36,7 +36,7 @@ Two independent verification routes are used:
 
 The mode checks scale as the grid's finite-difference order; the energy drift is at machine precision, confirming exact conservation of the scheme and of the theorem.
 
-### 2.3 `power_grid_mode_migration.py` — Paper 03 (causal spectral theory)
+### 2.3 `power_grid_mode_migration.py` — Paper 03 (PDF p. 58; causal spectral theory)
 
 | Check | Result |
 |---|---|
@@ -46,13 +46,13 @@ The mode checks scale as the grid's finite-difference order; the energy drift is
 
 The skewness error $4.2\times10^{-6}$ directly confirms the eigenframe connection theorem; the energy-balance residual confirms that the skew part contributes zero to total energy (Energy Migration).
 
-### 2.4 `epidemic_decay_bound.py` — Papers 03, 07 (time-varying networks)
+### 2.4 `epidemic_decay_bound.py` — Papers 03 (PDF p. 58), 07 (PDF p. 78) (time-varying networks)
 
 | Check | Result |
 |---|---|
 | Mass conservation (Thm 11): total mass | conserved within $10^{-9}$ |
 | Algebraic-connectivity contraction bound (Thm 11) | holds throughout |
-| SIS decay bound (Paper 07, Thm 3): $\|x(t)\|$ below Grönwall envelope | holds throughout |
+| SIS decay bound (Paper 07, Thm 3; PDF p. 78): $\|x(t)\|$ below Grönwall envelope | holds throughout |
 
 ### 2.5 New-theorem checks (Papers 02, 03, 07, 09)
 

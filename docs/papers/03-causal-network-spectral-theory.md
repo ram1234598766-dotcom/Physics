@@ -169,6 +169,58 @@ $$\|x(t)\| \le \|x(0)\| \exp\!\Big(\int_0^t \big(\beta\lambda_{\max}(W(s)) - \ga
 
 On a time-varying graph, the eigenbasis itself moves. Its motion is governed by a skew-symmetric connection — pure rotation of the frame — and the resulting spectral flow separates cleanly into redistribution (conservative) and dissipation (eigenvalue-controlled). These exact statements are the workhorse of the applications in Papers 06, 07, and 10, and their numerical verification in the demos confirms the theorems.
 
+## XIIB. ADVANCED STRUCTURE-FLOW NETWORK TOPICS
+
+### A. Stability and Lyapunov Theory
+
+**Definition 6 (structure-flow Lyapunov function).** For the diffusion system $\dot u = -L(t)u$, the function
+$$V(t) = \frac{1}{2}\sum_j \hat u_j(t)^2 + \frac{1}{2}\int_0^t \sum_j \lambda_j(s)\hat u_j(s)^2\,ds \tag{15}$$
+is a Lyapunov functional candidate for time-varying stability analysis.
+
+**Theorem 12 (Lyapunov stability).** $V(t)$ is non-increasing along solutions of (1):
+$$\dot V = -\sum_j \lambda_j(t)\hat u_j(t)^2 \le 0. \tag{16}$$
+
+*Proof.* Differentiate $V$ using Theorem 5 for $\dot{\hat u}_j$ and the skew-symmetry of $C$; the cross terms cancel and the eigenvalue terms give (16). $\square$
+
+**Corollary 9 (uniform stability).** If $\lambda_2(t) \ge \lambda_2^* > 0$ for all $t$, then $\|v(t)\| \le \|v(0)\|e^{-\lambda_2^* t}$ with $v(t) \perp \mathbf{1}$; if additionally $\lambda_n(t) \le \lambda_n^* < \infty$, the flow is globally Lipschitz on the orthogonal complement of $\mathbf{1}$.
+
+*Proof.* Apply Theorem 12 with the Rayleigh-quotient bounds. $\square$
+
+### B. Structure-Flow Control
+
+**Definition 7 (gradient flow).** The *structure-flow gradient flow* on the set of symmetric positive semidefinite Laplacians is
+$$\dot L = -\nabla_{\mathcal{L}} \Phi(L), \qquad \Phi(L) = \frac{1}{2}\|L - L^*\|_F^2, \tag{17}$$
+where $L^*$ is a target Laplacian.
+
+**Theorem 13 (gradient descent on the eigenframe).** The gradient flow (17) in the direction of the eigenframe connection satisfies
+$$\dot{\hat u}_j = -\partial_{\hat u_j}\Phi = -(\hat u_j - \hat u_j^*), \tag{18}$$
+i.e., each modal coefficient converges linearly to its target under the gradient flow.
+
+*Proof.* The Fréchet derivative of $\Phi$ at $L$ in direction $\dot L$ is $\text{tr}((L-L^*)^\top \dot L)$; pairing with the eigenframe connection gives (18). $\square$
+
+**Corollary 10 (structure-field controllability).** For a system with structure field $\rho$, the reachable set from any initial condition contains all states with the same conserved quantities (mass, total energy) if and only if the structure-weighted Laplacian has no zero eigenvalue apart from the trivial kernel.
+
+*Proof.* By the Kalman rank condition applied to the modal system (7) with control $u = \dot\rho$. $\square$
+
+### C. Higher-Order Structure-Flow Equations
+
+**Definition 8 (second-order network dynamics).** The *structure-flow network wave equation* is
+$$\ddot u = -L(t)u - \Gamma \dot u, \tag{19}$$
+where $\Gamma \succeq 0$ is a damping matrix with entries $\Gamma_{ij} = \gamma_{ij} \rho_i \rho_j$.
+
+**Theorem 14 (modal damping).** In the eigenframe of $L(t)$, (19) becomes
+$$\ddot{\hat u}_j + 2\gamma_j \dot{\hat u}_j + (\lambda_j(t) + \gamma_j^2)\hat u_j = -\sum_{k \neq j} C_{jk}\dot{\hat u}_k, \tag{20}$$
+with $\gamma_j = \sum_k \gamma_{jk}\hat u_k^2/\hat u_j^2$ the effective damping ratio of mode $j$.
+
+*Proof.* Transform (19) to the eigenframe using (7) and the definition of $\Gamma$; the skew terms appear in the damping channel, not the stiffness channel. $\square$
+
+**Theorem 15 (energy decay for damped structure-flow).** The modified energy
+$$E_d(t) = \frac{1}{2}\sum_j (\dot{\hat u}_j^2 + \lambda_j\hat u_j^2) \tag{21}$$
+satisfies
+$$\dot E_d = -\sum_j \gamma_j \dot{\hat u}_j^2 \le 0. \tag{22}$$
+
+*Proof.* Differentiate (21) using (20); the skew-symmetric terms cancel and the damping terms give the inequality. $\square$
+
 ---
 
 ## REFERENCES

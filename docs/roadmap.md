@@ -27,13 +27,13 @@ This document maps how the eleven papers and four demos fit together, states the
 
 ### Reading order
 
-1. **Paper 01** first: everything downstream uses the $\rho$-calculus and the transport map.
-2. **Paper 02** second: the spectral theory is the workhorse for Papers 05, 08, 09.
-3. **Paper 04** is self-contained variational theory (uses only 01); it can be read any time after 01.
-4. **Paper 03** begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
-5. **Paper 11** documents novelty and can be read last (or first, for the honest statement).
-6. **Capstone** (Paper 00) collects all central theorems in one place.
-7. **Comprehensive treatise** (`00-treatise.md`, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
+1. **Paper 01** (PDF p. 45) first: everything downstream uses the $\rho$-calculus and the transport map.
+2. **Paper 02** (PDF p. 52) second: the spectral theory is the workhorse for Papers 05, 08, 09.
+3. **Paper 04** (PDF p. 65) is self-contained variational theory (uses only 01); it can be read any time after 01.
+4. **Paper 03** (PDF p. 58) begins the network half; Papers 06, 07, 10 are applications of it and can be read in any order after 03.
+5. **Paper 11** (PDF p. 94) documents novelty and can be read last (or first, for the honest statement).
+6. **Capstone** (Paper 00, PDF p. 10) collects all central theorems in one place.
+7. **Comprehensive treatise** (`00-treatise.md`, PDF p. 15, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## 2. What each paper contributes
 

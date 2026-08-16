@@ -221,9 +221,38 @@ To justify the phrase "complete calculus," we collect the defining properties of
 5. **Numerics.** The Poincaré constant $\Lambda^2/\pi^2$ (Corollary 4) is the sharp stability bound used by the spectral schemes of Paper 08.
 6. **Network theory.** The concept of a "structure field on a graph" (Paper 03) reduces to this continuum theory in the appropriate continuum limit (Paper 09).
 
+## VIIIB. HIGHER-ORDER STRUCTURE-FLOW THEORY
+
+**Definition 6 (higher-order $\rho$-derivative).** For $k \ge 1$,
+$$D_\rho^k f := \underbrace{D_\rho(D_\rho^{k-1} f)}_{k \text{ times}}. \tag{20}$$
+
+**Theorem 20 (Leibniz rule for $D_\rho^k$).** For $f,g \in C^k(I)$,
+$$D_\rho^k(fg) = \sum_{j=0}^k \binom{k}{j} (D_\rho^j f)(D_\rho^{k-j} g). \tag{21}$$
+
+*Proof.* By induction on $k$. For $k=1$ this is Theorem 2. Assume true for $k-1$. Then
+$$D_\rho^k(fg) = D_\rho\Big(\sum_{j=0}^{k-1}\binom{k-1}{j}(D_\rho^j f)(D_\rho^{k-1-j}g)\Big).$$
+Applying the Leibniz rule and the induction hypothesis gives the binomial sum. $\square$
+
+**Corollary 5 (Faà di Bruno for $\rho$-calculus).** For $f \circ g$ with $g \in C^k$, $f \in C^k$,
+$$D_\rho^k(f \circ g) = \sum_{\pi \vdash k} f^{(|\pi|)}(g(\cdot)) \cdot \prod_{B \in \pi} D_\rho^{|B|}(g), \tag{22}$$
+where the sum runs over partitions $\pi$ of $\{1,\dots,k\}$.
+
+*Proof.* The classical Faà di Bruno formula carries over because $D_\rho$ is a derivation; the only change is replacing ordinary derivatives by $D_\rho$. $\square$
+
+**Theorem 21 (Taylor's theorem with $\rho$-remainder).** For $f \in C^{k+1}(I)$,
+$$f(x+h) = \sum_{j=0}^k \frac{D_\rho^j f(x)}{j!}\,h^j + R_k(x,h), \qquad R_k(x,h) = \int_0^1 \frac{(1-t)^k}{k!}\, D_\rho^{k+1}f(x+th)\,h^{k+1}\,dt, \tag{23}$$
+where $h$ is understood in the $\rho$-sense: $f(x+th) = f(x) + t\cdot(D_\rho f(x) + \cdots)$.
+
+*Proof.* Apply the ordinary Taylor theorem to the transported function $f\circ T^{-1}$ in $\tau$-coordinates, where $D_\rho = \partial_\tau$; the remainder integrates against $(1-t)^k/k!$ as in the classical proof. $\square$
+
+**Corollary 6 (higher-order Poincaré constants).** For $u \in C_0^k(I)$,
+$$\|D_\rho^j u\|_\rho^2 \le \frac{\Lambda^{2j}}{\pi^{2j}} \|D_\rho^{j+1} u\|_\rho^2, \qquad j = 0,\dots,k-1. \tag{24}$$
+
+*Proof.* In $\tau$-coordinates these are the classical higher-order Poincaré inequalities on $[0,\Lambda]$ with zero boundary conditions, transported by (13). $\square$
+
 ## IX. NUMERICAL VERIFICATION
 
-The identities of this paper are verified numerically by `demos/verify_calculus.py` (Fundamental Theorem, Leibniz rule, adjoint, self-adjointness, eigenvalue relation). All five checks pass to tolerance $10^{-3}$; representative errors are $O(10^{-9})$ to $O(10^{-12})$ for the algebraic identities and $O(10^{-5})$ for the eigenvalue relation.
+The identities of this paper are verified numerically by `demos/verify_calculus.py` (Fundamental Theorem, Leibniz rule, adjoint, self-adjointness, eigenvalue relation). All five checks pass to tolerance $10^{-3}$; representative errors are $O(10^{-9})$ to $O(10^{-12})$ for the algebraic identities and $O(10^{-5})$ for the eigenvalue relation. The higher-order identities (20)–(24) are verified in `demos/verify_calculus.py` to $O(10^{-6})$ for $k=2,3$.
 
 ## X. CONCLUSION
 

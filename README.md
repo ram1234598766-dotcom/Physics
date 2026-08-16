@@ -23,7 +23,7 @@ The papers are rendered as a documentation site. To read it locally, run `npm in
 
 ### Read it as a PDF
 
-Grab the ready-to-read PDF — **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** (100 pages, A4, mathematics embedded) — straight from the repo, or download it from [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest). Open it in any PDF reader; no installation required. Regenerate it any time with `npm run docs:pdf`.
+Grab the ready-to-read PDF — **[`Structure-Flow-Calculus-Docs.pdf`](Structure-Flow-Calculus-Docs.pdf)** (106 pages, A4, mathematics embedded) — straight from the repo, or download it from [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest). Open it in any PDF reader; no installation required. Regenerate it any time with `npm run docs:pdf`.
 
 ## Install
 
@@ -48,21 +48,21 @@ Four ways to get the documentation, from easiest to fullest:
 
 ## Research papers
 
-| # | Paper | Delivers |
-|---|---|---|
-| 00a | **Capstone** | The unified statement of the program, contributions 1–10 |
-| 00b | **Comprehensive Treatise** | The whole program in one self-contained document, with a derivation appendix and a numerical casebook |
-| 01 | **Foundations** | The $\rho$-calculus, the Fundamental Theorem, conformal transport |
-| 02 | **Structure Spectral Theory** | Closed-form graded-media modes, energy conservation |
-| 03 | **Causal Network Spectral Theory** | The eigenframe connection, the Energy Migration Theorem |
-| 04 | **Variational & Conservation Theory** | Structure-flow Euler–Lagrange, Noether-type laws |
-| 05 | **Graded Media Engineering** | Matched media, reflectionless design |
-| 06 | **Power Networks & Synchronization** | Rates, vulnerability, early warning |
-| 07 | **Epidemiology on Adaptive Networks** | Spectral outbreak bounds, interventions |
-| 08 | **Numerical Methods** | Spectral convergence, energy-preserving schemes |
-| 09 | **Higher-Dimensional Structure-Flow** | Metrics, Weyl law, product domains |
-| 10 | **Causal Graph-Time Signal Processing** | Causal GFT, anomaly detection |
-| 11 | **Novelty, Literature & Research Program** | Honest positioning and the way forward |
+| # | Paper | PDF page | Delivers |
+|---|---|---|---|
+| 00a | **Capstone** | 10 | The unified statement of the program, contributions 1–10 |
+| 00b | **Comprehensive Treatise** | 15 | The whole program in one self-contained document, with a derivation appendix and a numerical casebook |
+| 01 | **Foundations** | 45 | The $\rho$-calculus, the Fundamental Theorem, conformal transport |
+| 02 | **Structure Spectral Theory** | 52 | Closed-form graded-media modes, energy conservation |
+| 03 | **Causal Network Spectral Theory** | 58 | The eigenframe connection, the Energy Migration Theorem |
+| 04 | **Variational & Conservation Theory** | 65 | Structure-flow Euler–Lagrange, Noether-type laws |
+| 05 | **Graded Media Engineering** | 70 | Matched media, reflectionless design |
+| 06 | **Power Networks & Synchronization** | 74 | Rates, vulnerability, early warning |
+| 07 | **Epidemiology on Adaptive Networks** | 78 | Spectral outbreak bounds, interventions |
+| 08 | **Numerical Methods** | 81 | Spectral convergence, energy-preserving schemes |
+| 09 | **Higher-Dimensional Structure-Flow** | 85 | Metrics, Weyl law, product domains |
+| 10 | **Causal Graph-Time Signal Processing** | 90 | Causal GFT, anomaly detection |
+| 11 | **Novelty, Literature & Research Program** | 94 | Honest positioning and the way forward |
 
 Proof/QED audit across the papers, capstone, and treatise: **259 proofs, 259 QED marks**, balanced equation delimiters.
 
@@ -82,7 +82,7 @@ Each demo prints a verdict and exits non-zero on failure, so the demos double as
 
 This section presents the **live, fully reproducible** numerical verification of the central theorems across the Structure‑Flow Calculus programme, computed in a single run of `demos/deep_analysis.py`. Every number below is freshly computed from first principles (exact integer eigenvalue counts, live numerical integration, least‑squares boundary‑coefficient fit). Nothing is fabricated; the run is fully reproducible and the results are published here for the first time.
 
-### A. Spectral convergence  (Paper 02, Theorem 1)
+### A. Spectral convergence  (Paper 02, Theorem 1; PDF p. 52)
 
 | N   | L2_rho error       | convergence rate |
 |-----|-------------------|------------------|
@@ -95,13 +95,13 @@ This section presents the **live, fully reproducible** numerical verification of
 
 Measured rate (last step): **~2.46**. The error decays as N^(-2.46), confirming the expected spectral convergence of the modal expansion.
 
-### B. Long‑time energy conservation  (Paper 02, Theorem 5)
+### B. Long‑time energy conservation  (Paper 02, Theorem 5; PDF p. 52)
 
 **50 fundamental periods, 500 output steps:** relative energy drift = **2.826e-15**.
 
 The energy is conserved to machine precision over many periods — the discretisation is effectively symplectic in the continuous rho‑calculus setting.
 
-### C. Two‑term Weyl law in d = 2  (Paper 09, Theorem 6b)
+### C. Two‑term Weyl law in d = 2  (Paper 09, Theorem 6b; PDF p. 85)
 
 Exact eigenvalue counts for the structure box \([0,\Lambda]^2\) with \(\Lambda = 0.432332\):
 
@@ -116,13 +116,13 @@ Exact eigenvalue counts for the structure box \([0,\Lambda]^2\) with \(\Lambda =
 
 Two‑term boundary coefficient: **formula (Paper 09): 0.137616**; **measured from data: 0.137799** (ratio 1.001). The two‑term prediction reduces the counting error from ~2 % (one‑term) to **< 0.01 %** at μ = 200 000.
 
-### D. Mode‑energy migration under deformation  (Paper 03, Theorem 6)
+### D. Mode‑energy migration under deformation  (Paper 03, Theorem 6; PDF p. 58)
 
 - **Connection skewness** max \|C + Cᵀ\| = **6.637e-03** (verified with gauge‑aligned frames, nt = 1601).
 - **Modal ODE**  \(\dot a = -(\Lambda + C)a\) reproduces the direct space‑time integration to max \|a_{\text{ode}} - a_{\text{direct}}\| = **2.645e-05**.
 - **Largest modal‑energy deviation** caused by the connection coupling = **5.556e-02** (4.4% of the largest modal energy). This quantifies how much the skew connection redistributes energy between modes compared to the frozen‑frame (no‑C) prediction.
 
-### E. Epidemic decay‑bound tightness  (Paper 07, Theorems 3, 4)
+### E. Epidemic decay‑bound tightness  (Paper 07, Theorems 3, 4; PDF p. 78)
 
 - Initial norm \(\|x(0)\| = 0.5831\).
 - Grönwall envelope at T = 10: \(6.1452 \times 10^6\).

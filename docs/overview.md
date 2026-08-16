@@ -14,9 +14,9 @@ $$\tau(x) = \int_a^x \frac{dt}{\rho(t)}$$
 
 is a diffeomorphism — the **conformal transport** — under which the $\rho$-deformed calculus becomes the ordinary calculus on a straight axis. Three consequences follow:
 
-1. **Graded continua become uniform.** The wave equation in a graded, impedance-matched medium is, in the transported coordinate, the constant-coefficient wave equation. Modes are closed-form (Paper 02), design is reflectionless (Paper 05), and energy is exactly conserved (Paper 04).
-2. **Time-varying networks become stationary shadows.** The spectral theory of a time-varying graph is the spectral theory of a fixed operator in a moving eigenframe. Mode energy *migrates* between modes under deformation — a proven redistribution law (Paper 03) — with applications to power-grid stress (Paper 06), epidemic outbreaks on adaptive contact networks (Paper 07), and causal graph-time signal processing (Paper 10).
-3. **Higher dimensions inherit the structure.** A structure field per coordinate direction endows a product (anisotropic) metric, a structure Laplacian, a divergence theorem, a Weyl law, and — on separable domains — closed-form spectra (Paper 09).
+1. **Graded continua become uniform.** The wave equation in a graded, impedance-matched medium is, in the transported coordinate, the constant-coefficient wave equation. Modes are closed-form (Paper 02, PDF p. 52), design is reflectionless (Paper 05, PDF p. 70), and energy is exactly conserved (Paper 04, PDF p. 65).
+2. **Time-varying networks become stationary shadows.** The spectral theory of a time-varying graph is the spectral theory of a fixed operator in a moving eigenframe. Mode energy *migrates* between modes under deformation — a proven redistribution law (Paper 03, PDF p. 58) — with applications to power-grid stress (Paper 06, PDF p. 74), epidemic outbreaks on adaptive contact networks (Paper 07, PDF p. 78), and causal graph-time signal processing (Paper 10, PDF p. 90).
+3. **Higher dimensions inherit the structure.** A structure field per coordinate direction endows a product (anisotropic) metric, a structure Laplacian, a divergence theorem, a Weyl law, and — on separable domains — closed-form spectra (Paper 09, PDF p. 85).
 
 ## What is proved
 
