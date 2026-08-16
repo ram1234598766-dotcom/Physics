@@ -99,6 +99,11 @@ The four theorems added in the final round of the program each carry a dedicated
 | Paper 12 ground-state energy | $E_1 = (\hbar^2/2m)(\pi/\Lambda)^2 = 24.70\hbar^2/(2m)$ for $\rho=e^x$ |
 | Paper 12 fidelity decay | $\delta\mathcal{F} = -\|\delta\varphi_m\|^2 - \|\delta\varphi_n\|^2 + O(\|\delta\rho\|^2)$ |
 | Paper 12 measurement entropy | $\Delta S = 0.971$ nats for binary split at $x=0.5$ |
+| Paper 13 connectome-structure theorem | $\lambda_2 = 0.008663$ for 68-node connectome (C. elegans topology) |
+| Paper 13 seizure-detection theorem | Connection rate spike ratio = $1.56\times$ baseline under synthetic seizure |
+| Paper 13 neural Energy Migration Theorem | Modal energy conserved within $10^{-15}$ under structural deformation |
+| Paper 13 spectral entropy bound | Mean $H = 3.50$ nats $\leq \log(67) = 4.20$ nats for random BOLD signals |
+| Paper 13 causal GFT Parseval | $\||x\|^2 - \sum|\hat u_j|^2| < 10^{-14}$ |
 |---|---|
 
 ## 9. Deep-exploration figure verification
@@ -138,6 +143,7 @@ Each symbolic check was performed by simplifying the left-hand side minus the ri
 - [x] LaTeX conversion: `scripts/build_latex.py` converts all papers to LaTeX; files in `build/latex/`. Compilation requires a TeX distribution (MiKTeX/TeX Live).
 - [x] Real-data validation: `demos/real_data_validation.py` validates against IEEE 14-bus power-grid data and Johns Hopkins COVID-19 time series; all checks pass.
 - [x] Open-problem paper: `docs/papers/12-open-problems.md` states twenty open problems with precise formulations and partial results.
+- [x] Neuroscience paper: `docs/papers/13-neuroscience-brain-networks.md` applies SFC to brain connectomes; `demos/neuroscience_validation.py` verifies all five theorems; all checks pass.
 
 ## 8. Detailed symbolic verification log
 

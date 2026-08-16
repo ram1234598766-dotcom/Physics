@@ -41,6 +41,7 @@ PAPERS = [
     ("10-causal-graph-time-signal-processing", "docs/papers/10-causal-graph-time-signal-processing.md"),
     ("11-novelty-and-literature", "docs/papers/11-novelty-and-literature.md"),
     ("12-quantum-information", "docs/papers/12-quantum-information.md"),
+    ("13-neuroscience-brain-networks", "docs/papers/13-neuroscience-brain-networks.md"),
     ("12-open-problems", "docs/papers/12-open-problems.md"),
 ]
 

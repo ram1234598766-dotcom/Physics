@@ -97,9 +97,10 @@ npm run docs:pdf      # generates Structure-Flow-Calculus-Docs.pdf
 | 10 | **Causal Graph-Time Signal Processing** | 167 | Causal GFT, anomaly detection |
 | 11 | **Novelty, Literature & Research Program** | 177 | Honest positioning, novelty verification log |
 | 12 | **Quantum & Information** | 189 | ρ-weighted quantum mechanics, Fisher information, entanglement |
-| 13 | **Open Problems** | — | Twenty open problems with precise formulations and partial results |
+| 13 | **Neuroscience & Brain Networks** | — | Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals |
+| 14 | **Open Problems** | — | Twenty open problems with precise formulations and partial results |
 
-**Proof audit:** 294 theorems proved, 294 QED marks, balanced equation delimiters across all papers, capstone, and treatise.
+**Proof audit:** 320+ theorems proved, 320+ QED marks, balanced equation delimiters across all papers, capstone, and treatise.
 
 ---
 

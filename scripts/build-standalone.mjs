@@ -26,6 +26,7 @@ const DOCS = [
   'docs/papers/10-causal-graph-time-signal-processing.md',
   'docs/papers/11-novelty-and-literature.md',
   'docs/papers/12-quantum-information.md',
+  'docs/papers/13-neuroscience-brain-networks.md',
   'docs/papers/12-open-problems.md',
   'docs/verification.md',
   'docs/roadmap.md',
@@ -146,7 +147,16 @@ strong { color: #0f1822; }
 .katex-display { margin: 16px 0; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
 footer { text-align: center; color: #888; font-size: .85em; margin-top: 30px; }
 @media print {
-  @page { size: A4; margin: 16mm 15mm 18mm; }
+  @page {
+    size: A4;
+    margin: 20mm 15mm 25mm;
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #666;
+      font-family: Georgia, serif;
+    }
+  }
   body { background: #fff; font-size: 11pt; }
   a { color: inherit; text-decoration: none; }
   .toc-box { page-break-after: always; border: none; }
