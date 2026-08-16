@@ -1,445 +1,539 @@
 /* ============================================================
-   Structure-Flow Calculus — Premium Scholarship Theme
-   Sophisticated academic presentation with refined aesthetics,
-   superior typography, and polished interactive details.
+   Structure-Flow Calculus — Clean Scholarly Theme
+   Modern academic presentation with refined typography
    ============================================================ */
 
-/* -- Root: premium color palette with 10-level tonal scale -- */
 :root {
-  /* Brand foundation: deep scholarly navy */
-  --vp-c-brand-1: #2f5d8a;    /* Primary brand, heading accents */
-  --vp-c-brand-2: #24507a;    /* Slightly lighter for subtler accents */
-  --vp-c-brand-3: #1c3f63;    /* Deepest brand tone */
-  --vp-c-brand-4: #153556;    /* Modal brand tone */
-  --vp-c-brand-5: #0d2a44;    /* Accent tone */
+  /* Brand: deep scholarly navy */
+  --sf-navy: #2c5282;
+  --sf-navy-dark: #1a365d;
+  --sf-navy-darker: #153556;
+  --sf-navy-light: #3a6aa5;
 
-  /* Gold/scholarly accent - expanded palette */
-  --vp-c-gold-1: #c9a227;     /* Primary gold, links, highlights */
-  --vp-c-gold-2: #b8951f;     /* Lighter gold */
-  --vp-c-gold-3: #a68816;     /* Medium gold */
-  --vp-c-gold-4: #957b0d;     /* Subtle gold */
-  --vp-c-gold-5: #766200;     /* Deep gold */
+  /* Accent: warm gold */
+  --sf-gold: #c9a227;
+  --sf-gold-dark: #a68816;
+  --sf-gold-light: #d9b54d;
 
-  /* Sophisticated neutrals */
-  --vp-c-surface: #f8f6f2;    /* Page background, slightly off-white */
-  --vp-c-surface-subtle: #f0efe8; /* Subtle surface variations */
-  --vp-c-muted: #6b6a66;      /* Muted text, secondary labels */
-  --vp-c-border: #d0cfc8;     /* Border divider color */
+  /* Surfaces */
+  --sf-paper: #fafaf7;
+  --sf-paper-warm: #f5f3ec;
+  --sf-line: #e5e3d8;
+  --sf-muted: #6b6a66;
+  --sf-text: #1a1a1a;
+  --sf-text-soft: #2d2d2d;
 
-  /* Interactive states */
-  --vp-c-interactive: #2f5d8a;
-  --vp-c-interactive-hover: #356894;
-  --vp-c-interactive-active: #24507a;
+  /* VitePress overrides */
+  --vp-c-brand-1: var(--sf-navy);
+  --vp-c-brand-2: var(--sf-navy-light);
+  --vp-c-brand-3: var(--sf-navy-dark);
+  --vp-c-brand-soft: rgba(44, 82, 130, 0.12);
+  --vp-c-bg: var(--sf-paper);
+  --vp-c-bg-soft: var(--sf-paper-warm);
+  --vp-c-text-1: var(--sf-text);
+  --vp-c-text-2: var(--sf-text-soft);
+  --vp-c-text-3: var(--sf-muted);
+  --vp-c-divider: var(--sf-line);
+  --vp-c-gutter: var(--sf-line);
 
-  --vp-c-code-bg: #f0e7d8;    /* Code block background */
-  --vp-c-code-fg: #1a1a1a;    /* Code foreground */
-
-  --vp-font-family-heading: 'Merriweather', 'Georgia', 'Times New Roman', Times, serif;
-  --vp-font-family-base: 'Inter', 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --vp-font-family-mono: 'Fira Code', 'JetBrains Mono', 'Consolas', 'Menlo', monospace;
+  /* Typography */
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --vp-font-family-heading: 'Source Serif Pro', 'Charter', 'Iowan Old Style', 'Georgia', serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
 }
 
-/* -- Vertical rhythm: scales based on golden ratio adjacent -- */
-:root {
-  --vp-font-size-xs: 0.75rem;
-  --vp-font-size-sm: 0.875rem;
-  --vp-font-size-md: 1rem;
-  --vp-font-size-lg: 1.25rem;
-  --vp-font-size-xl: 1.5rem;
-  --vp-font-size-2xl: 1.875rem;
-  --vp-font-size-3xl: 2.25rem;
-
-  --vp-line-height-xs: 1.5;
-  --vp-line-height-sm: 1.6;
-  --vp-line-height-md: 1.75;
-  --vp-line-height-lg: 1.8;
-  --vp-line-height-xl: 2;
-  --vp-line-height-2xl: 2.1;
+/* Dark mode */
+.dark {
+  --sf-paper: #1a1a1a;
+  --sf-paper-warm: #222222;
+  --sf-line: #333333;
+  --sf-muted: #a0a09a;
+  --sf-text: #f0f0f0;
+  --sf-text-soft: #d0d0d0;
 }
 
-/* -- Reduced motion for accessibility -- */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0ms !important;
-  }
-}
-
-/* -- Global typography: premium academic typography -- */
-.vp-doc {
-  font-family: var(--vp-font-family-base);
-  color: var(--vp-c-text);
-  line-height: var(--vp-line-height-md);
-  font-feature-settings: "rlig" 1, "css" 1;
-}
-
-/* Scale up headings from the base */
-.vp-doc h1 { font-size: calc(var(--vp-font-size-3xl) * 1.1); }
-.vp-doc h2 { font-size: calc(var(--vp-font-size-2xl) * 1.05); }
-.vp-doc h3 { font-size: calc(var(--vp-font-size-xl) * 1.05); }
-.vp-doc h4 { font-size: var(--vp-font-size-lg); }
-.vp-doc h5 { font-size: var(--vp-font-size-lg); }
-.vp-doc h6 { font-size: var(--vp-font-size-md); }
-
-/* -- Sophisticated serif headings with precise kerning -- */
+/* ============================================================
+   Typography
+   ============================================================ */
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4 {
   font-family: var(--vp-font-family-heading);
   font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--sf-navy-dark);
+  line-height: 1.25;
+}
+
+.dark .vp-doc h1,
+.dark .vp-doc h2,
+.dark .vp-doc h3,
+.dark .vp-doc h4 {
+  color: var(--sf-gold-light);
+}
+
+.vp-doc h1 {
+  font-size: 2.25rem;
+  border-bottom: 2px solid var(--sf-gold);
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.75rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--vp-c-brand-1);
-}
-
-/* Subtle heading rule, integrated */
-.vp-doc h1::after {
-  content: '';
-  display: block;
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--vp-c-gold-1), var(--vp-c-gold-3));
-  margin-top: 0.5rem;
-}
-
-.vp-doc h2::after {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 2px;
-  background: var(--vp-c-gold-2);
-  margin-top: 0.3rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--sf-line);
 }
 
 .vp-doc h3 {
-  border-left: 3px solid var(--vp-c-gold-2);
-  padding-left: 0.5rem;
+  font-size: 1.375rem;
+  margin-top: 1.5rem;
 }
 
-/* -- Enhanced body text with proper measure and line height -- */
-.vp-doc p {
-  margin-bottom: 1.5rem;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.vp-doc > :first-child {
-  margin-top: 0;
-}
-
-.vp-doc > :last-child {
-  margin-bottom: 0;
-}
-
-/* -- Sophisticated tables with banded rows and header rules -- */
-.vp-doc table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  font-size: var(--vp-font-size-sm);
-}
-
-.vp-doc th {
-  background: var(--vp-c-gold-1);
-  color: var(--vp-c-base);
-  font-weight: 700;
-  text-align: left;
-  padding: 1rem 1.25rem;
-  border-bottom: 2px solid var(--vp-c-gold-3);
-  font-family: var(--vp-font-family-heading);
-  letter-spacing: 0.01em;
-}
-
-.vp-doc td {
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--vp-c-border);
-  line-height: var(--vp-line-height-md);
-}
-
-.vp-doc tr:nth-child(odd) td {
-  background: var(--vp-c-surface-subtle);
-}
-
-.vp-doc tr:hover td {
-  background: rgba(47, 93, 138, 0.08);
-}
-
-/* -- Sophisticated code blocks with Fira Code ligatures -- */
-.vp-doc .section.sourceCode {
-  background: var(--vp-c-code-bg);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  overflow-x: auto;
-}
-
-.vp-doc .section.sourceCode pre {
-  font-family: var(--vp-font-family-mono);
-  font-size: var(--vp-font-size-sm);
-  line-height: 1.45;
-  padding: 1rem;
-  margin: 0;
-  color: var(--vp-c-code-fg);
-}
-
-/* -- Elegant blockquotes with gold accent -- */
-.vp-doc blockquote {
-  margin: 2rem 0;
-  padding: 1.5rem 2rem;
-  border-left: 5px solid var(--vp-c-gold-1);
-  background: linear-gradient(180deg, rgba(201, 162, 39, 0.04) 0%, transparent 100%);
-  border-radius: 0 8px 8px 0;
-  font-family: var(--vp-font-family-heading);
-  color: var(--vp-c-gold-1);
-  font-style: italic;
-  line-height: 1.6;
-  position: relative;
-}
-
-.vp-doc blockquote::before {
-  content: '\201C';
-  font-family: var(--vp-font-family-heading);
-  font-size: 3rem;
-  line-height: 1;
-  color: var(--vp-c-gold-2);
-  opacity: 0.4;
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-}
-
-.vp-doc blockquote cite {
-  display: block;
-  margin-top: 1rem;
-  font-style: normal;
-  color: var(--vp-c-muted);
-}
-
-/* -- Enhanced navigation and sidebar -- */
-.vp-nav,
-.vp-sidebar {
-  font-family: var(--vp-font-family-base);
-}
-
-.vp-nav a,
-.vp-sidebar a {
-  color: var(--vp-c-brand-1);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.vp-nav a:hover,
-.vp-sidebar a:hover {
-  color: var(--vp-c-gold-1);
-}
-
-.vp-nav .is-active a,
-.vp-sidebar .is-active a {
-  color: var(--vp-c-gold-1);
+.vp-doc h4 {
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
-/* -- Premium figure styling with caption -- */
-.vp-doc figure {
-  margin: 2rem 0;
-  padding: 1rem;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 12px;
-  background: var(--vp-c-surface);
+.vp-doc p {
+  line-height: 1.75;
+  margin: 1rem 0;
 }
 
-.vp-doc figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(47, 93, 138, 0.15);
+.vp-doc a {
+  color: var(--sf-navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.vp-doc figure figcaption {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: var(--vp-font-size-sm);
-  color: var(--vp-c-muted);
-  font-style: italic;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--vp-c-border);
+.vp-doc a:hover {
+  color: var(--sf-gold-dark);
+  border-bottom-color: var(--sf-gold);
 }
 
-/* -- Testimonial / callout style -- */
-.vp-doc .callout {
-  border-left: 4px solid var(--vp-c-gold-2);
-  background: linear-gradient(135deg, rgba(47, 93, 138, 0.06) 0%, transparent 100%);
-  padding: 1.5rem 2rem;
-  margin: 2rem 0;
-  border-radius: 0 8px 8px 0;
+.dark .vp-doc a {
+  color: var(--sf-gold-light);
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+.vp-doc table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border: 1px solid var(--sf-line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.vp-doc th {
+  background: var(--sf-navy);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
   font-family: var(--vp-font-family-heading);
 }
 
-.vp-doc .callout p {
-  margin-bottom: 0;
+.dark .vp-doc th {
+  background: var(--sf-gold-dark);
+  color: var(--sf-paper);
 }
 
-/* -- Focus states that actually look premium -- */
-.vp-doc :focus-visible {
-  outline: 2px solid var(--vp-c-gold-1);
-  outline-offset: 2px;
+.vp-doc td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--sf-line);
+  line-height: 1.5;
+}
+
+.vp-doc tr:nth-child(even) td {
+  background: var(--sf-paper-warm);
+}
+
+.dark .vp-doc tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   Blockquotes
+   ============================================================ */
+.vp-doc blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--sf-gold);
+  background: var(--sf-paper-warm);
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: var(--sf-text-soft);
+}
+
+.dark .vp-doc blockquote {
+  background: rgba(201, 162, 39, 0.08);
+  color: var(--sf-text);
+}
+
+/* ============================================================
+   Code blocks
+   ============================================================ */
+.vp-doc div[class*='language-'],
+.vp-doc pre {
+  background: var(--sf-paper-warm);
+  border: 1px solid var(--sf-line);
   border-radius: 6px;
+  padding: 1rem;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-/* -- Link styles with subtle hover -- */
-a {
-  color: var(--vp-c-brand-1);
-  text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+.dark .vp-doc div[class*='language-'],
+.dark .vp-doc pre {
+  background: rgba(255, 255, 255, 0.05);
 }
 
-a:hover {
-  color: var(--vp-c-gold-1);
+.vp-doc code {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.9em;
+  background: var(--sf-paper-warm);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: var(--sf-navy-dark);
 }
 
-a:focus-visible {
-  outline: 2px solid var(--vp-c-gold-1);
-  outline-offset: 2px;
+.dark .vp-doc code {
+  background: rgba(201, 162, 39, 0.15);
+  color: var(--sf-gold-light);
 }
 
-/* -- Hero premium enhancement -- */
-.VPHero {
-  padding: 6rem 2rem 4rem;
-  background: var(--vp-c-surface);
-  border-bottom: 1px solid var(--vp-c-border);
+.vp-doc pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* ============================================================
+   Lists
+   ============================================================ */
+.vp-doc ul,
+.vp-doc ol {
+  padding-left: 1.5rem;
+  line-height: 1.75;
+}
+
+.vp-doc li {
+  margin: 0.4rem 0;
+}
+
+.vp-doc li::marker {
+  color: var(--sf-gold);
+}
+
+/* ============================================================
+   Hero section (home page)
+   ============================================================ */
+.VPHero .container {
+  padding: 4rem 2rem 3rem;
 }
 
 .VPHero .name {
   font-family: var(--vp-font-family-heading);
-  font-size: calc(var(--vp-font-size-4xl) * 1.05);
   font-weight: 700;
-  color: var(--vp-c-brand-1);
+  font-size: 3rem;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  color: var(--sf-navy-dark);
+  line-height: 1.1;
+}
+
+.dark .VPHero .name {
+  color: var(--sf-gold-light);
 }
 
 .VPHero .text {
-  font-size: var(--vp-font-size-lg);
-  color: var(--vp-c-text-2);
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  font-family: var(--vp-font-family-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--sf-text-soft);
+  margin-top: 0.5rem;
 }
 
-.VPHero .container {
-  background: none;
-  border-radius: 24px;
-  padding: 3rem 2rem;
-  max-width: 720px;
+.VPHero .tagline {
+  font-size: 1.05rem;
+  color: var(--sf-muted);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.VPHero .actions {
+  margin-top: 2rem;
+  gap: 0.75rem;
+}
+
+.VPHero .vp-button {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.VPHero .vp-button.brand {
+  background: var(--sf-navy);
+  color: white;
+  border: 1px solid var(--sf-navy);
+}
+
+.VPHero .vp-button.brand:hover {
+  background: var(--sf-navy-dark);
+  border-color: var(--sf-navy-dark);
+}
+
+.VPHero .vp-button.alt {
+  background: transparent;
+  color: var(--sf-navy);
+  border: 1px solid var(--sf-navy);
+}
+
+.dark .VPHero .vp-button.alt {
+  color: var(--sf-gold-light);
+  border-color: var(--sf-gold);
+}
+
+.VPHero .vp-button.alt:hover {
+  background: var(--sf-navy);
+  color: white;
+}
+
+/* Hero image */
+.VPHero .image-container {
+  filter: drop-shadow(0 8px 24px rgba(44, 82, 130, 0.18));
+}
+
+/* ============================================================
+   Features section (home page)
+   ============================================================ */
+.VPFeatures {
+  padding: 2rem 0;
+}
+
+.VPFeatures .container {
+  max-width: 1152px;
   margin: 0 auto;
 }
 
-/* -- Feature cards with depth -- */
-.feature-card {
-  background: var(--vp-c-surface);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  margin: 1.5rem 0;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+.VPFeature {
+  padding: 1.5rem;
+  border: 1px solid var(--sf-line);
+  border-radius: 8px;
+  background: var(--sf-paper);
+  transition: all 0.25s ease;
 }
 
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--vp-c-gold-1), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.VPFeature:hover {
+  border-color: var(--sf-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(44, 82, 130, 0.08);
 }
 
-.feature-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 8px 40px rgba(47, 93, 138, 0.15);
+.dark .VPFeature {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.feature-card:hover::before {
-  opacity: 1;
+.dark .VPFeature:hover {
+  border-color: var(--sf-gold);
+  box-shadow: 0 8px 24px rgba(201, 162, 39, 0.15);
 }
 
-.feature-card .icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1.5rem;
-}
-
-.feature-card h3 {
+.VPFeature .title {
   font-family: var(--vp-font-family-heading);
-  font-size: var(--vp-font-size-lg);
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--vp-c-brand-1);
+  font-size: 1.125rem;
+  color: var(--sf-navy-dark);
 }
 
-/* -- Premium footnote styling -- */
-.vp-footnote {
-  font-size: var(--vp-font-size-sm);
-  color: var(--vp-c-muted);
-  border-top: 1px solid var(--vp-c-border);
+.dark .VPFeature .title {
+  color: var(--sf-gold-light);
+}
+
+.VPFeature .details {
+  color: var(--sf-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   Nav and sidebar
+   ============================================================ */
+.VPNav {
+  border-bottom: 1px solid var(--sf-line);
+  background: var(--sf-paper);
+}
+
+.dark .VPNav {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.VPNavBar .title {
+  font-family: var(--vp-font-family-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--sf-navy-dark);
+}
+
+.dark .VPNavBar .title {
+  color: var(--sf-gold-light);
+}
+
+.VPNavBarMenuLink,
+.VPSidebarItem.level-1 > .item > .text {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.VPNavBarMenuLink.active,
+.VPSidebarItem.level-1 > .item.is-active > .text {
+  color: var(--sf-gold-dark);
+}
+
+.dark .VPNavBarMenuLink.active,
+.dark .VPSidebarItem.level-1 > .item.is-active > .text {
+  color: var(--sf-gold-light);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.VPDocFooter {
+  margin-top: 4rem;
   padding-top: 1.5rem;
-  margin-top: 2rem;
+  border-top: 1px solid var(--sf-line);
 }
 
-/* -- Print styles: premium A4 output -- */
+.VPFooter {
+  background: var(--sf-paper-warm);
+  border-top: 1px solid var(--sf-line);
+  padding: 2rem 0;
+}
+
+.dark .VPFooter {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--sf-muted);
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   Math (KaTeX)
+   ============================================================ */
+.katex-display {
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex {
+  font-size: 1.05em;
+  color: var(--sf-text);
+}
+
+.dark .katex {
+  color: var(--sf-text);
+}
+
+.katex-display > .katex {
+  color: var(--sf-navy-dark);
+}
+
+.dark .katex-display > .katex {
+  color: var(--sf-gold-light);
+}
+
+/* ============================================================
+   Custom containers (theorem, definition, etc.)
+   ============================================================ */
+.vp-doc .theorem,
+.vp-doc .definition,
+.vp-doc .lemma,
+.vp-doc .proof {
+  border-left: 3px solid var(--sf-gold);
+  background: var(--sf-paper-warm);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.dark .vp-doc .theorem,
+.dark .vp-doc .definition,
+.dark .vp-doc .lemma,
+.dark .vp-doc .proof {
+  background: rgba(201, 162, 39, 0.06);
+}
+
+/* ============================================================
+   Images
+   ============================================================ */
+.vp-doc img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.vp-doc figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.vp-doc figcaption {
+  margin-top: 0.75rem;
+  color: var(--sf-muted);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   Selection and focus
+   ============================================================ */
+::selection {
+  background: var(--sf-gold);
+  color: white;
+}
+
+.vp-doc :focus-visible {
+  outline: 2px solid var(--sf-gold);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Print styles
+   ============================================================ */
 @media print {
-  .vp-doc,
-  .vp-doc * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  .vp-doc {
-    max-width: 21cm !important;
-    margin: 0 auto !important;
-  }
-
-  .vp-doc h1,
-  .vp-doc h2,
-  .vp-doc h3,
-  .vp-doc h4 {
-    color: var(--vp-c-brand-1) !important;
-    -webkit-print-color-adjust: important !important;
-    print-color-adjust: important !important;
-  }
-
-  .vp-doc table {
-    page-break-inside: avoid;
-  }
-
-  .vp-doc blockquote {
-    border-left: 5px solid var(--vp-c-gold-1) !important;
-  }
-
-  .vp-doc code {
-    font-family: var(--vp-font-family-mono) !important;
-    font-size: 0.8em !important;
-  }
-
-  .vp-nav,
-  .vp-sidebar,
-  .vp-footer,
-  .vp-doc .theorem,
-  .vp-doc .callout,
-  nav,
-  .vp-doc .breadcrumb {
+  .VPHero .image-container,
+  .VPFeatures,
+  .VPNav,
+  .VPSidebar,
+  .VPFooter,
+  .VPDocFooter {
     display: none !important;
+  }
+
+  .vp-doc h1 {
+    color: #1a1a1a;
+    border-bottom-color: #c9a227;
+  }
+
+  .vp-doc a {
+    color: #1a1a1a;
+    text-decoration: underline;
   }
 }
