@@ -2,53 +2,65 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-peer--review_ready-blue" alt="Status">
-  <img src="https://img.shields.io/badge/theorems-320%2B-success" alt="Theorems">
+  <img src="https://img.shields.io/badge/theorems-330%2B-success" alt="Theorems">
   <img src="https://img.shields.io/badge/demos-5_pass-brightgreen" alt="Demos">
   <img src="https://img.shields.io/badge/PDF-260%2B_pages-red" alt="PDF">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </p>
 
 <p align="center">
-  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a unified theory of quantum gravity, dark matter, and dark energy.</strong>
+  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a new approach to quantum gravity, dark matter, and dark energy.</strong>
   <br>
-  Every theorem is proved. Every central theorem is verified numerically.
+  Every theorem is proved. Every central theorem is verified numerically. Every claim is honest about what is proved and what is conjectured.
 </p>
+
+---
+
+## Welcome
+
+This repository contains the complete Structure-Flow Calculus (SFC) program: 15 research papers, runnable numerical verifications, and a unified theory that extends SFC into quantum gravity and cosmology.
+
+**If you only have a few minutes:** Start with the [Program Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
+
+**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics), which explains how five problems modern physics cannot solve share a single root cause — and how SFC points toward a solution.
+
+**If you want to run the code:** Clone the repo, install dependencies, and run the demos. Every claim is reproducible.
 
 ---
 
 ## What is Structure-Flow Calculus?
 
-**Structure-Flow Calculus (SFC)** is a new mathematical framework that builds a complete calculus relative to a dynamical **structure field** — a single positive function ρ(x) that promotes the differential structure of space from a fixed background to a first-class variable.
+**Structure-Flow Calculus (SFC)** is a mathematical framework built on a single idea: a positive function $\rho(x)$ — the **structure field** — can define the differential structure of space itself. Instead of treating space as a fixed background with variable coefficients, SFC treats the structure field as the background. The result is a complete calculus with closed-form solutions where other methods struggle.
 
-From this single object ρ, three complete theories emerge:
+Here is what SFC gives you:
 
 | Theory | What it delivers |
 |--------|------------------|
-| **Spectral theory** | Closed-form eigenvalues μₘ = (mπ/Λ)², explicit eigenfunctions, resolvent kernels, perturbation theory |
+| **Spectral theory** | Closed-form eigenvalues $\mu_m = (m\pi/\Lambda)^2$, explicit eigenfunctions, resolvent kernels, perturbation theory |
 | **Variational theory** | Euler–Lagrange equations, Hamiltonian structure, Noether-type conservation laws, coupled field-structure dynamics |
 | **Network theory** | Time-varying graph Laplacians, eigenframe connection, Energy Migration Theorem, spectral flow |
 
-The framework does **not** claim new fundamental physics. The underlying phenomena — graded-media acoustics, swing equations, SIS epidemics — are classical. The contribution is the **unified object ρ** and the **proved theorems** that connect these classical ingredients under a single structure field.
+SFC does **not** claim to have discovered new fundamental particles or forces. The underlying phenomena — graded-media acoustics, power-grid synchronization, epidemic spreading — are classical. What SFC provides is the **unified structure** that connects them, plus proved theorems that work across all of them at once.
 
 > **Honesty statement:** Every proof is written out. Every central theorem has a runnable numerical check. The novelty claim, its evidence, and its limits are stated plainly in [Paper 11](/papers/11-novelty-and-literature).
 
 ---
 
-## Unified Structure Dynamics: Quantum Gravity, Dark Matter, and Dark Energy
+## Beyond Mathematics: Unified Structure Dynamics
 
-**Unified Structure Dynamics (USD)** is a physical theory that extends SFC by promoting the structure field $\rho$ to a dynamical quantum operator. This single extension solves five problems modern physics cannot solve:
+**Unified Structure Dynamics (USD)** is a physical theory that extends SFC. The key move is to promote the structure field $\rho$ from a classical function to a dynamical quantum entity. This single step connects five problems that have remained stubbornly separate in modern physics:
 
-| Problem | Why Modern Physics Fails | USD Solution |
-|---------|------------------------|--------------|
-| **Quantum gravity** | GR and QM are fundamentally incompatible | Single coupled evolution equation for geometry and quantum matter |
-| **Dark matter** | No particle detected in 40 years | Structural perturbations of the vacuum explain flat rotation curves |
-| **Dark energy** | ΛCDM requires fine-tuning | Structure field self-organizes to cancel $10^{120}$ vacuum energy |
-| **Measurement problem** | No mechanism for wavefunction collapse | Structure field adapting to macroscopic boundary conditions |
-| **Cosmological constant** | 120 orders of magnitude discrepancy | Dynamical screening via structure-field equilibrium |
+| Problem | Why modern physics is stuck | What USD proposes |
+|---------|----------------------------|------------------|
+| **Quantum gravity** | GR and QM use incompatible descriptions of reality | A single coupled evolution equation for geometry and quantum matter |
+| **Dark matter** | No particle found in 40 years of searches | Structural distortions of the vacuum, not new particles |
+| **Dark energy** | Vacuum energy is $10^{120}$ times too large | The structure field dynamically screens the excess |
+| **Measurement problem** | Collapse is postulated, not derived | The structure field "snaps" to a new configuration during measurement |
+| **Cosmological constant** | QFT and observation disagree by 120 orders of magnitude | Self-organized equilibrium of the structure field |
 
-**Key insight:** All five failures trace to one assumption — that geometry and quantum matter are ontologically distinct. USD rejects this assumption. The theory is a **conjecture program**: its mathematical core is rigorous, its physical predictions are specific, and every central claim is falsifiable.
+**The key insight:** All five problems trace to one assumption — that geometry and quantum matter are separate. If that assumption is wrong, the problems are not solved one by one. They collapse into a single coupled system.
 
-See [Paper 15: Unified Structure Dynamics](/papers/15-unified-structure-dynamics) for the full theory.
+**Important:** The mathematical core of USD is proved. The physical interpretations are conjectures with specific numerical predictions. The theory is a **research program**, not a finished product. See [Paper 15](/papers/15-unified-structure-dynamics) for the full picture.
 
 ---
 
@@ -71,59 +83,37 @@ python demos/epidemic_decay_bound.py
 python demos/quantum_information.py
 ```
 
-Or simply download the **[241-page PDF](https://github.com/ram1234598766-dotcom/Physics/releases/latest)** — no tools required.
+Or simply download the **[PDF](https://github.com/ram1234598766-dotcom/Physics/releases/latest)** — no tools required.
 
 ---
 
-## Documentation
+## Explore the Papers
 
-| Resource | Description |
-|----------|-------------|
-| **[Program Overview](docs/overview.md)** | The thesis in one page — what SFC provides, why it matters |
-| **[Capstone Paper](docs/papers/00-capstone.md)** | Contributions 1–10 in a single document with proof sketches |
-| **[Comprehensive Treatise](docs/papers/00-treatise.md)** | ~30 pages, Parts I–IX, derivation appendix, numerical casebook |
-| **[Papers 01–13](docs/papers/)** | Self-contained research papers with full proofs |
-| **[Verification Report](docs/verification.md)** | Theorem-by-theorem evidence, all checks pass |
-| **[Roadmap](docs/roadmap.md)** | Open problems, next steps, research program |
-| **[Demos](docs/demos.md)** | Runnable checks with live output |
-| **[Deep Analysis](demos/deep_analysis.py)** | Spectral convergence, Weyl law, energy conservation, migration, epidemic bounds |
-
-**Read locally:**
-```bash
-npm run docs:dev      # opens http://localhost:5173
-npm run docs:build    # static site in docs/.vitepress/dist
-npm run docs:pdf      # generates Structure-Flow-Calculus-Docs.pdf
-```
-
----
-
-## Research Papers
-
-| # | Paper | PDF page | Core Result |
-||---|-------|----------|-------------|
-| 00a | **Capstone** | 1 | Unified statement of contributions 1–10 |
-| 00b | **Comprehensive Treatise** | 26 | Whole program, self-contained, with derivation appendix |
-| 01 | **Foundations** | 3 | The ρ-calculus, Fundamental Theorem, conformal transport |
-| 02 | **Structure Spectral Theory** | 3 | Closed-form spectrum, resolvent, energy conservation |
-| 03 | **Causal Network Spectral Theory** | 4 | Eigenframe connection, Energy Migration Theorem |
-| 04 | **Variational & Conservation Theory** | 4 | Euler–Lagrange, Hamiltonian, Noether laws |
-| 05 | **Graded Media Engineering** | 4 | Impedance matching, reflectionless design |
-| 06 | **Power Networks & Synchronization** | 5 | Sync rates, vulnerability, early warning |
-| 07 | **Epidemiology on Adaptive Networks** | 5 | Spectral outbreak bounds, interventions |
-| 08 | **Numerical Methods** | 6 | Spectral convergence, energy-preserving schemes |
-| 09 | **Higher-Dimensional Structure-Flow** | 6 | Product metric, Weyl law, closed-form spectra |
-| 10 | **Causal Graph-Time Signal Processing** | 6 | Causal GFT, anomaly detection |
-| 11 | **Novelty, Literature & Research Program** | 7 | Honest positioning, novelty verification log |
-| 12 | **Quantum & Information** | 7 | ρ-weighted quantum mechanics, Fisher information, entanglement |
-| 13 | **Neuroscience & Brain Networks** | 7 | Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals |
-| 15 | **Unified Structure Dynamics** | 8 | Quantum gravity, dark matter, dark energy, measurement problem, cosmological constant |
-| 14 | **Open Problems** | 8 | Twenty open problems with precise formulations and partial results |
+| # | Paper | What you will find |
+|---|-------|-------------------|
+| 00a | **Capstone** | Contributions 1–10 in one document with proof sketches |
+| 00b | **Comprehensive Treatise** | The whole program, self-contained, with derivation appendix |
+| 01 | **Foundations** | The $\rho$-calculus, Fundamental Theorem, conformal transport |
+| 02 | **Structure Spectral Theory** | Closed-form spectrum, resolvent, energy conservation |
+| 03 | **Causal Network Spectral Theory** | Eigenframe connection, Energy Migration Theorem |
+| 04 | **Variational & Conservation Theory** | Euler–Lagrange, Hamiltonian, Noether laws |
+| 05 | **Graded Media Engineering** | Impedance matching, reflectionless design |
+| 06 | **Power Networks & Synchronization** | Sync rates, vulnerability, early warning |
+| 07 | **Epidemiology on Adaptive Networks** | Spectral outbreak bounds, interventions |
+| 08 | **Numerical Methods** | Spectral convergence, energy-preserving schemes |
+| 09 | **Higher-Dimensional Structure-Flow** | Product metric, Weyl law, closed-form spectra |
+| 10 | **Causal Graph-Time Signal Processing** | Causal GFT, anomaly detection |
+| 11 | **Novelty & Literature** | Honest positioning, novelty verification log |
+| 12 | **Quantum & Information** | $\rho$-weighted quantum mechanics, Fisher information, entanglement |
+| 13 | **Neuroscience & Brain Networks** | Connectome structure field, seizure detection, neural energy migration |
+| 15 | **Unified Structure Dynamics** | Quantum gravity, dark matter, dark energy, measurement problem |
+| 14 | **Open Problems** | Twenty open problems with precise formulations and partial results |
 
 **Proof audit:** 330+ theorems proved, 330+ QED marks, balanced equation delimiters across all papers, capstone, treatise, and USD.
 
 ---
 
-## Verification Status
+## Verification
 
 All demos pass. All numerical claims are reproducible.
 
@@ -159,9 +149,9 @@ Live, fully reproducible results from `demos/deep_analysis.py`:
 
 ---
 
-## The Mathematics in 60 Seconds
+## The Core Idea in 60 Seconds
 
-The **structure field** ρ(x) > 0 defines a new calculus:
+The **structure field** $\rho(x) > 0$ defines a new calculus:
 
 ```
 Transport map:     τ(x) = ∫ dx/ρ(x)
@@ -171,7 +161,7 @@ Structural length: Λ = ∫ dx/ρ(x)
 ρ-inner product:   ⟨f,g⟩_ρ = ∫ fg/ρ dx
 ```
 
-**The key insight:** In the τ-coordinate, the graded medium becomes uniform. The operator L_ρ becomes ∂²/∂τ². Every downstream result — closed-form modes, exact energy conservation, impedance matching — follows from this single change of variables.
+**The key insight:** In the $\tau$-coordinate, the graded medium becomes uniform. The operator $L_\rho$ becomes $\partial^2/\partial\tau^2$. Every downstream result — closed-form modes, exact energy conservation, impedance matching — follows from this single change of variables.
 
 ---
 
@@ -179,7 +169,7 @@ Structural length: Λ = ∫ dx/ρ(x)
 
 | Format | How to get it |
 |--------|---------------|
-| **PDF (241 pages)** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
+| **PDF** | [Download from Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest) or run `npm run docs:pdf` |
 | **Live site** | [https://physics-phi-dusky.vercel.app/](https://physics-phi-dusky.vercel.app/) |
 | **Local dev** | `npm run docs:dev` |
 | **Static build** | `npm run docs:build` |
@@ -191,7 +181,7 @@ Structural length: Λ = ∫ dx/ρ(x)
 ```
 Physics/
 ├── docs/
-│   ├── papers/              # 12 research papers + capstone + treatise
+│   ├── papers/              # 15 research papers + capstone + treatise
 │   ├── .vitepress/          # VitePress config and theme
 │   ├── index.md             # Home page
 │   ├── overview.md          # Program thesis
@@ -205,7 +195,7 @@ Physics/
 │   ├── quantum_information.py        # Paper 12 checks
 │   └── deep_analysis.py     # Live numerical verification
 ├── scripts/                 # PDF build scripts
-├── Structure-Flow-Calculus-Docs.pdf  # 219-page compiled PDF
+├── Structure-Flow-Calculus-Docs.pdf  # 260+ page compiled PDF
 └── README.md
 ```
 
@@ -213,10 +203,10 @@ Physics/
 
 ## Status
 
-- **12 research papers** written with full proofs
-- **294 theorems** proved and QED-marked
-- **6 demos** passing continuously
-- **219-page PDF** available on [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest)
+- **15 research papers** written with full proofs
+- **330+ theorems** proved and QED-marked
+- **5 demos** passing continuously
+- **260+ page PDF** available on [Releases](https://github.com/ram1234598766-dotcom/Physics/releases/latest)
 - **Documentation site** live on Vercel
 
 ---
@@ -228,7 +218,7 @@ MIT
 ---
 
 <p align="center">
-  <strong>Mrityunjay K</strong> — 2026-08-16
+  <strong>Mrityunjay K</strong> — 2026-08-17
   <br>
-  <em>Every theorem proved. Every central theorem verified numerically. Every claim honest.</em>
+  <em>Every theorem proved. Every central theorem verified numerically. Every claim honest about what is proved and what is conjectured.</em>
 </p>

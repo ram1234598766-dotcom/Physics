@@ -155,6 +155,11 @@ We call the stream **Structure-Flow Calculus**, or **SFC**. A structure field $\
 1. Read Paper 12 (the quantum extensions).
 2. Paper 01 and Paper 02 provide the classical spectral background.
 
+**For the physical theory** (Unified Structure Dynamics):
+1. Read Paper 15 (Unified Structure Dynamics) — no prior SFC background required for the physical ideas, though Papers 01–02 provide the mathematical foundation.
+2. The paper is self-contained: it introduces the five problems, the core postulates, the coupled evolution equations, and the specific numerical predictions.
+3. Paper 12 (Quantum & Information) provides the mathematical bridge between classical SFC and the quantum extension.
+
 **For the general reader** (novelty, verification, research program):
 1. Read the honesty statement above.
 2. Read Paper 11 (novelty matrix, literature survey, verification log).

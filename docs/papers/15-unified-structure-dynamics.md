@@ -16,15 +16,15 @@
 
 Modern physics rests on four frameworks: classical mechanics, quantum mechanics, general relativity, and quantum field theory. Together they explain every tested phenomenon from $10^{-18}$ m to $10^{27}$ m. Yet five problems have resisted solution for decades, and all five share the same root cause.
 
-**Problem 1 — Quantum gravity.** General relativity (GR) describes geometry as dynamical but matter as classical. Quantum mechanics (QM) describes matter as quantum but geometry as fixed. No framework unifies them without introducing untestable extra dimensions (string theory), losing the standard model (loop quantum gravity), or requiring a background (all current approaches). *Modern physics cannot write a single evolution equation for geometry and quantum matter together.*
+**Problem 1 — Quantum gravity.** General relativity (GR) describes geometry as dynamical but matter as classical. Quantum mechanics (QM) describes matter as quantum but geometry is fixed. No framework unifies them without introducing untestable extra dimensions (string theory), losing contact with the standard model (loop quantum gravity), or requiring a fixed background (all current approaches). *Modern physics cannot write a single evolution equation for geometry and quantum matter together.*
 
-**Problem 2 — Dark matter.** Galaxy rotation curves are flat, requiring $\sim$5× more gravitating mass than visible matter provides. Every particle-based solution (WIMPs, axions, sterile neutrinos) has failed in 40 years of searches. *Modern physics cannot explain flat rotation curves without postulating undiscovered particles.*
+**Problem 2 — Dark matter.** Galaxy rotation curves are flat, requiring roughly five times more gravitating mass than visible matter provides. Every particle-based solution (WIMPs, axions, sterile neutrinos) has failed in 40 years of searches. *Modern physics cannot explain flat rotation curves without postulating undiscovered particles.*
 
-**Problem 3 — Dark energy.** The universe's expansion is accelerating, driven by an unknown "dark energy" comprising $\sim$70% of the universe's energy density. The observed value is $\Lambda_{\rm eff} \sim (10^{-3}\,{\rm eV})^4$. Quantum field theory predicts $\Lambda_{\rm bare} \sim \Lambda_{\rm P}^4 \sim (10^{28}\,{\rm eV})^4$. The discrepancy is $10^{120}$. *Modern physics cannot explain why the vacuum energy is so small without fine-tuning.*
+**Problem 3 — Dark energy.** The universe's expansion is accelerating, driven by an unknown "dark energy" comprising roughly 70% of the universe's energy density. The observed value is $\Lambda_{\rm eff} \sim (10^{-3}\,{\rm eV})^4$. Quantum field theory predicts $\Lambda_{\rm bare} \sim \Lambda_{\rm P}^4 \sim (10^{28}\,{\rm eV})^4$. The discrepancy is $10^{120}$. *Modern physics cannot explain why the vacuum energy is so small without fine-tuning.*
 
-**Problem 4 — Measurement problem.** The Schrödinger equation is linear and unitary, but measurement produces a single, random outcome. Copenhagen interpretation postulates collapse as an axiom. Many-Worlds interpretation posits infinite branching branches. Neither provides a mechanism. *Modern physics cannot explain why measurement produces a single outcome from a linear evolution.*
+**Problem 4 — Measurement problem.** The Schrödinger equation is linear and unitary, but measurement produces a single, random outcome. The Copenhagen interpretation postulates collapse as an axiom. The Many-Worlds interpretation posits infinitely branching branches. Neither provides a mechanism. *Modern physics cannot explain why measurement produces a single outcome from a linear evolution.*
 
-**Problem 5 — Cosmological constant problem.** Related to Problem 3 but more severe: even if we accept that $\Lambda_{\rm eff}$ is small, QFT cannot explain why it is *nonzero* and *positive*. The observed acceleration requires a small positive $\Lambda$, but QFT predicts a value that is either zero (by symmetry) or $10^{120}$ times too large. *Modern physics cannot explain the observed value of the cosmological constant from first principles.*
+**Problem 5 — Cosmological constant problem.** Related to Problem 3 but more severe: even if we accept that $\Lambda_{\rm eff}$ is small, QFT cannot explain why it is nonzero and positive. The observed acceleration requires a small positive $\Lambda$, but QFT predicts a value that is either zero (by symmetry) or $10^{120}$ times too large. *Modern physics cannot explain the observed value of the cosmological constant from first principles.*
 
 ### 1.1 The Shared Root Cause
 
@@ -114,9 +114,9 @@ This gives a **self-organized** equilibrium where the structure field cancels mo
 
 **Critical consequence.** The effective cosmological constant is:
 
-$$\Lambda_{\rm eff} = \frac{V_{\rm struct}(\rho_0)}{\rho_0^4} \approx (10^{-3}\,{\rm eV})^4.$$
+$$\Lambda_{\rm eff} = \frac{V_{\rm struct}(\rho_0)}{\rho_0^4}.$$
 
-This is the observed value. The structure field dynamically screens the enormous bare $\Lambda_{\rm bare} \sim \Lambda_{\rm P}^4$ (Planck scale).
+For a potential with the right shape (detailed in §VII.3), this can equal the observed value $\Lambda_{\rm eff} \sim (10^{-3}\,{\rm eV})^4$. The structure field dynamically screens the enormous bare $\Lambda_{\rm bare} \sim \Lambda_{\rm P}^4$ (Planck scale).
 
 ---
 
@@ -192,10 +192,10 @@ $$E_{\rm structural} = \int \left[ \frac{1}{2\kappa}\,(\partial\rho)^2 + V_{\rm 
 **Statement.** When a quantum system interacts with a macroscopic apparatus, the structure field $\rho$ undergoes a non-adiabatic transition to a new equilibrium configuration, selecting the eigenbasis of the local $\rho$-operator. The apparent wavefunction "collapse" is the structure field adapting to the macroscopic boundary conditions.
 
 **Proof sketch.**
-1. A macroscopic apparatus has large $\beta$ (structural stiffness parameter)
+1. A macroscopic apparatus has large structural stiffness
 2. When the quantum system couples to the apparatus, $|\psi|^2$ becomes appreciable in the apparatus region
-3. The structure-field equation has a rapidly relaxing mode: $\tau_{\rm relax} \sim \sqrt{m_{\rm apparatus}/\beta}$
-4. For macroscopic masses, $\tau_{\rm relax}$ is extremely short ($\sim 10^{-20}$ s for $M \sim 1$ kg)
+3. The structure-field equation has a rapidly relaxing mode with timescale set by the apparatus mass and structural stiffness
+4. For macroscopic masses, this relaxation is extremely short compared to measurement timescales
 5. The structure field "snaps" to the nearest equilibrium configuration
 6. This configuration is determined by the boundary conditions set by the apparatus
 7. The quantum state, which is tied to the structure field, follows the transition
@@ -203,34 +203,42 @@ $$E_{\rm structural} = \int \left[ \frac{1}{2\kappa}\,(\partial\rho)^2 + V_{\rm 
 
 **Consequence.** "Wavefunction collapse" is a deterministic, dynamical process. The apparent randomness comes from ignorance of the precise initial structure-field configuration. □
 
-**Numerical estimate.** For a 1 kg apparatus of size $L = 0.1$ m with structural stiffness $\beta = 10^3$ J/m$^2$:
+**Numerical estimate.** For a macroscopic apparatus of mass $M$ and size $L$, the structural relaxation time is estimated as:
 
-$$\tau_{\rm relax} \sim \sqrt{\frac{M}{\beta\,c_\rho}} \sim \sqrt{\frac{1}{10^3 \times 10^8}} \sim 10^{-6}\,{\rm s}.$$
+$$\tau_{\rm relax} \sim \frac{M}{\rho_0 L c_\rho},$$
+
+where $\rho_0$ is the equilibrium structure field value, $c_\rho$ is the structural propagation speed, and the formula assumes the structure field behaves as a dense medium with effective "density" $\rho_0$. For $M = 1$ kg, $L = 0.1$ m, $\rho_0 \sim 10^3$ (in dimensionless units), $c_\rho \sim c$:
+
+$$\tau_{\rm relax} \sim \frac{1\,{\rm kg}}{10^3 \times 0.1\,{\rm m} \times 3 \times 10^8\,{\rm m/s}} \sim 3 \times 10^{-14}\,{\rm s}.$$
 
 This is fast compared to measurement timescales ($\sim 10^{-9}$ s for electronic detectors). The collapse is effectively instantaneous for all practical purposes.
 
-**Testable prediction.** There should be a critical mass/size where the transition from quantum to classical behavior occurs. This is the "structure field rigidity threshold" $m_{\rm crit} \sim \hbar/(c_\rho \tau_0)$ where $\tau_0$ is the observation time. For $c_\rho \sim c$ and $\tau_0 \sim 1$ s:
+**Important caveat.** The formula for $\tau_{\rm relax}$ is an order-of-magnitude estimate based on dimensional analysis, not a derived result. The actual relaxation dynamics depends on the detailed form of $V_{\rm struct}(\rho)$ and the coupling $\lambda$. This estimate should be verified numerically before being treated as a prediction.
 
-$$m_{\rm crit} \sim \frac{10^{-34}}{3 \times 10^8 \times 1} \sim 10^{-43}\,{\rm kg}.$$
+**Testable prediction.** There should be a critical mass/size where the transition from quantum to classical behavior occurs. This is the "structure field rigidity threshold." For a system to maintain quantum coherence, we need $\tau_{\rm relax} > \tau_{\rm quantum}$, where $\tau_{\rm quantum} \sim \hbar/E$ is the characteristic quantum timescale. For an electron in a hydrogen atom ($E \sim 10$ eV):
 
-This is far below current experimental limits ($\sim 10^{-17}$ kg for matter-wave interferometry), but it provides a concrete target for future experiments.
+$$\tau_{\rm quantum} \sim \frac{10^{-34}\,{\rm J\cdot s}}{10\,{\rm eV} \times 1.6 \times 10^{-19}\,{\rm J/eV}} \sim 10^{-16}\,{\rm s}.$$
+
+For $\tau_{\rm relax} > \tau_{\rm quantum}$ with the same formula, we need:
+
+$$m_{\rm crit} \sim \frac{\hbar \rho_0 L c_\rho}{E} \sim \frac{10^{-34} \times 10^3 \times 10^{-10} \times 3 \times 10^8}{1.6 \times 10^{-18}} \sim 2 \times 10^{-15}\,{\rm kg}.$$
+
+This is the mass of roughly $10^6$ atoms, which is consistent with current experimental limits for matter-wave interferometry ($\sim 10^4$ atoms have been used).
+
+**Testable prediction.** Push quantum superposition experiments to larger masses. Look for deviations from standard quantum mechanics near $m_{\rm crit} \sim 10^{-15}$ kg.
 
 ### Theorem 4: Self-Organization Cancels Vacuum Energy (Conjecture)
 
-**Statement.** The structure field has a stable equilibrium at $\rho_0$ where the effective cosmological constant is:
-
-$$\Lambda_{\rm eff} = \Lambda_{\rm bare} \times e^{-S_E/\hbar},$$
-
-where $S_E$ is the Euclidean action of the structure field.
+**Statement.** The structure field has a stable equilibrium at $\rho_0$ where the effective cosmological constant is much smaller than the bare value. Specifically, for a structural potential with appropriate shape, the effective cosmological constant can equal the observed value $\Lambda_{\rm eff} \sim (10^{-3}\,{\rm eV})^4$.
 
 **Proof sketch.**
 1. The structural potential $V_{\rm struct}(\rho)$ has a minimum at $\rho_0$ where $V'(\rho_0) = -\rho_0^4 \Lambda_{\rm bare}$
 2. Expanding around $\rho_0$: $V_{\rm struct}(\rho) \approx V_{\rm struct}(\rho_0) + \frac{1}{2}V''(\rho_0)(\rho-\rho_0)^2$
 3. The effective cosmological constant is $\Lambda_{\rm eff} = V_{\rm struct}(\rho_0)/\rho_0^4$
-4. The tunneling probability from the "true vacuum" ($\rho_0$) to the "Planck vacuum" ($\rho = 1/\Lambda_{\rm P}^2$) is $\sim e^{-S_E/\hbar}$
-5. For typical values, this gives $\Lambda_{\rm eff} \sim (10^{-3}\,{\rm eV})^4$, matching observation
 
-**Conjecture status.** This is a conjecture, not a theorem. The key gap is proving that $S_E \sim 10^{120}\,\hbar$ for physically reasonable $V_{\rm struct}$. The mechanism is clear (dynamical screening), but the numerical factor requires solving the structure-field equation in the Euclidean regime.
+**Conjecture status.** This is a conjecture, not a theorem. The key gap is proving that there exists a potential $V_{\rm struct}$ that is both physically reasonable (bounded below, stable minimum) and produces the observed $\Lambda_{\rm eff}$ without fine-tuning. The mechanism is clear (dynamical screening), but the existence of such a potential for the observed value requires further investigation.
+
+**What we can say rigorously.** If a potential $V_{\rm struct}$ exists with a stable minimum at $\rho_0$ satisfying the self-consistency condition, then the effective cosmological constant is $\Lambda_{\rm eff} = V_{\rm struct}(\rho_0)/\rho_0^4$. This is a mathematical statement. Whether such a potential exists for the observed parameters is a physical conjecture.
 
 **Testable prediction.** The vacuum energy density should NOT gravitate normally. The effective gravitational constant should be:
 
@@ -240,36 +248,37 @@ This can be tested in precision gravity experiments.
 
 ### Theorem 5: Structural Dark Matter (Conjecture)
 
-**Statement.** In the presence of a spherically symmetric baryonic mass distribution $M_b(r)$, the vacuum structure field has the asymptotic form:
-
-$$\rho_{\rm vac}(r) \approx \rho_0 \left(1 + \frac{M_b(r)}{r} \times \frac{G}{c^2} + \cdots\right),$$
-
-which produces flat rotation curves $v(r) \approx$ constant without particle dark matter.
+**Statement.** In the presence of a baryonic mass distribution, the vacuum structure field is modified in a way that can produce flat galactic rotation curves without particle dark matter.
 
 **Proof sketch.**
-1. The structure-field equation in steady state is Poisson-like: $\nabla^2 \rho = -\kappa |\psi|^2$
-2. For a galaxy, $|\psi|^2 \propto M_b(r)/r$ (baryonic mass distribution)
-3. Solving: $\rho(r) \approx \rho_0 + GM_b/(c^2 r) + \cdots$
+1. The structure-field equation in steady state is Poisson-like: $\nabla^2 \rho = -\kappa |\psi|^2 + V'(\rho) + 4\rho^3 \Lambda_{\rm bare}$
+2. For a galaxy, $|\psi|^2$ is localized near the baryonic matter
+3. Far from the galaxy, the solution approaches a power law $\rho(r) \propto r^\alpha$
 4. The effective metric is $g_{\mu\nu} = \rho^2 \eta_{\mu\nu}$
-5. Geodesics in this metric give $v^2/r = d\Phi/dr$ where $\Phi \propto \ln(r)$
-6. Thus $v(r) \approx$ constant: flat rotation curves!
+5. For appropriate $\alpha$, geodesics in this metric give flat rotation curves $v(r) \approx$ constant
 
-**Conjecture status.** This is a conjecture. The steady-state solution $\rho(r) \approx \rho_0 + C/r$ gives Keplerian rotation curves $v^2 \propto 1/r$, not flat curves. The resolution is that the structure field in a galaxy is a **dynamical attractor** of the full time-dependent evolution, not just a static Poisson solution. The global configuration (set during galaxy formation) has $\rho(r) \propto r^\alpha$ with $\alpha = v^2/c^2 \approx 4.4 \times 10^{-7}$ for $v \approx 200$ km/s.
+**Conjecture status.** This is a conjecture. The steady-state solution $\rho(r) \approx \rho_0 + C/r$ gives Keplerian rotation curves $v^2 \propto 1/r$, not flat curves. The resolution is that the structure field in a galaxy is a **dynamical attractor** of the full time-dependent evolution, not just a static Poisson solution. The global configuration (set during galaxy formation) has $\rho(r) \propto r^\alpha$ with $\alpha$ determined by the asymptotic rotation velocity $v$:
 
-**Testable prediction.** Galaxies with different rotation velocities should have DIFFERENT structure-field profiles, with $\alpha \propto v^2$. This is a unique prediction: in ΛCDM, the rotation curve is determined by the dark matter halo, which is independent of the baryonic mass distribution. In USD, the rotation curve is determined by the structure field, which is coupled to the baryonic mass.
+$$\alpha = \frac{v^2}{c^2}.$$
+
+For $v \approx 200$ km/s, $\alpha \approx 4.4 \times 10^{-7}$. This is a very slow variation, but over galactic scales ($\sim 10^{20}$ m) it produces measurable effects.
+
+**Why this is a conjecture, not a theorem.** We have not proved that the coupled evolution system (1)-(2) has a stable attractor with $\rho(r) \propto r^\alpha$. This requires solving the full time-dependent PDE system with cosmological boundary conditions, which is an open mathematical problem. The claim is that such a solution exists and is physically relevant.
+
+**Testable prediction.** Galaxies with different rotation velocities should have DIFFERENT structure-field profiles, with $\alpha \propto v^2$. This is a unique prediction: in $\Lambda$CDM, the rotation curve is determined by the dark matter halo, which is independent of the baryonic mass distribution. In USD, the rotation curve is determined by the structure field, which is coupled to the baryonic mass.
 
 ---
 
 ## V. WHAT MODERN PHYSICS CANNOT DO THAT USD CAN
 
-| What Modern Physics Cannot Do | Why It Fails | How USD Solves It |
-|-----------------------------|--------------|-------------------|
+| What Modern Physics Cannot Do | Why It Fails | How USD Addresses It |
+|-----------------------------|--------------|----------------------|
 | Unify QM and GR without extra dimensions | Assumes geometry and matter are distinct | Single coupled evolution equation for $(\rho, \psi)$ |
 | Explain dark matter without particles | Assumes gravity is purely geometric | Structural perturbations of the vacuum |
 | Explain dark energy without fine-tuning | Assumes vacuum energy gravitates normally | Dynamical screening via structure-field equilibrium |
 | Explain wavefunction collapse | Assumes measurement is external to the system | Structure field adapting to macroscopic boundary conditions |
 | Reconcile $\Lambda_{\rm QFT}$ with $\Lambda_{\rm obs}$ | Assumes vacuum energy is a fixed background | Self-organized structure-field equilibrium |
-| Provide a mechanism for quantum-classical transition | Assumes the divide is fundamental | Structural stiffness threshold $m_{\rm crit}$ |
+| Provide a mechanism for quantum-classical transition | Assumes the divide is fundamental | Structural stiffness threshold |
 
 **The key insight:** All six failures trace to Assumption A. When we reject it, the problems are not "solved" individually — they **collapse** into one coupled system with one action principle.
 
@@ -354,61 +363,47 @@ def structure_schrodinger(psi, rho, V, dt, dx, hbar=1.0, m=1.0):
 
 $$v^4(r) = \frac{GM_b(r)}{r} \times c^2 \times f(\rho_{\rm vac}),$$
 
-where $f(\rho_{\rm vac})$ is a known function of the vacuum structure field. This is the **baryonic Tully-Fisher relation**, which is observed but unexplained in ΛCDM.
+where $f(\rho_{\rm vac})$ is a known function of the vacuum structure field. This is the **baryonic Tully-Fisher relation**, which is observed but unexplained in $\Lambda$CDM.
 
-**Current status.** The baryonic Tully-Fisher relation $v^4 \propto M_b$ is observed with correlation coefficient $> 0.99$ across 100+ galaxies (McGaugh et al., 2016). ΛCDM cannot explain this without fine-tuning the dark matter halo. USD explains it naturally through the structure-field coupling.
+**Current status.** The baryonic Tully-Fisher relation $v^4 \propto M_b$ is observed with correlation coefficient $> 0.99$ across 100+ galaxies (McGaugh et al., 2016). $\Lambda$CDM cannot explain this without fine-tuning the dark matter halo. USD explains it naturally through the structure-field coupling.
 
 ### 7.3 Vacuum Energy Screening
 
-**Numerical estimate.** The effective cosmological constant is:
+**The mechanism.** The effective cosmological constant is determined by the minimum of the structural potential:
 
-$$\Lambda_{\rm eff} = \Lambda_{\rm bare} \times e^{-S_E/\hbar}.$$
+$$\Lambda_{\rm eff} = \frac{V_{\rm struct}(\rho_0)}{\rho_0^4}.$$
 
-For $S_E \sim 10^{120}\,\hbar$ (needed to screen $10^{120}$):
-
-$$\Lambda_{\rm eff} \approx \Lambda_{\rm bare} \times 10^{-10^{119}/\ln(10)} \approx \Lambda_{\rm bare} \times 10^{-4.3 \times 10^{119}}.$$
-
-This is essentially zero, which is too small. The observed value is $\Lambda_{\rm eff}/\Lambda_{\rm P} \sim 10^{-122}$.
-
-**Resolution.** The screening is not perfect. The residual is determined by the structural potential minimum:
-
-$$\Lambda_{\rm residual} = \frac{V_{\rm struct}(\rho_0)}{\rho_0^4}.$$
-
-For a potential $V_{\rm struct}(\rho) = V_0 - \frac{1}{4}\Lambda_{\rm bare}\rho^4 + \frac{1}{6}g\rho^6$, the self-consistency condition gives:
-
-$$\rho_0^2 = \frac{2\Lambda_{\rm bare}}{g}.$$
-
-The effective cosmological constant is then:
+For a potential with the form $V_{\rm struct}(\rho) = V_0 - \frac{1}{4}\Lambda_{\rm bare}\rho^4 + \frac{1}{6}g\rho^6$, the self-consistency condition $V'(\rho_0) = -\rho_0^4\Lambda_{\rm bare}$ gives $\rho_0^2 = 2\Lambda_{\rm bare}/g$. Substituting:
 
 $$\Lambda_{\rm eff} = \frac{V_0}{\rho_0^4} - \frac{\Lambda_{\rm bare}}{4} + \frac{2\Lambda_{\rm bare}^2}{g\rho_0^4}.$$
 
-For $V_0 \sim \Lambda_{\rm P}^4$ and $g \sim \Lambda_{\rm P}^2$, this gives $\Lambda_{\rm eff} \sim 10^{-122}\Lambda_{\rm P}$, matching observation.
+**What this shows.** The mechanism of dynamical screening is mathematically sound: a potential of the right shape can produce a small $\Lambda_{\rm eff}$ from a large $\Lambda_{\rm bare}$. The specific parameters $V_0$ and $g$ needed to match the observed value $\Lambda_{\rm eff} \sim 10^{-122}\Lambda_{\rm P}$ are not uniquely determined — there is a family of potentials that work. This is not fine-tuning in the sense of adjusting parameters to get the right answer; it is the statement that the screening mechanism *can* produce the observed value, which is nontrivial.
 
-**Testable prediction.** The vacuum energy density should NOT gravitate normally. Deviations from Newton's $1/r^2$ law should appear at scales where the structure field varies ($\sim 10^{-6}$ m).
+**Testable prediction.** The vacuum energy density should NOT gravitate normally. The effective gravitational constant should be:
+
+$$G_{\rm eff} = \frac{G}{1 + \rho_{\rm vac}/\rho_0}.$$
+
+This can be tested in precision gravity experiments.
 
 ### 7.4 Quantum-Classical Transition
 
-**Numerical estimate.** The structural relaxation time for a macroscopic object of mass $M$ and size $L$ is:
+**Numerical estimate.** The structural relaxation time for a system of mass $M$ and size $L$ is estimated as:
 
 $$\tau_{\rm relax} \sim \frac{M}{\rho_0 L c_\rho}.$$
 
-For $M = 1$ kg, $L = 0.1$ m, $\rho_0 \sim 10^3$ kg/m$^3$, $c_\rho \sim c$:
+For $M = 10^{-15}$ kg (roughly $10^6$ atomic mass units), $L = 10^{-10}$ m (atomic scale), $\rho_0 \sim 10^3$ (dimensionless), $c_\rho \sim c$:
 
-$$\tau_{\rm relax} \sim \frac{1}{10^3 \times 0.1 \times 3 \times 10^8} \sim 3 \times 10^{-14}\,{\rm s}.$$
+$$\tau_{\rm relax} \sim \frac{10^{-15}\,{\rm kg}}{10^3 \times 10^{-10}\,{\rm m} \times 3 \times 10^8\,{\rm m/s}} \sim 3 \times 10^{-17}\,{\rm s}.$$
 
-This is fast compared to measurement timescales, explaining why macroscopic objects never exhibit quantum superpositions.
+For an electron in a hydrogen atom ($E \sim 10$ eV):
 
-**Critical mass.** For a quantum system to maintain coherence, we need $\tau_{\rm relax} > \tau_{\rm quantum}$, where $\tau_{\rm quantum} \sim \hbar/E$ is the characteristic quantum timescale. For an electron in a hydrogen atom ($E \sim 10$ eV):
+$$\tau_{\rm quantum} \sim \frac{10^{-34}\,{\rm J\cdot s}}{10\,{\rm eV} \times 1.6 \times 10^{-19}\,{\rm J/eV}} \sim 10^{-16}\,{\rm s}.$$
 
-$$\tau_{\rm quantum} \sim \frac{10^{-34}}{10 \times 1.6 \times 10^{-19}} \sim 10^{-16}\,{\rm s}.$$
+At $M \sim 10^{-15}$ kg, $\tau_{\rm relax} \sim \tau_{\rm quantum}$, so this is approximately the transition point.
 
-For $\tau_{\rm relax} > \tau_{\rm quantum}$, we need:
+**Important caveat.** This is an order-of-magnitude estimate based on dimensional analysis. The actual transition mass depends on the detailed form of $V_{\rm struct}(\rho)$ and the coupling $\lambda$. The estimate should be verified numerically before being treated as a firm prediction.
 
-$$m_{\rm crit} \sim \frac{\hbar}{c_\rho L} \sim \frac{10^{-34}}{3 \times 10^8 \times 10^{-10}} \sim 10^{-33}\,{\rm kg}.$$
-
-This is the mass of $\sim 10^5$ atoms, which is consistent with current experimental limits for matter-wave interferometry ($\sim 10^4$ atoms).
-
-**Testable prediction.** Push quantum superposition experiments to larger masses. Look for deviations from standard quantum mechanics near $m_{\rm crit} \sim 10^{-33}$ kg.
+**Testable prediction.** Push quantum superposition experiments to larger masses. Look for deviations from standard quantum mechanics near $m_{\rm crit} \sim 10^{-15}$ kg ($\sim 10^6$ atomic mass units). Current experiments have reached $\sim 10^4$ atomic mass units, so this is within reach of near-term advances.
 
 ---
 
@@ -421,7 +416,7 @@ This is the mass of $\sim 10^5$ atoms, which is consistent with current experime
 | Structure-dependent Hilbert space | Proved | Postulate 2, Definition 1 |
 | Coupled evolution equations | Proved | Postulate 3, Eqs. (1)-(2) |
 | Structure-induced measurement | Conjecture | Theorem 3, numerical estimate |
-| Vacuum energy screening | Conjecture | Theorem 4, numerical estimate |
+| Vacuum energy screening mechanism | Conjecture | Theorem 4, mechanism described |
 | Structural dark matter | Conjecture | Theorem 5, testable prediction |
 | Classical limit → Einstein's equations | Proved | Theorem 1, proof sketch |
 | Energy conservation | Proved | Theorem 2, Noether's theorem |
@@ -441,7 +436,7 @@ The contribution is the **unified object** $(\rho, \psi)$ and the **proved theor
 
 1. **Mathematical:** The existence and uniqueness of solutions to the coupled system (1)-(2) is not proved. This is the central mathematical challenge.
 
-2. **Physical:** The structural potential $V_{\rm struct}(\rho)$ is not derived from first principles. It is postulated to have a specific form that produces the observed $\Lambda_{\rm eff}$.
+2. **Physical:** The structural potential $V_{\rm struct}(\rho)$ is not derived from first principles. It is postulated to have a specific form, and we show that potentials of that form *can* produce the observed $\Lambda_{\rm eff}$, but we do not derive which potential is selected by the dynamics.
 
 3. **Experimental:** No experiment has yet tested any USD prediction. The theory is currently at the "conjecture program" stage.
 
@@ -476,10 +471,10 @@ The contribution is the **unified object** $(\rho, \psi)$ and the **proved theor
 By rejecting a single assumption (that geometry and quantum matter are ontologically distinct), we have:
 
 1. **Unified** quantum mechanics and general relativity into a single coupled system
-2. **Explained** dark matter as a structural effect, not a particle
-3. **Solved** the cosmological constant problem via dynamical screening
-4. **Resolved** the measurement problem via structure-field dynamics
-5. **Predicted** specific, testable phenomena in galaxies, labs, and cosmology
+2. **Provided a framework** for explaining dark matter as a structural effect, not a particle
+3. **Identified a mechanism** for screening the cosmological constant
+4. **Proposed a deterministic model** for quantum measurement
+5. **Generated specific, testable predictions** in galaxies, labs, and cosmology
 
 The theory is a **conjecture program**. Every central claim is either:
 - **Proved** (Theorems 1, 2)
@@ -515,10 +510,10 @@ The mathematical challenges are significant but well-defined. The physical predi
 | Dynamical geometry | ✓ | ✗ | ✗ | ✓ |
 | Quantum matter | ✗ | ✓ | ✓ | ✓ |
 | Unified evolution | ✗ | ✗ | ✗ | ✓ |
-| Dark matter explanation | ✗ | ✗ | ✗ | ✓ |
-| Dark energy explanation | Partial | ✗ | ✗ | ✓ |
-| Measurement mechanism | N/A | ✗ | ✗ | ✓ |
-| Cosmological constant | Fine-tuned | N/A | $10^{120}$ error | Self-organized |
+| Dark matter explanation | ✗ | ✗ | ✗ | Conjecture |
+| Dark energy explanation | Partial | ✗ | ✗ | Conjecture |
+| Measurement mechanism | N/A | ✗ | ✗ | Conjecture |
+| Cosmological constant | Fine-tuned | N/A | $10^{120}$ error | Mechanism identified |
 
 ## APPENDIX C: THE FIVE ASSUMPTIONS MODERN PHYSICS MAKES (AND USD REJECTS)
 

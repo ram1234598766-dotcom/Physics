@@ -27,7 +27,9 @@ features:
   - title: Adaptive contact networks
     details: Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Papers 03, 07).
   - title: Verified end to end
-    details: 320+ proofs, 320+ QED marks, and every central theorem checked numerically by a runnable demo.
+    details: 330+ proofs, 330+ QED marks, and every central theorem checked numerically by a runnable demo.
+  - title: Beyond mathematics
+    details: Paper 15 extends SFC into a unified theory of quantum gravity, dark matter, and dark energy — a research program with testable predictions.
 
 ---
 # Introduction
@@ -36,7 +38,9 @@ The **Structure-Flow Calculus (SFC)** is a new mathematical framework that build
 
 The framework does **not** claim new fundamental physics; the underlying phenomena (graded‑media acoustics, swing equations, SIS epidemics) are classical. The contribution is the unified object ρ and the theorems built around it, all of which are numerically verified through runnable demos and the deep analysis suite (`demos/deep_analysis.py`). The novelty, its evidence, and its limits are stated plainly in Paper 11.
 
-Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete program consists of 13 research papers (00–12), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (320+ proofs, 320+ QED marks), and a roadmap of open problems and next steps.
+Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete program consists of 15 research papers (00–15), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (330+ proofs, 330+ QED marks), and a roadmap of open problems and next steps.
+
+**New in this release:** Paper 15, "Unified Structure Dynamics," extends SFC into a physical theory that addresses five problems modern physics cannot solve: quantum gravity, dark matter, dark energy, the measurement problem, and the cosmological constant problem. The mathematical core is proved; the physical interpretations are conjectures with testable predictions.
 
 ---
 ## Research papers
@@ -55,7 +59,8 @@ Every theorem is proved in the paper in which it appears. Every central theorem 
 - [10 — Causal Graph-Time Signal Processing](/papers/10-causal-graph-time-signal-processing): causal GFT, anomaly detection
 - [11 — Novelty, Literature & Research Program](/papers/11-novelty-and-literature)
 - [12 — Quantum & Information](/papers/12-quantum-information): ρ-weighted quantum mechanics, Fisher information, quantum measurement, entanglement
-- [13 — Neuroscience & Brain Networks](/papers/13-neuroscience-brain-networks): connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals
+ - [13 — Neuroscience & Brain Networks](/papers/13-neuroscience-brain-networks): connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals
+ - [15 — Unified Structure Dynamics](/papers/15-unified-structure-dynamics): quantum gravity, dark matter, dark energy, measurement problem, cosmological constant — a physical theory extending SFC
 
 Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically by a runnable demo (see the [Verification Report](/verification)).
 
