@@ -53,9 +53,9 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 | Problem | Why modern physics is stuck | What USD derives |
 |---------|----------------------------|-----------------|
 | **Quantum gravity** | GR and QM use incompatible descriptions | A single evolution equation for geometry and quantum matter |
-| **Dark matter** | No particle found in 40 years | Structural distortions of the vacuum produce flat rotation curves |
+| **Dark matter** | No particle found in 40 years | A conjecture: structural distortions of the vacuum produce flat rotation curves |
 | **Dark energy** | Vacuum energy is $10^{120}$ times too large | The structure field dynamically screens the excess |
-| **Measurement problem** | Collapse is postulated, not derived | The structure field "snaps" to a new configuration during measurement |
+| **Measurement problem** | Collapse is postulated, not derived | A conjecture: the structure field "snaps" to a new configuration during measurement |
 | **Cosmological constant** | QFT and observation disagree by 120 orders of magnitude | Self-organized equilibrium of the structure field |
 
 **The key insight:** All five problems trace to one assumption — that geometry and quantum matter are separate. If that assumption is wrong, the problems are not solved one by one. They collapse into a single coupled system.
