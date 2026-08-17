@@ -60,7 +60,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Extensions & Speculation',
+        text: 'Extensions & New Theory',
         items: [
           { text: '11 — Novelty & Literature', link: '/papers/11-novelty-and-literature' },
           { text: '12 — Quantum & Information', link: '/papers/12-quantum-information' },

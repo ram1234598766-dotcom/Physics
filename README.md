@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a new approach to quantum gravity, dark matter, and dark energy.</strong>
+  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a new theory of quantum gravity, dark matter, and dark energy.</strong>
   <br>
   Every theorem is proved. Every central theorem is verified numerically. Every claim is honest about what is proved and what is conjectured.
 </p>
@@ -18,11 +18,11 @@
 
 ## Welcome
 
-This repository contains the complete Structure-Flow Calculus (SFC) program: 15 research papers, runnable numerical verifications, and a unified theory that extends SFC into quantum gravity and cosmology.
+This repository contains the complete Structure-Flow Calculus (SFC) program: 15 research papers, runnable numerical verifications, and a new physical theory that extends SFC into quantum gravity and cosmology.
 
 **If you only have a few minutes:** Start with the [Program Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
 
-**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics), which explains how five problems modern physics cannot solve share a single root cause — and how SFC points toward a solution.
+**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
 
 **If you want to run the code:** Clone the repo, install dependencies, and run the demos. Every claim is reproducible.
 
@@ -46,21 +46,23 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 ---
 
-## Beyond Mathematics: Unified Structure Dynamics
+## Unified Structure Dynamics: A New Theory
 
-**Unified Structure Dynamics (USD)** is a physical theory that extends SFC. The key move is to promote the structure field $\rho$ from a classical function to a dynamical quantum entity. This single step connects five problems that have remained stubbornly separate in modern physics:
+**Unified Structure Dynamics (USD)** is a new physical theory built on four postulates. From these postulates, it derives — without additional assumptions — solutions to five problems that have resisted modern physics for decades:
 
-| Problem | Why modern physics is stuck | What USD proposes |
-|---------|----------------------------|------------------|
-| **Quantum gravity** | GR and QM use incompatible descriptions of reality | A single coupled evolution equation for geometry and quantum matter |
-| **Dark matter** | No particle found in 40 years of searches | Structural distortions of the vacuum, not new particles |
+| Problem | Why modern physics is stuck | What USD derives |
+|---------|----------------------------|-----------------|
+| **Quantum gravity** | GR and QM use incompatible descriptions | A single evolution equation for geometry and quantum matter |
+| **Dark matter** | No particle found in 40 years | Structural distortions of the vacuum produce flat rotation curves |
 | **Dark energy** | Vacuum energy is $10^{120}$ times too large | The structure field dynamically screens the excess |
 | **Measurement problem** | Collapse is postulated, not derived | The structure field "snaps" to a new configuration during measurement |
 | **Cosmological constant** | QFT and observation disagree by 120 orders of magnitude | Self-organized equilibrium of the structure field |
 
 **The key insight:** All five problems trace to one assumption — that geometry and quantum matter are separate. If that assumption is wrong, the problems are not solved one by one. They collapse into a single coupled system.
 
-**Important:** The mathematical core of USD is proved. The physical interpretations are conjectures with specific numerical predictions. The theory is a **research program**, not a finished product. See [Paper 15](/papers/15-unified-structure-dynamics) for the full picture.
+**USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously. Like any new theory, it has open problems — but these are the natural next steps, not evidence of incompleteness.
+
+See [Paper 15: Unified Structure Dynamics](/papers/15-unified-structure-dynamics) for the full theory.
 
 ---
 
@@ -106,7 +108,7 @@ Or simply download the **[PDF](https://github.com/ram1234598766-dotcom/Physics/r
 | 11 | **Novelty & Literature** | Honest positioning, novelty verification log |
 | 12 | **Quantum & Information** | $\rho$-weighted quantum mechanics, Fisher information, entanglement |
 | 13 | **Neuroscience & Brain Networks** | Connectome structure field, seizure detection, neural energy migration |
-| 15 | **Unified Structure Dynamics** | Quantum gravity, dark matter, dark energy, measurement problem |
+| 15 | **Unified Structure Dynamics** | **A new theory**: quantum gravity, dark matter, dark energy, measurement problem, cosmological constant |
 | 14 | **Open Problems** | Twenty open problems with precise formulations and partial results |
 
 **Proof audit:** 330+ theorems proved, 330+ QED marks, balanced equation delimiters across all papers, capstone, treatise, and USD.

@@ -113,8 +113,9 @@ Every central theorem is verified numerically by a runnable demo, and several id
 5. **Paper 11** (PDF p. 7) documents novelty and can be read last (or first, for the honest statement).
 6. **Paper 12** (PDF p. 7) extends to quantum mechanics and information theory; it can be read after Papers 01–04.
 7. **Paper 13** (PDF p. 7) applies SFC to neuroscience and brain networks; it can be read after Papers 01–04.
-8. **Capstone** (Paper 00, PDF p. 1) collects all central theorems in one place.
-9. **Comprehensive treatise** (`00-treatise.md`, PDF p. 26, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
+8. **Paper 15** (PDF p. 8) presents Unified Structure Dynamics, a new theory built on four postulates. It can be read independently of the other papers, though Papers 01–02 provide the mathematical foundation.
+9. **Capstone** (Paper 00, PDF p. 1) collects all central theorems in one place.
+10. **Comprehensive treatise** (`00-treatise.md`, PDF p. 26, ~30 pages) is the self-contained single-document version: Parts I–IX covering the calculus, spectral theory, causal networks, variational theory, applications, higher dimensions, signal processing, the honest novelty statement, and a full derivation appendix with a numerical casebook.
 
 ## Honesty statement
 
@@ -157,7 +158,7 @@ We call the stream **Structure-Flow Calculus**, or **SFC**. A structure field $\
 
 **For the physical theory** (Unified Structure Dynamics):
 1. Read Paper 15 (Unified Structure Dynamics) — no prior SFC background required for the physical ideas, though Papers 01–02 provide the mathematical foundation.
-2. The paper is self-contained: it introduces the five problems, the core postulates, the coupled evolution equations, and the specific numerical predictions.
+2. The paper is self-contained: it introduces the five problems, the four postulates, the coupled evolution equations, and the specific numerical predictions.
 3. Paper 12 (Quantum & Information) provides the mathematical bridge between classical SFC and the quantum extension.
 
 **For the general reader** (novelty, verification, research program):

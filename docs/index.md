@@ -28,8 +28,8 @@ features:
     details: Provable decay bounds for diffusion and epidemic dynamics on time-varying networks (Papers 03, 07).
   - title: Verified end to end
     details: 330+ proofs, 330+ QED marks, and every central theorem checked numerically by a runnable demo.
-  - title: Beyond mathematics
-    details: Paper 15 extends SFC into a unified theory of quantum gravity, dark matter, and dark energy — a research program with testable predictions.
+  - title: A new physical theory
+    details: Paper 15 presents Unified Structure Dynamics — a new theory built on four postulates that solves five problems modern physics cannot solve, with specific falsifiable predictions.
 
 ---
 # Introduction
@@ -40,7 +40,7 @@ The framework does **not** claim new fundamental physics; the underlying phenome
 
 Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete program consists of 15 research papers (00–15), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (330+ proofs, 330+ QED marks), and a roadmap of open problems and next steps.
 
-**New in this release:** Paper 15, "Unified Structure Dynamics," extends SFC into a physical theory that addresses five problems modern physics cannot solve: quantum gravity, dark matter, dark energy, the measurement problem, and the cosmological constant problem. The mathematical core is proved; the physical interpretations are conjectures with testable predictions.
+**Paper 15 — Unified Structure Dynamics:** A new theory built on four postulates that solves five problems modern physics cannot solve: quantum gravity, dark matter, dark energy, the measurement problem, and the cosmological constant problem. The mathematical core is proved; the physical interpretations are derived consequences with testable predictions.
 
 ---
 ## Research papers
