@@ -12,6 +12,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 03 (Causal Network Spectral Theory):** Theorems 1–11. The eigenframe connection $C_{jk}(t)$, the Energy Migration Theorem (Theorem 6), modal ODEs.
+3. **Basic epidemiology:** SIS model, epidemic thresholds, basic reproduction number $\mathcal{R}_0$ (Keeling & Rohani [1]).
+4. **Basic graph theory:** Adjacency matrix, degree matrix, graph Laplacian, spectral radius (Chung [2]).
+
+---
+
 ## I. INTRODUCTION
 
 Contact networks are not static: behavior changes the graph, and the graph changes the outbreak. Modeling both requires a time-varying contact matrix $W(t)$, and bounding the outbreak requires the spectral theory of the family $W(t)$. Paper 03 provides exactly the needed theorems — mass conservation, algebraic-connectivity contraction, and the Grönwall bound through $\lambda_{\max}(W(t))$. This paper develops the epidemiology: certified outbreak envelopes, thresholds, intervention ranking, and the spectral targeting formula.

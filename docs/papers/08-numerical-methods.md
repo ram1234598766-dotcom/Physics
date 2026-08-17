@@ -12,6 +12,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 02 (Spectral Theory):** Theorems 1–10. The closed-form spectrum, wave evolution, resolvent kernel.
+3. **Basic numerical analysis:** Finite difference consistency, CFL conditions, spectral Galerkin convergence, stability theory (Trefethen [1]; LeVeque [2]).
+4. **Basic ODE theory:** Well-posedness, stability, convergence of time-stepping schemes (Hairer et al. [3]).
+
+---
+
 ## I. INTRODUCTION
 
 Every theorem in this series is corroborated numerically. This paper fixes the numerical machinery: how to discretize $L_\rho$, how to time-step without destroying the invariants, and what convergence to expect. The design rule is that the discrete scheme must mirror the three structural properties of the continuum problem: symmetry of $L_\rho$, conservation of mass/energy, and the midpoint-flux divergence form.

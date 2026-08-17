@@ -12,6 +12,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 02 (Spectral Theory):** Theorems 1–10. The closed-form spectrum $\mu_m = (m\pi/\Lambda)^2$, the wave evolution (Theorem 5), the resolvent kernel (Theorem 6).
+3. **Basic PDE theory:** The wave equation $u_{tt} = c^2 u_{xx}$, characteristics, and energy methods.
+4. **Basic acoustics/optics:** Impedance $Z = \sqrt{K\rho_0}$, refractive index, reflection and transmission at interfaces (Kinsler et al. [1], Ch. 2).
+
+---
+
 ## I. INTRODUCTION
 
 A graded medium is one whose properties vary continuously with position — a density gradient, a refractive-index profile, a tapered rod. Designers want to know: for which profiles are the modes computable in closed form, is propagation reflectionless, and is energy conserved? Paper 02 shows that precisely the profiles that are structure fields $\rho$ (any positive $C^1$ profile) make the governing equation $u_{tt} = c_0^2 L_\rho u$ — and this equation has a complete closed-form solution theory via the transport map. This paper converts that theory into engineering: matching, reflectionlessness, anti-reflection design, and energy auditing.

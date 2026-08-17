@@ -10,6 +10,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 00 (Capstone):** Overview of all 10 contributions and their dependencies.
+2. **Papers 01–10:** The complete Structure-Flow Calculus program as documented in the individual papers.
+3. **Literature search methodology:** Exact-phrase search, arXiv API, Google Scholar, Web of Science, Zentralblatt.
+4. **Philosophy of science:** Novelty claims, prior art, research program methodology (Lakatos [1]).
+
+---
+
 ## I. INTRODUCTION
 
 A framework whose papers state theorems must also state its own position: what is new, what is not, how it relates to the existing literature, and where it is going. This paper discharges that obligation for Structure-Flow Calculus (SFC). It records the novelty verification performed at the time of writing, states the claims and non-claims precisely, positions the framework against its neighbors, and sketches the research program.

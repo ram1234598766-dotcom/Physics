@@ -12,6 +12,18 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 02 (Spectral Theory):** Theorems 1–10. The closed-form spectrum, wave evolution, resolvent kernel.
+3. **Riemannian geometry:** Metrics, volume forms, isometries, divergence theorem (Gallot-Hulin-Lafontaine [1]; Chavel [2]).
+4. **Functional analysis:** Self-adjoint operators, spectral theorem for compact self-adjoint operators, coercivity.
+5. **Asymptotic spectral geometry:** Weyl's law and the two-term Weyl asymptotics (Ivrii [3]).
+
+---
+
 ## I. INTRODUCTION
 
 The one-dimensional framework extends naturally when each coordinate direction carries its own structure profile. This paper sets out the higher-dimensional calculus: what $D_\rho$ becomes, what the structure-flow Laplacian is, what plays the role of the transport map, and where closed-form spectra survive. The organizing fact, mirroring Paper 01, Theorem 12, is that the map $\tau = (\tau_1,\dots,\tau_d)$ with $\tau_j(x_j) = \int dx_j/\rho_j$ is an *isometry* from the structure-flow geometry to the flat box $[0,\Lambda_1]\times\dots\times[0,\Lambda_d]$, $\Lambda_j = \int_{I_j} dx_j/\rho_j$. In $\tau$-coordinates the structure Laplacian is exactly the ordinary Laplacian, so the higher-dimensional spectral theory is the classical spectral theory of a box, transported. The results underpin a class of graded-media problems in two and three dimensions (extending Paper 05) and give the continuum target of the discrete geometry constructions used in Paper 10.

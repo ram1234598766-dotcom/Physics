@@ -12,6 +12,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 03 (Causal Network Spectral Theory):** Theorems 1–11. The eigenframe connection $C_{jk}(t)$, the Energy Migration Theorem (Theorem 6), modal ODEs, variational characterization.
+3. **Signal processing:** Fourier transform, filtering, Parseval's identity, detection theory (Kay [1]).
+4. **Graph signal processing:** Graph Laplacian, spectral graph theory, graph Fourier transform (Shuman et al. [2]).
+
+---
+
 ## I. INTRODUCTION
 
 Static graph signal processing (GSP) assumes a fixed graph [1,2]. But the signals we care about — power-system frequency deviations, epidemic load, traffic — live on graphs that change while the signal evolves. Paper 03 gave the exact laws of motion of the eigenframe and the modal coefficients. This paper turns those laws into a processing pipeline: a *causal* transform that tracks the moving basis, filters that run in the modal domain, and a detector that reads a structural event off the conserved-total migration of modal energy.

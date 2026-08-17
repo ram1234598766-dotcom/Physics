@@ -12,6 +12,17 @@
 
 ---
 
+## Prerequisites
+
+Before reading this paper, the reader should be familiar with:
+
+1. **Paper 01 (Foundations):** Theorems 1–19. The ρ-calculus, transport map, adjoint pair, energy identity.
+2. **Paper 03 (Causal Network Spectral Theory):** Theorems 1–11. The eigenframe connection $C_{jk}(t)$, the Energy Migration Theorem (Theorem 6), modal ODEs, variational characterization.
+3. **Basic power systems:** Linearized swing equations, DC power flow, algebraic connectivity as synchronization metric (Dorfler et al. [1]).
+4. **Basic graph theory:** Graph Laplacian, Perron–Frobenius theorem, algebraic connectivity $\lambda_2$ (Chung [2]).
+
+---
+
 ## I. INTRODUCTION
 
 A power network must keep generators synchronized. Under small disturbances, frequency deviations follow, in the uniform-inertia DC-flow relaxation, $\dot u = -L(t)u$: the network Laplacian itself is the dynamics, and it changes as lines are loaded, stressed, and tripped. The theorems of Paper 03 therefore apply verbatim: mass is conserved (power balance), deviation from the mean contracts at a rate governed by the time-integrated algebraic connectivity, and modal energy migrates conservatively as the topology deforms. This paper turns those theorems into engineering statements: synchronization guarantees, vulnerability ranking, and early-warning observables.
