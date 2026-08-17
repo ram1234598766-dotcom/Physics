@@ -22,7 +22,7 @@ This repository contains the complete Structure-Flow Calculus (SFC) framework: 1
 
 **If you only have a few minutes:** Start with the [Theory Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
 
-**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
+**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics.md), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
 
 **If you want to run the code:** Clone the repo, install dependencies, and run the demos. Every claim is reproducible.
 
@@ -62,7 +62,7 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 **USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously.
 
-See [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics) for the full theory.
+See [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics.md) for the full theory.
 
 ---
 
