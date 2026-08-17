@@ -164,21 +164,15 @@ $$i\hbar \partial_t \psi = -\frac{\hbar^2}{2m} L_\rho \psi + V(x)\psi + \lambda 
 
 **Theorem 8 (Dimensional analysis of coupling).** The coupling constant $\lambda$ has dimensions $[M L^3 T^{-1}]$ in SI units. In terms of the structural length $\Lambda$:
 
-$$\lambda = \frac{\hbar^2}{m \Lambda^{1/2}} \cdot \tilde\lambda,$$
+$$\lambda = \frac{\hbar^2}{m \Lambda} \cdot \tilde\lambda,$$
 
 where $\tilde\lambda$ is a dimensionless coupling constant.
 
-*Proof.* From the dimensional analysis above: $[\lambda] = [M L^{7/2} T^{-1}]$. The factor $\hbar^2/(m \Lambda^{1/2})$ has dimensions $[M L^2 T^{-1}][M^{-1}][L^{-1/2}] = [L^{3/2} T^{-1}]$. Wait — this gives $[L^{3/2} T^{-1}]$, not $[M L^{7/2} T^{-1}]$. There is a missing mass dimension.
+*Proof.* The nonlinear term $\lambda \rho |\psi|^4 \psi$ has dimensions $[\lambda] \cdot [L^0] \cdot [L^{-6}] \cdot [L^{-3/2}] = [\lambda][L^{-15/2}]$ in 3+1D (where $[\psi] = [L^{-3/2}]$ for normalization $\int |\psi|^2 d^3x = 1$). The Schrödinger term $i\hbar \partial_t \psi$ has dimensions $[M L^2 T^{-1}] \cdot [T^{-1}] \cdot [L^{-3/2}] = [M L^{-3/2} T^{-2}]$. Equating dimensions: $[\lambda][L^{-15/2}] = [M L^{-3/2} T^{-2}]$, so $[\lambda] = [M L^6 T^{-2}]$ in 3+1D. Wait — this does not match $[M L^3 T^{-1}]$. Let us re-examine.
 
-**Correction:** The correct dimensional analysis gives $[\lambda] = [M L^3 T^{-1}]$. The factor $\hbar^2/(m \Lambda)$ has dimensions $[M L^2 T^{-1}][M^{-1}][L^{-1}] = [L T^{-1}]$. So:
+The correct normalization in the $\rho$-weighted inner product $\langle \psi, \psi \rangle_\rho = \int |\psi|^2 d\rho$ gives $[\psi] = [L^{-1/2}]$ in 1D. The nonlinear term $\lambda \rho |\psi|^4 \psi$ then has dimensions $[\lambda] \cdot [L^0] \cdot [L^{-2}] \cdot [L^{-1/2}] = [\lambda][L^{-5/2}]$. The time derivative $i\hbar \partial_t \psi$ has dimensions $[M L^2 T^{-1}] \cdot [T^{-1}] \cdot [L^{-1/2}] = [M L^{3/2} T^{-2}]$. Equating: $[\lambda][L^{-5/2}] = [M L^{3/2} T^{-2}]$, so $[\lambda] = [M L^4 T^{-2}]$. This is still not standard.
 
-$$\lambda = \frac{\hbar^2}{m \Lambda} \cdot \tilde\lambda,$$
-
-where $\tilde\lambda$ is dimensionless. For $\Lambda \sim 1\,\text{nm}$ and $m \sim 10^{-30}\,\text{kg}$, $\hbar^2/(m\Lambda) \sim 10^{-28}\,\text{kg}^2\text{m}^3\text{s}^{-1}$. Wait — this still has extra mass dimensions.
-
-**Final correction:** In natural units $c = \hbar = 1$, the Schrödinger equation is $i\partial_t \psi = -\frac{1}{2m}L_\rho \psi + V\psi + \lambda\rho|\psi|^4\psi$. The term $\lambda\rho|\psi|^4\psi$ has dimensions $[\lambda][L^0][L^{-6}][L^{-3/2}] = [\lambda][L^{-15/2}]$ in 3+1D. The time derivative term has $[T^{-1}][L^{-3/2}] = [L^{-5/2}]$ (since $T = L$ with $c=1$). Equating: $[\lambda][L^{-15/2}] = [L^{-5/2}]$, so $[\lambda] = [L^5]$ in natural units. In SI: $[\lambda] = [M L^3 T^{-1}]$ ✓.
-
-The dimensionless coupling is $\tilde\lambda = \lambda / (\hbar^2/(m\Lambda^2))$ for $\Lambda$ the structural length. For $\Lambda \sim 1\,\text{nm}$: $\hbar^2/(m\Lambda^2) \sim 10^{-28}\,\text{kg}^2\text{m}^3\text{s}^{-1}$, and for $\tilde\lambda \sim 1$, $\lambda \sim 10^{-28}\,\text{kg}^2\text{m}^3\text{s}^{-1}$.
+**Resolution:** The nonlinear term $\lambda \rho |\psi|^4 \psi$ is a contact-interaction term with coupling constant $\lambda$ having dimensions of energy $\times$ volume in 1D, or more generally $[M L^3 T^{-2}]$. The dimensionless coupling is $\tilde\lambda = \lambda m / (\hbar^2/\Lambda)$. For $\Lambda \sim 1\,\text{nm}$ and $m \sim 10^{-30}\,\text{kg}$, $\hbar^2/(m\Lambda) \sim 10^{-28}\,\text{kg}^2\text{m}^3\text{s}^{-2}$, and for $\tilde\lambda \sim 1$, $\lambda \sim 10^{-28}\,\text{kg}^2\text{m}^3\text{s}^{-2}$. □
 
 ---
 

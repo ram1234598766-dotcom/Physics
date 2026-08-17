@@ -1,16 +1,22 @@
 """
 neuroscience_validation.py
 ===========================
-Validates the Structure-Flow Calculus theorems of Paper 13:
+Validates the Structure-Flow Calculus theorems of Paper 13 using SYNTHETIC
+data that mimics the structure of real neuroimaging data:
 
-A. Connectome-structure theorem: lambda2 of C. elegans connectome Laplacian
-   matches the structure-field prediction.
+A. Connectome-structure theorem: lambda2 of a synthetic connectome Laplacian
+   with structure-field weighting.
 B. Seizure-detection theorem: eigenframe connection spike under
    synthetic seizure-like perturbation.
 C. Neural Energy Migration Theorem: modal energy conservation under
    pure structural deformation.
-D. Spectral entropy bound: H(t) <= log(n-1) for neural signals.
-E. Causal GFT Parseval: Sum_j |â_j|² = ||x||² for BOLD-like signals.
+D. Spectral entropy bound: H(t) <= log(n-1) for synthetic BOLD-like signals.
+E. Causal GFT Parseval: Sum_j |â_j|² = ||x||².
+
+NOTE: This demo uses SIMULATED data. Real validation on ABIDE and CHB-MIT
+requires the actual datasets (not included in this repository). The theorems
+are proved analytically in Paper 13; this demo only verifies the numerical
+implementation on toy problems.
 """
 
 import numpy as np

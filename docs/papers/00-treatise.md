@@ -1654,9 +1654,9 @@ $\partial_t^2 u = \frac{E}{\rho_*}\rho\partial_x(\rho\partial_x u) = c_0^2 L_\rh
 ### C.2 Application to Optical Fiber Design
 
 A graded-index fiber has refractive index $n(x) = n_0\sqrt{1 + 2\Delta(x/\ell)^\alpha}$ near the axis. The Helmholtz equation for the electric field $E$ is
-$\partial_t^2 E = c^2/n(x)^2 \partial_x^2 E$. Setting $\rho(x) = n(x)/n_0$ gives $L_\rho E = (n_0/c)^2 E_{tt}$ with modes $\varphi_m$ of Paper 02. For $\alpha=2$ (parabolic index, $\Delta=0.01$, $\ell=25\mu$m, $n_0=1.5$):
+$\partial_t^2 E = c^2/n(x)^2 \partial_x^2 E$. Setting $\rho(x) = n(x)/n_0$ gives $L_\rho E = (n_0/c)^2 E_{tt}$ with modes $\varphi_m$ of Paper 02. For $\alpha=2$ (parabolic index, $\Delta=0.01$, $\ell=25\mu$ m, $n_0=1.5$):
 - $\rho(x) = \sqrt{1+2\cdot0.01(x/25\mu\text{m})^2} \approx 1 + 0.01(x/25\mu\text{m})^2$
-- $\Lambda \approx \int_{-25}^{25} dx/1.01 = 49.5\mu$m
+- $\Lambda \approx \int_{-25}^{25} dx/1.01 = 49.5\mu$ m
 - $\omega_1 = c\pi/\Lambda = (3\times10^8)\pi/(49.5\times10^{-6}) = 1.90\times10^{13}$ rad/s
 - Bandwidth: $\Delta f = c/(2n_0\Lambda) = 3\times10^8/(2\cdot1.5\cdot49.5\times10^{-6}) = 2.02$ THz
 
@@ -1699,3 +1699,4 @@ For the cloak profile $\rho(r) = r/(R_2-R_1)\cdot(R_2/r-1) = R_2/(R_2-R_1) - r/(
 The program is complete in the sense that matters for a research document: every theorem has a terminated proof, every number has a reproduction path, every reference is cited where it is used, and the boundaries of the framework are stated as openly as its results. The cross-reference index above maps each mathematical object to its source paper and treatise location, providing a navigation map for the reader who wants to trace any claim to its origin.
 
 The Structure-Flow Calculus program is thirteen papers and one capstone. From a single positive function $\rho$, it constructs a complete calculus, a closed-form spectral theory, a causal network theory, a variational theory, an engineering toolbox, a higher-dimensional theory, a quantum-information reading, and a neuroscience application -- every step a proved theorem, every central theorem verified numerically, every claim honest. The thirteen contributions of the program are thirteen facets of one object: the transport map $\tau = \int dx/\rho$ and the physics that flows through it.
+
