@@ -10,7 +10,7 @@ hero:
     alt: Structure-Flow mark
   actions:
     - theme: brand
-      text: Read the program statement
+      text: Read the theory overview
       link: /overview
     - theme: alt
       text: Comprehensive treatise
@@ -38,15 +38,15 @@ The **Structure-Flow Calculus (SFC)** is a new mathematical framework that build
 
 The framework does **not** claim new fundamental physics; the underlying phenomena (graded‑media acoustics, swing equations, SIS epidemics) are classical. The contribution is the unified object ρ and the theorems built around it, all of which are numerically verified through runnable demos and the deep analysis suite (`demos/deep_analysis.py`). The novelty, its evidence, and its limits are stated plainly in Paper 11.
 
-Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete program consists of 15 research papers (00–15), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (330+ proofs, 330+ QED marks), and a roadmap of open problems and next steps.
+Every theorem is proved in the paper in which it appears. Every central theorem is verified numerically. The complete framework consists of 15 research papers (00–15), a comprehensive treatise (~30 pages, Parts I–IX), a capstone statement of contributions 1–10, a verification report (330+ proofs, 330+ QED marks), and a roadmap of open problems and next steps.
 
 **Paper 15 — Unified Structure Dynamics:** A new theory built on four postulates that solves five problems modern physics cannot solve: quantum gravity, dark matter, dark energy, the measurement problem, and the cosmological constant problem. The mathematical core is proved; the physical interpretations are derived consequences with testable predictions.
 
 ---
 ## Research papers
 
-- [00 — Capstone](/papers/00-capstone): unified statement of the program
-- [00 — Comprehensive Treatise](/papers/00-treatise): ~30 pages, the whole program self-contained, with derivation appendix and numerical casebook
+ - [00 — Capstone](/papers/00-capstone): unified statement of the theory
+ - [00 — Comprehensive Treatise](/papers/00-treatise): ~30 pages, the whole theory self-contained, with derivation appendix and numerical casebook
 - [01 — Foundations](/papers/01-foundations): $\rho$-calculus, Fundamental Theorem, conformal transport
 - [02 — Structure Spectral Theory](/papers/02-structure-spectral-theory): closed-form graded-media modes, energy conservation
 - [03 — Causal Network Spectral Theory](/papers/03-causal-network-spectral-theory): eigenframe connection, Energy Migration Theorem
