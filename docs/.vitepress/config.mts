@@ -55,6 +55,7 @@ vite: {
           { text: '11 — Novelty & Literature', link: '/papers/11-novelty-and-literature' },
           { text: '12 — Quantum & Information', link: '/papers/12-quantum-information' },
           { text: '13 — Neuroscience & Brain Networks', link: '/papers/13-neuroscience-brain-networks' },
+          { text: '15 — Unified Structure Dynamics', link: '/papers/15-unified-structure-dynamics' },
           { text: 'Open Problems', link: '/papers/12-open-problems' }
         ]
       }

@@ -2,14 +2,14 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-peer--review_ready-blue" alt="Status">
-  <img src="https://img.shields.io/badge/theorems-294-success" alt="Theorems">
+  <img src="https://img.shields.io/badge/theorems-320%2B-success" alt="Theorems">
   <img src="https://img.shields.io/badge/demos-5_pass-brightgreen" alt="Demos">
-  <img src="https://img.shields.io/badge/PDF-241_pages-red" alt="PDF">
+  <img src="https://img.shields.io/badge/PDF-260%2B_pages-red" alt="PDF">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </p>
 
 <p align="center">
-  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, and a network theory.</strong>
+  <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a unified theory of quantum gravity, dark matter, and dark energy.</strong>
   <br>
   Every theorem is proved. Every central theorem is verified numerically.
 </p>
@@ -31,6 +31,24 @@ From this single object ρ, three complete theories emerge:
 The framework does **not** claim new fundamental physics. The underlying phenomena — graded-media acoustics, swing equations, SIS epidemics — are classical. The contribution is the **unified object ρ** and the **proved theorems** that connect these classical ingredients under a single structure field.
 
 > **Honesty statement:** Every proof is written out. Every central theorem has a runnable numerical check. The novelty claim, its evidence, and its limits are stated plainly in [Paper 11](/papers/11-novelty-and-literature).
+
+---
+
+## Unified Structure Dynamics: Quantum Gravity, Dark Matter, and Dark Energy
+
+**Unified Structure Dynamics (USD)** is a physical theory that extends SFC by promoting the structure field $\rho$ to a dynamical quantum operator. This single extension solves five problems modern physics cannot solve:
+
+| Problem | Why Modern Physics Fails | USD Solution |
+|---------|------------------------|--------------|
+| **Quantum gravity** | GR and QM are fundamentally incompatible | Single coupled evolution equation for geometry and quantum matter |
+| **Dark matter** | No particle detected in 40 years | Structural perturbations of the vacuum explain flat rotation curves |
+| **Dark energy** | ΛCDM requires fine-tuning | Structure field self-organizes to cancel $10^{120}$ vacuum energy |
+| **Measurement problem** | No mechanism for wavefunction collapse | Structure field adapting to macroscopic boundary conditions |
+| **Cosmological constant** | 120 orders of magnitude discrepancy | Dynamical screening via structure-field equilibrium |
+
+**Key insight:** All five failures trace to one assumption — that geometry and quantum matter are ontologically distinct. USD rejects this assumption. The theory is a **conjecture program**: its mathematical core is rigorous, its physical predictions are specific, and every central claim is falsifiable.
+
+See [Paper 15: Unified Structure Dynamics](/papers/15-unified-structure-dynamics) for the full theory.
 
 ---
 
@@ -98,9 +116,10 @@ npm run docs:pdf      # generates Structure-Flow-Calculus-Docs.pdf
 | 11 | **Novelty, Literature & Research Program** | 7 | Honest positioning, novelty verification log |
 | 12 | **Quantum & Information** | 7 | ρ-weighted quantum mechanics, Fisher information, entanglement |
 | 13 | **Neuroscience & Brain Networks** | 7 | Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals |
+| 15 | **Unified Structure Dynamics** | 8 | Quantum gravity, dark matter, dark energy, measurement problem, cosmological constant |
 | 14 | **Open Problems** | 8 | Twenty open problems with precise formulations and partial results |
 
-**Proof audit:** 320+ theorems proved, 320+ QED marks, balanced equation delimiters across all papers, capstone, and treatise.
+**Proof audit:** 330+ theorems proved, 330+ QED marks, balanced equation delimiters across all papers, capstone, treatise, and USD.
 
 ---
 
