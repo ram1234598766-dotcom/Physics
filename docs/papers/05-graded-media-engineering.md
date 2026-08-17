@@ -310,7 +310,7 @@ $$\partial_t^2 E = c^2\Big[\partial_r(\rho\partial_r E) + \frac{\rho}{r}\partial
 
 For the $m$-th azimuthal mode ($e^{im\theta}$), the radial equation is
 $\partial_t^2 R = c^2[\rho R'' + (\rho' + \rho/r)R' - (m^2\rho^2/r^2)R]$.
-With $\rho(r) = 1 + 0.2(r/a)^2$, $a=4.1\mu$m, $n_0=1.45$:
+With $\rho(r) = 1 + 0.2(r/a)^2$, $a=4.1\mu$ m, $n_0=1.45$:
 - The fundamental mode ($m=0$) has cutoff at $V = 2.405$ where $V = a\sqrt{n_0^2k_0^2 - \beta^2}$
 - For $\lambda_0 = 1.55\mu$m: $k_0 = 2\pi/\lambda_0 = 4.053\times10^6$ m⁻¹
 - $V = 4.1\times10^{-6}\sqrt{1.45^2-1}\cdot4.053\times10^6 = 4.1\times1.198\cdot4.053 = 19.91$ (multimode)

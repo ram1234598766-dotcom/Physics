@@ -376,7 +376,7 @@ Using a time-varying contact network with $\lambda_{\max}(W(t))$ increasing at $
 A $50$-node road network with edge weights representing traffic flow. An accident on edge $(12,13)$ at $t=20$ s:
 - Pre-accident: $\lambda_2 = 0.15$, $S(t) < 10^{-8}$
 - Post-accident: $\lambda_2$ drops to $0.08$, $S(20^+) = 6.7$
-- Mode 2 energy increases from $0.08$ to $0.35$ (4.4$\times$)
+- Mode 2 energy increases from $0.08$ to $0.35$ ($4.4\times$)
 - The detector triggers at $t=20.1$ s, before the congestion propagates to adjacent edges.
 
 ---

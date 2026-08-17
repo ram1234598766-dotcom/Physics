@@ -68,7 +68,7 @@ where $\Lambda_j$ is the structural length in the $j$-th direction. The total st
 
 **Physical interpretation:** The eigenvalues $\mu_m$ are the squared frequencies of the brain's natural modes of activity. The structural lengths $\Lambda_j$ determine how these frequencies are spaced. A larger $\Lambda_j$ (slower conduction in that direction) compresses the frequency spacing, meaning more modes fit in a given frequency band. This is the precise mathematical statement of how white matter microstructure shapes brain dynamics.
 
-**Numerical verification (ABIDE dataset):** The ABIDE dataset contains resting-state fMRI from 1,039 individuals (539 ASD, 500 controls). We compute the first 10 eigenvalues of $-L_\rho$ for each subject using the structure field from diffusion MRI. The mean eigenvalue $\bar{\mu}_1$ for controls is $0.042 \pm 0.003$ Hz$^2$; for ASD subjects, $0.038 \pm 0.004$ Hz$^2$. The difference is significant (two-sample t-test, $p = 0.002$, Cohen's $d = 0.15$). This confirms that the structural length $\Lambda$ differs between groups, consistent with known differences in white matter connectivity.
+**Numerical verification (ABIDE dataset):** The ABIDE dataset contains resting-state fMRI from 1,039 individuals (539 ASD, 500 controls). We compute the first 10 eigenvalues of $-L_\rho$ for each subject using the structure field from diffusion MRI. The mean eigenvalue $\bar{\mu}_1$ for controls is $0.042 \pm 0.003$ $\text{Hz}^2$; for ASD subjects, $0.038 \pm 0.004$ $\text{Hz}^2$. The difference is significant (two-sample t-test, $p = 0.002$, Cohen's $d = 0.15$). This confirms that the structural length $\Lambda$ differs between groups, consistent with known differences in white matter connectivity.
 
 ---
 
