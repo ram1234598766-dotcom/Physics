@@ -62,7 +62,7 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 **USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously.
 
-See [Paper 15: Unified Structure Dynamics](/papers/15-unified-structure-dynamics) for the full theory.
+See [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics) for the full theory.
 
 ---
 
