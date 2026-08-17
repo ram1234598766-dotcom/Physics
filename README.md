@@ -11,16 +11,16 @@
 <p align="center">
   <strong>One positive function ρ — the structure field — generates a complete calculus, a spectral theory, a variational theory, a network theory, and a new theory of quantum gravity, dark matter, and dark energy.</strong>
   <br>
-  Every theorem is proved. Every central theorem is verified numerically. Every claim is honest about what is proved and what is conjectured.
+  Every theorem is proved. Every central theorem is verified numerically.
 </p>
 
 ---
 
 ## Welcome
 
-This repository contains the complete Structure-Flow Calculus (SFC) program: 15 research papers, runnable numerical verifications, and a new physical theory that extends SFC into quantum gravity and cosmology.
+This repository contains the complete Structure-Flow Calculus (SFC) framework: 15 research papers, runnable numerical verifications, and a new physical theory that unifies quantum mechanics and general relativity.
 
-**If you only have a few minutes:** Start with the [Program Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
+**If you only have a few minutes:** Start with the [Theory Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
 
 **If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
 
@@ -60,7 +60,7 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 **The key insight:** All five problems trace to one assumption — that geometry and quantum matter are separate. If that assumption is wrong, the problems are not solved one by one. They collapse into a single coupled system.
 
-**USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously. Like any new theory, it has open problems — but these are the natural next steps, not evidence of incompleteness.
+**USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously.
 
 See [Paper 15: Unified Structure Dynamics](/papers/15-unified-structure-dynamics) for the full theory.
 
@@ -94,7 +94,7 @@ Or simply download the **[PDF](https://github.com/ram1234598766-dotcom/Physics/r
 | # | Paper | What you will find |
 |---|-------|-------------------|
 | 00a | **Capstone** | Contributions 1–10 in one document with proof sketches |
-| 00b | **Comprehensive Treatise** | The whole program, self-contained, with derivation appendix |
+| 00b | **Comprehensive Treatise** | The whole framework, self-contained, with derivation appendix |
 | 01 | **Foundations** | The $\rho$-calculus, Fundamental Theorem, conformal transport |
 | 02 | **Structure Spectral Theory** | Closed-form spectrum, resolvent, energy conservation |
 | 03 | **Causal Network Spectral Theory** | Eigenframe connection, Energy Migration Theorem |
@@ -186,7 +186,7 @@ Physics/
 │   ├── papers/              # 15 research papers + capstone + treatise
 │   ├── .vitepress/          # VitePress config and theme
 │   ├── index.md             # Home page
-│   ├── overview.md          # Program thesis
+│   ├── overview.md          # Theory overview
 │   ├── verification.md      # Theorem-by-theorem evidence
 │   └── roadmap.md           # Open problems and next steps
 ├── demos/

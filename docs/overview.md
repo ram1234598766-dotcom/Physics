@@ -1,6 +1,6 @@
 # The Structure-Flow Calculus: A New Stream in Mathematics and Physics
 
-**Mrityunjay K** — *Program statement, 2026-08-16*
+**Mrityunjay K** — *Theory statement, 2026-08-16*
 
 ---
 
@@ -14,13 +14,11 @@ $$\tau(x) = \int_a^x \frac{dt}{\rho(t)}$$
 
 is a diffeomorphism — the **conformal transport** — under which the $\rho$-deformed calculus becomes the ordinary calculus on a straight axis. Three consequences follow:
 1. **Graded continua become uniform.** The wave equation in a graded, impedance-matched medium is, in the transported coordinate, the constant-coefficient wave equation. Modes are closed-form (Paper 02, PDF p. 3), design is reflectionless (Paper 05, PDF p. 4), and energy is exactly conserved (Paper 04, PDF p. 4).
-
 2. **Time-varying networks become stationary shadows.** The spectral theory of a time-varying graph is the spectral theory of a fixed operator in a moving eigenframe. Mode energy *migrates* between modes under deformation — a proven redistribution law (Paper 03, PDF p. 4) — with applications to power-grid stress (Paper 06, PDF p. 5), epidemic outbreaks on adaptive contact networks (Paper 07, PDF p. 5), and causal graph-time signal processing (Paper 10, PDF p. 6).
-
 3. **Higher dimensions inherit the structure.** A structure field per coordinate direction endows a product (anisotropic) metric, a structure Laplacian, a divergence theorem, a Weyl law, and — on separable domains — closed-form spectra (Paper 09, PDF p. 6).
 ## What is proved
 
-Every theorem in the program carries a complete proof. The theorems are:
+Every theorem in the framework carries a complete proof. The theorems are:
 
 - **Paper 01 — Foundations.** The $\rho$-calculus: Fundamental Theorem, Leibniz, quotient, chain, power, exponential rules, integration by parts, change of variables, adjoint pair $(D_\rho, -D_\rho)$, self-adjoint structure Laplacian $L_\rho = \rho\partial_x(\rho\partial_x)$, conformal transport, uniqueness of the structure field, mean-value theory, energy identity, and the uniqueness of the calculus (19 theorems).
 - **Paper 02 — Structure Spectral Theory.** Spectral theorem for $L_\rho$, closed-form eigenvalues $\mu_m = (m\pi/\Lambda)^2$ and eigenfunctions, the graded-media wave equation and its closed-form evolution, exact energy conservation, the resolvent kernel in closed form, and first-order eigenvalue perturbation.
@@ -32,8 +30,8 @@ Every theorem in the program carries a complete proof. The theorems are:
 - **Paper 08 — Numerical Methods.** Spectral Galerkin convergence, energy-preserving finite differences, CFL stability bounds, and the drift bound for the leapfrog scheme.
 - **Paper 09 — Higher-Dimensional Structure-Flow.** Product metric, transport isometry, structure Laplacian, divergence and Green's identities, spectral theorem, Weyl law, closed-form spectra on product domains, and the obstruction theorem.
 - **Paper 10 — Causal Graph-Time Signal Processing.** Causal graph Fourier transform, modal ODEs, filtered output, energy-rate dynamics, anomaly bounds, and the truncation theorem.
-- **Paper 11 — Novelty, Literature & Research Program.** The honest novelty statement, the literature survey, and the program.
-- **00 — Comprehensive Treatise (~30 pages).** The self-contained single document of the program: Parts I–IX covering the calculus, the closed-form spectral theory, the causal network theory, the variational theory, the applications, the higher-dimensional theory, the signal-processing pipeline, the honest novelty statement, and a derivation appendix that reconstructs every central identity step by step with a numerical casebook. All 86 proofs are collected with their verification numbers.
+- **Paper 11 — Novelty, Literature & Research framework.** The honest novelty statement, the literature survey, and the framework.
+- **00 — Comprehensive Treatise (~30 pages).** The self-contained single document of the framework: Parts I–IX covering the calculus, the closed-form spectral theory, the causal network theory, the variational theory, the applications, the higher-dimensional theory, the signal-processing pipeline, the honest novelty statement, and a derivation appendix that reconstructs every central identity step by step with a numerical casebook. All 86 proofs are collected with their verification numbers.
 
 ## What is verified
 
@@ -62,7 +60,7 @@ Every central theorem is verified numerically by a runnable demo, and several id
 | Two-term Weyl rel. err ($\mu=600$) | $0.003$ (one-term: $0.39$) |
 | Null detection $S(t)$ | $<10^{-8}$ |
 
-## The program papers (expanded)
+## The framework papers (expanded)
 
 - **00 Capstone** (PDF p. 1): Contributions 1–10; Theorems 1–22 with proof sketches, numerical verification tables, and robustness analysis.
 - **00 Comprehensive Treatise** (~30 pages, this document): Parts I–IX covering the calculus, the closed-form spectral theory, the causal network theory, the variational theory, the applications, the higher-dimensional theory, the signal-processing pipeline, the honest novelty statement, and a full derivation appendix with a numerical casebook. All 86 proofs are collected with their verification numbers.
@@ -76,7 +74,7 @@ Every central theorem is verified numerically by a runnable demo, and several id
 - **08 Numerical Methods** (PDF p. 6): Spectral Galerkin convergence, midpoint-flux finite differences, energy-preserving time stepping, CFL stability bounds, dispersion analysis, and stability regions. 5+ theorems.
 - **09 Higher-Dimensional Structure-Flow** (PDF p. 6): Product metric, transport isometry, structure Laplacian, divergence and Green's identities, spectral theorem, Weyl law with two-term correction, closed-form product spectra, and obstruction theorem. 10+ theorems.
 - **10 Causal Graph-Time Signal Processing** (PDF p. 6): Causal graph Fourier transform, spectral-flow filtering, reduced-order modeling, energy-migration anomaly detection, and detectability threshold. 5+ theorems.
-- **11 Novelty, Literature & Research Program** (PDF p. 7): Honest novelty statement, literature comparison tables, novelty verification log, research program timeline, and collaboration opportunities.
+- **11 Novelty, Literature & Research framework** (PDF p. 7): Honest novelty statement, literature comparison tables, novelty verification log, research framework timeline, and collaboration opportunities.
 - **12 Quantum & Information** (PDF p. 7): $\rho$-weighted Schrödinger equation, Fisher information, quantum-like graph diffusion, spectral entropy, fidelity measures, and measurement back-action.
 - **13 Neuroscience & Brain Networks** (PDF p. 7): Connectome structure field, seizure detection, neural energy migration, spectral entropy of BOLD signals, and causal GFT for real-time fMRI. 6 theorems.
 
@@ -101,7 +99,7 @@ Every central theorem is verified numerically by a runnable demo, and several id
     │        └── 12 Quantum & Information Theory ── Schrodinger equation, Fisher information, entropy
     │        └── 13 Neuroscience & Brain Networks ── connectome structure field, seizure detection, neural energy migration
     │
-    └── 11 Novelty, Literature & Research Program ── honest positioning, novelty verification log
+    └── 11 Novelty, Literature & Research framework ── honest positioning, novelty verification log
 ```
 
 ## Reading order (expanded)
@@ -119,7 +117,7 @@ Every central theorem is verified numerically by a runnable demo, and several id
 
 ## Honesty statement
 
-The physics equations studied in the program are classical: energy-conserving wave propagation in variable media, the Webster/acoustic equation, linearized swing equations, and SIS epidemic models are known results of physics. **The contribution of Structure-Flow Calculus is not the claim that these equations were never written down; it is the unified framework** in which one object $\rho$ yields a complete calculus, a spectral theory, a variational theory, and a network theory, together with the theorems proved here. This caveat is restated in every paper. The program is original in *organization and theorems*, classical in *underlying mathematics*, and fully verified.
+The physics equations studied in the framework are classical: energy-conserving wave propagation in variable media, the Webster/acoustic equation, linearized swing equations, and SIS epidemic models are known results of physics. **The contribution of Structure-Flow Calculus is not the claim that these equations were never written down; it is the unified framework** in which one object $\rho$ yields a complete calculus, a spectral theory, a variational theory, and a network theory, together with the theorems proved here. This caveat is restated in every paper. The framework is original in *organization and theorems*, classical in *underlying mathematics*, and fully verified.
 
 ## The name
 
@@ -161,7 +159,7 @@ We call the stream **Structure-Flow Calculus**, or **SFC**. A structure field $\
 2. The paper is self-contained: it introduces the five problems, the four postulates, the coupled evolution equations, and the specific numerical predictions.
 3. Paper 12 (Quantum & Information) provides the mathematical bridge between classical SFC and the quantum extension.
 
-**For the general reader** (novelty, verification, research program):
+**For the general reader** (novelty, verification, research framework):
 1. Read the honesty statement above.
 2. Read Paper 11 (novelty matrix, literature survey, verification log).
 3. Browse the cross-reference diagram above.
@@ -239,9 +237,9 @@ We call the stream **Structure-Flow Calculus**, or **SFC**. A structure field $\
 **Key tables:** Filter design (comb, notch, adaptive), detection performance vs. SNR, real-world case studies.
 **Length:** ~90 pages (PDF).
 
-### Paper 11 — Novelty, Literature & Research Program
+### Paper 11 — Novelty, Literature & Research framework
 **Core result:** Honest positioning of SFC relative to Sturm-Liouville theory, GSP, Noether's theorem, and Weyl asymptotics. The framework is original in organization and theorems.
-**Key tables:** Novelty verification checklist (15 items), literature comparison (36 references), research program timeline.
+**Key tables:** Novelty verification checklist (15 items), literature comparison (36 references), research framework timeline.
 **Length:** ~94 pages (PDF).
 
 ### Paper 12 — Quantum & Information Theory
@@ -279,7 +277,7 @@ We call the stream **Structure-Flow Calculus**, or **SFC**. A structure field $\
 ## Reading order guide
 
 **Recommended path for new readers:**
-1. Start with `overview.md` (this file) for the thesis and program map.
+1. Start with `overview.md` (this file) for the thesis and framework map.
 2. Read Paper 01 (Foundations) — all downstream papers use the $\rho$-calculus and transport map.
 3. Read Paper 02 (Spectral Theory) — the workhorse for Papers 05, 08, 09.
 4. Choose your application half:
