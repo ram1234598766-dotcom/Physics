@@ -12,7 +12,7 @@
 
 - Every stated theorem must be accompanied by a complete, correct proof. No proof, no theorem.
 - Every paper MUST contain the honesty caveat (verbatim from spec §3): the underlying physics equations (e.g., Webster/acoustic equation) are known; SFC's contribution is the unified framework and its theorems.
-- Papers use `$...$`/`$$...$$` KaTeX delimiters so VitePress renders them.
+- Papers use `\(...\)`/`\[...\]` KaTeX delimiters so VitePress renders them.
 - Canonical papers live in `docs/papers/` (rendered directly by VitePress). Root `README.md` links to them. (Deviation from spec §6 layout: papers moved under `docs/` so VitePress renders them without duplication.)
 - VitePress config MUST include `server.allowedHosts: ['.monkeycode-ai.live']`.
 - Python demos must be runnable with `pip install -r demos/requirements.txt`; save plots to `demos/figures/`.
@@ -726,84 +726,84 @@ git commit -m "feat: adaptive-network decay bound demos"
 - Consumes: Task 1 KaTeX setup; Task 2/3 demo results for verification figures.
 - Produces: papers 1 and 2 rendering under `/papers/01-foundations` and `/papers/02-structure-spectral-theory`.
 
-- [x] **Step 1: Write `/workspace/docs/papers/01-foundations.md`** with exactly this content (KaTeX delimiters `$...$`, `$$...$$`):
+- [x] **Step 1: Write `/workspace/docs/papers/01-foundations.md`** with exactly this content (KaTeX delimiters `\(...\)`, `\[...\]`):
 
 ```markdown
 # Paper 01 — Foundations of Structure-Flow Calculus
 
 **Abstract.** We construct a calculus whose differential structure is parameterized by a positive
-field $\rho$, the *structure field*, defined on an interval. The calculus is complete: it has a
-derivative $D_\rho$, an integral $\int d\rho$, a Fundamental Theorem, product and chain rules, an
-integration-by-parts identity, an adjoint pair $(D_\rho, -D_\rho)$, and a self-adjoint *structure
-Laplacian* $L_\rho = D_\rho^2$. We prove each property and exhibit the conformal transport that
+field \(\rho, the *structure field*, defined on an interval. The calculus is complete: it has a
+derivative \)D_\rho, an integral \(\int d\rho, a Fundamental Theorem, product and chain rules, an
+integration-by-parts identity, an adjoint pair \)(D_\rho, -D_\rho)\(, and a self-adjoint *structure
+Laplacian* \)L_\rho = D_\rho^2\(. We prove each property and exhibit the conformal transport that
 identifies the calculus with the ordinary calculus of a deformed coordinate.
 
 **Honesty caveat.** The elementary identities below are simple rearrangements of classical calculus;
 the physical equations studied in Papers 02-05 (e.g. energy-conserving wave propagation in graded
 media, the Webster-type equation) are known results of classical physics. The contribution of
-Structure-Flow Calculus is the *unified framework* in which a single structure field $\rho$ yields a
+Structure-Flow Calculus is the *unified framework* in which a single structure field \)\rho yields a
 complete calculus, a spectral theory, a variational theory, and a network theory — not the claim that
 the underlying equations were never written down.
 
 ## 1. The structure field
 
-**Definition 1.1 (structure field).** A *structure field* on a compact interval $I=[a,b]$ is a
-positive $C^1$ function $\rho: I \to \mathbb{R}_{>0}$.
+**Definition 1.1 (structure field).** A *structure field* on a compact interval \(I=[a,b]\) is a
+positive \(C^1\) function \(\rho: I \to \mathbb{R}_{>0}\).
 
-**Definition 1.2 ($\rho$-derivative).** For $f \in C^1(I)$, the $\rho$-derivative is
-$$D_\rho f(x) := \lim_{h \to 0} \frac{f(x + \rho(x) h) - f(x)}{h} = \rho(x) f'(x).$$
+**Definition 1.2 (\(\rho-derivative).** For \)f \in C^1(I)\(, the \)\rho-derivative is
+\[D_\rho f(x) := \lim_{h \to 0} \frac{f(x + \rho(x) h) - f(x)}{h} = \rho(x) f'(x).\]
 
-**Definition 1.3 ($\rho$-integral).** For integrable $f$,
-$$\int_a^b f(x)\, d\rho := \int_a^b \frac{f(x)}{\rho(x)}\, dx.$$
+**Definition 1.3 (\(\rho-integral).** For integrable \)f\(,
+\[\int_a^b f(x)\, d\rho := \int_a^b \frac{f(x)}{\rho(x)}\, dx.\]
 
-**Definition 1.4 ($\rho$-inner product).**
-$$\langle f, g \rangle_\rho := \int_a^b f(x) g(x)\, d\rho, \qquad L^2_\rho(I) = \overline{C^\infty_c(I)}^{\|\cdot\|_\rho}.$$
+**Definition 1.4 (\)\rho-inner product).**
+\[\langle f, g \rangle_\rho := \int_a^b f(x) g(x)\, d\rho, \qquad L^2_\rho(I) = \overline{C^\infty_c(I)}^{\|\cdot\|_\rho}.\]
 
-## 2. Fundamental Theorem of the $\rho$-calculus
+## 2. Fundamental Theorem of the \(\rho-calculus
 
-**Theorem 1.5 (Fundamental Theorem).** (a) If $f$ is continuous and $F(x) = \int_a^x f\, d\rho$,
-then $D_\rho F = f$ on $(a,b)$. (b) If $F \in C^1(I)$, then $\int_a^b D_\rho F\, d\rho = F(b) - F(a)$.
+**Theorem 1.5 (Fundamental Theorem).** (a) If \)f\( is continuous and \)F(x) = \int_a^x f\, d\rho,
+then \(D_\rho F = f\) on \((a,b)\). (b) If \(F \in C^1(I)\), then \(\int_a^b D_\rho F\, d\rho = F(b) - F(a)\).
 
-*Proof.* (a) $F'(x) = f(x)/\rho(x)$, so $D_\rho F(x) = \rho(x)F'(x) = f(x)$. (b)
-$\int_a^b D_\rho F\, d\rho = \int_a^b \rho(x)F'(x)/\rho(x)\,dx = F(b)-F(a)$. $\square$
+*Proof.* (a) \(F'(x) = f(x)/\rho(x)\), so \(D_\rho F(x) = \rho(x)F'(x) = f(x)\). (b)
+\(\int_a^b D_\rho F\, d\rho = \int_a^b \rho(x)F'(x)/\rho(x)\,dx = F(b)-F(a)\). \(\square\)
 
-**Theorem 1.6 (Leibniz rule).** $D_\rho(fg) = (D_\rho f)\,g + f\,(D_\rho g)$.
-*Proof.* $D_\rho(fg) = \rho(f'g + fg') = \rho f' g + f\rho g'$. $\square$
+**Theorem 1.6 (Leibniz rule).** \(D_\rho(fg) = (D_\rho f)\,g + f\,(D_\rho g)\).
+*Proof.* \(D_\rho(fg) = \rho(f'g + fg') = \rho f' g + f\rho g'\). \(\square\)
 
-**Theorem 1.7 (chain rule).** $D_\rho(f \circ g)(x) = D_\rho g(x) \cdot f'(g(x))$.
-*Proof.* $D_\rho(f \circ g)(x) = \rho(x) f'(g(x)) g'(x) = f'(g(x)) \cdot \rho(x) g'(x)$. $\square$
+**Theorem 1.7 (chain rule).** \(D_\rho(f \circ g)(x) = D_\rho g(x) \cdot f'(g(x))\).
+*Proof.* \(D_\rho(f \circ g)(x) = \rho(x) f'(g(x)) g'(x) = f'(g(x)) \cdot \rho(x) g'(x)\). \(\square\)
 
 **Theorem 1.8 (integration by parts).**
-$$\int_a^b f\, D_\rho g\, d\rho = \big[fg\big]_a^b - \int_a^b D_\rho f\, g\, d\rho.$$
-*Proof.* $\int (f\rho g' + \rho f' g)\, d\rho = \int \rho (fg)' / \rho\, dx = [fg]_a^b$. $\square$
+\[\int_a^b f\, D_\rho g\, d\rho = \big[fg\big]_a^b - \int_a^b D_\rho f\, g\, d\rho.\]
+*Proof.* \(\int (f\rho g' + \rho f' g)\, d\rho = \int \rho (fg)' / \rho\, dx = [fg]_a^b\). \(\square\)
 
 ## 3. The adjoint and the structure Laplacian
 
-**Theorem 1.9 (adjoint).** For $f,g \in C^1(I)$ with $f(a)=f(b)=g(a)=g(b)=0$,
-$\langle D_\rho f, g\rangle_\rho = -\langle f, D_\rho g\rangle_\rho$.
-*Proof.* By Theorem 1.8 with boundary terms vanishing. $\square$
+**Theorem 1.9 (adjoint).** For \(f,g \in C^1(I)\) with \(f(a)=f(b)=g(a)=g(b)=0\),
+\(\langle D_\rho f, g\rangle_\rho = -\langle f, D_\rho g\rangle_\rho.
+*Proof.* By Theorem 1.8 with boundary terms vanishing. \)\square\(
 
-**Theorem 1.10 (self-adjoint structure Laplacian).** $L_\rho := D_\rho^2 = \rho \tfrac{d}{dx}(\rho \tfrac{d}{dx})$
-with domain $C^2_c(I)$ is symmetric in $L^2_\rho(I)$.
-*Proof.* $L_\rho^* = (D_\rho^2)^* = (D_\rho^*)^2 = (-D_\rho)^2 = D_\rho^2 = L_\rho$ by Theorem 1.9. $\square$
+**Theorem 1.10 (self-adjoint structure Laplacian).** \)L_\rho := D_\rho^2 = \rho \tfrac{d}{dx}(\rho \tfrac{d}{dx})\(
+with domain \)C^2_c(I)\( is symmetric in \)L^2_\rho(I)\(.
+*Proof.* \)L_\rho^* = (D_\rho^2)^* = (D_\rho^*)^2 = (-D_\rho)^2 = D_\rho^2 = L_\rho by Theorem 1.9. \(\square\)
 
 ## 4. Conformal transport
 
-**Theorem 1.11 (transport).** The map $T(x) = \int_a^x d\rho = \int_a^x dt/\rho(t)$ is a $C^2$
-diffeomorphism of $I$ onto $[0,\Lambda]$, $\Lambda = \int_a^b d\rho$, and in the $\tau$-coordinate
-$\tau = T(x)$ one has $D_\rho f = (f \circ T^{-1})' \circ T$ and $\int f\, d\rho = \int f \circ T^{-1}\, d\tau$.
-Consequently $L_\rho$ corresponds to $\partial_\tau^2$.
-*Proof.* $d\tau/dx = 1/\rho(x)$, so $\partial_\tau = \rho\partial_x$, giving $\partial_\tau^2 = L_\rho$;
-the integral identity is the change-of-variables formula. $\square$
+**Theorem 1.11 (transport).** The map \(T(x) = \int_a^x d\rho = \int_a^x dt/\rho(t)\) is a \(C^2\)
+diffeomorphism of \(I\) onto \([0,\Lambda]\), \(\Lambda = \int_a^b d\rho, and in the \)\tau\(-coordinate
+\)\tau = T(x)\( one has \)D_\rho f = (f \circ T^{-1})' \circ T\( and \)\int f\, d\rho = \int f \circ T^{-1}\, d\tau\(.
+Consequently \)L_\rho corresponds to \(\partial_\tau^2\).
+*Proof.* \(d\tau/dx = 1/\rho(x)\), so \(\partial_\tau = \rho\partial_x\), giving \(\partial_\tau^2 = L_\rho;
+the integral identity is the change-of-variables formula. \)\square\(
 
-> **Remark.** Theorem 1.11 is the honest core of the framework: the $\rho$-calculus is ordinary
-> calculus transported by $T$. Its value is not novelty of individual identities but the single
-> object $\rho$ that yields, downstream, a spectral theory (Paper 02), a variational theory
+> **Remark.** Theorem 1.11 is the honest core of the framework: the \)\rho-calculus is ordinary
+> calculus transported by \(T\). Its value is not novelty of individual identities but the single
+> object \(\rho that yields, downstream, a spectral theory (Paper 02), a variational theory
 > (Paper 04), and a network theory (Paper 03).
 
 **Numerical verification.** The identities of this paper are verified numerically by
 `demos/verify_calculus.py` (Fundamental Theorem, Leibniz rule, adjoint, self-adjointness,
-eigenvalue relation); all five checks pass to tolerance $10^{-3}$.
+eigenvalue relation); all five checks pass to tolerance \)10^{-3}\(.
 
 ## References
 [1] G. Webster, *Acoustical impedance and the theory of horns*, Proc. Natl. Acad. Sci., 1919.
@@ -815,63 +815,63 @@ eigenvalue relation); all five checks pass to tolerance $10^{-3}$.
 ```markdown
 # Paper 02 — Structure Spectral Theory
 
-**Abstract.** We develop the spectral theory of the structure Laplacian $L_\rho$. By Theorem 1.11,
-$L_\rho = \partial_\tau^2$ in the transport coordinate, so the classical Sturm-Liouville
+**Abstract.** We develop the spectral theory of the structure Laplacian \)L_\rho. By Theorem 1.11,
+\(L_\rho = \partial_\tau^2\) in the transport coordinate, so the classical Sturm-Liouville
 completeness theorem applies. We prove the eigenvalue formula, exhibit closed-form modes, prove
 energy conservation for the Structure-Flow wave equation, and identify the equation with
 energy-conserving wave propagation in a graded medium.
 
 **Honesty caveat.** The completeness theorem cited is classical; the graded-medium wave equation is
 the Webster-type/acoustic equation in impedance-matched form. The contribution is the unified
-framework in which these results arise from a single structure field $\rho$.
+framework in which these results arise from a single structure field \(\rho.
 
-## 1. Eigenstructure of $L_\rho$
+## 1. Eigenstructure of \)L_\rho
 
-**Theorem 2.1 (spectral theorem).** Let $\rho$ be a structure field on $I=[a,b]$, $\Lambda =
-\int_a^b d\rho$, and let $\tau(x) = \int_a^x d\rho$. Then:
-(a) $L_\rho$ has eigenvalues $\mu_m = (m\pi/\Lambda)^2$, $m = 1,2,\dots$;
-(b) $\varphi_m(x) = \sqrt{2/\Lambda}\,\sin(m\pi \tau(x)/\Lambda)$ are $L^2_\rho$-orthonormal
-eigenfunctions; (c) $\{\varphi_m\}$ is a complete orthonormal basis of $L^2_\rho(I)$.
+**Theorem 2.1 (spectral theorem).** Let \(\rho be a structure field on \)I=[a,b]\(, \)\Lambda =
+\int_a^b d\rho, and let \(\tau(x) = \int_a^x d\rho. Then:
+(a) \)L_\rho has eigenvalues \(\mu_m = (m\pi/\Lambda)^2\), \(m = 1,2,\dots\);
+(b) \(\varphi_m(x) = \sqrt{2/\Lambda}\,\sin(m\pi \tau(x)/\Lambda)\) are \(L^2_\rho-orthonormal
+eigenfunctions; (c) \)\{\varphi_m\}\( is a complete orthonormal basis of \)L^2_\rho(I)\(.
 
-*Proof.* By Theorem 1.11, $L_\rho \leftrightarrow \partial_\tau^2$ on $[0,\Lambda]$ with Dirichlet
-conditions. The classical Sturm-Liouville theorem gives eigenvalues $(m\pi/\Lambda)^2$ with
-orthonormal eigenfunctions $\sqrt{2/\Lambda}\sin(m\pi\tau/\Lambda)$ complete in $L^2([0,\Lambda])$;
-transport back to $I$ (Theorem 1.11) transfers orthonormality and completeness to $L^2_\rho(I)$.
-$\square$
+*Proof.* By Theorem 1.11, \)L_\rho \leftrightarrow \partial_\tau^2\( on \)[0,\Lambda]\( with Dirichlet
+conditions. The classical Sturm-Liouville theorem gives eigenvalues \)(m\pi/\Lambda)^2\( with
+orthonormal eigenfunctions \)\sqrt{2/\Lambda}\sin(m\pi\tau/\Lambda)\( complete in \)L^2([0,\Lambda])\(;
+transport back to \)I\( (Theorem 1.11) transfers orthonormality and completeness to \)L^2_\rho(I)\(.
+\)\square\(
 
 ## 2. The Structure-Flow wave equation
 
 **Definition 2.2.** The *Structure-Flow (SF) wave equation* is
-$$u_{tt} = L_\rho u = \rho\, \partial_x\big(\rho\, \partial_x u\big).$$
+\[u_{tt} = L_\rho u = \rho\, \partial_x\big(\rho\, \partial_x u\big).\]
 
-**Theorem 2.3 (closed-form solution).** For initial data $u(0)=u_0$, $u_t(0)=v_0$,
-$$u(x,t) = \sum_{m\ge 1}\left[a_m \cos(\sqrt{\mu_m}\,t) + \frac{b_m}{\sqrt{\mu_m}} \sin(\sqrt{\mu_m}\,t)\right]\varphi_m(x),$$
-with $a_m = \langle u_0, \varphi_m\rangle_\rho$, $b_m = \langle v_0, \varphi_m\rangle_\rho$.
-*Proof.* Separation of variables: solutions $T(t)\varphi(x)$ require $\varphi = \varphi_m$ and
-$\ddot T = -\mu_m T$; completeness (Thm 2.1) gives the superposition. $\square$
+**Theorem 2.3 (closed-form solution).** For initial data \)u(0)=u_0\(, \)u_t(0)=v_0\(,
+\[u(x,t) = \sum_{m\ge 1}\left[a_m \cos(\sqrt{\mu_m}\,t) + \frac{b_m}{\sqrt{\mu_m}} \sin(\sqrt{\mu_m}\,t)\right]\varphi_m(x),\]
+with \)a_m = \langle u_0, \varphi_m\rangle_\rho, \(b_m = \langle v_0, \varphi_m\rangle_\rho.
+*Proof.* Separation of variables: solutions \)T(t)\varphi(x)\( require \)\varphi = \varphi_m\( and
+\)\ddot T = -\mu_m T\(; completeness (Thm 2.1) gives the superposition. \)\square\(
 
 **Theorem 2.4 (physical identification).** The SF wave equation is the energy-conserving wave
-equation of a graded acoustic medium: with density $\rho_0(x) \propto 1/\rho(x)$ and bulk modulus
-$K(x) \propto \rho(x)$, the acoustic equations $\rho_0 u_t + p_x = 0$, $p_t + K u_x = 0$ yield
-$u_{tt} = (1/\rho_0)(K u_x)_x = \rho(\rho u_x)_x$; the local wave speed is $\rho$ (up to scale).
-*Proof.* Direct substitution. $\square$
+equation of a graded acoustic medium: with density \)\rho_0(x) \propto 1/\rho(x)\( and bulk modulus
+\)K(x) \propto \rho(x)\(, the acoustic equations \)\rho_0 u_t + p_x = 0\(, \)p_t + K u_x = 0\( yield
+\)u_{tt} = (1/\rho_0)(K u_x)_x = \rho(\rho u_x)_x\(; the local wave speed is \)\rho (up to scale).
+*Proof.* Direct substitution. \(\square\)
 
 ## 3. Energy conservation
 
 **Theorem 2.5 (energy conservation).** The energy
-$$E(t) = \tfrac12 \int_I (u_t)^2\, d\rho + \tfrac12 \int_I (D_\rho u)^2\, d\rho$$
+\[E(t) = \tfrac12 \int_I (u_t)^2\, d\rho + \tfrac12 \int_I (D_\rho u)^2\, d\rho\(
 is constant for solutions of the SF wave equation.
-*Proof.* $\dot E = \int u_t u_{tt}\, d\rho + \int D_\rho u\, D_\rho u_t\, d\rho
-= \langle u_t, L_\rho u\rangle_\rho - \langle u, L_\rho u_t\rangle_\rho = 0$ by Theorem 1.10. $\square$
+*Proof.* \)\dot E = \int u_t u_{tt}\, d\rho + \int D_\rho u\, D_\rho u_t\, d\rho
+= \langle u_t, L_\rho u\rangle_\rho - \langle u, L_\rho u_t\rangle_\rho = 0\( by Theorem 1.10. \)\square\(
 
 ## 4. Closed-form examples
 
-**Example 2.6 (exponential profile).** $\rho(x) = \rho_0 e^{\kappa x}$ on $[0,1]$:
-$\tau(x) = (1-e^{-\kappa x})/(\kappa\rho_0)$, $\Lambda = (1-e^{-\kappa})/(\kappa\rho_0)$;
-modes $\varphi_m(x) = \sqrt{2/\Lambda}\sin(m\pi\tau(x)/\Lambda)$.
+**Example 2.6 (exponential profile).** \)\rho(x) = \rho_0 e^{\kappa x}\( on \)[0,1]\(:
+\)\tau(x) = (1-e^{-\kappa x})/(\kappa\rho_0)\(, \)\Lambda = (1-e^{-\kappa})/(\kappa\rho_0)\(;
+modes \)\varphi_m(x) = \sqrt{2/\Lambda}\sin(m\pi\tau(x)/\Lambda)\(.
 
-**Example 2.7 (linear profile).** $\rho(x) = \rho_0 + \delta x$:
-$\tau(x) = \delta^{-1}\ln(1 + \delta x/\rho_0)$, $\Lambda = \delta^{-1}\ln(1+\delta/\rho_0)$.
+**Example 2.7 (linear profile).** \)\rho(x) = \rho_0 + \delta x\(:
+\)\tau(x) = \delta^{-1}\ln(1 + \delta x/\rho_0)\(, \)\Lambda = \delta^{-1}\ln(1+\delta/\rho_0)\(.
 
 **Numerical verification.** `demos/graded_wave.py` verifies (i) each mode satisfies the PDE,
 (ii) time evolution matches Theorem 2.3, (iii) energy is conserved per Theorem 2.5.
@@ -910,7 +910,7 @@ git commit -m "feat: papers 01-02 foundations and structure spectral theory"
 # Paper 03 — Causal Network Spectral Theory
 
 **Abstract.** We develop the spectral theory of diffusion on time-varying networks. A time-varying
-graph $G(t)$ yields a family of Laplacians $L(t)$; we prove mass conservation, a contraction bound
+graph \)G(t)\( yields a family of Laplacians \)L(t)\(; we prove mass conservation, a contraction bound
 through the time-integrated algebraic connectivity, a skew-symmetric connection governing the motion
 of the eigenframe, and the *Energy Migration Theorem*: structural deformation redistributes spectral
 energy between modes without creating or destroying it, while only the instantaneous eigenvalues
@@ -922,66 +922,66 @@ and its energy consequences, integrated with the Structure-Flow framework.
 
 ## 1. Time-varying graphs and their Laplacians
 
-**Definition 3.1.** A *time-varying graph* is $G(t) = (V, E(t), w(t))$ with $|V|=n$, symmetric
-weights $w_{ij}(t) \ge 0$ of class $C^1$, Laplacian $L(t) = D(t) - W(t)$, $D(t)$ the degree
-matrix. $L(t)$ is symmetric positive semidefinite with $L(t)\mathbf{1} = 0$.
+**Definition 3.1.** A *time-varying graph* is \)G(t) = (V, E(t), w(t))\( with \)|V|=n\(, symmetric
+weights \)w_{ij}(t) \ge 0\( of class \)C^1\(, Laplacian \)L(t) = D(t) - W(t)\(, \)D(t)\( the degree
+matrix. \)L(t)\( is symmetric positive semidefinite with \)L(t)\mathbf{1} = 0\(.
 
 ## 2. Mass conservation
 
-**Theorem 3.2 (mass conservation).** If $u$ solves $\dot u = -L(t)u$, then $m(t) = \mathbf{1}^\top u(t)$ is constant.
-*Proof.* $\dot m = \mathbf{1}^\top \dot u = -\mathbf{1}^\top L(t)u = -(L(t)\mathbf{1})^\top u = 0$. $\square$
+**Theorem 3.2 (mass conservation).** If \)u\( solves \)\dot u = -L(t)u\(, then \)m(t) = \mathbf{1}^\top u(t)\( is constant.
+*Proof.* \)\dot m = \mathbf{1}^\top \dot u = -\mathbf{1}^\top L(t)u = -(L(t)\mathbf{1})^\top u = 0\(. \)\square\(
 
 ## 3. Contraction through algebraic connectivity
 
-**Theorem 3.3 (contraction bound).** Let $\lambda_2(t)$ be the algebraic connectivity of $L(t)$ and
-$v = u - \bar m \mathbf{1}$, $\bar m = m(0)/n$. Then
-$$\|v(t)\| \le \|v(0)\| \exp\left(-\int_0^t \lambda_2(s)\, ds\right).$$
-*Proof.* $v$ stays orthogonal to $\mathbf{1}$ (Thm 3.2). Then
-$\frac12 \frac{d}{dt}\|v\|^2 = -\langle v, L(t)v\rangle \le -\lambda_2(t)\|v\|^2$ by the
-Rayleigh quotient bound $\langle v, Lv\rangle \ge \lambda_2\|v\|^2$ for $v \perp \mathbf{1}$.
-Grönwall's inequality yields the bound. $\square$
+**Theorem 3.3 (contraction bound).** Let \)\lambda_2(t)\( be the algebraic connectivity of \)L(t)\( and
+\)v = u - \bar m \mathbf{1}\(, \)\bar m = m(0)/n\(. Then
+\]\|v(t)\| \le \|v(0)\| \exp\left(-\int_0^t \lambda_2(s)\, ds\right).\[
+*Proof.* \)v\( stays orthogonal to \)\mathbf{1}\( (Thm 3.2). Then
+\)\frac12 \frac{d}{dt}\|v\|^2 = -\langle v, L(t)v\rangle \le -\lambda_2(t)\|v\|^2\( by the
+Rayleigh quotient bound \)\langle v, Lv\rangle \ge \lambda_2\|v\|^2\( for \)v \perp \mathbf{1}\(.
+Grönwall's inequality yields the bound. \)\square\(
 
 ## 4. The eigenframe connection
 
-**Theorem 3.4 (skew connection).** Let $\varphi_j(t)$ be a $C^1$ orthonormal eigenframe,
-$L(t)\varphi_j = \lambda_j(t)\varphi_j$. Then $C_{jk}(t) := \langle \varphi_j, \dot\varphi_k\rangle$
-satisfies $C_{jk} = -C_{kj}$.
-*Proof.* $0 = \frac{d}{dt}\langle\varphi_j,\varphi_k\rangle = \langle\dot\varphi_j,\varphi_k\rangle +
-\langle\varphi_j,\dot\varphi_k\rangle$. $\square$
+**Theorem 3.4 (skew connection).** Let \)\varphi_j(t)\( be a \)C^1\( orthonormal eigenframe,
+\)L(t)\varphi_j = \lambda_j(t)\varphi_j\(. Then \)C_{jk}(t) := \langle \varphi_j, \dot\varphi_k\rangle\(
+satisfies \)C_{jk} = -C_{kj}\(.
+*Proof.* \)0 = \frac{d}{dt}\langle\varphi_j,\varphi_k\rangle = \langle\dot\varphi_j,\varphi_k\rangle +
+\langle\varphi_j,\dot\varphi_k\rangle\(. \)\square\(
 
 ## 5. The Energy Migration Theorem
 
-**Theorem 3.5 (spectral flow equation).** With $\hat u_j = \langle\varphi_j, u\rangle$,
-$$\dot{\hat u}_j = -\lambda_j(t)\,\hat u_j - \sum_k C_{jk}(t)\,\hat u_k.$$
-*Proof.* $u = \sum_k \hat u_k \varphi_k$, $\dot u = -Lu = -\sum_k \lambda_k \hat u_k \varphi_k$.
-Projecting $\langle\varphi_j, \cdot\rangle$ onto $\frac{d}{dt}u = \sum_k(\dot{\hat u}_k\varphi_k + \hat u_k\dot\varphi_k)$ gives the equation. $\square$
+**Theorem 3.5 (spectral flow equation).** With \)\hat u_j = \langle\varphi_j, u\rangle\(,
+\]\dot{\hat u}_j = -\lambda_j(t)\,\hat u_j - \sum_k C_{jk}(t)\,\hat u_k.\[
+*Proof.* \)u = \sum_k \hat u_k \varphi_k\(, \)\dot u = -Lu = -\sum_k \lambda_k \hat u_k \varphi_k\(.
+Projecting \)\langle\varphi_j, \cdot\rangle\( onto \)\frac{d}{dt}u = \sum_k(\dot{\hat u}_k\varphi_k + \hat u_k\dot\varphi_k)\( gives the equation. \)\square\(
 
-**Theorem 3.6 (Energy Migration Theorem).** $E(t) := \sum_j \hat u_j(t)^2$ satisfies
-$$\frac{d}{dt}E = -2\sum_j \lambda_j(t)\,\hat u_j(t)^2 \le 0.$$
-*Proof.* $\dot E = 2\sum_j \hat u_j\dot{\hat u}_j = -2\sum_j\lambda_j\hat u_j^2
-- 2\sum_{j,k}C_{jk}\hat u_j\hat u_k$; the quadratic form of the skew-symmetric $C$ vanishes. $\square$
+**Theorem 3.6 (Energy Migration Theorem).** \)E(t) := \sum_j \hat u_j(t)^2\( satisfies
+\]\frac{d}{dt}E = -2\sum_j \lambda_j(t)\,\hat u_j(t)^2 \le 0.\[
+*Proof.* \)\dot E = 2\sum_j \hat u_j\dot{\hat u}_j = -2\sum_j\lambda_j\hat u_j^2
+- 2\sum_{j,k}C_{jk}\hat u_j\hat u_k\(; the quadratic form of the skew-symmetric \)C\( vanishes. \)\square\(
 
 **Corollary 3.7 (redistribution vs dissipation).** Structural deformation transfers energy between
-modes (the $C\hat u$ terms appear in $\frac{d}{dt}|\hat u_j|^2$ pairwise, conserving the sum) but
-contributes nothing to $\dot E$; only the instantaneous eigenvalues $\lambda_j(t)$ dissipate.
-$\square$
+modes (the \)C\hat u\( terms appear in \)\frac{d}{dt}|\hat u_j|^2\( pairwise, conserving the sum) but
+contributes nothing to \)\dot E\(; only the instantaneous eigenvalues \)\lambda_j(t)\( dissipate.
+\)\square\(
 
 ## 6. Eigenvalue flow
 
-**Theorem 3.8 (Hadamard-type eigenvalue flow).** $\dot\lambda_j = \langle\varphi_j, \dot L\,\varphi_j\rangle$.
-*Proof.* Differentiate $L\varphi_j = \lambda_j\varphi_j$; pair with $\varphi_j$:
-$\langle\varphi_j, \dot L\varphi_j\rangle + \langle\varphi_j, L\dot\varphi_j\rangle
-= \dot\lambda_j + \lambda_j\langle\varphi_j,\dot\varphi_j\rangle$, and
-$\langle\varphi_j, L\dot\varphi_j\rangle = \lambda_j\langle\varphi_j,\dot\varphi_j\rangle$,
-$\langle\varphi_j,\dot\varphi_j\rangle = 0$ by Theorem 3.4. $\square$
+**Theorem 3.8 (Hadamard-type eigenvalue flow).** \)\dot\lambda_j = \langle\varphi_j, \dot L\,\varphi_j\rangle\(.
+*Proof.* Differentiate \)L\varphi_j = \lambda_j\varphi_j\(; pair with \)\varphi_j\(:
+\)\langle\varphi_j, \dot L\varphi_j\rangle + \langle\varphi_j, L\dot\varphi_j\rangle
+= \dot\lambda_j + \lambda_j\langle\varphi_j,\dot\varphi_j\rangle\(, and
+\)\langle\varphi_j, L\dot\varphi_j\rangle = \lambda_j\langle\varphi_j,\dot\varphi_j\rangle\(,
+\)\langle\varphi_j,\dot\varphi_j\rangle = 0\( by Theorem 3.4. \)\square\(
 
 ## 7. Epidemic bounds on adaptive networks
 
 **Theorem 3.9 (Grönwall decay bound for SIS).** For linearized SIS
-$\dot x = -\gamma x + \beta W(t)x$ on a symmetric contact graph $W(t)$,
-$$\|x(t)\| \le \|x(0)\| \exp\left(\int_0^t \big(\beta\lambda_{\max}(W(s)) - \gamma\big)\, ds\right).$$
-*Proof.* $\frac12\frac{d}{dt}\|x\|^2 = \langle x, (-\gamma I + \beta W(t))x\rangle
-\le (\beta\lambda_{\max}(W(t)) - \gamma)\|x\|^2$; Grönwall. $\square$
+\)\dot x = -\gamma x + \beta W(t)x\( on a symmetric contact graph \)W(t)\(,
+\]\|x(t)\| \le \|x(0)\| \exp\left(\int_0^t \big(\beta\lambda_{\max}(W(s)) - \gamma\big)\, ds\right).\[
+*Proof.* \)\frac12\frac{d}{dt}\|x\|^2 = \langle x, (-\gamma I + \beta W(t))x\rangle
+\le (\beta\lambda_{\max}(W(t)) - \gamma)\|x\|^2\(; Grönwall. \)\square\(
 
 **Numerical verification.** `demos/power_grid_mode_migration.py` verifies Theorems 3.4-3.6;
 `demos/epidemic_decay_bound.py` verifies Theorems 3.2, 3.3 and 3.9.
@@ -998,7 +998,7 @@ $$\|x(t)\| \le \|x(0)\| \exp\left(\int_0^t \big(\beta\lambda_{\max}(W(s)) - \gam
 # Paper 04 — Variational & Conservation Theory
 
 **Abstract.** We couple fields to the structure field through an action principle. Varying the field
-$u$ gives the Structure-Flow Euler-Lagrange equation; varying the structure $\rho$ gives a
+\)u\( gives the Structure-Flow Euler-Lagrange equation; varying the structure \)\rho gives a
 *structure-stationarity* constraint. We prove a Noether-type conservation theorem for joint
 field-structure symmetries and derive energy conservation for the free SF wave equation from
 time-translation invariance.
@@ -1008,52 +1008,52 @@ is the explicit joint variation of field and structure within the Structure-Flow
 
 ## 1. The action
 
-**Definition 4.1.** For a compact interval $I$ and time horizon $[0,T]$, the *Structure-Flow action*
+**Definition 4.1.** For a compact interval \(I\) and time horizon \([0,T]\), the *Structure-Flow action*
 is
-$$S[u,\rho] = \int_0^T\!\!\int_I \left[\tfrac12 u_t^2 - \tfrac12 \rho^2 u_x^2 - V(u;\rho)\right] d\rho\, dt,$$
-with $d\rho = dx/\rho(x)$ and $u$ satisfying Dirichlet conditions on $\partial I$.
+\]S[u,\rho] = \int_0^T\!\!\int_I \left[\tfrac12 u_t^2 - \tfrac12 \rho^2 u_x^2 - V(u;\rho)\right] d\rho\, dt,\[
+with \(d\rho = dx/\rho(x)\) and \(u\) satisfying Dirichlet conditions on \(\partial I\).
 
 ## 2. Euler-Lagrange equations
 
-**Theorem 4.2 (field equation).** A critical point of $S$ under compactly supported variations of
-$u$ satisfies $u_{tt} = L_\rho u - V_u(u;\rho)$.
-*Proof.* The variation is $\delta S = \int\int[-\partial_t(u_t/\rho) + \partial_x(\rho u_x) -
-V_u/\rho]\delta u\, dx\, dt$ after two integrations by parts; $\delta S=0$ for all $\delta u$
-gives $-\partial_t(u_t/\rho) + \partial_x(\rho u_x) - V_u/\rho = 0$; multiply by $\rho$. $\square$
+**Theorem 4.2 (field equation).** A critical point of \(S\) under compactly supported variations of
+\(u\) satisfies \(u_{tt} = L_\rho u - V_u(u;\rho)\).
+*Proof.* The variation is \(\delta S = \int\int[-\partial_t(u_t/\rho) + \partial_x(\rho u_x) -
+V_u/\rho]\delta u\, dx\, dt\) after two integrations by parts; \(\delta S=0\) for all \(\delta u\)
+gives \(-\partial_t(u_t/\rho) + \partial_x(\rho u_x) - V_u/\rho = 0\); multiply by \(\rho. \)\square\(
 
-**Theorem 4.3 (structure stationarity).** At a critical point with respect to $\rho$ (variations
-compactly supported in the interior of $I\times[0,T]$),
-$$\tfrac12 u_t^2 + \tfrac12 \rho^2 u_x^2 = V(u;\rho) - \rho\, V_\rho(u;\rho).$$
-*Proof.* $\delta_\rho S$: differentiate the integrand $(\tfrac12u_t^2 - \tfrac12\rho^2u_x^2 - V)/\rho$
-with respect to $\rho$; setting the result to zero and multiplying by $\rho^2$ yields the
-equation. $\square$
+**Theorem 4.3 (structure stationarity).** At a critical point with respect to \)\rho (variations
+compactly supported in the interior of \(I\times[0,T]\)),
+\]\tfrac12 u_t^2 + \tfrac12 \rho^2 u_x^2 = V(u;\rho) - \rho\, V_\rho(u;\rho).\[
+*Proof.* \(\delta_\rho S\): differentiate the integrand \((\tfrac12u_t^2 - \tfrac12\rho^2u_x^2 - V)/\rho
+with respect to \)\rho; setting the result to zero and multiplying by \(\rho^2\) yields the
+equation. \(\square\)
 
-> **Remark 4.4.** When the Lagrangian depends on $\rho$ algebraically (as here), structure
+> **Remark 4.4.** When the Lagrangian depends on \(\rho algebraically (as here), structure
 > stationarity is a pointwise *constraint* rather than a PDE. A structure-gradient term
-> $\tfrac12\kappa (D_\rho\rho)^2\,d\rho$ renders the stationarity a genuine PDE for $\rho$; the
+> \)\tfrac12\kappa (D_\rho\rho)^2\,d\rho renders the stationarity a genuine PDE for \(\rho; the
 > computation is identical, and we omit it for brevity.
 
 ## 3. Conservation laws
 
-**Theorem 4.5 (energy conservation via time-translation symmetry).** If $V$ is independent of
-$t$ and $u$ solves Theorem 4.2, then
-$$H(t) = \int_I \Big[\tfrac12 u_t^2 + \tfrac12 \rho^2 u_x^2 + V(u;\rho)\Big]\, d\rho$$
+**Theorem 4.5 (energy conservation via time-translation symmetry).** If \)V\( is independent of
+\)t\( and \)u\( solves Theorem 4.2, then
+\]H(t) = \int_I \Big[\tfrac12 u_t^2 + \tfrac12 \rho^2 u_x^2 + V(u;\rho)\Big]\, d\rho\)
 is constant.
-*Proof.* $\dot H = \int [u_t u_{tt} + \rho^2 u_x u_{xt} + V_u u_t]\, d\rho
-= \int [u_t(\rho(\rho u_x)_x) + \rho^2u_xu_{xt}]\, d\rho$ using Theorem 4.2;
-integrating the second term by parts in $x$ gives $-\int \rho(\rho u_t)_x \rho u_x\, d\rho$,
-and the two terms cancel as in Theorem 2.5. $\square$
+*Proof.* \(\dot H = \int [u_t u_{tt} + \rho^2 u_x u_{xt} + V_u u_t]\, d\rho
+= \int [u_t(\rho(\rho u_x)_x) + \rho^2u_xu_{xt}]\, d\rho using Theorem 4.2;
+integrating the second term by parts in \)x\( gives \)-\int \rho(\rho u_t)_x \rho u_x\, d\rho,
+and the two terms cancel as in Theorem 2.5. \(\square\)
 
-**Theorem 4.6 (Noether-type theorem).** Let a one-parameter group act on $(t,x,u,\rho)$ preserving
-$S$. Then a corresponding quantity is conserved; for translations in $t$ it is $H$ (Thm 4.5), for
-translations in $x$ (when $\rho$ and $V$ are $x$-independent) it is momentum
-$P = -\int u_t D_\rho u\, d\rho$, and for a scale symmetry $\rho \mapsto c\rho$, $u\mapsto
-c^{-1/2}u$ (when $V=0$) it is $Q = \int [u_t(\tfrac12 x D_\rho u + \tfrac12 u) + \tfrac12
-\rho D_\rho u D_\rho u\, ]\, d\rho$ ... 
+**Theorem 4.6 (Noether-type theorem).** Let a one-parameter group act on \((t,x,u,\rho)\) preserving
+\(S\). Then a corresponding quantity is conserved; for translations in \(t\) it is \(H\) (Thm 4.5), for
+translations in \(x\) (when \(\rho and \)V\( are \)x\(-independent) it is momentum
+\)P = -\int u_t D_\rho u\, d\rho, and for a scale symmetry \(\rho \mapsto c\rho, \)u\mapsto
+c^{-1/2}u\( (when \)V=0\() it is \)Q = \int [u_t(\tfrac12 x D_\rho u + \tfrac12 u) + \tfrac12
+\rho D_\rho u D_\rho u\, ]\, d\rho ... 
 
 *Proof.* Standard Noether argument: infinitesimal symmetry gives a total-divergence identity;
-integrating over $I$ yields the conserved quantity; each listed quantity is verified directly by
-differentiation against the field equation. $\square$
+integrating over \(I\) yields the conserved quantity; each listed quantity is verified directly by
+differentiation against the field equation. \(\square\)
 
 > **Note.** The scale-symmetry statement above is a placeholder to be completed during writing with
 > the exact Noether current; if the direct verification does not close, present only the
@@ -1061,8 +1061,8 @@ differentiation against the field equation. $\square$
 
 ## 4. Verification
 
-The free-field energy conservation (Theorem 4.5 with $V=0$) is verified numerically by
-`demos/graded_wave.py` (energy flat to $10^{-3}$).
+The free-field energy conservation (Theorem 4.5 with \(V=0\)) is verified numerically by
+`demos/graded_wave.py` (energy flat to \(10^{-3}\)).
 
 ## References
 [1] I. Gelfand, S. Fomin, *Calculus of Variations*, 1963.
@@ -1111,26 +1111,26 @@ use.
 
 ## 1. Graded acoustic media
 
-Using Theorem 2.4, a graded medium with $\rho_0 \propto 1/\rho$, $K \propto \rho$ has wave equation
-$u_{tt} = \rho(\rho u_x)_x$, whose modes are closed-form (Thm 2.1, Ex. 2.6-2.7). For an exponential
+Using Theorem 2.4, a graded medium with \(\rho_0 \propto 1/\rho, \)K \propto \rho has wave equation
+\(u_{tt} = \rho(\rho u_x)_x\), whose modes are closed-form (Thm 2.1, Ex. 2.6-2.7). For an exponential
 profile the modes compress toward the high-speed end, enabling impedance-matched design. Energy is
 exactly conserved (Thm 2.5). *Verification:* `demos/graded_wave.py`.
 
 ## 2. Power networks under stress
 
-Linearized frequency deviations on a power network follow $\dot u = -L(t)u$ (uniform-inertia DC
+Linearized frequency deviations on a power network follow \(\dot u = -L(t)u\) (uniform-inertia DC
 flow relaxation / consensus regulation). The Energy Migration Theorem (Thm 3.6) states that as a
 line weakens, energy is redistributed across modes without loss except through the (changing)
-eigenvalues $\lambda_j(t)$. A developing outage therefore drives energy toward the modes with the
+eigenvalues \(\lambda_j(t)\). A developing outage therefore drives energy toward the modes with the
 smallest algebraic connectivity — the least damped, most vulnerable modes. *Verification:*
 `demos/power_grid_mode_migration.py` shows modal energies migrating as one edge is stressed.
 
 ## 3. Adaptive-contact epidemics
 
 For SIS on a time-varying contact graph, Theorem 3.9 bounds the linearized outbreak by
-$\|I(t)\| \le \|I(0)\| e^{\int(\beta\lambda_{\max}(W) - \gamma)ds}$. Mitigation that reduces
-$\lambda_{\max}(W(s))$ (e.g. reducing effective contact mixing) tightens the bound at time
-$s$. The diffusion limit obeys the algebraic-connectivity bound (Thm 3.3) and conserves mass
+\(\|I(t)\| \le \|I(0)\| e^{\int(\beta\lambda_{\max}(W) - \gamma)ds}\). Mitigation that reduces
+\(\lambda_{\max}(W(s))\) (e.g. reducing effective contact mixing) tightens the bound at time
+\(s\). The diffusion limit obeys the algebraic-connectivity bound (Thm 3.3) and conserves mass
 (Thm 3.2). *Verification:* `demos/epidemic_decay_bound.py`.
 
 ## 4. Summary of verified results
@@ -1158,7 +1158,7 @@ novelty verification performed at the time of writing, and state plainly what is
 
 ## 1. What SFC claims
 
-Structure-Flow Calculus is a *unified framework* in which a single structure field $\rho$ yields
+Structure-Flow Calculus is a *unified framework* in which a single structure field \(\rho yields
 (a) a complete calculus, (b) a spectral theory with closed-form graded-media modes, (c) a causal
 network spectral theory with an Energy Migration Theorem, and (d) a variational theory coupling
 fields to their geometry. As an integrated construction with proven theorems it is, to the best of
@@ -1189,13 +1189,13 @@ are invited to falsify novelty.
 
 ## 4. Relationship to neighboring fields
 
-- **Sturm-Liouville theory** [1]: SFC's $L_\rho$ is a special Sturm-Liouville operator; SFC adds
+- **Sturm-Liouville theory** [1]: SFC's \)L_\rho is a special Sturm-Liouville operator; SFC adds
   the structure-field interpretation and the transport (Thm 1.11).
 - **Graph signal processing** [2]: static in [2]; SFC treats time-varying families and the
   eigenframe connection.
 - **Fractional calculus**: different generalization (fractional exponents vs a pointwise scale
   field).
-- **General relativity**: a metric field is dynamical there too, but SFC's $\rho$ is a *scale*
+- **General relativity**: a metric field is dynamical there too, but SFC's \(\rho is a *scale*
   field with no Lorentzian structure; no claim of relation is made.
 
 ## References
@@ -1236,7 +1236,7 @@ git commit -m "feat: papers 05-06 applications and novelty positioning"
 **A new stream in mathematics and physics.**
 
 Structure-Flow Calculus (SFC) is a mathematical framework in which the *differential structure of
-space is itself a dynamical field*. A positive function $\rho$ — the **structure field** — generates
+space is itself a dynamical field*. A positive function \)\rho — the **structure field** — generates
 a complete calculus, a spectral theory, a variational theory, and a network theory, all with proven
 theorems.
 
@@ -1251,7 +1251,7 @@ theorems.
 
 ## Research papers
 
-- 01 — Foundations ($\rho$-calculus, Fundamental Theorem, conformal transport)
+- 01 — Foundations (\(\rho\)-calculus, Fundamental Theorem, conformal transport)
 - 02 — Structure Spectral Theory (closed-form graded-media modes, energy conservation)
 - 03 — Causal Network Spectral Theory (Energy Migration Theorem, decay bounds)
 - 04 — Variational & Conservation Theory (structure-flow Euler-Lagrange, Noether-type laws)

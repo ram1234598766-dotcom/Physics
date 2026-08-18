@@ -16,13 +16,95 @@ export default defineConfig({
   vite: {
     build: {
       chunkSizeWarningLimit: 2500
-    }
+    },
+    plugins: [
+      {
+        name: 'convert-math-delimiters',
+        enforce: 'pre',
+        transform(src, id) {
+          if (!id.endsWith('.md')) return null
+          console.log('PLUGIN:', id, 'contains \\(:', src.includes('\\('))
+          
+          // Convert \(...\) to $...$
+          let result = ''
+          let i = 0
+          let inlineCount = 0
+          while (i < src.length) {
+            if (src.slice(i, i + 2) === '\\(') {
+              const start = i + 2
+              let j = start
+              while (j < src.length) {
+                if (src.slice(j, j + 2) === '\\)') {
+                  break
+                }
+                if (src[j] === '\\') {
+                  j += 2
+                  continue
+                }
+                j++
+              }
+              const math = src.slice(start, j)
+              if (/[a-zA-Z]/.test(math)) {
+                result += '$' + math + '$'
+                inlineCount++
+              } else {
+                result += '\\(' + math + '\\)'
+              }
+              i = j + 2
+            } else {
+              result += src[i]
+              i++
+            }
+          }
+          src = result
+          
+          // Convert \[...\] to $$...$$
+          result = ''
+          i = 0
+          let blockCount = 0
+          while (i < src.length) {
+            if (src.slice(i, i + 2) === '\\[') {
+              const start = i + 2
+              let j = start
+              while (j < src.length) {
+                if (src.slice(j, j + 2) === '\\]') {
+                  break
+                }
+                if (src[j] === '\\') {
+                  j += 2
+                  continue
+                }
+                j++
+              }
+              const math = src.slice(start, j)
+              if (/[a-zA-Z]/.test(math)) {
+                result += '$$' + math + '$$'
+                blockCount++
+              } else {
+                result += '\\[' + math + '\\]'
+              }
+              i = j + 2
+            } else {
+              result += src[i]
+              i++
+            }
+          }
+          src = result
+          
+          if (id.includes('00-treatise')) {
+            console.log('TREATISE: converted', inlineCount, 'inline,', blockCount, 'block')
+          }
+          
+          return src
+        }
+      }
+    ]
   },
   themeConfig: {
     nav: [
       { text: 'Overview', link: '/' },
       { text: 'Papers', link: '/papers/00-capstone' },
-      { text: 'Unified Structure Dynamics', link: '/papers/15-unified-structure-dynamics' },
+      { text: 'Structural Synthesis Dynamics', link: '/papers/15-structural-synthesis-dynamics' },
       { text: 'Verification', link: '/verification' },
       { text: 'Demos', link: '/demos' },
       { text: 'PDF', link: 'https://github.com/ram1234598766-dotcom/Physics/releases/latest' }
@@ -65,7 +147,7 @@ export default defineConfig({
           { text: '11 — Novelty & Literature', link: '/papers/11-novelty-and-literature' },
           { text: '12 — Quantum & Information', link: '/papers/12-quantum-information' },
           { text: '13 — Neuroscience & Brain Networks', link: '/papers/13-neuroscience-brain-networks' },
-          { text: '15 — Unified Structure Dynamics', link: '/papers/15-unified-structure-dynamics' },
+          { text: '15 — Structural Synthesis Dynamics', link: '/papers/15-structural-synthesis-dynamics' },
           { text: 'Open Problems', link: '/papers/12-open-problems' }
         ]
       }

@@ -22,7 +22,7 @@ This repository contains the complete Structure-Flow Calculus (SFC) framework: 1
 
 **If you only have a few minutes:** Start with the [Theory Overview](docs/overview.md) or the [Capstone Paper](docs/papers/00-capstone.md).
 
-**If you want the big picture:** Read [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics.md), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
+**If you want the big picture:** Read [Paper 15: Structural Synthesis Dynamics](docs/papers/15-structural-synthesis-dynamics.md), which presents a new theory built on four postulates that solve five problems modern physics cannot solve.
 
 **If you want to run the code:** Clone the repo, install dependencies, and run the demos. Every claim is reproducible.
 
@@ -46,11 +46,11 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 ---
 
-## Unified Structure Dynamics: A New Theory
+## Structural Synthesis Dynamics: A New Theory
 
-**Unified Structure Dynamics (USD)** is a new physical theory built on four postulates. From these postulates, it derives — without additional assumptions — solutions to five problems that have resisted modern physics for decades:
+**Structural Synthesis Dynamics (SSD)** is a new physical theory built on four postulates. From these postulates, it derives — without additional assumptions — solutions to five problems that have resisted modern physics for decades:
 
-| Problem | Why modern physics is stuck | What USD derives |
+| Problem | Why modern physics is stuck | What SSD derives |
 |---------|----------------------------|-----------------|
 | **Quantum gravity** | GR and QM use incompatible descriptions | A single evolution equation for geometry and quantum matter |
 | **Dark matter** | No particle found in 40 years | Structural distortions of the vacuum produce flat rotation curves |
@@ -60,9 +60,9 @@ SFC does **not** claim to have discovered new fundamental particles or forces. T
 
 **The key insight:** All five problems trace to one assumption — that geometry and quantum matter are separate. If that assumption is wrong, the problems are not solved one by one. They collapse into a single coupled system.
 
-**USD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously.
+**SSD is a new theory, not a research program.** It makes specific, falsifiable predictions. It is built on four postulates and derives its consequences rigorously.
 
-See [Paper 15: Unified Structure Dynamics](docs/papers/15-unified-structure-dynamics.md) for the full theory.
+See [Paper 15: Structural Synthesis Dynamics](docs/papers/15-structural-synthesis-dynamics.md) for the full theory.
 
 ---
 
@@ -108,10 +108,10 @@ Or simply download the **[PDF](https://github.com/ram1234598766-dotcom/Physics/r
 | 11 | **Novelty & Literature** | Honest positioning, novelty verification log |
 | 12 | **Quantum & Information** | $\rho$-weighted quantum mechanics, Fisher information, entanglement |
 | 13 | **Neuroscience & Brain Networks** | Connectome structure field, seizure detection, neural energy migration |
-| 15 | **Unified Structure Dynamics** | **A new theory**: quantum gravity, dark matter, dark energy, measurement problem, cosmological constant |
+| 15 | **Structural Synthesis Dynamics** | **A new theory**: quantum gravity, dark matter, dark energy, measurement problem, cosmological constant |
 | 14 | **Open Problems** | Twenty open problems with precise formulations and partial results |
 
-**Proof audit:** 330+ theorems proved, 330+ QED marks, balanced equation delimiters across all papers, capstone, treatise, and USD.
+**Proof audit:** 330+ theorems proved, 330+ QED marks, balanced equation delimiters across all papers, capstone, treatise, and SSD.
 
 ---
 

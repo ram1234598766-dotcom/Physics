@@ -4,11 +4,11 @@
 
 *Received 2026-08-16*
 
-**Abstract.** We extend the Structure-Flow framework from intervals to higher-dimensional product domains. A structure field $\rho = (\rho_1,\dots,\rho_d)$, one profile per coordinate direction, induces a complete calculus — gradient, divergence, Laplacian, integration, and spectral theory — through the product (anisotropic) metric $g_\rho = \sum_j \rho_j^{-2} dx_j^2$. The transport maps $\tau_j(x_j) = \int dx_j/\rho_j$ give an exact isometry from $(\Omega, g_\rho)$ to a Euclidean box, so the structure Laplacian $L_\rho = \sum_j \rho_j\partial_j(\rho_j\partial_j)$ is the pullback of the flat Laplacian. We prove the integration-by-parts identities, the divergence theorem, Green's identities, the spectral theorem, the Weyl-type asymptotics, and the closed-form spectra on product domains for separable structure fields. We characterize the class of domains and profiles for which closed-form modes exist and prove the reduction of the higher-dimensional framework to the one-dimensional theory of Papers 01–02 on product domains.
+**Abstract.** We extend the Structure-Flow framework from intervals to higher-dimensional product domains. A structure field \(\rho = (\rho_1,\dots,\rho_d)\), one profile per coordinate direction, induces a complete calculus — gradient, divergence, Laplacian, integration, and spectral theory — through the product (anisotropic) metric \(g_\rho = \sum_j \rho_j^{-2} dx_j^2\). The transport maps \(\tau_j(x_j) = \int dx_j/\rho_j\) give an exact isometry from \((\Omega, g_\rho)\) to a Euclidean box, so the structure Laplacian \(L_\rho = \sum_j \rho_j\partial_j(\rho_j\partial_j)\) is the pullback of the flat Laplacian. We prove the integration-by-parts identities, the divergence theorem, Green's identities, the spectral theorem, the Weyl-type asymptotics, and the closed-form spectra on product domains for separable structure fields. We characterize the class of domains and profiles for which closed-form modes exist and prove the reduction of the higher-dimensional framework to the one-dimensional theory of Papers 01–02 on product domains.
 
 **Keywords:** higher-dimensional structure fields, product metric, divergence theorem, spectral theory, product domains, Weyl law.
 
-**Original Contributions.** The paper extends the framework to higher dimensions with a structure field per coordinate direction. New results include the product (anisotropic) metric formulation (Theorem 1), the exact transport isometry to a Euclidean box (Theorem 2), the divergence theorem and Green's identities in $\rho$-coordinates (Theorems 3–4), the spectral theorem (Theorem 5), the Weyl-type asymptotics with explicit volume constant $\Lambda_1\cdots\Lambda_d$ (Theorem 6), the closed-form product spectra $\mu_{m_1,\dots,m_d}=\sum_j(m_j\pi/\Lambda_j)^2$ on separable domains (Theorem 7), and the obstruction theorem characterizing when closed forms exist (Theorem 8). The product-spectrum and Weyl results are verified numerically.
+**Original Contributions.** The paper extends the framework to higher dimensions with a structure field per coordinate direction. New results include the product (anisotropic) metric formulation (Theorem 1), the exact transport isometry to a Euclidean box (Theorem 2), the divergence theorem and Green's identities in \(\rho\)-coordinates (Theorems 3–4), the spectral theorem (Theorem 5), the Weyl-type asymptotics with explicit volume constant \(\Lambda_1\cdots\Lambda_d\) (Theorem 6), the closed-form product spectra \(\mu_{m_1,\dots,m_d}=\sum_j(m_j\pi/\Lambda_j)^2\) on separable domains (Theorem 7), and the obstruction theorem characterizing when closed forms exist (Theorem 8). The product-spectrum and Weyl results are verified numerically.
 
 ---
 
@@ -26,118 +26,118 @@ Before reading this paper, the reader should be familiar with:
 
 ## I. INTRODUCTION
 
-The one-dimensional framework extends naturally when each coordinate direction carries its own structure profile. This paper sets out the higher-dimensional calculus: what $D_\rho$ becomes, what the structure-flow Laplacian is, what plays the role of the transport map, and where closed-form spectra survive. The organizing fact, mirroring Paper 01, Theorem 12, is that the map $\tau = (\tau_1,\dots,\tau_d)$ with $\tau_j(x_j) = \int dx_j/\rho_j$ is an *isometry* from the structure-flow geometry to the flat box $[0,\Lambda_1]\times\dots\times[0,\Lambda_d]$, $\Lambda_j = \int_{I_j} dx_j/\rho_j$. In $\tau$-coordinates the structure Laplacian is exactly the ordinary Laplacian, so the higher-dimensional spectral theory is the classical spectral theory of a box, transported. The results underpin a class of graded-media problems in two and three dimensions (extending Paper 05) and give the continuum target of the discrete geometry constructions used in Paper 10.
+The one-dimensional framework extends naturally when each coordinate direction carries its own structure profile. This paper sets out the higher-dimensional calculus: what \(D_\rho\) becomes, what the structure-flow Laplacian is, what plays the role of the transport map, and where closed-form spectra survive. The organizing fact, mirroring Paper 01, Theorem 12, is that the map \(\tau = (\tau_1,\dots,\tau_d)\) with \(\tau_j(x_j) = \int dx_j/\rho_j\) is an *isometry* from the structure-flow geometry to the flat box \([0,\Lambda_1]\times\dots\times[0,\Lambda_d]\), \(\Lambda_j = \int_{I_j} dx_j/\rho_j\). In \(\tau\)-coordinates the structure Laplacian is exactly the ordinary Laplacian, so the higher-dimensional spectral theory is the classical spectral theory of a box, transported. The results underpin a class of graded-media problems in two and three dimensions (extending Paper 05) and give the continuum target of the discrete geometry constructions used in Paper 10.
 
-**Honesty caveat.** The differential-geometric toolkit (Riemannian metrics, isometries) and the spectral theorems (Hilbert-Schmidt, Weyl) are classical [1,2]; the contribution is the explicit structure-field presentation, the integral identities in $\rho$-coordinates, and the closed-form spectral results on product domains.
+**Honesty caveat.** The differential-geometric toolkit (Riemannian metrics, isometries) and the spectral theorems (Hilbert-Schmidt, Weyl) are classical [1,2]; the contribution is the explicit structure-field presentation, the integral identities in \(\rho\)-coordinates, and the closed-form spectral results on product domains.
 
 ## II. THE STRUCTURE-FIELD GEOMETRY
 
-**Definition 1 (structure-flow geometry).** Let $\Omega = I_1 \times \dots \times I_d$ be a product of intervals, and let $\rho_j: I_j \to \mathbb{R}_{>0}$ be $C^1$ for each $j$. The *structure-flow calculus* is generated by the diagonal (product) metric
+**Definition 1 (structure-flow geometry).** Let \(\Omega = I_1 \times \dots \times I_d\) be a product of intervals, and let \(\rho_j: I_j \to \mathbb{R}_{>0}\) be \(C^1\) for each \(j\). The *structure-flow calculus* is generated by the diagonal (product) metric
 
-$$g_\rho = \sum_{j=1}^d \frac{1}{\rho_j(x_j)^2}\, dx_j \otimes dx_j, \tag{1}$$
+\[g_\rho = \sum_{j=1}^d \frac{1}{\rho_j(x_j)^2}\, dx_j \otimes dx_j, \tag{1}\]
 
 and the volume form
 
-$$dV_\rho = \prod_{j=1}^d \frac{dx_j}{\rho_j(x_j)}. \tag{2}$$
+\[dV_\rho = \prod_{j=1}^d \frac{dx_j}{\rho_j(x_j)}. \tag{2}\]
 
 **Definition 2 (differential operators).** The *structure-flow derivative, gradient, divergence, and Laplacian* are
 
-$$D_j f = \rho_j\,\partial_j f, \qquad \nabla_\rho f = (D_1 f, \dots, D_d f), \qquad \operatorname{div}_\rho X = \sum_{j=1}^d D_j X_j, \qquad L_\rho f = \operatorname{div}_\rho(\nabla_\rho f) = \sum_{j=1}^d \rho_j\,\partial_j\big(\rho_j\,\partial_j f\big). \tag{3}$$
+\[D_j f = \rho_j\,\partial_j f, \qquad \nabla_\rho f = (D_1 f, \dots, D_d f), \qquad \operatorname{div}_\rho X = \sum_{j=1}^d D_j X_j, \qquad L_\rho f = \operatorname{div}_\rho(\nabla_\rho f) = \sum_{j=1}^d \rho_j\,\partial_j\big(\rho_j\,\partial_j f\big). \tag{3}\]
 
-**Theorem 1 (transport isometry / metric identification).** The map $\tau: \Omega \to \widehat\Omega = [0,\Lambda_1]\times\dots\times[0,\Lambda_d]$ defined by $\tau_j(x_j) = \int_{a_j}^{x_j} dx_j/\rho_j(x_j)$, with $\Lambda_j = \tau_j(b_j)$, is an isometry $(\Omega, g_\rho) \to (\widehat\Omega, \delta)$, and the structure Laplacian is the pullback of the flat Laplacian:
+**Theorem 1 (transport isometry / metric identification).** The map \(\tau: \Omega \to \widehat\Omega = [0,\Lambda_1]\times\dots\times[0,\Lambda_d]\) defined by \(\tau_j(x_j) = \int_{a_j}^{x_j} dx_j/\rho_j(x_j)\), with \(\Lambda_j = \tau_j(b_j)\), is an isometry \((\Omega, g_\rho) \to (\widehat\Omega, \delta)\), and the structure Laplacian is the pullback of the flat Laplacian:
 
-$$L_\rho f = \Delta_\tau \tilde f, \qquad \tilde f(\tau) = f(\tau^{-1}(\tau)), \qquad \Delta_\tau = \sum_{j=1}^d \partial_{\tau_j}^2. \tag{4}$$
+\[L_\rho f = \Delta_\tau \tilde f, \qquad \tilde f(\tau) = f(\tau^{-1}(\tau)), \qquad \Delta_\tau = \sum_{j=1}^d \partial_{\tau_j}^2. \tag{4}\]
 
-*Proof.* Since $d\tau_j = dx_j/\rho_j$, the metric pulls back as $g_\rho = \sum_j \rho_j^{-2}\,dx_j^2 = \sum_j d\tau_j^2 = \delta$, and $dV_\rho = \prod dx_j/\rho_j = \prod d\tau_j = d\tau$. For the operator: by the chain rule, $\partial_j = \rho_j^{-1}\partial_{\tau_j}$, so $D_j = \rho_j\partial_j = \partial_{\tau_j}$ and $L_\rho = \sum_j \rho_j\partial_j(\rho_j\partial_j) = \sum_j \partial_{\tau_j}^2$. $\square$
+*Proof.* Since \(d\tau_j = dx_j/\rho_j\), the metric pulls back as \(g_\rho = \sum_j \rho_j^{-2}\,dx_j^2 = \sum_j d\tau_j^2 = \delta\), and \(dV_\rho = \prod dx_j/\rho_j = \prod d\tau_j = d\tau\). For the operator: by the chain rule, \(\partial_j = \rho_j^{-1}\partial_{\tau_j}\), so \(D_j = \rho_j\partial_j = \partial_{\tau_j}\) and \(L_\rho = \sum_j \rho_j\partial_j(\rho_j\partial_j) = \sum_j \partial_{\tau_j}^2\). \(\square\)
 
-**Remark 1 (isotropic case).** When all profiles coincide, $\rho_j \equiv \rho$, the metric (1) is the conformal metric $\rho^{-2}\delta$ of the original manuscript; the transport map is the common $\tau = \int dx/\rho$. All results below include this case, and the general (anisotropic) case is the direct product of the one-dimensional theories of Papers 01–02.
+**Remark 1 (isotropic case).** When all profiles coincide, \(\rho_j \equiv \rho\), the metric (1) is the conformal metric \(\rho^{-2}\delta\) of the original manuscript; the transport map is the common \(\tau = \int dx/\rho\). All results below include this case, and the general (anisotropic) case is the direct product of the one-dimensional theories of Papers 01–02.
 
 ## III. INTEGRAL IDENTITIES
 
-**Theorem 2 (divergence theorem).** For a smooth vector field $X$ on $\Omega$,
+**Theorem 2 (divergence theorem).** For a smooth vector field \(X\) on \(\Omega\),
 
-$$\int_\Omega \operatorname{div}_\rho X\, dV_\rho = \int_{\partial\Omega} \langle X, n\rangle_\rho\, dA_\rho, \tag{5}$$
+\[\int_\Omega \operatorname{div}_\rho X\, dV_\rho = \int_{\partial\Omega} \langle X, n\rangle_\rho\, dA_\rho, \tag{5}\]
 
-with outward unit $\rho$-normal $n$ and induced area form $dA_\rho$.
-*Proof.* In $\tau$-coordinates (Theorem 1) the operator $\operatorname{div}_\rho$ and the measure $dV_\rho$ become the Euclidean divergence and Lebesgue measure on the box, and $n$, $dA_\rho$ become the Euclidean normal and area; the result is the Euclidean divergence theorem transported back. $\square$
+with outward unit \(\rho\)-normal \(n\) and induced area form \(dA_\rho\).
+*Proof.* In \(\tau\)-coordinates (Theorem 1) the operator \(\operatorname{div}_\rho\) and the measure \(dV_\rho\) become the Euclidean divergence and Lebesgue measure on the box, and \(n\), \(dA_\rho\) become the Euclidean normal and area; the result is the Euclidean divergence theorem transported back. \(\square\)
 
-**Theorem 3 (integration by parts).** For smooth $f, g$ and a vector field $X$,
+**Theorem 3 (integration by parts).** For smooth \(f, g\) and a vector field \(X\),
 
-$$\int_\Omega g\,\operatorname{div}_\rho X\, dV_\rho = -\int_\Omega \langle \nabla_\rho g, X\rangle_\rho\, dV_\rho + \int_{\partial\Omega} g\,\langle X, n\rangle_\rho\, dA_\rho, \tag{6}$$
+\[\int_\Omega g\,\operatorname{div}_\rho X\, dV_\rho = -\int_\Omega \langle \nabla_\rho g, X\rangle_\rho\, dV_\rho + \int_{\partial\Omega} g\,\langle X, n\rangle_\rho\, dA_\rho, \tag{6}\]
 
-where $\langle Y, Z\rangle_\rho = \sum_j Y_j Z_j$.
-*Proof.* Each $D_j = \rho_j\partial_j$ is skew-adjoint with respect to $dV_\rho$ (Paper 01, Theorem 9 applied factor-wise, since $\int g\,D_j X_j\,dV_\rho = \int g\,\partial_{\tau_j}X_j\,d\tau = -\int X_j\,\partial_{\tau_j}g\,d\tau$); summing over $j$ and adding the boundary term gives (6). $\square$
+where \(\langle Y, Z\rangle_\rho = \sum_j Y_j Z_j\).
+*Proof.* Each \(D_j = \rho_j\partial_j\) is skew-adjoint with respect to \(dV_\rho\) (Paper 01, Theorem 9 applied factor-wise, since \(\int g\,D_j X_j\,dV_\rho = \int g\,\partial_{\tau_j}X_j\,d\tau = -\int X_j\,\partial_{\tau_j}g\,d\tau\)); summing over \(j\) and adding the boundary term gives (6). \(\square\)
 
 **Corollary 1 (Green's first identity).**
 
-$$\int_\Omega \langle \nabla_\rho f, \nabla_\rho g\rangle_\rho\, dV_\rho = -\int_\Omega g\, L_\rho f\, dV_\rho + \int_{\partial\Omega} g\,\partial_n^{(\rho)} f\, dA_\rho, \tag{7}$$
+\[\int_\Omega \langle \nabla_\rho f, \nabla_\rho g\rangle_\rho\, dV_\rho = -\int_\Omega g\, L_\rho f\, dV_\rho + \int_{\partial\Omega} g\,\partial_n^{(\rho)} f\, dA_\rho, \tag{7}\]
 
-where $\partial_n^{(\rho)}$ is the outward $\rho$-normal derivative.
-*Proof.* Theorem 3 with $X = \nabla_\rho f$. $\square$
+where \(\partial_n^{(\rho)}\) is the outward \(\rho\)-normal derivative.
+*Proof.* Theorem 3 with \(X = \nabla_\rho f\). \(\square\)
 
-**Corollary 2 (Green's second identity).** For $f, g$ vanishing on $\partial\Omega$,
+**Corollary 2 (Green's second identity).** For \(f, g\) vanishing on \(\partial\Omega\),
 
-$$\int_\Omega \big(f\, L_\rho g - g\, L_\rho f\big)\, dV_\rho = 0. \tag{8}$$
+\[\int_\Omega \big(f\, L_\rho g - g\, L_\rho f\big)\, dV_\rho = 0. \tag{8}\]
 
-*Proof.* Subtract the two instances of (7). $\square$
+*Proof.* Subtract the two instances of (7). \(\square\)
 
-**Corollary 3 (self-adjointness).** For $f, g$ vanishing on $\partial\Omega$, $\langle L_\rho f, g\rangle_\rho = \langle f, L_\rho g\rangle_\rho$ and $\langle L_\rho f, f\rangle_\rho \le 0$ (or $\ge 0$ for $-L_\rho$). The Structure-Flow Laplacian is self-adjoint and semibounded.
-*Proof.* Corollaries 1–2. $\square$
+**Corollary 3 (self-adjointness).** For \(f, g\) vanishing on \(\partial\Omega\), \(\langle L_\rho f, g\rangle_\rho = \langle f, L_\rho g\rangle_\rho\) and \(\langle L_\rho f, f\rangle_\rho \le 0\) (or \(\ge 0\) for \(-L_\rho\)). The Structure-Flow Laplacian is self-adjoint and semibounded.
+*Proof.* Corollaries 1–2. \(\square\)
 
 ## IV. SPECTRAL THEORY
 
-**Theorem 4 (spectral theorem on product boxes).** With Dirichlet conditions, $-L_\rho$ on $L^2(\Omega, dV_\rho)$ has a complete orthonormal system of eigenfunctions $\{\varphi_m\}$ with eigenvalues $0 < \mu_1 \le \mu_2 \le \dots \to \infty$.
-*Proof.* By Corollary 3, $-L_\rho$ is self-adjoint, semibounded, and coercive with compact resolvent on $L^2(\Omega, dV_\rho)$; the Hilbert-Schmidt spectral theorem gives the result. $\square$
+**Theorem 4 (spectral theorem on product boxes).** With Dirichlet conditions, \(-L_\rho\) on \(L^2(\Omega, dV_\rho)\) has a complete orthonormal system of eigenfunctions \(\{\varphi_m\}\) with eigenvalues \(0 < \mu_1 \le \mu_2 \le \dots \to \infty\).
+*Proof.* By Corollary 3, \(-L_\rho\) is self-adjoint, semibounded, and coercive with compact resolvent on \(L^2(\Omega, dV_\rho)\); the Hilbert-Schmidt spectral theorem gives the result. \(\square\)
 
-**Theorem 5 (Weyl-type asymptotics).** The counting function $N(\mu) = \#\{m : \mu_m \le \mu\}$ satisfies
+**Theorem 5 (Weyl-type asymptotics).** The counting function \(N(\mu) = \#\{m : \mu_m \le \mu\}\) satisfies
 
-$$N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\,\Gamma(1 + d/2)}\,\mu^{d/2}, \qquad \operatorname{Vol}_\rho(\Omega) = \Lambda_1\cdots\Lambda_d. \tag{9}$$
+\[N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\,\Gamma(1 + d/2)}\,\mu^{d/2}, \qquad \operatorname{Vol}_\rho(\Omega) = \Lambda_1\cdots\Lambda_d. \tag{9}\]
 
-*Proof.* By Theorem 1, $-L_\rho$ is unitarily equivalent to the Dirichlet Laplacian on the box $\widehat\Omega$, whose spectrum has the classical Weyl asymptotics with volume $\prod_j \Lambda_j = \int_\Omega dV_\rho = \operatorname{Vol}_\rho(\Omega)$. $\square$
+*Proof.* By Theorem 1, \(-L_\rho\) is unitarily equivalent to the Dirichlet Laplacian on the box \(\widehat\Omega\), whose spectrum has the classical Weyl asymptotics with volume \(\prod_j \Lambda_j = \int_\Omega dV_\rho = \operatorname{Vol}_\rho(\Omega)\). \(\square\)
 
-**Corollary 4 (modal density).** The density of modes per unit $\mu$ is $\rho_\mu = \frac{d}{d\mu}N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\,\frac{d}{2}\mu^{d/2 - 1}$.
-*Proof.* Differentiate (9). $\square$
+**Corollary 4 (modal density).** The density of modes per unit \(\mu\) is \(\rho_\mu = \frac{d}{d\mu}N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\,\frac{d}{2}\mu^{d/2 - 1}\).
+*Proof.* Differentiate (9). \(\square\)
 
 **Theorem 6b (two-term Weyl law on product boxes).** On the product box with Dirichlet conditions, the counting function satisfies the classical two-term Weyl asymptotics (Ivrii) transported by the isometry of Theorem 1:
-$$N(\mu) = \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(1+d/2)}\,\mu^{d/2} \;-\; \frac{S_\rho(\partial\Omega)}{4\,(4\pi)^{(d-1)/2}\,\Gamma\big(1+\tfrac{d-1}{2}\big)}\,\mu^{(d-1)/2} + o\big(\mu^{(d-1)/2}\big), \tag{9b}$$
-where $S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell$ is the structure-area of the box boundary, i.e. the $(d-1)$-volume of $\partial\widehat\Omega$ computed in the transported Euclidean metric (for a box, each coordinate direction contributes two faces of volume $\prod_{\ell\neq j}\Lambda_\ell$; the factor $\tfrac14$ is the classical Ivrii coefficient of the two-term law).
+\[N(\mu) = \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(1+d/2)}\,\mu^{d/2} \;-\; \frac{S_\rho(\partial\Omega)}{4\,(4\pi)^{(d-1)/2}\,\Gamma\big(1+\tfrac{d-1}{2}\big)}\,\mu^{(d-1)/2} + o\big(\mu^{(d-1)/2}\big), \tag{9b}\]
+where \(S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell\) is the structure-area of the box boundary, i.e. the \((d-1)\)-volume of \(\partial\widehat\Omega\) computed in the transported Euclidean metric (for a box, each coordinate direction contributes two faces of volume \(\prod_{\ell\neq j}\Lambda_\ell\); the factor \(\tfrac14\) is the classical Ivrii coefficient of the two-term law).
 
-*Proof.* Under the isometry of Theorem 1, $N$ is the counting function of the flat Dirichlet Laplacian on the box with side lengths $\Lambda_j$; the two-term Weyl law with Dirichlet boundary conditions is classical (see [2], §IV and the Ivrii theorem), and the transported boundary term is $S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell$. The theorem is stated for smooth domains; for the box the boundary is piecewise smooth and the corners contribute oscillatory corrections of relative size $O(\mu^{-1/2})$. Verified numerically in $d=2$ on the box $(\Lambda_1,\Lambda_2) = (0.5, 0.7)$: the two-term formula reduces the relative counting error by an order of magnitude versus the one-term formula (at $\mu = 600$: relative error $0.003$ versus $0.39$; at $\mu = 2400$: $0.009$ versus $0.17$; the residual oscillates about zero at the corner-correction amplitude as $\mu$ grows). A boundary term written without the factor $\tfrac14$ — i.e. $S_\rho = \sum_j\prod_{\ell\neq j}\Lambda_\ell$ in the same denominator — is twice too large and does not fit the count (relative error $\approx -0.28$ at $\mu = 1200$); the factor $\tfrac14$ is essential. $\square$
+*Proof.* Under the isometry of Theorem 1, \(N\) is the counting function of the flat Dirichlet Laplacian on the box with side lengths \(\Lambda_j\); the two-term Weyl law with Dirichlet boundary conditions is classical (see [2], §IV and the Ivrii theorem), and the transported boundary term is \(S_\rho(\partial\Omega) = 2\sum_j \prod_{\ell\neq j}\Lambda_\ell\). The theorem is stated for smooth domains; for the box the boundary is piecewise smooth and the corners contribute oscillatory corrections of relative size \(O(\mu^{-1/2})\). Verified numerically in \(d=2\) on the box \((\Lambda_1,\Lambda_2) = (0.5, 0.7)\): the two-term formula reduces the relative counting error by an order of magnitude versus the one-term formula (at \(\mu = 600\): relative error \(0.003\) versus \(0.39\); at \(\mu = 2400\): \(0.009\) versus \(0.17\); the residual oscillates about zero at the corner-correction amplitude as \(\mu\) grows). A boundary term written without the factor \(\tfrac14\) — i.e. \(S_\rho = \sum_j\prod_{\ell\neq j}\Lambda_\ell\) in the same denominator — is twice too large and does not fit the count (relative error \(\approx -0.28\) at \(\mu = 1200\)); the factor \(\tfrac14\) is essential. \(\square\)
 
 ## V. CLOSED-FORM SPECTRA ON PRODUCT DOMAINS
 
-**Definition 3 (separable structure field).** On $\Omega = I_1 \times \dots \times I_d$, $\rho = (\rho_1,\dots,\rho_d)$ with each $\rho_j: I_j \to \mathbb{R}_{>0}$. (Every structure field in the calculus of Section II is separable by construction; the terminology marks the contrast with coordinate-coupling profiles, treated in Section VI.)
+**Definition 3 (separable structure field).** On \(\Omega = I_1 \times \dots \times I_d\), \(\rho = (\rho_1,\dots,\rho_d)\) with each \(\rho_j: I_j \to \mathbb{R}_{>0}\). (Every structure field in the calculus of Section II is separable by construction; the terminology marks the contrast with coordinate-coupling profiles, treated in Section VI.)
 
 **Theorem 6 (product separation).** The Structure-Flow Laplacian splits into the sum of its one-dimensional factors,
 
-$$-L_\rho = \sum_{j=1}^d (-L_{\rho_j}^{(j)}) \otimes \mathbb{1}_{(\text{other factors})}, \qquad L_{\rho_j}^{(j)} = \rho_j\,\partial_j(\rho_j\,\partial_j), \tag{10}$$
+\[-L_\rho = \sum_{j=1}^d (-L_{\rho_j}^{(j)}) \otimes \mathbb{1}_{(\text{other factors})}, \qquad L_{\rho_j}^{(j)} = \rho_j\,\partial_j(\rho_j\,\partial_j), \tag{10}\]
 
 and the eigenfunctions are products of the 1D eigenfunctions of Paper 02 with eigenvalues
 
-$$\mu_{m_1,\dots,m_d} = \sum_{j=1}^d \Big(\frac{m_j\pi}{\Lambda_j}\Big)^2. \tag{11}$$
+\[\mu_{m_1,\dots,m_d} = \sum_{j=1}^d \Big(\frac{m_j\pi}{\Lambda_j}\Big)^2. \tag{11}\]
 
-*Proof.* By Theorem 1, in $\tau$-coordinates the eigenvalue problem $-L_\rho f = \mu f$ is $-\Delta_\tau \tilde f = \mu \tilde f$ on the box $\widehat\Omega = [0,\Lambda_1]\times\dots\times[0,\Lambda_d]$ with Dirichlet conditions, which separates into the independent one-dimensional problems of Paper 02, Theorem 1. The eigenfunctions $\tilde\varphi_{m}(\tau) = \prod_j \sqrt{2/\Lambda_j}\sin(m_j\pi\tau_j/\Lambda_j)$ and eigenvalues (11) follow. $\square$
+*Proof.* By Theorem 1, in \(\tau\)-coordinates the eigenvalue problem \(-L_\rho f = \mu f\) is \(-\Delta_\tau \tilde f = \mu \tilde f\) on the box \(\widehat\Omega = [0,\Lambda_1]\times\dots\times[0,\Lambda_d]\) with Dirichlet conditions, which separates into the independent one-dimensional problems of Paper 02, Theorem 1. The eigenfunctions \(\tilde\varphi_{m}(\tau) = \prod_j \sqrt{2/\Lambda_j}\sin(m_j\pi\tau_j/\Lambda_j)\) and eigenvalues (11) follow. \(\square\)
 
-**Corollary 5 (rectangular graded media).** A 2D matched graded medium on a rectangle with profiles $(\rho_x, \rho_y)$ has closed-form modes as products of sines in $\tau$-coordinates:
+**Corollary 5 (rectangular graded media).** A 2D matched graded medium on a rectangle with profiles \((\rho_x, \rho_y)\) has closed-form modes as products of sines in \(\tau\)-coordinates:
 
-$$\varphi_{m,n}(x,y) = \frac{2}{\sqrt{\Lambda_x\Lambda_y}}\sin\!\Big(\frac{m\pi\tau_x(x)}{\Lambda_x}\Big)\sin\!\Big(\frac{n\pi\tau_y(y)}{\Lambda_y}\Big). \tag{12}$$
+\[\varphi_{m,n}(x,y) = \frac{2}{\sqrt{\Lambda_x\Lambda_y}}\sin\!\Big(\frac{m\pi\tau_x(x)}{\Lambda_x}\Big)\sin\!\Big(\frac{n\pi\tau_y(y)}{\Lambda_y}\Big). \tag{12}\]
 
-*Proof.* Theorem 6 with the 1D eigenfunctions substituted. $\square$
+*Proof.* Theorem 6 with the 1D eigenfunctions substituted. \(\square\)
 
 **Theorem 7 (energy conservation in higher dimensions).** The energy
 
-$$E(t) = \frac{1}{2}\int_\Omega (u_t)^2\, dV_\rho + \frac{1}{2}\int_\Omega \langle \nabla_\rho u, \nabla_\rho u\rangle_\rho\, dV_\rho \tag{13}$$
+\[E(t) = \frac{1}{2}\int_\Omega (u_t)^2\, dV_\rho + \frac{1}{2}\int_\Omega \langle \nabla_\rho u, \nabla_\rho u\rangle_\rho\, dV_\rho \tag{13}\]
 
-is conserved for solutions of $u_{tt} = L_\rho u$ with Dirichlet conditions.
-*Proof.* $\dot E = \langle u_t, L_\rho u\rangle_\rho + \langle \nabla_\rho u_t, \nabla_\rho u\rangle_\rho = 0$ by Corollary 1 with $g = u_t$, $f = u$ and vanishing boundary terms. Equivalently, under the isometry of Theorem 1 this is the classical energy conservation of the flat wave equation on the box. $\square$
+is conserved for solutions of \(u_{tt} = L_\rho u\) with Dirichlet conditions.
+*Proof.* \(\dot E = \langle u_t, L_\rho u\rangle_\rho + \langle \nabla_\rho u_t, \nabla_\rho u\rangle_\rho = 0\) by Corollary 1 with \(g = u_t\), \(f = u\) and vanishing boundary terms. Equivalently, under the isometry of Theorem 1 this is the classical energy conservation of the flat wave equation on the box. \(\square\)
 
 ## VI. DOMAINS WITHOUT CLOSED FORMS AND LOCAL THEORY
 
-**Theorem 8 (non-product obstruction).** If the structure profile couples coordinates — i.e. the metric is not of the direct-product form (1) with $\rho_j = \rho_j(x_j)$ — then the transport map of Theorem 1 is no longer an isometry to a flat box, the Laplacian no longer splits as a sum of one-dimensional operators, and closed-form separable modes of the type (12) generically do not exist; one must use the numerical theory of Paper 08.
-*Proof.* Separation of variables into products $f(x) = \prod_j f^{(j)}(x_j)$ forces the operator to be a sum of single-coordinate operators, which by (3) holds exactly when $\rho_j = \rho_j(x_j)$ is independent of the other coordinates; otherwise the mixed dependence prevents a single-coordinate decomposition of the eigenvalue problem. $\square$
+**Theorem 8 (non-product obstruction).** If the structure profile couples coordinates — i.e. the metric is not of the direct-product form (1) with \(\rho_j = \rho_j(x_j)\) — then the transport map of Theorem 1 is no longer an isometry to a flat box, the Laplacian no longer splits as a sum of one-dimensional operators, and closed-form separable modes of the type (12) generically do not exist; one must use the numerical theory of Paper 08.
+*Proof.* Separation of variables into products \(f(x) = \prod_j f^{(j)}(x_j)\) forces the operator to be a sum of single-coordinate operators, which by (3) holds exactly when \(\rho_j = \rho_j(x_j)\) is independent of the other coordinates; otherwise the mixed dependence prevents a single-coordinate decomposition of the eigenvalue problem. \(\square\)
 
-**Theorem 9 (local transport).** In any small region where each $\rho_j$ varies slowly compared with the region's extent, the structure-flow Laplacian is locally equivalent to the flat Laplacian under the coordinate map $\tau_j = \int dx_j/\rho_j$ in each direction; the local structure-flow calculus is flat.
-*Proof.* At a point, the metric (1) is diagonal and the map $\tau$ makes it isometric to the Euclidean metric to first order (Theorem 1 applied on a small box). $\square$
+**Theorem 9 (local transport).** In any small region where each \(\rho_j\) varies slowly compared with the region's extent, the structure-flow Laplacian is locally equivalent to the flat Laplacian under the coordinate map \(\tau_j = \int dx_j/\rho_j\) in each direction; the local structure-flow calculus is flat.
+*Proof.* At a point, the metric (1) is diagonal and the map \(\tau\) makes it isometric to the Euclidean metric to first order (Theorem 1 applied on a small box). \(\square\)
 
 ## VII. USES OF HIGHER-DIMENSIONAL STRUCTURE-FLOW CALCULUS
 
@@ -150,92 +150,92 @@ is conserved for solutions of $u_{tt} = L_\rho u$ with Dirichlet conditions.
 
 ## IX. DETAILED PRODUCT-DOMAIN DERIVATIONS
 
-**Derivation of the 2D spectral theorem.** On $\Omega=[0,\Lambda_x]\times[0,\Lambda_y]$, the Dirichlet Laplacian $\Delta_\tau = \partial_{\tau_x}^2 + \partial_{\tau_y}^2$ has eigenfunctions $\varphi_{m,n}(\tau_x,\tau_y) = \sqrt{4/(\Lambda_x\Lambda_y)}\sin(m\pi\tau_x/\Lambda_x)\sin(n\pi\tau_y/\Lambda_y)$ with eigenvalues $(m\pi/\Lambda_x)^2 + (n\pi/\Lambda_y)^2$. Pulling back by $(\tau_x,\tau_y) = (\tau_x(x),\tau_y(y))$ gives the 2D structure-flow modes
-$$\varphi_{m,n}(x,y) = \frac{2}{\sqrt{\Lambda_x\Lambda_y}}\sin\Big(\frac{m\pi\tau_x(x)}{\Lambda_x}\Big)\sin\Big(\frac{n\pi\tau_y(y)}{\Lambda_y}\Big). \tag{14}$$
+**Derivation of the 2D spectral theorem.** On \(\Omega=[0,\Lambda_x]\times[0,\Lambda_y]\), the Dirichlet Laplacian \(\Delta_\tau = \partial_{\tau_x}^2 + \partial_{\tau_y}^2\) has eigenfunctions \(\varphi_{m,n}(\tau_x,\tau_y) = \sqrt{4/(\Lambda_x\Lambda_y)}\sin(m\pi\tau_x/\Lambda_x)\sin(n\pi\tau_y/\Lambda_y)\) with eigenvalues \((m\pi/\Lambda_x)^2 + (n\pi/\Lambda_y)^2\). Pulling back by \((\tau_x,\tau_y) = (\tau_x(x),\tau_y(y))\) gives the 2D structure-flow modes
+\[\varphi_{m,n}(x,y) = \frac{2}{\sqrt{\Lambda_x\Lambda_y}}\sin\Big(\frac{m\pi\tau_x(x)}{\Lambda_x}\Big)\sin\Big(\frac{n\pi\tau_y(y)}{\Lambda_y}\Big). \tag{14}\]
 
-**Theorem 10 (explicit 2D spectrum).** The eigenvalues of $-L_\rho$ on a product of two intervals with separable structure $(\rho_x,\rho_y)$ are
-$$\mu_{m,n} = \Big(\frac{m\pi}{\Lambda_x}\Big)^2 + \Big(\frac{n\pi}{\Lambda_y}\Big)^2, \qquad m,n \ge 1. \tag{15}$$
+**Theorem 10 (explicit 2D spectrum).** The eigenvalues of \(-L_\rho\) on a product of two intervals with separable structure \((\rho_x,\rho_y)\) are
+\[\mu_{m,n} = \Big(\frac{m\pi}{\Lambda_x}\Big)^2 + \Big(\frac{n\pi}{\Lambda_y}\Big)^2, \qquad m,n \ge 1. \tag{15}\]
 
-*Proof.* By Theorem 1, $L_\rho = \Delta_\tau$ in transported coordinates; the 2D Dirichlet eigenvalue problem separates into two 1D problems, whose eigenvalues add. $\square$
+*Proof.* By Theorem 1, \(L_\rho = \Delta_\tau\) in transported coordinates; the 2D Dirichlet eigenvalue problem separates into two 1D problems, whose eigenvalues add. \(\square\)
 
-**Worked example 9.1 (2D exponential grading).** $\Omega=[0,1]\times[0,1]$, $\rho_x(x)=e^x$, $\rho_y(y)=e^{2y}$:
-- $\Lambda_x = 1-e^{-1} = 0.6321$, $\Lambda_y = (1-e^{-2})/2 = 0.4323$
-- $\mu_{1,1} = (\pi/0.6321)^2 + (\pi/0.4323)^2 = 24.70 + 53.10 = 77.80$
-- $\mu_{1,2} = 24.70 + 4\times53.10 = 237.1$
-- $\mu_{2,1} = 4\times24.70 + 53.10 = 151.9$
-- Mode $\varphi_{1,1}$ at $(0.5,0.5)$: $\tau_x=0.3935$, $\tau_y=0.2281$; $\varphi_{1,1}=2/\sqrt{0.6321\cdot0.4323}\cdot\sin(\pi\cdot0.3935/0.6321)\cdot\sin(\pi\cdot0.2281/0.4323) = 3.046\cdot0.926\cdot0.866 = 2.443$
+**Worked example 9.1 (2D exponential grading).** \(\Omega=[0,1]\times[0,1]\), \(\rho_x(x)=e^x\), \(\rho_y(y)=e^{2y}\):
+- \(\Lambda_x = 1-e^{-1} = 0.6321\), \(\Lambda_y = (1-e^{-2})/2 = 0.4323\)
+- \(\mu_{1,1} = (\pi/0.6321)^2 + (\pi/0.4323)^2 = 24.70 + 53.10 = 77.80\)
+- \(\mu_{1,2} = 24.70 + 4\times53.10 = 237.1\)
+- \(\mu_{2,1} = 4\times24.70 + 53.10 = 151.9\)
+- Mode \(\varphi_{1,1}\) at \((0.5,0.5)\): \(\tau_x=0.3935\), \(\tau_y=0.2281\); \(\varphi_{1,1}=2/\sqrt{0.6321\cdot0.4323}\cdot\sin(\pi\cdot0.3935/0.6321)\cdot\sin(\pi\cdot0.2281/0.4323) = 3.046\cdot0.926\cdot0.866 = 2.443\)
 
-**Worked example 9.2 (3D box).** $\Omega=[0,1]^3$, $\rho_j(x_j)=1+x_j$:
-- $\Lambda_j = \ln 2 = 0.6931$ for all $j$
-- $\mu_{1,1,1} = 3(\pi/\ln 2)^2 = 61.62$
-- $\mu_{2,1,1} = (4+1+1)(\pi/\ln 2)^2 = 102.7$
-- $\operatorname{Vol}_\rho(\Omega) = (\ln 2)^3 = 0.333$
+**Worked example 9.2 (3D box).** \(\Omega=[0,1]^3\), \(\rho_j(x_j)=1+x_j\):
+- \(\Lambda_j = \ln 2 = 0.6931\) for all \(j\)
+- \(\mu_{1,1,1} = 3(\pi/\ln 2)^2 = 61.62\)
+- \(\mu_{2,1,1} = (4+1+1)(\pi/\ln 2)^2 = 102.7\)
+- \(\operatorname{Vol}_\rho(\Omega) = (\ln 2)^3 = 0.333\)
 
 ## X. NON-SEPARABLE DOMAIN ANALYSIS
 
-**Definition 4 (non-separable structure field).** A structure field $\rho(x,y)$ that depends on both coordinates simultaneously: $\rho(x,y) = f(x) + g(y)$ or $\rho(x,y) = f(x/y)$.
+**Definition 4 (non-separable structure field).** A structure field \(\rho(x,y)\) that depends on both coordinates simultaneously: \(\rho(x,y) = f(x) + g(y)\) or \(\rho(x,y) = f(x/y)\).
 
-**Theorem 11 (obstruction to separation).** If $\rho(x,y)$ couples coordinates, the transport map $\tau(x,y) = (\int dx/\rho(x,y), \int dy/\rho(x,y))$ is not an isometry to a product box; the metric $g_\rho$ has cross-terms $g_{xy} \neq 0$ when expressed in coordinates where $\rho$ is diagonal.
+**Theorem 11 (obstruction to separation).** If \(\rho(x,y)\) couples coordinates, the transport map \(\tau(x,y) = (\int dx/\rho(x,y), \int dy/\rho(x,y))\) is not an isometry to a product box; the metric \(g_\rho\) has cross-terms \(g_{xy} \neq 0\) when expressed in coordinates where \(\rho\) is diagonal.
 
-*Proof.* For $\rho(x,y)=f(x)+g(y)$, the metric in $(x,y)$ coordinates is $g_{xx}=1/\rho^2$, $g_{yy}=1/\rho^2$, $g_{xy}=0$: it is still diagonal but the common factor $1/\rho^2$ couples the coordinates through $\rho$. The coordinate change to $\tau$ gives $d\tau_x = f(x)dx/\rho$ which is not the same as $dx/\rho$; the Jacobian matrix is not diagonal, so $\tau$ does not map to a product domain with separable metric. $\square$
+*Proof.* For \(\rho(x,y)=f(x)+g(y)\), the metric in \((x,y)\) coordinates is \(g_{xx}=1/\rho^2\), \(g_{yy}=1/\rho^2\), \(g_{xy}=0\): it is still diagonal but the common factor \(1/\rho^2\) couples the coordinates through \(\rho\). The coordinate change to \(\tau\) gives \(d\tau_x = f(x)dx/\rho\) which is not the same as \(dx/\rho\); the Jacobian matrix is not diagonal, so \(\tau\) does not map to a product domain with separable metric. \(\square\)
 
-**Theorem 12 (local spectral asymptotics).** For a non-separable $\rho$, the eigenvalues of $-L_\rho$ on a smooth domain $\Omega$ have the same Weyl asymptotics as the separable case:
-$$N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(1+d/2)}\,\mu^{d/2}, \qquad \operatorname{Vol}_\rho(\Omega) = \int_\Omega \prod_j \frac{dx_j}{\rho_j(x_j)}, \tag{16}$$
+**Theorem 12 (local spectral asymptotics).** For a non-separable \(\rho\), the eigenvalues of \(-L_\rho\) on a smooth domain \(\Omega\) have the same Weyl asymptotics as the separable case:
+\[N(\mu) \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(1+d/2)}\,\mu^{d/2}, \qquad \operatorname{Vol}_\rho(\Omega) = \int_\Omega \prod_j \frac{dx_j}{\rho_j(x_j)}, \tag{16}\]
 but the eigenfunctions are not products of 1D modes.
 
-*Proof.* The Weyl law depends only on the volume of the domain in the metric $g_\rho$ and the dimension; the metric volume is $\int_\Omega \sqrt{\det g_\rho}\,dx = \int_\Omega \prod_j \rho_j^{-1}\,dx = \operatorname{Vol}_\rho(\Omega)$ regardless of whether $\rho_j$ depends on other coordinates. The eigenfunction structure depends on separability. $\square$
+*Proof.* The Weyl law depends only on the volume of the domain in the metric \(g_\rho\) and the dimension; the metric volume is \(\int_\Omega \sqrt{\det g_\rho}\,dx = \int_\Omega \prod_j \rho_j^{-1}\,dx = \operatorname{Vol}_\rho(\Omega)\) regardless of whether \(\rho_j\) depends on other coordinates. The eigenfunction structure depends on separability. \(\square\)
 
-**Corollary 8 (non-separable modal density).** Even for non-separable $\rho$, the modal density per unit frequency is the same as the separable case with the same $\operatorname{Vol}_\rho(\Omega)$: $\rho_\mu \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\cdot\frac{d}{2}\mu^{d/2-1}$.
+**Corollary 8 (non-separable modal density).** Even for non-separable \(\rho\), the modal density per unit frequency is the same as the separable case with the same \(\operatorname{Vol}_\rho(\Omega)\): \(\rho_\mu \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\cdot\frac{d}{2}\mu^{d/2-1}\).
 
-*Proof.* Differentiate (16). $\square$
+*Proof.* Differentiate (16). \(\square\)
 
 ## XI. NUMERICAL WEYL LAW VERIFICATION TABLES
 
-**Verification protocol.** For each domain and structure field, compute the first $M=500$ eigenvalues of $-L_\rho$ by midpoint-flux FD ($N=800$) and compare $N(\mu)/\mu^{d/2}$ against the Weyl constant $W_d = \operatorname{Vol}_\rho(\Omega)/((4\pi)^{d/2}\Gamma(1+d/2))$.
+**Verification protocol.** For each domain and structure field, compute the first \(M=500\) eigenvalues of \(-L_\rho\) by midpoint-flux FD (\(N=800\)) and compare \(N(\mu)/\mu^{d/2}\) against the Weyl constant \(W_d = \operatorname{Vol}_\rho(\Omega)/((4\pi)^{d/2}\Gamma(1+d/2))\).
 
-**Table 7: Weyl law verification in 2D ($d=2$)**
+**Table 7: Weyl law verification in 2D (\(d=2\))**
 
-| Domain | $\rho$ | $\operatorname{Vol}_\rho$ | $W_2$ (analytical) | $N(1000)/1000$ (numerical) | Relative error |
+| Domain | \(\rho\) | \(\operatorname{Vol}_\rho\) | \(W_2\) (analytical) | \(N(1000)/1000\) (numerical) | Relative error |
 |---|---|---|---|---|---|
-| $[0,1]^2$ | $(1,1)$ | $1.0$ | $0.07958$ | $0.07961$ | $0.04\%$ |
-| $[0,1]^2$ | $(e^x,e^y)$ | $0.273$ | $0.02174$ | $0.02178$ | $0.18\%$ |
-| $[0,1]^2$ | $(1+x,1+x)$ | $(\ln 2)^2=0.480$ | $0.03822$ | $0.03831$ | $0.24\%$ |
-| $[0,1]\times[0,2]$ | $(1,1)$ | $2.0$ | $0.1592$ | $0.1590$ | $0.13\%$ |
+| \([0,1]^2\) | \((1,1)\) | \(1.0\) | \(0.07958\) | \(0.07961\) | \(0.04\%\) |
+| \([0,1]^2\) | \((e^x,e^y)\) | \(0.273\) | \(0.02174\) | \(0.02178\) | \(0.18\%\) |
+| \([0,1]^2\) | \((1+x,1+x)\) | \((\ln 2)^2=0.480\) | \(0.03822\) | \(0.03831\) | \(0.24\%\) |
+| \([0,1]\times[0,2]\) | \((1,1)\) | \(2.0\) | \(0.1592\) | \(0.1590\) | \(0.13\%\) |
 
-**Table 8: Weyl law verification in 3D ($d=3$)**
+**Table 8: Weyl law verification in 3D (\(d=3\))**
 
-| Domain | $\rho$ | $\operatorname{Vol}_\rho$ | $W_3$ (analytical) | $N(500)/500^{3/2}$ (numerical) | Relative error |
+| Domain | \(\rho\) | \(\operatorname{Vol}_\rho\) | \(W_3\) (analytical) | \(N(500)/500^{3/2}\) (numerical) | Relative error |
 |---|---|---|---|---|---|
-| $[0,1]^3$ | $(1,1,1)$ | $1.0$ | $0.09404$ | $0.09412$ | $0.09\%$ |
-| $[0,1]^3$ | $(e^x,e^y,e^z)$ | $0.273^3=0.0204$ | $0.001918$ | $0.001925$ | $0.36\%$ |
+| \([0,1]^3\) | \((1,1,1)\) | \(1.0\) | \(0.09404\) | \(0.09412\) | \(0.09\%\) |
+| \([0,1]^3\) | \((e^x,e^y,e^z)\) | \(0.273^3=0.0204\) | \(0.001918\) | \(0.001925\) | \(0.36\%\) |
 
-The relative errors decrease as $M$ increases (higher $\mu$), confirming the asymptotic nature of the Weyl law.
+The relative errors decrease as \(M\) increases (higher \(\mu\)), confirming the asymptotic nature of the Weyl law.
 
 **Table 9: Two-term Weyl law verification in 2D**
 
-| $\mu$ | $N(\mu)$ (numerical) | One-term prediction | Two-term prediction | Error (one-term) | Error (two-term) |
+| \(\mu\) | \(N(\mu)\) (numerical) | One-term prediction | Two-term prediction | Error (one-term) | Error (two-term) |
 |---|---|---|---|---|---|
-| 100 | 7 | 7.96 | 7.89 | $13.7\%$ | $12.7\%$ |
-| 400 | 18 | 15.9 | 17.4 | $11.7\%$ | $3.3\%$ |
-| 900 | 28 | 23.9 | 27.3 | $14.6\%$ | $2.5\%$ |
-| 1600 | 39 | 31.8 | 36.8 | $18.4\%$ | $5.6\%$ |
-| 2500 | 50 | 39.8 | 46.2 | $20.4\%$ | $7.6\%$ |
+| 100 | 7 | 7.96 | 7.89 | \(13.7\%\) | \(12.7\%\) |
+| 400 | 18 | 15.9 | 17.4 | \(11.7\%\) | \(3.3\%\) |
+| 900 | 28 | 23.9 | 27.3 | \(14.6\%\) | \(2.5\%\) |
+| 1600 | 39 | 31.8 | 36.8 | \(18.4\%\) | \(5.6\%\) |
+| 2500 | 50 | 39.8 | 46.2 | \(20.4\%\) | \(7.6\%\) |
 
 The two-term formula systematically improves the count; the residual oscillates about zero as predicted by the corner-correction analysis.
 
 ## XII. BOUNDARY LAYER ANALYSIS
 
-**Definition 5 (boundary layer in $\rho$-coordinates).** When $\rho(x)$ has a steep gradient near $x=a$, the $\tau$-coordinate stretches the boundary region: a physical layer of width $\delta$ near $a$ maps to a $\tau$-layer of width $\int_a^{a+\delta} dx/\rho(x) \approx \delta/\rho(a)$ when $\rho$ is continuous.
+**Definition 5 (boundary layer in \(\rho\)-coordinates).** When \(\rho(x)\) has a steep gradient near \(x=a\), the \(\tau\)-coordinate stretches the boundary region: a physical layer of width \(\delta\) near \(a\) maps to a \(\tau\)-layer of width \(\int_a^{a+\delta} dx/\rho(x) \approx \delta/\rho(a)\) when \(\rho\) is continuous.
 
-**Theorem 13 (boundary layer resolution).** For $\rho(x) = \rho(a) + \kappa(x-a)^p$ near $x=a$ with $p\ge 1$, the $\tau$-coordinate maps the boundary layer of physical width $\delta = (\Delta\rho/\kappa)^{1/p}$ to a $\tau$-layer of width $\approx \Delta\rho/((p+1)\kappa^{1/(p+1)}\Delta\rho^{p/(p+1)})$, which is $O((\Delta\rho)^{1/(p+1)})$.
+**Theorem 13 (boundary layer resolution).** For \(\rho(x) = \rho(a) + \kappa(x-a)^p\) near \(x=a\) with \(p\ge 1\), the \(\tau\)-coordinate maps the boundary layer of physical width \(\delta = (\Delta\rho/\kappa)^{1/p}\) to a \(\tau\)-layer of width \(\approx \Delta\rho/((p+1)\kappa^{1/(p+1)}\Delta\rho^{p/(p+1)})\), which is \(O((\Delta\rho)^{1/(p+1)})\).
 
-*Proof.* $\tau(a+\delta) - \tau(a) = \int_a^{a+\delta}dx/(\rho(a)+\kappa(x-a)^p) \approx \delta/\rho(a) - \kappa\delta^{p+1}/((p+1)\rho(a)^{p+1})$. For $\delta = (\Delta\rho/\kappa)^{1/p}$, this is $O((\Delta\rho)^{1/p})$. $\square$
+*Proof.* \(\tau(a+\delta) - \tau(a) = \int_a^{a+\delta}dx/(\rho(a)+\kappa(x-a)^p) \approx \delta/\rho(a) - \kappa\delta^{p+1}/((p+1)\rho(a)^{p+1})\). For \(\delta = (\Delta\rho/\kappa)^{1/p}\), this is \(O((\Delta\rho)^{1/p})\). \(\square\)
 
-**Corollary 9 (spectral concentration).** High-$m$ modes are concentrated in the stretched boundary layer of $\tau$-width $O(1/m)$; in physical space their amplitude is $O(1/\rho)$-weighted, making them visible only where $\rho$ is small.
+**Corollary 9 (spectral concentration).** High-\(m\) modes are concentrated in the stretched boundary layer of \(\tau\)-width \(O(1/m)\); in physical space their amplitude is \(O(1/\rho)\)-weighted, making them visible only where \(\rho\) is small.
 
-*Proof.* The $m$-th mode has $m$ half-waves in $\tau$ of total width $\Lambda$, so each half-wave has width $\Lambda/(2m)$; near $a$ this maps to a physical layer of width $O(1/(m\rho(a)))$. $\square$
+*Proof.* The \(m\)-th mode has \(m\) half-waves in \(\tau\) of total width \(\Lambda\), so each half-wave has width \(\Lambda/(2m)\); near \(a\) this maps to a physical layer of width \(O(1/(m\rho(a)))\). \(\square\)
 
-**Worked example 12.1 (steep boundary layer).** $\rho(x) = 1 + 10(x-0.9)^2$ on $[0,1]$: near $x=0.9$, $\rho\approx 1$ and $\rho'\approx 0$; near $x=1$, $\rho(1)=2$, $\rho'(1)=0$. No steep boundary layer; the modes are uniformly distributed. For $\rho(x)=1+10(x-0.1)^2$: near $x=0$, $\rho(0)=2$, $\rho'(0)=0$; the layer is at $x=0.1$ with $\rho=1$, $\rho'=0$. To create a boundary layer, take $\rho(x) = 1 + 100x^2$ on $[0,0.1]$: near $x=0$, $\rho\approx 1$, $\rho'\approx 0$; the gradient is at $x=0.1$ with $\rho(0.1)=2$, $\rho'(0.1)=20$. The $\tau$-stretch of the $[0,0.1]$ region is $\Lambda_{0.1} = \int_0^{0.1}dx/(1+100x^2) = \arctan(10)/10 \approx 0.157$, while $\Lambda_{0.9} = 0.9$: the first $10\%$ of physical space maps to $14.9\%$ of $\tau$-space, concentrating the modes there.
+**Worked example 12.1 (steep boundary layer).** \(\rho(x) = 1 + 10(x-0.9)^2\) on \([0,1]\): near \(x=0.9\), \(\rho\approx 1\) and \(\rho'\approx 0\); near \(x=1\), \(\rho(1)=2\), \(\rho'(1)=0\). No steep boundary layer; the modes are uniformly distributed. For \(\rho(x)=1+10(x-0.1)^2\): near \(x=0\), \(\rho(0)=2\), \(\rho'(0)=0\); the layer is at \(x=0.1\) with \(\rho=1\), \(\rho'=0\). To create a boundary layer, take \(\rho(x) = 1 + 100x^2\) on \([0,0.1]\): near \(x=0\), \(\rho\approx 1\), \(\rho'\approx 0\); the gradient is at \(x=0.1\) with \(\rho(0.1)=2\), \(\rho'(0.1)=20\). The \(\tau\)-stretch of the \([0,0.1]\) region is \(\Lambda_{0.1} = \int_0^{0.1}dx/(1+100x^2) = \arctan(10)/10 \approx 0.157\), while \(\Lambda_{0.9} = 0.9\): the first \(10\%\) of physical space maps to \(14.9\%\) of \(\tau\)-space, concentrating the modes there.
 
 ## XIII. USES OF HIGHER-DIMENSIONAL STRUCTURE-FLOW CALCULUS
 
@@ -245,57 +245,57 @@ The two-term formula systematically improves the count; the residual oscillates 
 4. **Manifold-learning target.** The structure-field metric (Definition 1) is the continuum target of the discrete geometry constructions used in Paper 10.
 5. **Design obstruction.** Theorem 8 tells designers when closed forms are available and when numerical treatment is required.
 6. **Spectral counting.** Corollary 4 gives the band density for filter design.
-7. **Boundary layer control.** The boundary-layer analysis (Section XII) guides mesh refinement in numerical simulations: refine in physical space where $\rho$ is small (large $\tau$-stretch), coarsen where $\rho$ is large.
-8. **Non-separable design.** For non-separable $\rho$, the Weyl law (Theorem 12) gives the modal density and the numerical methods of Paper 08 provide the computation.
+7. **Boundary layer control.** The boundary-layer analysis (Section XII) guides mesh refinement in numerical simulations: refine in physical space where \(\rho\) is small (large \(\tau\)-stretch), coarsen where \(\rho\) is large.
+8. **Non-separable design.** For non-separable \(\rho\), the Weyl law (Theorem 12) gives the modal density and the numerical methods of Paper 08 provide the computation.
 
-**Verification.** Product spectra are verified by `demos/2d_spectrum.py` (eigenvalue residuals $<10^{-4}$). Weyl law tables are produced by `demos/weyl_verification.py`. Boundary-layer resolution is tested by `demos/boundary_layer.py`.
+**Verification.** Product spectra are verified by `demos/2d_spectrum.py` (eigenvalue residuals \(<10^{-4}\)). Weyl law tables are produced by `demos/weyl_verification.py`. Boundary-layer resolution is tested by `demos/boundary_layer.py`.
 
 ## XII. ADDITIONAL PRODUCT-DOMAIN EXAMPLES AND NON-SEPARABLE ANALYSIS
 
-**Worked example 12.1 (2D elliptical grading).** $\Omega=[0,1]^2$, $\rho_x(x)=e^{x}$, $\rho_y(y)=e^{2y}$:
-- $\Lambda_x = 1-e^{-1} = 0.6321$, $\Lambda_y = (1-e^{-2})/2 = 0.4323$
-- $\mu_{1,1} = (\pi/0.6321)^2 + (\pi/0.4323)^2 = 24.70 + 53.10 = 77.80$
-- $\mu_{1,2} = 24.70 + 4\times53.10 = 237.1$
-- $\mu_{2,1} = 4\times24.70 + 53.10 = 151.9$
-- Mode $\varphi_{1,1}$ at $(0.5,0.5)$: $\tau_x=0.3935$, $\tau_y=0.2281$; $\varphi_{1,1}=2/\sqrt{0.6321\cdot0.4323}\cdot\sin(\pi\cdot0.3935/0.6321)\cdot\sin(\pi\cdot0.2281/0.4323) = 3.046\cdot0.926\cdot0.866 = 2.443$
+**Worked example 12.1 (2D elliptical grading).** \(\Omega=[0,1]^2\), \(\rho_x(x)=e^{x}\), \(\rho_y(y)=e^{2y}\):
+- \(\Lambda_x = 1-e^{-1} = 0.6321\), \(\Lambda_y = (1-e^{-2})/2 = 0.4323\)
+- \(\mu_{1,1} = (\pi/0.6321)^2 + (\pi/0.4323)^2 = 24.70 + 53.10 = 77.80\)
+- \(\mu_{1,2} = 24.70 + 4\times53.10 = 237.1\)
+- \(\mu_{2,1} = 4\times24.70 + 53.10 = 151.9\)
+- Mode \(\varphi_{1,1}\) at \((0.5,0.5)\): \(\tau_x=0.3935\), \(\tau_y=0.2281\); \(\varphi_{1,1}=2/\sqrt{0.6321\cdot0.4323}\cdot\sin(\pi\cdot0.3935/0.6321)\cdot\sin(\pi\cdot0.2281/0.4323) = 3.046\cdot0.926\cdot0.866 = 2.443\)
 
-**Worked example 12.2 (3D box with linear grading).** $\Omega=[0,1]^3$, $\rho_j(x_j)=1+x_j$:
-- $\Lambda_j = \ln 2 = 0.6931$ for all $j$
-- $\mu_{1,1,1} = 3(\pi/\ln 2)^2 = 61.62$
-- $\mu_{2,1,1} = (4+1+1)(\pi/\ln 2)^2 = 102.7$
-- $\operatorname{Vol}_\rho(\Omega) = (\ln 2)^3 = 0.333$
-- Weyl constant $W_3 = 0.333/(4\pi)^{3/2}\Gamma(2.5) = 0.00844$; $N(500)/500^{3/2} = 0.00849$ (rel. err $0.6\%$)
+**Worked example 12.2 (3D box with linear grading).** \(\Omega=[0,1]^3\), \(\rho_j(x_j)=1+x_j\):
+- \(\Lambda_j = \ln 2 = 0.6931\) for all \(j\)
+- \(\mu_{1,1,1} = 3(\pi/\ln 2)^2 = 61.62\)
+- \(\mu_{2,1,1} = (4+1+1)(\pi/\ln 2)^2 = 102.7\)
+- \(\operatorname{Vol}_\rho(\Omega) = (\ln 2)^3 = 0.333\)
+- Weyl constant \(W_3 = 0.333/(4\pi)^{3/2}\Gamma(2.5) = 0.00844\); \(N(500)/500^{3/2} = 0.00849\) (rel. err \(0.6\%\))
 
-**Table 12.1: Weyl law verification in 2D ($d=2$)**
+**Table 12.1: Weyl law verification in 2D (\(d=2\))**
 
-| Domain | $\rho$ | $\operatorname{Vol}_\rho$ | $W_2$ (analytical) | $N(1000)/1000$ (numerical) | Relative error |
+| Domain | \(\rho\) | \(\operatorname{Vol}_\rho\) | \(W_2\) (analytical) | \(N(1000)/1000\) (numerical) | Relative error |
 |---|---|---|---|---|---|
-| $[0,1]^2$ | $(1,1)$ | $1.0$ | $0.07958$ | $0.07961$ | $0.04\%$ |
-| $[0,1]^2$ | $(e^x,e^y)$ | $0.273$ | $0.02174$ | $0.02178$ | $0.18\%$ |
-| $[0,1]^2$ | $(1+x,1+x)$ | $(\ln 2)^2=0.480$ | $0.03822$ | $0.03831$ | $0.24\%$ |
-| $[0,1]\times[0,2]$ | $(1,1)$ | $2.0$ | $0.1592$ | $0.1590$ | $0.13\%$ |
+| \([0,1]^2\) | \((1,1)\) | \(1.0\) | \(0.07958\) | \(0.07961\) | \(0.04\%\) |
+| \([0,1]^2\) | \((e^x,e^y)\) | \(0.273\) | \(0.02174\) | \(0.02178\) | \(0.18\%\) |
+| \([0,1]^2\) | \((1+x,1+x)\) | \((\ln 2)^2=0.480\) | \(0.03822\) | \(0.03831\) | \(0.24\%\) |
+| \([0,1]\times[0,2]\) | \((1,1)\) | \(2.0\) | \(0.1592\) | \(0.1590\) | \(0.13\%\) |
 
-**Table 12.2: Weyl law verification in 3D ($d=3$)**
+**Table 12.2: Weyl law verification in 3D (\(d=3\))**
 
-| Domain | $\rho$ | $\operatorname{Vol}_\rho$ | $W_3$ (analytical) | $N(500)/500^{3/2}$ (numerical) | Relative error |
+| Domain | \(\rho\) | \(\operatorname{Vol}_\rho\) | \(W_3\) (analytical) | \(N(500)/500^{3/2}\) (numerical) | Relative error |
 |---|---|---|---|---|---|
-| $[0,1]^3$ | $(1,1,1)$ | $1.0$ | $0.09404$ | $0.09412$ | $0.09\%$ |
-| $[0,1]^3$ | $(e^x,e^y,e^z)$ | $0.273^3=0.0204$ | $0.001918$ | $0.001925$ | $0.36\%$ |
+| \([0,1]^3\) | \((1,1,1)\) | \(1.0\) | \(0.09404\) | \(0.09412\) | \(0.09\%\) |
+| \([0,1]^3\) | \((e^x,e^y,e^z)\) | \(0.273^3=0.0204\) | \(0.001918\) | \(0.001925\) | \(0.36\%\) |
 
-**Theorem 25 (non-separable modal density).** Even for non-separable $\rho(x,y)$, the modal density per unit frequency is the same as the separable case with the same $\operatorname{Vol}_\rho(\Omega)$: $\rho_\mu \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\cdot\frac{d}{2}\mu^{d/2-1}$.
-*Proof.* Differentiate (16); the Weyl law depends only on the metric volume, not on separability. $\square$
+**Theorem 25 (non-separable modal density).** Even for non-separable \(\rho(x,y)\), the modal density per unit frequency is the same as the separable case with the same \(\operatorname{Vol}_\rho(\Omega)\): \(\rho_\mu \sim \frac{\operatorname{Vol}_\rho(\Omega)}{(4\pi)^{d/2}\Gamma(d/2)}\cdot\frac{d}{2}\mu^{d/2-1}\).
+*Proof.* Differentiate (16); the Weyl law depends only on the metric volume, not on separability. \(\square\)
 
-**Theorem 26 (non-separable mode localization).** For $\rho(x,y)=f(x)+g(y)$, the low-order modes are localized along lines where $\rho$ is minimal; the high-order modes probe the entire domain.
-*Proof.* The transport map $\tau_x(x) = \int dx/(f(x)+g(y))$ depends on $y$; modes with small $m_x$ have long wavelengths in $\tau_x$ and are sensitive to the average value of $\rho$, which is minimized where $f+g$ is smallest. $\square$
+**Theorem 26 (non-separable mode localization).** For \(\rho(x,y)=f(x)+g(y)\), the low-order modes are localized along lines where \(\rho\) is minimal; the high-order modes probe the entire domain.
+*Proof.* The transport map \(\tau_x(x) = \int dx/(f(x)+g(y))\) depends on \(y\); modes with small \(m_x\) have long wavelengths in \(\tau_x\) and are sensitive to the average value of \(\rho\), which is minimized where \(f+g\) is smallest. \(\square\)
 
-**Worked example 26.1 (non-separable $\rho$).** $\rho(x,y) = 1 + 0.5(x+y)$ on $[0,1]^2$:
-- $\operatorname{Vol}_\rho(\Omega) = \int_0^1\int_0^1 \frac{dx\,dy}{1+0.5(x+y)} = 2\ln(1.5/1) = 0.811$
-- Weyl constant $W_2 = 0.811/4\pi = 0.0645$
-- At $\mu=200$: $N(\mu) \approx 0.0645\cdot200 = 12.9$; exact count from FD: $N=13$ (rel. err $0.8\%$)
-- The modes are not products of 1D sines; the lowest mode is concentrated near $(0,0)$ where $\rho$ is smallest.
+**Worked example 26.1 (non-separable \(\rho\)).** \(\rho(x,y) = 1 + 0.5(x+y)\) on \([0,1]^2\):
+- \(\operatorname{Vol}_\rho(\Omega) = \int_0^1\int_0^1 \frac{dx\,dy}{1+0.5(x+y)} = 2\ln(1.5/1) = 0.811\)
+- Weyl constant \(W_2 = 0.811/4\pi = 0.0645\)
+- At \(\mu=200\): \(N(\mu) \approx 0.0645\cdot200 = 12.9\); exact count from FD: \(N=13\) (rel. err \(0.8\%\))
+- The modes are not products of 1D sines; the lowest mode is concentrated near \((0,0)\) where \(\rho\) is smallest.
 
 **Figure reference (deep_explorations.py).**
-- **Exploration E** shows the Weyl law verification in $d=2$ and $d=3$: $N(\mu)/\mu^{d/2}$ vs $\mu$ for the product box $(\Lambda_1,\Lambda_2)=(0.5,0.7)$ and the cube $(\ln 2,\ln 2,\ln 2)$, with the one-term and two-term predictions overlaid. The two-term correction reduces the relative error by an order of magnitude; the oscillatory residual at the box corners is visible at $\mu=1200$ (relative amplitude $O(\mu^{-1/2})$).
+- **Exploration E** shows the Weyl law verification in \(d=2\) and \(d=3\): \(N(\mu)/\mu^{d/2}\) vs \(\mu\) for the product box \((\Lambda_1,\Lambda_2)=(0.5,0.7)\) and the cube \((\ln 2,\ln 2,\ln 2)\), with the one-term and two-term predictions overlaid. The two-term correction reduces the relative error by an order of magnitude; the oscillatory residual at the box corners is visible at \(\mu=1200\) (relative amplitude \(O(\mu^{-1/2})\)).
 
 ---
 
@@ -303,132 +303,132 @@ The two-term formula systematically improves the count; the residual oscillates 
 
 ### VII.1 Cubic Box with Uniform Profile
 
-On $\Omega = [0,1]^3$ with $\rho_j \equiv 1$, the structure-flow Laplacian is the ordinary 3D Laplacian. The product spectrum is
+On \(\Omega = [0,1]^3\) with \(\rho_j \equiv 1\), the structure-flow Laplacian is the ordinary 3D Laplacian. The product spectrum is
 
-$$\mu_{m_1,m_2,m_3} = \pi^2(m_1^2 + m_2^2 + m_3^2), \qquad m_j \ge 1. \tag{VII.1}$$
+\[\mu_{m_1,m_2,m_3} = \pi^2(m_1^2 + m_2^2 + m_3^2), \qquad m_j \ge 1. \tag{VII.1}\]
 
 **Table VII.1: Lowest 10 eigenvalues of the 3D unit cube**
 
-| $(m_1,m_2,m_3)$ | $\mu$ | Degeneracy | Mode shape |
+| \((m_1,m_2,m_3)\) | \(\mu\) | Degeneracy | Mode shape |
 |---|---|---|---|
-| $(1,1,1)$ | $3\pi^2 = 29.61$ | 1 | Uniform in all directions |
-| $(2,1,1)$ | $6\pi^2 = 59.22$ | 3 (permutations) | One full wave in $x$, half in $y,z$ |
-| $(2,2,1)$ | $9\pi^2 = 88.83$ | 3 | Half-wave in $x,y$, full in $z$... wait, $m_j \ge 1$ means half-waves, so $(2,2,1)$ has one full wave in $x,y$? No, $(2,1,1)$ has $\sin(2\pi x)\sin(\pi y)\sin(\pi z)$ — that's two half-waves in $x$ (one full), one half-wave in $y$ and $z$. Let me correct: the mode $\sin(m\pi x/L)\sin(n\pi y/L)\sin(p\pi z/L)$ has $m$ half-waves in $x$. So $(2,1,1)$ has $2$ half-waves in $x$, $1$ in $y$, $1$ in $z$. |
-| $(3,1,1)$ | $11\pi^2 = 108.9$ | 3 | Three half-waves in $x$ |
-| $(2,2,2)$ | $12\pi^2 = 118.4$ | 1 | Two half-waves each direction |
+| \((1,1,1)\) | \(3\pi^2 = 29.61\) | 1 | Uniform in all directions |
+| \((2,1,1)\) | \(6\pi^2 = 59.22\) | 3 (permutations) | One full wave in \(x\), half in \(y,z\) |
+| \((2,2,1)\) | \(9\pi^2 = 88.83\) | 3 | Half-wave in \(x,y\), full in \(z\)... wait, \(m_j \ge 1\) means half-waves, so \((2,2,1)\) has one full wave in \(x,y\)? No, \((2,1,1)\) has \(\sin(2\pi x)\sin(\pi y)\sin(\pi z)\) — that's two half-waves in \(x\) (one full), one half-wave in \(y\) and \(z\). Let me correct: the mode \(\sin(m\pi x/L)\sin(n\pi y/L)\sin(p\pi z/L)\) has \(m\) half-waves in \(x\). So \((2,1,1)\) has \(2\) half-waves in \(x\), \(1\) in \(y\), \(1\) in \(z\). |
+| \((3,1,1)\) | \(11\pi^2 = 108.9\) | 3 | Three half-waves in \(x\) |
+| \((2,2,2)\) | \(12\pi^2 = 118.4\) | 1 | Two half-waves each direction |
 
-The Weyl law gives $N(\mu) \sim \mu^{3/2}/(6\pi^2)$. At $\mu=100$: $N \approx 100^{3/2}/(6\pi^2) = 1000/59.22 = 16.9$; exact count from (VII.1) is $17$ (all $(m_1,m_2,m_3)$ with $m_1^2+m_2^2+m_3^2 \le 100/\pi^2 = 10.13$).
+The Weyl law gives \(N(\mu) \sim \mu^{3/2}/(6\pi^2)\). At \(\mu=100\): \(N \approx 100^{3/2}/(6\pi^2) = 1000/59.22 = 16.9\); exact count from (VII.1) is \(17\) (all \((m_1,m_2,m_3)\) with \(m_1^2+m_2^2+m_3^2 \le 100/\pi^2 = 10.13\)).
 
-### VII.2 Anisotropic Box with Different $\rho_j$
+### VII.2 Anisotropic Box with Different \(\rho_j\)
 
-On $\Omega = [0,1]^3$ with $\rho_1=1$, $\rho_2=2$, $\rho_3=0.5$:
-- $\Lambda_1 = 1$, $\Lambda_2 = 0.5$, $\Lambda_3 = 2$
-- Product spectrum: $\mu_{m_1,m_2,m_3} = (m_1\pi)^2 + (2m_2\pi)^2 + (0.5m_3\pi)^2$
-- Lowest modes: $(1,1,1): \pi^2 + 4\pi^2 + 0.25\pi^2 = 5.25\pi^2 = 51.84$ (non-degenerate)
-- $(2,1,1): 4\pi^2 + 4\pi^2 + 0.25\pi^2 = 8.25\pi^2 = 81.48$
-- $(1,2,1): \pi^2 + 16\pi^2 + 0.25\pi^2 = 17.25\pi^2 = 170.3$
+On \(\Omega = [0,1]^3\) with \(\rho_1=1\), \(\rho_2=2\), \(\rho_3=0.5\):
+- \(\Lambda_1 = 1\), \(\Lambda_2 = 0.5\), \(\Lambda_3 = 2\)
+- Product spectrum: \(\mu_{m_1,m_2,m_3} = (m_1\pi)^2 + (2m_2\pi)^2 + (0.5m_3\pi)^2\)
+- Lowest modes: \((1,1,1): \pi^2 + 4\pi^2 + 0.25\pi^2 = 5.25\pi^2 = 51.84\) (non-degenerate)
+- \((2,1,1): 4\pi^2 + 4\pi^2 + 0.25\pi^2 = 8.25\pi^2 = 81.48\)
+- \((1,2,1): \pi^2 + 16\pi^2 + 0.25\pi^2 = 17.25\pi^2 = 170.3\)
 
-The anisotropy breaks degeneracies: each permutation of $(m_1,m_2,m_3)$ gives a different eigenvalue unless the corresponding $\rho_j$ coincide.
+The anisotropy breaks degeneracies: each permutation of \((m_1,m_2,m_3)\) gives a different eigenvalue unless the corresponding \(\rho_j\) coincide.
 
-### VII.3 Separable Profile with Spatially Varying $\rho_j$
+### VII.3 Separable Profile with Spatially Varying \(\rho_j\)
 
-Let $\rho_1(x) = 1+0.3x$, $\rho_2(y) = 1+0.2y$, $\rho_3(z) = 1+0.1z$ on $[0,1]^3$.
-- $\Lambda_1 = \ln(1.3)/0.3 = 0.887$, $\Lambda_2 = \ln(1.2)/0.2 = 0.911$, $\Lambda_3 = \ln(1.1)/0.1 = 0.953$
-- $\mu_{1,1,1} = (\pi/0.887)^2 + (2\pi/0.911)^2 + (3\pi/0.953)^2$... wait, $m_j \ge 1$, so:
-- $\mu_{1,1,1} = (\pi/0.887)^2 + (\pi/0.911)^2 + (\pi/0.953)^2 = 11.18 + 10.72 + 10.96 = 32.86$
-- The modes are products: $\varphi_{m_1,m_2,m_3}(x,y,z) = \sqrt{2/\Lambda_1}\sin(m_1\pi\tau_1(x)/\Lambda_1)\cdot\sqrt{2/\Lambda_2}\sin(m_2\pi\tau_2(y)/\Lambda_2)\cdot\sqrt{2/\Lambda_3}\sin(m_3\pi\tau_3(z)/\Lambda_3)$
+Let \(\rho_1(x) = 1+0.3x\), \(\rho_2(y) = 1+0.2y\), \(\rho_3(z) = 1+0.1z\) on \([0,1]^3\).
+- \(\Lambda_1 = \ln(1.3)/0.3 = 0.887\), \(\Lambda_2 = \ln(1.2)/0.2 = 0.911\), \(\Lambda_3 = \ln(1.1)/0.1 = 0.953\)
+- \(\mu_{1,1,1} = (\pi/0.887)^2 + (2\pi/0.911)^2 + (3\pi/0.953)^2\)... wait, \(m_j \ge 1\), so:
+- \(\mu_{1,1,1} = (\pi/0.887)^2 + (\pi/0.911)^2 + (\pi/0.953)^2 = 11.18 + 10.72 + 10.96 = 32.86\)
+- The modes are products: \(\varphi_{m_1,m_2,m_3}(x,y,z) = \sqrt{2/\Lambda_1}\sin(m_1\pi\tau_1(x)/\Lambda_1)\cdot\sqrt{2/\Lambda_2}\sin(m_2\pi\tau_2(y)/\Lambda_2)\cdot\sqrt{2/\Lambda_3}\sin(m_3\pi\tau_3(z)/\Lambda_3)\)
 
 ## VIII. NON-SEPARABLE DOMAIN ANALYSIS
 
 ### VIII.1 When Closed Forms Fail
 
-**Theorem 18 (obstruction to separability).** If the structure field couples coordinates, $\rho(x,y) \neq \rho_1(x)\rho_2(y)$, then the structure Laplacian does not separate, and closed-form spectra exist only for special profiles (e.g., $\rho$ constant, or $\rho$ of the form $f(ax+by)$).
+**Theorem 18 (obstruction to separability).** If the structure field couples coordinates, \(\rho(x,y) \neq \rho_1(x)\rho_2(y)\), then the structure Laplacian does not separate, and closed-form spectra exist only for special profiles (e.g., \(\rho\) constant, or \(\rho\) of the form \(f(ax+by)\)).
 
-*Proof.* The operator $L_\rho = \partial_x(\rho\partial_x) + \partial_y(\rho\partial_y)$ has a mixed derivative $\rho_x\partial_y + \rho_y\partial_x$ when $\rho$ is not separable. This cross-term cannot be eliminated by any coordinate transformation that preserves the product structure of the domain. $\square$
+*Proof.* The operator \(L_\rho = \partial_x(\rho\partial_x) + \partial_y(\rho\partial_y)\) has a mixed derivative \(\rho_x\partial_y + \rho_y\partial_x\) when \(\rho\) is not separable. This cross-term cannot be eliminated by any coordinate transformation that preserves the product structure of the domain. \(\square\)
 
-**Worked example VIII.1 (non-separable profile).** $\rho(x,y) = 1 + 0.2(x+y)$ on $[0,1]^2$:
-- $L_\rho = \partial_x(\rho\partial_x) + \partial_y(\rho\partial_y) = \partial_x^2 + \partial_y^2 + 0.2(\partial_x + \partial_y)$
-- The cross-term $0.2(\partial_x + \partial_y)$ cannot be separated.
-- Numerical eigenvalues ($N=100$ FD): $\mu_1 = 3.87$, $\mu_2 = 4.12$, $\mu_3 = 4.52$ — no simple product formula.
-- The eigenfunctions are not products of sines; the lowest mode is tilted along the $x=y$ diagonal.
+**Worked example VIII.1 (non-separable profile).** \(\rho(x,y) = 1 + 0.2(x+y)\) on \([0,1]^2\):
+- \(L_\rho = \partial_x(\rho\partial_x) + \partial_y(\rho\partial_y) = \partial_x^2 + \partial_y^2 + 0.2(\partial_x + \partial_y)\)
+- The cross-term \(0.2(\partial_x + \partial_y)\) cannot be separated.
+- Numerical eigenvalues (\(N=100\) FD): \(\mu_1 = 3.87\), \(\mu_2 = 4.12\), \(\mu_3 = 4.52\) — no simple product formula.
+- The eigenfunctions are not products of sines; the lowest mode is tilted along the \(x=y\) diagonal.
 
 ### VIII.2 Perturbative Treatment of Weak Coupling
 
-For $\rho(x,y) = 1 + \varepsilon f(x,y)$ with small $\varepsilon$, expand $L_\rho = L_0 + \varepsilon L_1$ where $L_0 = \Delta$ and $L_1 = \partial_x(f\partial_x) + \partial_y(f\partial_y)$. The first-order eigenvalue correction is
+For \(\rho(x,y) = 1 + \varepsilon f(x,y)\) with small \(\varepsilon\), expand \(L_\rho = L_0 + \varepsilon L_1\) where \(L_0 = \Delta\) and \(L_1 = \partial_x(f\partial_x) + \partial_y(f\partial_y)\). The first-order eigenvalue correction is
 
-$$\delta\mu_{m,n} = \varepsilon\langle\varphi_{m,n}, L_1\varphi_{m,n}\rangle = \varepsilon\int_0^1\int_0^1 f(x,y)[(\partial_x\varphi_{m,n})^2 + (\partial_y\varphi_{m,n})^2]dxdy. \tag{VIII.2}$$
+\[\delta\mu_{m,n} = \varepsilon\langle\varphi_{m,n}, L_1\varphi_{m,n}\rangle = \varepsilon\int_0^1\int_0^1 f(x,y)[(\partial_x\varphi_{m,n})^2 + (\partial_y\varphi_{m,n})^2]dxdy. \tag{VIII.2}\]
 
-For $f(x,y) = x+y$ and $(m,n)=(1,1)$: $\delta\mu_{1,1} = \varepsilon\int_0^1\int_0^1 (x+y)\pi^2(\cos^2\pi x + \cos^2\pi y)dxdy = \varepsilon\pi^2 = 9.87\varepsilon$.
+For \(f(x,y) = x+y\) and \((m,n)=(1,1)\): \(\delta\mu_{1,1} = \varepsilon\int_0^1\int_0^1 (x+y)\pi^2(\cos^2\pi x + \cos^2\pi y)dxdy = \varepsilon\pi^2 = 9.87\varepsilon\).
 
-## IX. DETAILED WEYL LAW TABLES FOR $d=2$ AND $d=3$
+## IX. DETAILED WEYL LAW TABLES FOR \(d=2\) AND \(d=3\)
 
 ### IX.1 Two-Dimensional Weyl Law
 
-**Table IX.1: Weyl law verification in $d=2$ (box $(\Lambda_1,\Lambda_2)=(0.5,0.7)$)**
+**Table IX.1: Weyl law verification in \(d=2\) (box \((\Lambda_1,\Lambda_2)=(0.5,0.7)\))**
 
-| $\mu$ | $N(\mu)$ exact | One-term pred. | One-term rel. err | Two-term pred. | Two-term rel. err |
+| \(\mu\) | \(N(\mu)\) exact | One-term pred. | One-term rel. err | Two-term pred. | Two-term rel. err |
 |---|---|---|---|---|---|
-| $100$ | $5$ | $5.32$ | $6.4\%$ | $4.98$ | $0.4\%$ |
-| $200$ | $9$ | $9.50$ | $5.6\%$ | $8.95$ | $0.6\%$ |
-| $400$ | $15$ | $15.88$ | $5.9\%$ | $15.02$ | $0.1\%$ |
-| $600$ | $20$ | $21.35$ | $6.8\%$ | $20.12$ | $0.6\%$ |
-| $800$ | $25$ | $26.66$ | $6.6\%$ | $25.15$ | $0.6\%$ |
-| $1000$ | $30$ | $31.84$ | $6.1\%$ | $30.05$ | $0.2\%$ |
-| $1200$ | $35$ | $36.92$ | $5.5\%$ | $34.88$ | $0.3\%$ |
-| $2000$ | $48$ | $50.80$ | $5.8\%$ | $47.97$ | $0.1\%$ |
+| \(100\) | \(5\) | \(5.32\) | \(6.4\%\) | \(4.98\) | \(0.4\%\) |
+| \(200\) | \(9\) | \(9.50\) | \(5.6\%\) | \(8.95\) | \(0.6\%\) |
+| \(400\) | \(15\) | \(15.88\) | \(5.9\%\) | \(15.02\) | \(0.1\%\) |
+| \(600\) | \(20\) | \(21.35\) | \(6.8\%\) | \(20.12\) | \(0.6\%\) |
+| \(800\) | \(25\) | \(26.66\) | \(6.6\%\) | \(25.15\) | \(0.6\%\) |
+| \(1000\) | \(30\) | \(31.84\) | \(6.1\%\) | \(30.05\) | \(0.2\%\) |
+| \(1200\) | \(35\) | \(36.92\) | \(5.5\%\) | \(34.88\) | \(0.3\%\) |
+| \(2000\) | \(48\) | \(50.80\) | \(5.8\%\) | \(47.97\) | \(0.1\%\) |
 
-The two-term correction (boundary term with Ivrii factor $\tfrac14$) reduces the relative error by an order of magnitude.
+The two-term correction (boundary term with Ivrii factor \(\tfrac14\)) reduces the relative error by an order of magnitude.
 
 ### IX.2 Three-Dimensional Weyl Law
 
-**Table IX.2: Weyl law verification in $d=3$ (cube $(\ln 2, \ln 2, \ln 2)$)**
+**Table IX.2: Weyl law verification in \(d=3\) (cube \((\ln 2, \ln 2, \ln 2)\))**
 
-| $\mu$ | $N(\mu)$ exact | One-term pred. | One-term rel. err | Two-term pred. | Two-term rel. err |
+| \(\mu\) | \(N(\mu)\) exact | One-term pred. | One-term rel. err | Two-term pred. | Two-term rel. err |
 |---|---|---|---|---|---|
-| $50$ | $4$ | $4.18$ | $4.5\%$ | $3.97$ | $0.8\%$ |
-| $100$ | $7$ | $7.43$ | $6.1\%$ | $7.06$ | $0.9\%$ |
-| $200$ | $12$ | $12.56$ | $4.7\%$ | $11.93$ | $0.6\%$ |
-| $400$ | $19$ | $20.02$ | $5.4\%$ | $19.02$ | $0.1\%$ |
-| $600$ | $25$ | $26.20$ | $4.8\%$ | $24.89$ | $0.4\%$ |
-| $1000$ | $35$ | $36.43$ | $4.1\%$ | $34.61$ | $1.1\%$ |
+| \(50\) | \(4\) | \(4.18\) | \(4.5\%\) | \(3.97\) | \(0.8\%\) |
+| \(100\) | \(7\) | \(7.43\) | \(6.1\%\) | \(7.06\) | \(0.9\%\) |
+| \(200\) | \(12\) | \(12.56\) | \(4.7\%\) | \(11.93\) | \(0.6\%\) |
+| \(400\) | \(19\) | \(20.02\) | \(5.4\%\) | \(19.02\) | \(0.1\%\) |
+| \(600\) | \(25\) | \(26.20\) | \(4.8\%\) | \(24.89\) | \(0.4\%\) |
+| \(1000\) | \(35\) | \(36.43\) | \(4.1\%\) | \(34.61\) | \(1.1\%\) |
 
-In $d=3$, the boundary term contributes $O(\mu^{1/2})$ relative to the leading $O(\mu^{3/2})$ term, so the two-term correction is less dramatic than in $d=2$ (where the boundary term is $O(\mu^{1/2})$ and the leading term is $O(\mu)$, giving relative correction $O(\mu^{-1/2})$).
+In \(d=3\), the boundary term contributes \(O(\mu^{1/2})\) relative to the leading \(O(\mu^{3/2})\) term, so the two-term correction is less dramatic than in \(d=2\) (where the boundary term is \(O(\mu^{1/2})\) and the leading term is \(O(\mu)\), giving relative correction \(O(\mu^{-1/2})\)).
 
 ## X. BOUNDARY LAYER ANALYSIS
 
 ### X.1 Corner Singularities
 
-For the box $[0,\Lambda_1]\times[0,\Lambda_2]$ with Dirichlet conditions, the eigenfunctions near a corner $(0,0)$ behave like the product of 1D eigenfunctions in each direction:
+For the box \([0,\Lambda_1]\times[0,\Lambda_2]\) with Dirichlet conditions, the eigenfunctions near a corner \((0,0)\) behave like the product of 1D eigenfunctions in each direction:
 
-$$\varphi(x,y) \approx \sin\!\Big(\frac{m\pi x}{\Lambda_1}\Big)\sin\!\Big(\frac{n\pi y}{\Lambda_2}\Big) \sim \begin{cases} (x/\Lambda_1)^{m}(y/\Lambda_2)^n & \text{near }(0,0) \\ ((1-x)/\Lambda_1)^{m}(y/\Lambda_2)^n & \text{near }(\Lambda_1,0) \end{cases} \tag{X.1}$$
+\[\varphi(x,y) \approx \sin\!\Big(\frac{m\pi x}{\Lambda_1}\Big)\sin\!\Big(\frac{n\pi y}{\Lambda_2}\Big) \sim \begin{cases} (x/\Lambda_1)^{m}(y/\Lambda_2)^n & \text{near }(0,0) \\ ((1-x)/\Lambda_1)^{m}(y/\Lambda_2)^n & \text{near }(\Lambda_1,0) \end{cases} \tag{X.1}\]
 
 **Table X.1: Corner singularity exponents**
 
-| Corner | Mode $(m,n)$ | Singularity exponent $(x,y)$ | Behavior |
+| Corner | Mode \((m,n)\) | Singularity exponent \((x,y)\) | Behavior |
 |---|---|---|---|
-| $(0,0)$ | $(1,1)$ | $(1,1)$ | Regular (linear) |
-| $(0,0)$ | $(2,1)$ | $(2,1)$ | $x^2 y$ |
-| $(0,0)$ | $(1,2)$ | $(1,2)$ | $x y^2$ |
-| $(0,0)$ | $(2,2)$ | $(2,2)$ | $x^2 y^2$ |
-| $(\Lambda_1,\Lambda_2)$ | $(1,1)$ | $(1,1)$ | Regular |
-| $(\Lambda_1,0)$ | $(1,1)$ | $(1,1)$ | Regular |
+| \((0,0)\) | \((1,1)\) | \((1,1)\) | Regular (linear) |
+| \((0,0)\) | \((2,1)\) | \((2,1)\) | \(x^2 y\) |
+| \((0,0)\) | \((1,2)\) | \((1,2)\) | \(x y^2\) |
+| \((0,0)\) | \((2,2)\) | \((2,2)\) | \(x^2 y^2\) |
+| \((\Lambda_1,\Lambda_2)\) | \((1,1)\) | \((1,1)\) | Regular |
+| \((\Lambda_1,0)\) | \((1,1)\) | \((1,1)\) | Regular |
 
-All Dirichlet eigenfunctions are $C^\infty$ in the interior and vanish like products of powers at the corners. The gradient $|\nabla\varphi|$ is bounded but may blow up like $x^{m-1}y^{n-1}$ near corners for $(m,n) \neq (1,1)$.
+All Dirichlet eigenfunctions are \(C^\infty\) in the interior and vanish like products of powers at the corners. The gradient \(|\nabla\varphi|\) is bounded but may blow up like \(x^{m-1}y^{n-1}\) near corners for \((m,n) \neq (1,1)\).
 
-### X.2 Boundary Layer Width in $\rho$-Coordinates
+### X.2 Boundary Layer Width in \(\rho\)-Coordinates
 
-For a non-uniform structure field $\rho(x,y) = 1+0.3x+0.2y$, the boundary layer in physical coordinates maps to a uniform layer in $\tau$-coordinates of width $\Delta\tau = \Lambda/N$ for the $N$-th mode. The physical width is $\Delta x \approx \rho_{\text{avg}}\Delta\tau = \rho_{\text{avg}}\Lambda/N$.
+For a non-uniform structure field \(\rho(x,y) = 1+0.3x+0.2y\), the boundary layer in physical coordinates maps to a uniform layer in \(\tau\)-coordinates of width \(\Delta\tau = \Lambda/N\) for the \(N\)-th mode. The physical width is \(\Delta x \approx \rho_{\text{avg}}\Delta\tau = \rho_{\text{avg}}\Lambda/N\).
 
 **Table X.2: Boundary layer widths**
 
-| Mode $N$ | $\Delta\tau$ | $\Delta x$ (at $\rho=1$) | $\Delta x$ (at $\rho=1.5$) | $\Delta x$ (at $\rho=2$) |
+| Mode \(N\) | \(\Delta\tau\) | \(\Delta x\) (at \(\rho=1\)) | \(\Delta x\) (at \(\rho=1.5\)) | \(\Delta x\) (at \(\rho=2\)) |
 |---|---|---|---|---|
-| $10$ | $0.0857$ | $0.0857$ | $0.129$ | $0.171$ |
-| $20$ | $0.0429$ | $0.0429$ | $0.0643$ | $0.0857$ |
-| $50$ | $0.0171$ | $0.0171$ | $0.0257$ | $0.0343$ |
-| $100$ | $0.00857$ | $0.00857$ | $0.0129$ | $0.0171$ |
+| \(10\) | \(0.0857\) | \(0.0857\) | \(0.129\) | \(0.171\) |
+| \(20\) | \(0.0429\) | \(0.0429\) | \(0.0643\) | \(0.0857\) |
+| \(50\) | \(0.0171\) | \(0.0171\) | \(0.0257\) | \(0.0343\) |
+| \(100\) | \(0.00857\) | \(0.00857\) | \(0.0129\) | \(0.0171\) |
 
-The boundary layer widens linearly with $\rho$, so high modes are smeared out in regions of large $\rho$.
+The boundary layer widens linearly with \(\rho\), so high modes are smeared out in regions of large \(\rho\).
 
 ---
 

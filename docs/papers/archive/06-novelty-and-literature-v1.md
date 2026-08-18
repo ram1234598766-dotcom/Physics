@@ -4,7 +4,7 @@
 
 ## 1. What SFC claims
 
-Structure-Flow Calculus is a *unified framework* in which a single structure field $\rho$ yields (a) a complete calculus, (b) a spectral theory with closed-form graded-media modes, (c) a causal network spectral theory with an Energy Migration Theorem, and (d) a variational theory coupling fields to their geometry. As an integrated construction with proven theorems it is, to the best of our knowledge at the time of writing, new.
+Structure-Flow Calculus is a *unified framework* in which a single structure field \(\rho\) yields (a) a complete calculus, (b) a spectral theory with closed-form graded-media modes, (c) a causal network spectral theory with an Energy Migration Theorem, and (d) a variational theory coupling fields to their geometry. As an integrated construction with proven theorems it is, to the best of our knowledge at the time of writing, new.
 
 ## 2. What SFC does not claim
 
@@ -27,10 +27,10 @@ This is evidence, not a guarantee: absence from arXiv is not absence from the li
 
 ## 4. Relationship to neighboring fields
 
-- **Sturm-Liouville theory** [1]: SFC's $L_\rho$ is a special Sturm-Liouville operator; SFC adds the structure-field interpretation and the transport (Thm 1.11).
+- **Sturm-Liouville theory** [1]: SFC's \(L_\rho\) is a special Sturm-Liouville operator; SFC adds the structure-field interpretation and the transport (Thm 1.11).
 - **Graph signal processing** [2]: static in [2]; SFC treats time-varying families and the eigenframe connection.
 - **Fractional calculus**: a different generalization (fractional exponents vs a pointwise scale field).
-- **General relativity**: a metric field is dynamical there too, but SFC's $\rho$ is a *scale* field with no Lorentzian structure; no claim of relation is made.
+- **General relativity**: a metric field is dynamical there too, but SFC's \(\rho\) is a *scale* field with no Lorentzian structure; no claim of relation is made.
 
 ## References
 [1] E. Coddington, N. Levinson, *Theory of Ordinary Differential Equations*, 1955.
