@@ -213,12 +213,6 @@ Physics/
 
 ---
 
-## License
-
-MIT
-
----
-
 <p align="center">
   <strong>Mrityunjay K</strong> — 2026-08-17
   <br>
